@@ -30,6 +30,11 @@ func _init() -> void:
 		if k == 60:
 			_scatta("3_avanti")
 	_scatta("4_avanti")
+	if p.galassia_v != null:
+		p._mostra_galassia(true)
+		await _attendi(1.0)
+		_scatta("4b_galassia")
+		p._mostra_galassia(false)
 	p._imposta_3d(true)
 	await _attendi(2.5)
 	_scatta("5_3d")

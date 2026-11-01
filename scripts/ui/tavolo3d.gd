@@ -22,6 +22,24 @@ var _pedine_root: Node3D
 var _tempo := 0.0
 var _voli := []
 var _mat_cache := {}
+var _sis: Node3D
+var stella_vista := -1
+
+
+func stella() -> int:
+	if m.livello == "sistema" or stella_vista < 0:
+		return int(m.scenario.get("stella", stella_vista))
+	return stella_vista
+
+
+## Mostra un altro sistema stellare (Province e Galactic Game).
+func imposta_stella(s: int) -> void:
+	if s == stella_vista:
+		return
+	stella_vista = s
+	if _root != null:
+		_costruisci_sistema()
+		aggiorna()
 
 
 func _ready() -> void:
@@ -96,6 +114,12 @@ func _mat(col: Color, emiss := 0.0, rough := 0.7) -> StandardMaterial3D:
 
 
 func _costruisci_sistema() -> void:
+	if _sis != null:
+		_sis.queue_free()
+	_sis = Node3D.new()
+	_root.add_child(_sis)
+	_pianeti.clear()
+	_piattaforme.clear()
 	# stella
 	var stella := MeshInstance3D.new()
 	var sfera := SphereMesh.new()
@@ -103,21 +127,21 @@ func _costruisci_sistema() -> void:
 	sfera.height = 4.8
 	stella.mesh = sfera
 	stella.material_override = _mat(Color(1.0, 0.75, 0.25), 3.5)
-	_root.add_child(stella)
+	_sis.add_child(stella)
 	var luce := OmniLight3D.new()
 	luce.omni_range = 80
 	luce.light_energy = 2.2
 	luce.light_color = Color(1, 0.9, 0.75)
-	_root.add_child(luce)
+	_sis.add_child(luce)
 	var dir := DirectionalLight3D.new()
 	dir.light_energy = 0.35
 	dir.rotation_degrees = Vector3(-50, 30, 0)
-	_root.add_child(dir)
-	var nome_stella: String = Dati.d()["stelle"].get(int(m.scenario["stella"]), {}).get("nome", "")
+	_sis.add_child(dir)
+	var nome_stella: String = Dati.d()["stelle"].get(stella(), {}).get("nome", "")
 	var ls := _etichetta(nome_stella.to_upper(), 120, Color(0.75, 0.88, 1.0))
 	ls.position = Vector3(0, 3.6, 0)
-	_root.add_child(ls)
-	var pids := m.scenario_pianeti()
+	_sis.add_child(ls)
+	var pids := m.scenario_pianeti() if m.livello == "sistema" else m.scenario_pianeti().filter(func(x): return int(x / 10) == stella())
 	for i in pids.size():
 		var pid: int = pids[i]
 		var dp := Dati.pianeta(pid)
@@ -128,7 +152,7 @@ func _costruisci_sistema() -> void:
 		var pos := Vector3(cos(ang) * r, 0, sin(ang) * r)
 		var nodo := Node3D.new()
 		nodo.position = pos
-		_root.add_child(nodo)
+		_sis.add_child(nodo)
 		_pianeti[pid] = nodo
 		var pm := MeshInstance3D.new()
 		var ps := SphereMesh.new()
@@ -139,7 +163,32 @@ func _costruisci_sistema() -> void:
 		pm.name = "Globo"
 		nodo.add_child(pm)
 		var lp := _etichetta("%s %d" % [dp["nome"].to_upper(), pid], 90, Color(0.98, 0.86, 0.42))
-		lp.position = Vector3(0, ps.radius + 2.2, 0)
+		lp.position = Vector3(0, ps.radius + 2.2 + (2.6 if m.livello != "sistema" else 0.0), 0)
+		if m.livello != "sistema":
+			var orb := Node3D.new()
+			orb.position = Vector3(0, ps.radius + 1.2, 0)
+			nodo.add_child(orb)
+			var anello_o := MeshInstance3D.new()
+			var to := TorusMesh.new()
+			to.inner_radius = 1.6
+			to.outer_radius = 1.75
+			anello_o.mesh = to
+			var mo := _mat(Color(0.55, 0.65, 1.0), 0.8)
+			anello_o.material_override = mo
+			orb.add_child(anello_o)
+			var lo := "%d:o" % pid
+			var ao := Area3D.new()
+			var co := CollisionShape3D.new()
+			var so := CylinderShape3D.new()
+			so.radius = 1.7
+			so.height = 1.2
+			co.shape = so
+			ao.add_child(co)
+			ao.input_event.connect(func(_c, ev, _p, _n, _i):
+				if ev is InputEventMouseButton and ev.pressed and ev.button_index == MOUSE_BUTTON_LEFT:
+					luogo_cliccato.emit(lo))
+			orb.add_child(ao)
+			_piattaforme[lo] = {"nodo": orb, "mat": mo, "col": Color(0.55, 0.65, 1.0)}
 		nodo.add_child(lp)
 		var st := _etichetta("", 60, Color(0.8, 0.8, 0.9))
 		st.name = "Stato"
@@ -234,7 +283,7 @@ func _orbita(r: float) -> void:
 	tor.rings = 128
 	mi.mesh = tor
 	mi.material_override = _mat(Color(0.85, 0.72, 0.25), 0.8)
-	_root.add_child(mi)
+	_sis.add_child(mi)
 
 
 func _etichetta(t: String, px: int, col: Color) -> Label3D:
@@ -293,7 +342,7 @@ func aggiorna() -> void:
 				var u2: Dictionary = m.unita[id2]
 				var tx: Texture2D
 				if u2["k"] == "pg":
-					tx = UI.pedina_tex(UI.chiave_pg(u2["nome"]), u2["ind"])
+					tx = UI.pedina_tex(str(u2["ped"]) if u2.has("ped") else UI.chiave_pg(u2["nome"]), u2["ind"])
 				else:
 					var nascosta: bool = u2["fz"] == Motore.I and u2["mobile"] and not u2["scoperta"] and vista == Motore.R
 					tx = UI.pedina_tex(UI.chiave_mil(u2), nascosta)

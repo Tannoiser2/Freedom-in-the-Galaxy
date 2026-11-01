@@ -36,6 +36,10 @@ var b_3d: Button
 var b_ritmo: Button
 var b_firebase: Button
 var _popup_timer := 0.0
+var galassia_v
+var b_galassia: Button
+var lbl_risorse: Label
+var _galassia_aperta := false
 
 
 func _ready() -> void:
@@ -107,18 +111,25 @@ func _costruisci() -> void:
 	var hb := HBoxContainer.new()
 	hb.add_theme_constant_override("separation", 10)
 	barra.add_child(hb)
-	var logo := UI.titolo("Freedom in the Galaxy", 30, UI.ROSSO)
+	var stretto := motore.livello != "sistema"
+	var logo := UI.titolo("Freedom in the Galaxy", 24 if stretto else 30, UI.ROSSO)
 	hb.add_child(logo)
-	hb.add_child(UI.titolo("· " + motore.scenario["nome"], 24, UI.GIALLO))
-	lbl_turno = UI.etichetta("", 19, UI.TESTO, true)
+	hb.add_child(UI.titolo("· " + motore.scenario["nome"], 20 if stretto else 24, UI.GIALLO))
+	lbl_turno = UI.etichetta("", 17 if stretto else 19, UI.TESTO, true)
 	hb.add_child(lbl_turno)
 	var sp := Control.new()
 	sp.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	hb.add_child(sp)
 	lbl_online = UI.etichetta("", 17, UI.CIANO)
 	hb.add_child(lbl_online)
-	lbl_pv = UI.etichetta("", 18, UI.GIALLO, true)
+	lbl_pv = UI.etichetta("", 16 if stretto else 18, UI.GIALLO, true)
 	hb.add_child(lbl_pv)
+	if motore.livello != "sistema":
+		lbl_risorse = UI.etichetta("", 17, UI.CIANO)
+		hb.add_child(lbl_risorse)
+		b_galassia = UI.bottone("Galassia", 17)
+		b_galassia.pressed.connect(func(): _mostra_galassia(not _galassia_aperta))
+		hb.add_child(b_galassia)
 	b_3d = UI.bottone("Vista 3D", 17)
 	b_3d.pressed.connect(func(): _imposta_3d(tavolo3d == null or not tavolo3d.visible))
 	hb.add_child(b_3d)
@@ -131,7 +142,7 @@ func _costruisci() -> void:
 	b_mis.pressed.connect(_mostra_missioni)
 	hb.add_child(b_mis)
 	if online == null:
-		b_firebase = UI.bottone("Salva su Firebase", 17)
+		b_firebase = UI.bottone("Salva online" if stretto else "Salva su Firebase", 17)
 		b_firebase.pressed.connect(_salva_firebase)
 		hb.add_child(b_firebase)
 	var b_reg := UI.bottone("Regole", 17)
@@ -158,6 +169,16 @@ func _costruisci() -> void:
 	mappa.luogo_cliccato.connect(_clic_luogo)
 	mappa.pedina_cliccata.connect(_clic_pedina)
 	area_mappa.add_child(mappa)
+	if motore.livello != "sistema":
+		mappa.stella_vista = _stella_iniziale()
+		galassia_v = preload("res://scripts/ui/galassia_vista.gd").new()
+		galassia_v.m = motore
+		galassia_v.vista = vista
+		galassia_v.stella_corrente = mappa.stella_vista
+		galassia_v.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+		galassia_v.stella_scelta.connect(_apri_stella)
+		galassia_v.visible = false
+		area_mappa.add_child(galassia_v)
 	popup_carta = Control.new()
 	popup_carta.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	popup_carta.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
@@ -220,11 +241,48 @@ func _applica_ritmo() -> void:
 	cf.save("user://impostazioni.cfg")
 
 
+func _stella_iniziale() -> int:
+	var cap := motore.galattico.capitale_di(motore.provincia) if motore.livello == "provincia" else 16
+	return int(cap / 10) if cap > 0 else int(motore.scenario_pianeti()[0] / 10)
+
+
+func _mostra_galassia(on: bool) -> void:
+	if galassia_v == null:
+		return
+	_galassia_aperta = on
+	galassia_v.visible = on
+	if on:
+		galassia_v.stella_corrente = mappa.stella_vista
+		mappa.visible = false
+		if tavolo3d != null:
+			tavolo3d.visible = false
+	else:
+		var tre_d: bool = tavolo3d != null and b_3d.text == "Mappa 2D"
+		mappa.visible = not tre_d
+		if tavolo3d != null:
+			tavolo3d.visible = tre_d
+			if tre_d:
+				tavolo3d.aggiorna()
+	b_galassia.text = "Sistema" if on else "Galassia"
+	area_mappa.move_child(popup_carta, -1)
+
+
+func _apri_stella(st: int) -> void:
+	mappa.stella_vista = st
+	if galassia_v != null:
+		galassia_v.stella_corrente = st
+	if tavolo3d != null:
+		tavolo3d.imposta_stella(st)
+	_mostra_galassia(false)
+	mappa.queue_redraw()
+
+
 func _imposta_3d(on: bool) -> void:
 	if on and tavolo3d == null:
 		tavolo3d = preload("res://scripts/ui/tavolo3d.gd").new()
 		tavolo3d.m = motore
 		tavolo3d.vista = vista
+		tavolo3d.stella_vista = mappa.stella_vista
 		tavolo3d.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 		tavolo3d.luogo_cliccato.connect(_clic_luogo)
 		area_mappa.add_child(tavolo3d)
@@ -235,6 +293,8 @@ func _imposta_3d(on: bool) -> void:
 			tavolo3d.aggiorna()
 	mappa.visible = not on
 	b_3d.text = "Mappa 2D" if on else "Vista 3D"
+	if _galassia_aperta:
+		_mostra_galassia(false)
 
 
 # =====================================================================================
@@ -244,14 +304,27 @@ func _imposta_3d(on: bool) -> void:
 func _aggiorna() -> void:
 	if _ripresa:
 		return
-	var fasi := {"schieramento": "schieramento", "movimento": "movimento", "reazione": "reazione", "combattimento": "combattimento militare", "ricerca": "ricerca", "missioni": "missioni", "finita": "partita finita"}
-	lbl_turno.text = "  Turno %d/%d · %s · %s" % [motore.turno, int(motore.scenario["turni"]), Dati.FAZIONI[motore.di_turno], fasi.get(motore.fase, "")]
+	var fasi := {"schieramento": "schieramento", "movimento": "movimento", "reazione": "reazione", "combattimento": "combattimento militare", "ricerca": "ricerca", "missioni": "missioni", "finita": "partita finita",
+		"interplanetario": "movimento interplanetario", "spazio": "combattimento spaziale", "personaggi": "movimento dei personaggi", "superficie": "movimento di superficie", "stadio": "stadio galattico", "risorse": "risorse"}
+	lbl_turno.text = "  Turno %d/%d%s · %s · %s" % [motore.turno, int(motore.scenario["turni"]), (" · mese %d" % (motore.giro + 1)) if motore.livello == "galassia" else "", Dati.FAZIONI[motore.di_turno], fasi.get(motore.fase, "")]
 	var pv := motore.punti_vittoria()
-	lbl_pv.text = "Punti Vittoria ribelli: %d / %d" % [pv["totale"], pv["soglia"]]
+	lbl_pv.text = ("PV ribelli: %d / %d" if motore.livello != "sistema" else "Punti Vittoria ribelli: %d / %d") % [pv["totale"], pv["soglia"]]
 	lbl_pv.tooltip_text = "\n".join(pv["dettaglio"]) if not pv["dettaglio"].is_empty() else "Nessun punto per ora."
 	mappa.queue_redraw()
 	if tavolo3d != null and tavolo3d.visible:
 		tavolo3d.aggiorna()
+	if lbl_risorse != null:
+		if motore.livello == "galassia":
+			lbl_risorse.text = "Risorse R %d · I %d" % [int(motore.pf[Motore.R]), int(motore.pf[Motore.I])]
+			var g := motore.galattico
+			var tt := []
+			if not g.strategico.is_empty():
+				tt.append("Incarico strategico: " + str(g.strategico["it"]))
+			if not g.evento_corrente.is_empty():
+				tt.append("Evento galattico: %s\n%s" % [g.evento_corrente["titolo_it"], g.evento_corrente["it"]])
+			lbl_risorse.tooltip_text = "\n\n".join(tt)
+		else:
+			lbl_risorse.text = ""
 	_aggiorna_carte()
 
 
@@ -413,6 +486,19 @@ func _evidenzia_richiesta() -> void:
 	mappa.evidenzia(ev)
 	if tavolo3d != null:
 		tavolo3d.evidenzia(ev)
+	if galassia_v != null:
+		galassia_v.evidenzia(ev)
+		if not ev.is_empty() and _in_attesa:
+			var stelle := {}
+			for l in ev:
+				var st := motore.av.stella_di(str(l))
+				if st > 0 and galassia_v._stelle_scenario().has(st):
+					stelle[st] = true
+			if not stelle.is_empty() and not stelle.has(mappa.stella_vista):
+				if stelle.size() == 1:
+					_apri_stella(stelle.keys()[0])
+				elif not _galassia_aperta:
+					_mostra_galassia(true)
 
 
 func _clic_luogo(l: String) -> void:

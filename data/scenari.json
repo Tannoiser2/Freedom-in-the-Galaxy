@@ -47,7 +47,8 @@
      }
     ]
    }
-  }
+  },
+  "livello": "sistema"
  },
  "varu": {
   "nome": "La polveriera di Varu",
@@ -107,6 +108,186 @@
      }
     ]
    }
+  },
+  "livello": "sistema"
+ },
+ "backdoor": {
+  "nome": "La porta di servizio dell'Impero",
+  "nome_en": "The Empire's Backdoor",
+  "livello": "provincia",
+  "tipo": "A",
+  "provincia": 2,
+  "turni": 7,
+  "soglia_pv": 15,
+  "bdp": {
+   "211": 2,
+   "212": 0,
+   "221": 2,
+   "222": 1,
+   "223": 1,
+   "231": 0,
+   "232": 1,
+   "241": 2
+  },
+  "testo": "Armageddon nella Seconda Provincia. Angoff è già ribelle; i Ribelli puntano su Cieson, patria degli Yester, e sulla capitale Orning. Sette turni, iperbalzi e combattimento spaziale. Vittoria immediata dei Ribelli con Orning, Cieson e un altro pianeta sotto controllo; dell'Impero se dal terzo turno non c'è più nulla di ribelle. Altrimenti servono 15 Punti Vittoria.",
+  "fazioni": {
+   "1": {
+    "personaggi": [
+     "Jin Voles",
+     "Gelba",
+     "Saytar",
+     "Barca"
+    ],
+    "navi": [
+     "imperiale",
+     "imperiale"
+    ],
+    "pf_iniziali": 65,
+    "max_elite": 3,
+    "max_suicide": 1,
+    "pianeti_pg": [
+     241
+    ],
+    "pf_turno": 5,
+    "capitali": [
+     241
+    ]
+   },
+   "0": {
+    "personaggi": [
+     "Doctor Sontag",
+     "Rayner Derban",
+     "Bridne Murcada",
+     "Ly Mantok",
+     "Adam Starlight",
+     "Zina Adora",
+     "Agan Rafa"
+    ],
+    "navi": [
+     33,
+     35
+    ],
+    "possessi_casuali": 2,
+    "navi_in_orbita": true,
+    "vietati": [
+     241,
+     211
+    ],
+    "pf_iniziali": 9,
+    "pf_ambiente": "urbano",
+    "pf_luogo": "222:0",
+    "pf_turno2": 35,
+    "pf_turno": 3,
+    "ingressi": [
+     32,
+     53
+    ],
+    "gruppi_ingresso": 1
+   }
+  }
+ },
+ "orlog": {
+  "nome": "Orlog sotto assedio",
+  "nome_en": "Orlog Besieged",
+  "livello": "provincia",
+  "tipo": "A",
+  "provincia": 1,
+  "turni": 10,
+  "soglia_pv": 35,
+  "bdp": "tutti2",
+  "testo": "Armageddon nel cuore dell'Impero. I Ribelli partono da Ownex e Bajukai, patria dei Segunden, con cinque Campi ribelli già pronti; l'Impero difende il Trono di Orlog e la capitale Diomas. Dieci turni. Vittoria immediata dei Ribelli con Diomas e Orlog sotto controllo, altrimenti servono 35 Punti Vittoria.",
+  "fazioni": {
+   "1": {
+    "personaggi": [
+     "Telmen",
+     "Redjac",
+     "Els Taroff",
+     "Emperor Coreguya",
+     "Thysa Kymbo"
+    ],
+    "navi": [
+     "redjac",
+     "imperiale"
+    ],
+    "pf_iniziali": 110,
+    "max_elite": 5,
+    "max_suicide": 1,
+    "pf_turno": 3,
+    "capitali": [
+     152,
+     162
+    ],
+    "posizioni": {
+     "Telmen": "152",
+     "Redjac": "152",
+     "Els Taroff": "162:0",
+     "Emperor Coreguya": "162:0",
+     "Thysa Kymbo": "162:0"
+    }
+   },
+   "0": {
+    "personaggi": [
+     "Boccanegra",
+     "Ran Jayma",
+     "Frun Sentel",
+     "Scott Rubel",
+     "Sidir Ganang",
+     "Oneste Woada",
+     "Odene Hobar",
+     "Vudot Vodot"
+    ],
+    "navi": [
+     40,
+     36,
+     38
+    ],
+    "possessi_casuali": 2,
+    "pianeti_pg": [
+     141,
+     122
+    ],
+    "campi": [
+     111,
+     112,
+     121,
+     151,
+     163
+    ],
+    "pf_iniziali": 10,
+    "pf_ambiente": "sotterraneo",
+    "pf_luogo": "141:sotterraneo",
+    "pf_turno2": 50,
+    "pf_turno": 5,
+    "ingressi": "confinanti",
+    "gruppi_ingresso": 2,
+    "min_gruppo": 15
+   }
+  }
+ },
+ "galattica": {
+  "nome": "La campagna galattica",
+  "nome_en": "Galactic Game Campaign",
+  "livello": "galassia",
+  "tipo": "S",
+  "turni": 20,
+  "soglia_pv": 26,
+  "testo": "La Ribellione stellare per intero: 51 pianeti in 5 province, tasse imperiali e Incarichi strategici, la base segreta ribelle, Segreti planetari, Eventi galattici e Atrocità. Ogni turno è un mese con due turni per parte. I Ribelli vincono appena raggiungono 26 Punti Vittoria di pianeti controllati; l'Impero se arriva al ventesimo turno, se tutti i Ribelli cadono o se, scoperta la base, non resta nessun pianeta ribelle.",
+  "fazioni": {
+   "1": {
+    "personaggi": [
+     "Thysa Kymbo",
+     "Emperor Coreguya",
+     "Senator Dermond",
+     "Jon Kidu",
+     "Gelba",
+     "Barca",
+     "Redjac",
+     "Jin Voles",
+     "Vans Ka-Tie-A",
+     "Els Taroff"
+    ]
+   },
+   "0": {}
   }
  }
 }

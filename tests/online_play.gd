@@ -26,7 +26,7 @@ func _run() -> void:
 	var cf := OS.get_environment("PL_CODEFILE")
 	var menu = main.current
 	menu.modo = 2
-	menu.scenario = "varu"
+	menu.scenario = OS.get_environment("PL_SCENARIO") if OS.get_environment("PL_SCENARIO") != "" else "varu"
 	menu.nome.text = "Ribelle" if role == "host" else "Imperatore"
 	if role == "host":
 		await menu._crea()

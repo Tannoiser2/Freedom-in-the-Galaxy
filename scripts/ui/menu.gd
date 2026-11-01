@@ -7,7 +7,7 @@ var main
 var scenario := "egrix"
 var modo := 0          # 0 Ribelli contro IA, 1 Impero contro IA, 2 due persone, 3 IA contro IA
 var vista3d := false
-var box_scenari: HBoxContainer
+var box_scenari: GridContainer
 var box_modi: VBoxContainer
 var stato: Label
 var codice: LineEdit
@@ -49,13 +49,15 @@ func _ready() -> void:
 	var sub := UI.titolo("La Ribellione stellare, 5764 d.C.", 28, Color(0.7, 0.85, 1.0))
 	sub.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	v.add_child(sub)
-	var cred := UI.etichetta("Da Freedom in the Galaxy di Howard Barasch e John H. Butterfield, SPI 1979 · Star System Game", 16, UI.GRIGIO)
+	var cred := UI.etichetta("Da Freedom in the Galaxy di Howard Barasch e John H. Butterfield, SPI 1979 · Star System, Province e Galactic Game", 16, UI.GRIGIO)
 	cred.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	v.add_child(cred)
 	# scenari
 	v.add_child(UI.titolo("Scenario", 26))
-	box_scenari = HBoxContainer.new()
-	box_scenari.add_theme_constant_override("separation", 16)
+	box_scenari = GridContainer.new()
+	box_scenari.columns = 3
+	box_scenari.add_theme_constant_override("h_separation", 12)
+	box_scenari.add_theme_constant_override("v_separation", 12)
 	v.add_child(box_scenari)
 	# modo
 	v.add_child(UI.titolo("Chi gioca", 26))
@@ -132,22 +134,27 @@ func _aggiorna() -> void:
 	for c in box_modi.get_children():
 		c.queue_free()
 	var S: Dictionary = Dati.d()["scenari"]
-	for k in ["egrix", "varu"]:
+	for k in ["egrix", "varu", "backdoor", "orlog", "galattica"]:
 		var s: Dictionary = S[k]
 		var p := UI.pannello(UI.PANNELLO_CHIARO if k == scenario else UI.PANNELLO, UI.GIALLO if k == scenario else UI.ROSSO_SCURO, 3 if k == scenario else 2)
-		p.custom_minimum_size = Vector2(580, 0)
+		p.custom_minimum_size = Vector2(385, 0)
 		p.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		p.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
 		var vv := VBoxContainer.new()
 		vv.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		p.add_child(vv)
-		var t := UI.titolo(s["nome"], 30, UI.GIALLO if k == scenario else UI.TESTO)
+		var liv := {"sistema": "STAR SYSTEM GAME", "provincia": "PROVINCE GAME", "galassia": "GALACTIC GAME"}
+		var lv := UI.etichetta(liv.get(str(s.get("livello", "sistema")), ""), 13, UI.ROSSO)
+		lv.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		vv.add_child(lv)
+		var t := UI.titolo(s["nome"], 26, UI.GIALLO if k == scenario else UI.TESTO)
+		t.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		t.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		vv.add_child(t)
 		var sub := UI.etichetta("%s · %s · %d turni" % [s["nome_en"], "Inizio della Ribellione" if s["tipo"] == "S" else "Armageddon", int(s["turni"])], 15, UI.CIANO)
 		sub.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		vv.add_child(sub)
-		var d := UI.testo_lungo(s["testo"], 15)
+		var d := UI.testo_lungo(s["testo"], 14)
 		d.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		vv.add_child(d)
 		p.gui_input.connect(func(ev):

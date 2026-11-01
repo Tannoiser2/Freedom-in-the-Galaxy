@@ -1,0 +1,386 @@
+{
+ "unita": {
+  "milizia": {
+   "nome": "Milizia",
+   "f": 1,
+   "s": 0,
+   "mobile": false,
+   "costo": 1,
+   "fz": 1,
+   "ped": "imp_milizia"
+  },
+  "pattuglia": {
+   "nome": "Pattuglia",
+   "f": 1,
+   "s": 2,
+   "mobile": true,
+   "costo": 3,
+   "fz": 1,
+   "ped": "imp_pattuglia"
+  },
+  "linea": {
+   "nome": "Linea",
+   "f": 3,
+   "s": 2,
+   "mobile": true,
+   "costo": 5,
+   "fz": 1,
+   "ped": "imp_linea"
+  },
+  "veterano": {
+   "nome": "Veterana",
+   "f": 3,
+   "s": 4,
+   "mobile": true,
+   "costo": 7,
+   "fz": 1,
+   "ped": "imp_veterano"
+  },
+  "elite_esercito": {
+   "nome": "Esercito d'élite",
+   "f": 5,
+   "s": 4,
+   "mobile": true,
+   "costo": 9,
+   "fz": 1,
+   "elite": true,
+   "ped": "imp_elite_esercito"
+  },
+  "elite_flotta": {
+   "nome": "Flotta d'élite",
+   "f": 4,
+   "s": 5,
+   "mobile": true,
+   "costo": 10,
+   "fz": 1,
+   "elite": true,
+   "ped": "imp_elite_flotta"
+  },
+  "suicida": {
+   "nome": "Squadra suicida",
+   "f": 1,
+   "s": 1,
+   "nav": 5,
+   "mobile": true,
+   "costo": 10,
+   "fz": 1,
+   "suicida": true,
+   "ped": "imp_squadra_suicida"
+  },
+  "resolution": {
+   "nome": "Resolution",
+   "f": 0,
+   "s": 2,
+   "mobile": true,
+   "costo": 15,
+   "fz": 1,
+   "atrocita": true,
+   "galattico": true,
+   "ped": "imp_resolution"
+  },
+  "peacemaker": {
+   "nome": "Peacemaker",
+   "f": 0,
+   "s": 2,
+   "mobile": true,
+   "costo": 15,
+   "fz": 1,
+   "atrocita": true,
+   "galattico": true,
+   "ped": "imp_peacemaker"
+  },
+  "stabilizzatore": {
+   "nome": "Planet Stabilizer",
+   "f": 0,
+   "s": 2,
+   "mobile": true,
+   "costo": 25,
+   "fz": 1,
+   "atrocita": true,
+   "stabilizzatore": true,
+   "galattico": true,
+   "ped": "imp_stabilizzatore"
+  },
+  "r10": {
+   "nome": "1-0",
+   "f": 1,
+   "s": 0,
+   "mobile": false,
+   "costo": 1,
+   "fz": 0,
+   "ped": "10"
+  },
+  "r21": {
+   "nome": "2-1",
+   "f": 2,
+   "s": 1,
+   "mobile": true,
+   "costo": 3,
+   "fz": 0,
+   "ped": "21"
+  },
+  "r23": {
+   "nome": "2-3",
+   "f": 2,
+   "s": 3,
+   "mobile": true,
+   "costo": 5,
+   "fz": 0,
+   "ped": "23"
+  },
+  "r43": {
+   "nome": "4-3",
+   "f": 4,
+   "s": 3,
+   "mobile": true,
+   "costo": 7,
+   "fz": 0,
+   "ped": "43"
+  },
+  "r44": {
+   "nome": "4-4 d'élite",
+   "f": 4,
+   "s": 4,
+   "mobile": true,
+   "costo": 8,
+   "fz": 0,
+   "elite": true,
+   "ped": "elite"
+  }
+ },
+ "sovrani": {
+  "Nam Nhuk": {
+   "fed": "R",
+   "comb": 4,
+   "res": 4,
+   "com": 2,
+   "com_s": 2,
+   "ped": "sovrano_nan_nhuk"
+  },
+  "Treb Eyro": {
+   "fed": "I",
+   "comb": 3,
+   "res": 3,
+   "com": 2,
+   "com_s": null,
+   "ped": "sovrano_treb_eyro"
+  },
+  "Megda Sheels": {
+   "fed": "I",
+   "comb": 2,
+   "res": 2,
+   "com": 1,
+   "com_s": null,
+   "ped": "sovrano_megda_sheels"
+  },
+  "Ascaill": {
+   "fed": "I",
+   "comb": 3,
+   "res": 3,
+   "com": 1,
+   "com_s": 1,
+   "ped": "sovrano_ascaill"
+  },
+  "Shirofune": {
+   "fed": "R",
+   "comb": 5,
+   "res": 5,
+   "com": 2,
+   "com_s": null,
+   "ped": "sovrano_shirofune"
+  },
+  "Xela Grebb": {
+   "fed": "N",
+   "comb": 3,
+   "res": 3,
+   "com": 2,
+   "com_s": null,
+   "ped": "sovrano_xela_grebb"
+  },
+  "Balgar": {
+   "fed": "N",
+   "comb": 4,
+   "res": 4,
+   "com": 2,
+   "com_s": 1,
+   "ped": "sovrano_balgar"
+  },
+  "Odel Hobar": {
+   "fed": "I",
+   "comb": 3,
+   "res": 3,
+   "com": 2,
+   "com_s": null,
+   "ped": "sovrano_odel_hobar"
+  },
+  "Yaldor": {
+   "fed": "R",
+   "comb": 4,
+   "res": 4,
+   "com": 2,
+   "com_s": null,
+   "ped": "sovrano_yaldor"
+  },
+  "Inzenzia III": {
+   "fed": "R",
+   "comb": 3,
+   "res": 3,
+   "com": 1,
+   "com_s": null,
+   "ped": "sovrano_inzenzia_iii"
+  },
+  "Tensok Phi": {
+   "fed": "N",
+   "comb": 3,
+   "res": 3,
+   "com": 1,
+   "com_s": null,
+   "ped": "sovrano_tensok_phi"
+  },
+  "Darb Selesh": {
+   "fed": "N",
+   "comb": 5,
+   "res": 4,
+   "com": 2,
+   "com_s": null,
+   "ped": "sovrano_darb_selesh"
+  }
+ },
+ "segreti": {
+  "casino": {
+   "nome": "Casino Galactica",
+   "ped": "",
+   "it": "Alla fine della Fase delle Missioni ribelle, ogni Gruppo di Missione ribelle sul pianeta con un personaggio di Intelligenza 4 sopravvissuto riceve un possesso. Sparisce quando il pianeta insorge."
+  },
+  "clonazione": {
+   "nome": "Complesso di clonazione",
+   "it": "Chi completa Reclutare personaggi sul pianeta può pescare a caso un proprio personaggio morto."
+  },
+  "morto": {
+   "nome": "Mondo morto",
+   "it": "Svelato, il pianeta è distrutto come per il Planet Stabilizer (effetto domino compreso); chi vi si trova può solo andarsene e nessuno può più arrivarci."
+  },
+  "droga": {
+   "nome": "Mondo della droga",
+   "it": "Ogni personaggio negli ambienti del pianeta ha +1 a tutti i valori non nulli; alla fine di ogni Fase delle Missioni subisce una ferita; qui le ferite non guariscono."
+  },
+  "impero": {
+   "nome": "Impero per sempre",
+   "it": "Svelato, la Lealtà va su Patriottico. L'Impero può tassarlo al massimo senza spostamenti di Lealtà. Nei Colpi di Stato e nelle Diplomazie ribelli la prima lettera utile è ignorata. Nessun effetto domino a favore dei Ribelli. Perde tutto se insorge."
+  },
+  "gemme": {
+   "nome": "Mondo delle gemme",
+   "it": "L'Impero riceve 5 Punti Forza in più a ogni Fase delle Risorse in cui lo controlla. Se insorge, i Ribelli ricevono il triplo dei Punti Forza sulla traccia delle risorse."
+  },
+  "iper": {
+   "nome": "Mondo iperdimensionale",
+   "it": "Ogni Gruppo di Missione può svolgere due missioni per fase (nella versione digitale: una pescata bonus in più per ogni missione sul pianeta)."
+  },
+  "archivi": {
+   "nome": "Archivi imperiali",
+   "it": "Se i Ribelli completano Raccogliere informazioni qui (una lettera), tutti i Segreti planetari sono svelati; Trappola! esce dal gioco."
+  },
+  "deltronics": {
+   "nome": "Imperial Deltronics",
+   "it": "Rilevamento delle astronavi ribelli spostato di due colonne a destra (tranne la S-XIII). Raccogliere informazioni (una lettera) dà ai Ribelli un'astronave."
+  },
+  "ipoc": {
+   "nome": "IPOC",
+   "it": "Se il pianeta insorge, tutte le unità mobili imperiali restano scoperte per il resto della partita."
+  },
+  "industria": {
+   "nome": "Mondo industriale",
+   "it": "L'Impero riceve 3 Punti Forza in più a ogni Fase delle Risorse in cui lo controlla. Se insorge, i Ribelli ricevono il doppio dei Punti Forza sulla traccia delle risorse."
+  },
+  "vivo": {
+   "nome": "Pianeta vivente",
+   "it": "Coup e sovrani ignorati. Una Diplomazia ribelle riuscita lo fa insorgere subito (senza effetto domino). Ribelli con due colonne a favore in ogni combattimento sul pianeta."
+  },
+  "mutanti": {
+   "nome": "Mondo mutante",
+   "it": "Ogni ambiente ha creature di forza 10 e resistenza 9; i locali infuriati hanno forza 8 e resistenza 8, corpo a corpo."
+  },
+  "schiavi": {
+   "nome": "Mondo degli schiavi",
+   "it": "L'Impero riceve 5 Punti Forza in più a ogni Fase delle Risorse in cui lo controlla. Se insorge, i Ribelli ricevono il triplo dei Punti Forza da spendere subito, con risorse considerate stellari."
+  },
+  "trappola": {
+   "nome": "Trappola!",
+   "it": "Svelato, i Ribelli individuati sul pianeta sono catturati. Qui i prigionieri non hanno bisogno di guardie. Sparisce quando il pianeta insorge."
+  },
+  "benvenuti": {
+   "nome": "Benvenuti Ribelli",
+   "it": "Svelato, la Lealtà va su Dissenso. Se l'Impero lo tassa, la Lealtà si sposta verso i Ribelli. Nei Colpi di Stato e nelle Diplomazie imperiali la prima lettera utile è ignorata. Se insorge, i Ribelli ricevono il doppio dei Punti Forza."
+  }
+ },
+ "tasse": [
+  0,
+  2,
+  3,
+  4,
+  5,
+  1,
+  2,
+  3,
+  4,
+  5,
+  1,
+  2,
+  3,
+  4,
+  5,
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "segreti_pianeti": [
+  113,
+  131,
+  143,
+  212,
+  221,
+  222,
+  312,
+  331,
+  341,
+  352,
+  442,
+  512,
+  521,
+  522,
+  531,
+  541
+ ],
+ "basi_possibili": [
+  112,
+  121,
+  141,
+  142,
+  223,
+  231,
+  232,
+  322,
+  323,
+  342,
+  421,
+  431,
+  432,
+  433,
+  441,
+  511,
+  523,
+  551
+ ],
+ "pv_provincia": {
+  "pianeta_controllo_ribelle": 5,
+  "pianeta_in_ribellione": 3,
+  "pianeta_in_agitazione": 1,
+  "pianeta_patriottico": -1,
+  "imperiale_ucciso": 0,
+  "imperiale_catturato": 1,
+  "ribelle_ucciso": 0,
+  "ribelle_catturato": -1
+ }
+}

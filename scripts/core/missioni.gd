@@ -3,7 +3,7 @@ extends RefCounted
 ## Fase delle Missioni (Sezione 13.0): assegnazione, carte Azione con i loro eventi, lettere di missione,
 ## pescate bonus ed effetti delle missioni nello Star System Game.
 
-const MULTI := {"C": 9, "D": 2, "F": 9, "I": 2, "S": 2, "T": 2}
+const MULTI := {"C": 9, "D": 2, "F": 9, "I": 2, "S": 2, "T": 2, "E": 2, "H": 2}
 const CAMPO := ["C", "D", "F", "I", "S", "T"]
 
 var m: Motore
@@ -161,7 +161,25 @@ func valide(l: String, pg: Array) -> Array:
 		out.append("B")
 	if f == Motore.R and not nemici_mil.is_empty():
 		out.append("T")
-	if amb.get("coup", null) != null and not p["coup"].has(l) and su_traccia:
+	if m.livello != "sistema":
+		if not pg.is_empty() and m.av.puo_convocare(l, f):
+			out.append("E")
+		var prig_nemici := m.pg_in(l, nemico).filter(func(x): return m.unita[x]["prig"] >= 0)
+		if m.livello == "galassia" and not prig_nemici.is_empty() and pg.size() == 1:
+			out.append("Q")
+		if m.livello == "galassia" and not pg.is_empty() and int(m.pf[nemico]) >= 2:
+			if f == Motore.R and m.controllo(pid) == Motore.I and (m.galattico.capitale(pid) or int(pid / 100) == m.galattico.provincia_tassata()):
+				out.append("H")
+			if f == Motore.I and m.galattico.base_svelata and pid == m.galattico.base:
+				out.append("H")
+	if m.galattico.segreto_attivo(pid, "vivo"):
+		out.erase("C")
+		out.erase("E")
+	if f == Motore.R and m.evento_attivo(107) and pid == 421:
+		out.erase("D")
+	if m.evento_attivo(120) and pg.any(func(x): return m.unita[x]["c"].get("razza_en", "") == "Kayn"):
+		return []
+	if amb.get("coup", null) != null and not p["coup"].has(l) and su_traccia and not m.galattico.segreto_attivo(pid, "vivo") and not (f == Motore.R and m.evento_attivo(107) and pid == 421):
 		var ok := pg.is_empty()
 		for id in pg:
 			if m.val(id, "intelligenza") > 1:
@@ -267,6 +285,12 @@ func _lettere(lettere: Array) -> void:
 
 
 func _bonus() -> void:
+	if m.evento_attivo(126):
+		flag.erase("no_bonus")
+		for g in gruppi:
+			g.erase("no_bonus")
+	if m.evento_attivo(110) and m.pid_di(luogo) == 312:
+		flag["no_bonus"] = true
 	if flag.get("no_bonus", false):
 		m.scrivi("Nessuna pescata bonus in questo ambiente.")
 		return
@@ -321,6 +345,25 @@ func _conta_bonus(g: Dictionary) -> int:
 			n = meglio.call("comando") + int(Dati.ambiente(luogo).get("coup", 0))
 		"R":
 			n = 0 if f == Motore.I else 0
+		"E":
+			n = meglio.call("diplomazia") + meglio.call("comando")
+		"H":
+			n = meglio.call("intelligenza") + pg.size() - 1
+		"Q":
+			var prig := m.pg_in(luogo, nemico).filter(func(x): return m.unita[x]["prig"] >= 0)
+			n = 3 + meglio.call("intelligenza") - (m.val(prig[0], "intelligenza") if not prig.is_empty() else 0)
+	# 26.0: pianeta natale e regalità
+	if m.livello != "sistema":
+		var pid_l := m.pid_di(luogo)
+		var nat := 0
+		for id in pg:
+			nat = maxi(nat, m.natale(id, pid_l))
+		if nat >= 1 and lt in ["A", "B", "E", "F", "G", "P", "S", "H"]:
+			n += 1
+		if nat == 2 and lt in ["C", "D", "I", "R", "T", "E"]:
+			n += 1
+		if m.galattico.segreto_attivo(pid_l, "iper"):
+			n += 1
 	var E: Dictionary = Dati.d()["possessi_effetti"]
 	for id in pg:
 		n += int(E.get("pg_" + m.unita[id]["nome"], {}).get("bonus", {}).get(lt, 0))
@@ -495,6 +538,9 @@ func _evento(cod: String, carta: Dictionary) -> void:
 							ok = true
 					if not ok:
 						_abortisci(g)
+		"ATROCITA":
+			if m.livello == "galassia":
+				await m.galattico.atrocita(pid)
 		"MISSIONE_CASUALE_ABORTITA":
 			var cand2 := _in_corso().filter(func(g): return not g["campo"])
 			if not cand2.is_empty():
@@ -615,10 +661,33 @@ func _completa(g: Dictionary) -> void:
 	m.evento.emit("missione_riuscita", {"lettera": g["lettera"], "luogo": luogo, "n": n})
 	match g["lettera"]:
 		"D":
-			m.sposta_lealta(pid, mini(n, 2), f)
+			if f == Motore.R and m.galattico.segreto_attivo(pid, "vivo") and p["stato"] in ["imperiale", "fermata"]:
+				p["lealta"] = 4
+				await m.avvia_ribellione(pid, {})
+				controlla_campi()
+				return
+			var eff := m.sposta_lealta(pid, mini(n, 2), f)
+			if eff >= 2 and m.livello != "sistema":
+				await m.av.domino(pid, "lealta", f)
 		"C":
-			m.sposta_lealta(pid, n, f)
+			var eff2 := m.sposta_lealta(pid, n, f)
 			p["coup"][luogo] = true
+			if eff2 >= 2 and m.livello != "sistema":
+				await m.av.domino(pid, "lealta", f)
+		"E":
+			var fed := m.av.fedelta_sovrano(m.av.sovrano_di(luogo))
+			if fed == "N" and n < 2:
+				m.scrivi("Un sovrano neutrale richiede due lettere: non risponde all'appello.")
+			elif m.av.puo_convocare(luogo, f):
+				await m.av.convoca(luogo, f)
+		"H":
+			var q := 8 if n >= 2 else 2
+			q = mini(q, int(m.pf[nemico]))
+			m.pf[nemico] -= q
+			m.pf[f] = mini(199 if f == Motore.R else 99, int(m.pf[f]) + q)
+			m.scrivi("Rubati %d Punti Forza al nemico." % q)
+		"Q":
+			await m.galattico.segreto_nemico(f)
 		"R":
 			if f == Motore.R:
 				if p["lealta"] == 4 and p["stato"] in ["imperiale", "fermata"]:
@@ -632,6 +701,8 @@ func _completa(g: Dictionary) -> void:
 				if p["stato"] == "ribellione":
 					p["stato"] = "fermata"
 					m.scrivi("La ribellione su %s è fermata." % Dati.pianeta(pid)["nome"])
+					if m.livello != "sistema":
+						await m.av.domino(pid, "fermata", Motore.I)
 		"S":
 			await _sabotaggio(n)
 		"P":
@@ -658,7 +729,16 @@ func _completa(g: Dictionary) -> void:
 						u["ind"] = true
 					else:
 						u["scoperta"] = true
-			if n >= 2:
+			if m.livello == "galassia":
+				if f == Motore.R and m.galattico.segreto_attivo(pid, "archivi"):
+					m.scrivi("Gli Archivi imperiali svelano tutti i Segreti planetari!")
+					for x in m.galattico.segreti.keys():
+						await m.galattico.svela(x)
+				if f == Motore.R and m.galattico.segreto_attivo(pid, "deltronics"):
+					await _pesca_possesso(g, false)
+				if n >= 2:
+					await m.galattico.segreto_nemico(f)
+			elif n >= 2:
 				m.vittoria_info[f] = true
 				m.scrivi("Un segreto nemico è svelato: Punto Vittoria per Raccogli informazioni.")
 		"F":

@@ -47,10 +47,22 @@ var da_rigiocare: Array = []
 var in_simulazione_prima := false
 var richiesta_corrente: Dictionary = {}
 var richiesta_posto := -1
+# --- Province Game e Galactic Game
+var livello := "sistema"         # sistema, provincia, galassia
+var provincia := 0
+var av: Avanzato
+var galattico: Galattico
+var sovrani := {}                # nome -> stato del sovrano convocato
+var eventi_attivi: Array = []    # eventi galattici in vigore in questo turno
+var pf := [0, 0]                 # tracciati delle risorse [Ribelli, Impero]
+var _cache_pianeti: Array = []
+var giro := 0                    # primo o secondo giro di turni nel Galactic Game
 
 
 func _init() -> void:
 	Dati.d()
+	av = Avanzato.new(self)
+	galattico = Galattico.new(self)
 
 
 # =====================================================================================
@@ -190,7 +202,7 @@ func mil_su_pianeta(pid: int, fz: int) -> Array:
 	var out := []
 	for id in unita:
 		var u: Dictionary = unita[id]
-		if u["k"] == "mil" and u["fz"] == fz and u["luogo"] != "" and u["luogo"] != "morto" and int(u["luogo"].get_slice(":", 0)) == pid:
+		if u["k"] == "mil" and u["fz"] == fz and is_amb(u["luogo"]) and int(u["luogo"].get_slice(":", 0)) == pid:
 			out.append(id)
 	return out
 
@@ -212,12 +224,82 @@ func luoghi_sistema() -> Array:
 
 
 func scenario_pianeti() -> Array:
+	if not _cache_pianeti.is_empty():
+		return _cache_pianeti
 	var out := []
 	for p in Dati.d()["galassia"]["pianeti"]:
-		if int(p["stella"]) == int(scenario.get("stella", 0)):
-			out.append(int(p["id"]))
+		var pid := int(p["id"])
+		if pianeti.has(pid) and pianeti[pid].get("distrutto", false):
+			continue
+		match livello:
+			"sistema":
+				if int(p["stella"]) != int(scenario.get("stella", 0)):
+					continue
+			"provincia":
+				if int(pid / 100) != provincia:
+					continue
+		out.append(pid)
 	out.sort()
+	if not pianeti.is_empty():
+		_cache_pianeti = out
 	return out
+
+
+func azzera_cache() -> void:
+	_cache_pianeti = []
+
+
+func is_amb(l: String) -> bool:
+	if l == "" or l == "morto" or l.begins_with("D") or l.begins_with("S:"):
+		return false
+	return l.get_slice(":", 1).is_valid_int()
+
+
+func is_orbita(l: String) -> bool:
+	return l.ends_with(":o")
+
+
+func distrutto(pid: int) -> bool:
+	return pianeti.has(pid) and pianeti[pid].get("distrutto", false)
+
+
+func evento_attivo(nr: int) -> bool:
+	return eventi_attivi.has(nr)
+
+
+## Pianeta natale e regalità (26.0): 0 nessuno, 1 pianeta natale, 2 reale sul suo pianeta.
+func natale(id: int, pid: int) -> int:
+	var u: Dictionary = unita[id]
+	if u["k"] != "pg" or u.get("sovrano", false):
+		return 0
+	var nome_p: String = str(Dati.pianeta(pid).get("nome", ""))
+	if not u["c"].get("pianeti_natali", []).has(nome_p):
+		return 0
+	var titolo: String = str(u["c"].get("titolo_en", ""))
+	for t in ["Prince", "Princess", "King", "Queen", "Lord", "Duke", "Duchess", "Baron", "Heir", "Emperor", "Empress", "Count"]:
+		if titolo.contains(t) and titolo.contains(nome_p):
+			return 2
+	return 1
+
+
+## +1 al Comando di un personaggio reale sul suo pianeta natale (26.0).
+func bonus_reale(id: int, l: String) -> int:
+	if id < 0 or livello == "sistema" or not unita.has(id):
+		return 0
+	if natale(id, pid_di(l)) == 2 and comando(id) > 0:
+		return 1
+	return 0
+
+
+## Nuova unità militare dal catalogo delle regole avanzate (19.7).
+func nuova_unita(fz: int, cat: String, amb := "") -> int:
+	var d: Dictionary = Dati.d()["regole_avanzate"]["unita"][cat]
+	var id := prossimo_id
+	prossimo_id += 1
+	unita[id] = {"id": id, "k": "mil", "fz": fz, "tipo": "rib" if fz == R else cat, "cat": cat, "forza": int(d["f"]),
+		"spazio": int(d["s"]), "amb": amb, "mobile": bool(d["mobile"]), "luogo": "", "mosso": false, "scoperta": false,
+		"elite": d.get("elite", false), "suicida": d.get("suicida", false), "atrocita": d.get("atrocita", false)}
+	return id
 
 
 func pid_di(luogo: String) -> int:
@@ -247,6 +329,11 @@ func nome_u(id: int) -> String:
 
 func descr_mil(id: int) -> String:
 	var u: Dictionary = unita[id]
+	if u.has("cat"):
+		var d: Dictionary = Dati.d()["regole_avanzate"]["unita"][u["cat"]]
+		if u["fz"] == R:
+			return "%s %d-%d%s" % [Dati.AMBIENTI_NOMI.get(u["amb"], ""), int(d["f"]), int(d["s"]), " d'élite" if d.get("elite", false) else ""]
+		return "%s %d-%d" % [d["nome"], int(d["f"]), int(d["s"])]
 	match u["tipo"]:
 		"milizia":
 			return "Milizia 1-0"
@@ -354,6 +441,9 @@ func prepara(config: Dictionary) -> void:
 	rng.seed = seme
 	scenario_id = config.get("scenario", "egrix")
 	scenario = Dati.d()["scenari"][scenario_id]
+	livello = str(scenario.get("livello", "sistema"))
+	provincia = int(scenario.get("provincia", 0))
+	_cache_pianeti = []
 	giocatori = config.get("giocatori", [{"nome": "Ribelli", "ia": false}, {"nome": "Impero", "ia": true}])
 	var D := Dati.d()
 	for c in D["carte"]["personaggi"]:
@@ -369,10 +459,17 @@ func prepara(config: Dictionary) -> void:
 		if armageddon and pol.get("AC", false):
 			stato = "ribelle"
 			lea = 4
-		pianeti[pid] = {"lealta": maxi(lea, 0), "stato": stato, "bdp": int(scenario["bdp"].get(str(pid), 0)), "su": true, "coup": {}}
+		var bdp := 0
+		var bd = scenario.get("bdp", {})
+		if bd is Dictionary:
+			bdp = int(bd.get(str(pid), 0))
+		elif str(bd) == "tutti2":
+			bdp = 2
+		pianeti[pid] = {"lealta": maxi(lea, 0), "stato": stato, "bdp": bdp, "su": livello != "galassia", "coup": {}, "distrutto": false}
 	_mescola(mazzo_pg[R])
 	_mescola(mazzo_pg[I])
 	_mescola(mazzo_poss)
+	_cache_pianeti = []
 
 
 func _mescola(a: Array) -> void:
@@ -501,23 +598,32 @@ func _pilota_per_nave(ids: Array, nave: Dictionary) -> int:
 # =====================================================================================
 
 func gioca() -> void:
-	await schiera()
+	match livello:
+		"provincia":
+			await av.schiera_provincia()
+		"galassia":
+			await galattico.prepara_galassia()
+		_:
+			await schiera()
 	while esito == "":
-		for f in [R, I]:
-			di_turno = f
-			await turno_giocatore(f)
+		if livello == "galassia":
+			await galattico.stadio_galattico()
 			if esito != "":
 				break
-		if esito != "":
-			break
-		# Interfase (Caso 15.52)
-		for pid in pianeti:
-			var p: Dictionary = pianeti[pid]
-			if p["stato"] == "ribellione" and mil_su_pianeta(pid, I).is_empty() and p["su"]:
-				p["stato"] = "ribelle"
-				scrivi("%s è ora sotto Controllo ribelle!" % Dati.pianeta(pid)["nome"])
-				evento.emit("controllo_ribelle", {"pid": pid})
-		controlla_vittoria_istantanea()
+		for g in (2 if livello == "galassia" else 1):
+			giro = g
+			for f in [R, I]:
+				di_turno = f
+				await turno_giocatore(f)
+				if esito != "":
+					break
+			if esito != "":
+				break
+			await interfase()
+			if livello == "galassia" and esito == "" and punti_vittoria()["totale"] >= int(scenario["soglia_pv"]):
+				_fine("ribelli", "I Ribelli raggiungono %d Punti Vittoria: la galassia è libera!" % punti_vittoria()["totale"])
+			if esito != "":
+				break
 		if esito != "":
 			break
 		if turno >= int(scenario["turni"]):
@@ -527,6 +633,19 @@ func gioca() -> void:
 		scrivi("— Turno %d —" % turno)
 		cambiato.emit()
 	finita.emit(esito)
+
+
+## Interfase (15.52): i pianeti in ribellione senza truppe imperiali passano sotto controllo ribelle.
+func interfase() -> void:
+	for pid in scenario_pianeti():
+		var p: Dictionary = pianeti[pid]
+		if p["stato"] == "ribellione" and mil_su_pianeta(pid, I).is_empty() and p["su"]:
+			p["stato"] = "ribelle"
+			scrivi("%s è ora sotto Controllo ribelle!" % Dati.pianeta(pid)["nome"])
+			evento.emit("controllo_ribelle", {"pid": pid})
+			if livello != "sistema":
+				await av.domino(pid, "controllo", R)
+	controlla_vittoria_istantanea()
 
 
 func turno_giocatore(f: int) -> void:
@@ -540,20 +659,25 @@ func turno_giocatore(f: int) -> void:
 	evento.emit("turno", {"f": f, "turno": turno})
 	if f == R:
 		_cura_sontag()
-	fase = "movimento"
-	cambiato.emit()
-	await movimento(f)
-	if esito != "":
-		return
-	fase = "reazione"
-	cambiato.emit()
-	await reazione(avversario(f), f)
-	fase = "combattimento"
-	cambiato.emit()
-	await combattimenti_militari(f)
+	if livello == "sistema":
+		fase = "movimento"
+		cambiato.emit()
+		await movimento(f)
+		if esito != "":
+			return
+		fase = "reazione"
+		cambiato.emit()
+		await reazione(avversario(f), f)
+		fase = "combattimento"
+		cambiato.emit()
+		await combattimenti_militari(f)
+	else:
+		await av.operazioni(f)
 	controlla_vittoria_istantanea()
 	if esito != "":
 		return
+	if livello == "galassia" and f == R:
+		await galattico.rivela_segreti()
 	fase = "ricerca"
 	cambiato.emit()
 	await ricerca_fase(avversario(f), f)
@@ -562,10 +686,12 @@ func turno_giocatore(f: int) -> void:
 		return
 	fase = "missioni"
 	cambiato.emit()
+	if livello != "sistema":
+		await av.riparazioni(f)
 	var mis := Missioni.new(self)
 	await mis.fase_missioni(f)
 	_guarigioni(f)
-	if f == I:
+	if f == I and livello != "galassia":
 		_navi_ai_cavalieri()
 	aggiorna_controllo()
 	controlla_vittoria_istantanea()
@@ -1062,6 +1188,10 @@ func reazione(f: int, nemico: int) -> void:
 			var u: Dictionary = unita[id]
 			if u["fz"] != f or u["luogo"] == "" or u["luogo"] == "morto" or u["luogo"] == l or pid_di(u["luogo"]) != pid:
 				continue
+			if u.get("atrocita", false) or u.get("interc", false) or str(u["luogo"]).begins_with("D") or str(u["luogo"]).begins_with("S:"):
+				continue
+			if u["k"] == "pg" and (u.get("sovrano", false) or (is_orbita(u["luogo"]) and u["nave"].is_empty() and mil_in(u["luogo"], f).is_empty())):
+				continue
 			if u["k"] == "pg":
 				if u["prig"] < 0 and not u["truppe"]:
 					opz.append({"t": "%s (da %s)" % [u["nome"], nome_luogo(u["luogo"])], "id": id})
@@ -1142,8 +1272,8 @@ func battaglia(l: String, att: int, ribellione := false) -> void:
 	else:
 		col = 5 - (mini(int(ceil(float(fd) / max(fa, 1))), 5) - 1)
 	var spost := 0   # positivo = a favore dell'attaccante
-	var ca := comando(capo_a) if capo_a >= 0 else 0
-	var cd := comando(capo_d) if capo_d >= 0 else 0
+	var ca := (comando(capo_a) + bonus_reale(capo_a, l)) if capo_a >= 0 else 0
+	var cd := (comando(capo_d) + bonus_reale(capo_d, l)) if capo_d >= 0 else 0
 	if ribellione and capo_a < 0:
 		ca = 1
 	spost += ca - cd
@@ -1154,8 +1284,11 @@ func battaglia(l: String, att: int, ribellione := false) -> void:
 			spost += segno_rib
 			break
 	var capo_imp := capo_a if att == I else capo_d
-	if tipo in Dati.SPECIALI and capo_imp < 0:
+	var elite_imp := mil_in(l, I).any(func(x): return unita[x].get("elite", false))
+	if tipo in Dati.SPECIALI and capo_imp < 0 and not elite_imp:
 		spost += segno_rib
+	if livello == "galassia":
+		spost += galattico.spostamento_vivo(pid_di(l), att)
 	col = clampi(col + spost, 0, 10)
 	var tab: Array = Dati.d()["tabelle"]["combattimento_militare"]["righe_dado"]
 	var da := dado()
@@ -1385,10 +1518,12 @@ func _controlla_navi_orfane() -> void:
 # RIBELLIONE (15.0)
 # =====================================================================================
 
-func sposta_lealta(pid: int, passi: int, verso: int) -> int:
+func sposta_lealta(pid: int, passi: int, verso: int, _domino := true) -> int:
 	## verso: R = verso Agitazione, I = verso Patriottico. Restituisce i passi effettivi.
 	var p: Dictionary = pianeti[pid]
-	if p["stato"] in ["ribellione", "ribelle"]:
+	if p["stato"] in ["ribellione", "ribelle"] or p.get("distrutto", false):
+		return 0
+	if livello == "galassia" and galattico.lealta_bloccata(pid):
 		return 0
 	var prima: int = p["lealta"]
 	var dir := 1 if verso == R else -1
@@ -1410,6 +1545,11 @@ func avvia_ribellione(pid: int, raddoppio: Dictionary) -> void:
 	if scenario_id == "egrix":
 		rinforzi_attesi += 1
 	var amb: Array = Dati.pianeta(pid)["ambienti"]
+	if livello == "galassia" and not era_fermata:
+		var totale := 0
+		for i in amb.size():
+			totale += int(amb[i].get("risorse", 0))
+		galattico.entrate_ribellione(pid, totale)
 	for i in amb.size():
 		var l := "%d:%d" % [pid, i]
 		var punti := int(amb[i].get("risorse", 0))
@@ -1422,6 +1562,9 @@ func avvia_ribellione(pid: int, raddoppio: Dictionary) -> void:
 		var tipo: String = amb[i]["tipo"]
 		var nuove := []
 		var spazio: int = taglia(l) - mil_in(l, R).size()
+		if livello != "sistema":
+			nuove = await av.compra_ribelli(l, punti, bool(amb[i].get("risorse_stella", false)))
+			punti = 0
 		while punti > 0 and spazio > 0:
 			# acquisto: 2-1 per 3 punti, 1-0 per 1 punto; la scelta la fa il giocatore ribelle
 			var opz := []
@@ -1445,6 +1588,8 @@ func avvia_ribellione(pid: int, raddoppio: Dictionary) -> void:
 				var k2 := await scegli(R, "Le nuove truppe attaccano subito gli Imperiali in %s?" % nome_luogo(l), [{"t": "Sì, all'attacco"}, {"t": "No"}], {"chiave": "attacco_ribellione", "conferma": true})
 				if k2 == 0:
 					await battaglia(l, R, true)
+	if livello != "sistema" and not era_fermata:
+		await av.domino(pid, "ribellione", R)
 	cambiato.emit()
 
 
@@ -1453,10 +1598,14 @@ func avvia_ribellione(pid: int, raddoppio: Dictionary) -> void:
 # =====================================================================================
 
 func punti_vittoria() -> Dictionary:
+	if livello == "galassia":
+		return galattico.punti_vittoria()
 	var pv: Dictionary = Dati.d()["tabelle"]["punti_vittoria_star_system"]
+	if livello == "provincia":
+		pv = Dati.d()["regole_avanzate"]["pv_provincia"]
 	var tot := 0
 	var dett := []
-	for pid in pianeti:
+	for pid in scenario_pianeti():
 		var p: Dictionary = pianeti[pid]
 		var nome: String = Dati.pianeta(pid)["nome"]
 		if p["stato"] == "ribelle":
@@ -1508,6 +1657,9 @@ func controlla_vittoria_istantanea() -> void:
 	for pid in pianeti:
 		if pianeti[pid]["stato"] != "imperiale" or controllo(pid) != I:
 			tutti_imp = false
+	if livello != "sistema":
+		_vittoria_avanzata(ribelli_vivi)
+		return
 	if scenario_id == "egrix":
 		for pid in pianeti:
 			if pianeti[pid]["stato"] == "ribelle":
@@ -1529,6 +1681,48 @@ func controlla_vittoria_istantanea() -> void:
 			return
 		if tutti_imp and ribelli_persi >= 3:
 			_fine("impero", "Tutti i pianeti sono imperiali e tre Ribelli sono caduti: vittoria immediata dell'Impero.")
+
+
+func _stato_ribelle(pid: int) -> bool:
+	return pianeti.has(pid) and pianeti[pid]["stato"] == "ribelle" and not distrutto(pid)
+
+
+func pid_per_status(st: String) -> int:
+	for p in Dati.d()["galassia"]["pianeti"]:
+		if p.get("status", null) != null and str(p["status"]) == st:
+			return int(p["id"])
+	return -1
+
+
+func _vittoria_avanzata(ribelli_vivi: int) -> void:
+	var ribelli_pianeti := 0
+	var qualcosa := 0
+	for pid in scenario_pianeti():
+		if pianeti[pid]["stato"] == "ribelle":
+			ribelli_pianeti += 1
+		if pianeti[pid]["stato"] in ["ribelle", "ribellione"]:
+			qualcosa += 1
+	if ribelli_vivi == 0:
+		_fine("impero", "Tutti i personaggi ribelli sono morti o catturati: vittoria immediata dell'Impero.")
+		return
+	match scenario_id:
+		"backdoor":
+			var cieson := 211
+			if _stato_ribelle(241) and _stato_ribelle(cieson) and ribelli_pianeti >= 3:
+				_fine("ribelli", "Orning, Cieson e un altro pianeta sono sotto controllo ribelle: vittoria immediata dei Ribelli!")
+				return
+			var truppe := false
+			for id in unita:
+				if unita[id]["k"] == "mil" and unita[id]["fz"] == R and vivo(id) and unita[id]["luogo"] != "":
+					truppe = true
+			if turno >= 3 and qualcosa == 0 and not truppe:
+				_fine("impero", "Dal terzo turno non resta nulla di ribelle nella Seconda Provincia: vittoria immediata dell'Impero.")
+		"orlog":
+			if _stato_ribelle(152) and _stato_ribelle(162):
+				_fine("ribelli", "Diomas e il Trono di Orlog sono sotto controllo ribelle: vittoria immediata dei Ribelli!")
+		"galattica":
+			if galattico.base_svelata and ribelli_pianeti == 0:
+				_fine("impero", "La base segreta è svelata e non resta un solo pianeta ribelle: vittoria immediata dell'Impero.")
 
 
 func fine_partita() -> void:

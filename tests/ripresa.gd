@@ -10,8 +10,8 @@ class ControlloSim:
 
 func _init() -> void:
 	var ok := true
-	for sc in ["egrix", "varu"]:
-		for seme in [11, 12, 13]:
+	for sc in ["egrix", "varu", "backdoor", "orlog", "galattica"]:
+		for seme in ([11, 12, 13] if sc in ["egrix", "varu"] else [11]):
 			var a := _nuovo(sc, seme)
 			await a.gioca()
 			var b := _nuovo(sc, seme)

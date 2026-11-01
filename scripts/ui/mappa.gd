@@ -14,12 +14,27 @@ var selezionati: Dictionary = {}   # id unità evidenziati
 var _rect_luoghi := {}
 var _rect_pedine := []   # [Rect2, id]
 var _rect_pianeti := {}
+var _rect_segreti := {}
 var _stelle_fondo: Array = []
 var _tempo := 0.0
 var _voli: Array = []    # animazioni {da: Vector2, a: Vector2, t: float, col}
 var _pos_pianeti := {}
 var _hover := ""
+var stella_vista := -1
 const PED := 50.0
+
+
+## Stella del sistema mostrato (nello Star System Game quella dello scenario).
+func stella() -> int:
+	if m.livello == "sistema" or stella_vista < 0:
+		return int(m.scenario.get("stella", stella_vista))
+	return stella_vista
+
+
+func pianeti_vista() -> Array:
+	if m.livello == "sistema":
+		return m.scenario_pianeti()
+	return m.scenario_pianeti().filter(func(x): return int(x / 10) == stella())
 
 
 func _ready() -> void:
@@ -80,12 +95,13 @@ func _draw() -> void:
 	_rect_luoghi.clear()
 	_rect_pedine.clear()
 	_rect_pianeti.clear()
+	_rect_segreti.clear()
 	draw_rect(Rect2(Vector2.ZERO, size), Color(0.015, 0.02, 0.05))
 	for s in _stelle_fondo:
 		var tw := 0.75 + 0.25 * sin(_tempo * 1.3 + s[0].x * 40.0)
 		draw_circle(s[0] * size, s[1] * 0.6, Color(0.85, 0.88, 1.0, s[2] * tw))
 	_disegna_sistema()
-	var pids := m.scenario_pianeti()
+	var pids := pianeti_vista()
 	var x0 := _larghezza_orbite()
 	var w := size.x - x0 - 8
 	var h: float = (size.y - 8) / max(3, pids.size())
@@ -95,7 +111,7 @@ func _draw() -> void:
 
 func _disegna_sistema() -> void:
 	var c := _centro_orbite()
-	var stella: Dictionary = Dati.d()["stelle"].get(int(m.scenario["stella"]), {})
+	var st: Dictionary = Dati.d()["stelle"].get(stella(), {})
 	var rmax := _raggio_max()
 	# alone e stella
 	for k in 12:
@@ -106,10 +122,10 @@ func _disegna_sistema() -> void:
 	draw_circle(c, 34 * pulsa, Color(1.0, 0.82, 0.25))
 	draw_circle(c, 24 * pulsa, Color(1.0, 0.95, 0.65))
 	var ft := UI.font_titolo
-	var nome: String = stella.get("nome", "")
+	var nome: String = st.get("nome", "")
 	_testo_centro(ft, c + Vector2(0, -56), nome.to_upper(), 28, Color(0.7, 0.85, 1.0))
-	_testo_centro(UI.font_grassetto, c + Vector2(0, 7), str(int(m.scenario["stella"])), 18, Color(0.2, 0.15, 0.05))
-	var pids := m.scenario_pianeti()
+	_testo_centro(UI.font_grassetto, c + Vector2(0, 7), str(stella()), 18, Color(0.2, 0.15, 0.05))
+	var pids := pianeti_vista()
 	for i in pids.size():
 		var pid: int = pids[i]
 		var dp := Dati.pianeta(pid)
@@ -131,7 +147,7 @@ func _disegna_sistema() -> void:
 		var ni := 0
 		for id in m.unita:
 			var u: Dictionary = m.unita[id]
-			if u["luogo"] != "" and u["luogo"] != "morto" and m.pid_di(u["luogo"]) == pid:
+			if u["luogo"] != "" and u["luogo"] != "morto" and (m.is_amb(u["luogo"]) or m.is_orbita(u["luogo"])) and m.pid_di(u["luogo"]) == pid:
 				if u["fz"] == Motore.R:
 					nr += 1
 				else:
@@ -158,6 +174,38 @@ func _disegna_sistema() -> void:
 	var y := 26.0
 	_testo(UI.font_titolo, Vector2(16, y), "TURNO %d DI %d" % [m.turno, int(m.scenario["turni"])], 24, UI.GIALLO)
 	_testo(UI.font_testo, Vector2(16, y + 26), "%s — %s" % [Dati.FAZIONI[m.di_turno], fasi.get(m.fase, m.fase)], 17, UI.colore_fazione(m.di_turno))
+	if m.livello != "sistema":
+		_disegna_derive()
+
+
+## Caselle di Deriva, Deriva 2 e, se serve, Fuori mappa per il sistema mostrato.
+func _disegna_derive() -> void:
+	var w := _larghezza_orbite()
+	var bw := (w - 36) / 2.0
+	var bh := 96.0
+	var y := size.y - bh - 10
+	var caselle := [["D:%d" % stella(), "DERIVA"], ["D2:%d" % stella(), "DERIVA 2"]]
+	var fuori := {}
+	for id in m.unita:
+		var l: String = str(m.unita[id]["luogo"])
+		if l.begins_with("S:"):
+			fuori[l] = true
+	for l in fuori:
+		caselle.append([l, "FUORI MAPPA (%s)" % Dati.d()["stelle"].get(int(l.get_slice(":", 1)), {}).get("nome", "")])
+	for i in caselle.size():
+		var col := i % 2
+		var riga := int(i / 2)
+		var r := Rect2(12 + col * (bw + 12), y - riga * (bh + 8), bw, bh)
+		var l: String = caselle[i][0]
+		_rect_luoghi[l] = r
+		var ev = evidenziati.get(l, null)
+		draw_rect(r, Color(0.06, 0.05, 0.12, 0.92))
+		draw_rect(r, ev if ev != null else Color(0.6, 0.5, 0.9, 0.7), false, 3.0 if ev != null else 1.5)
+		_testo(UI.font_titolo2, r.position + Vector2(8, 18), caselle[i][1], 14, Color(0.8, 0.75, 1.0))
+		var area := Rect2(r.position + Vector2(4, 24), r.size - Vector2(8, 28))
+		var meta := area.size.y / 2.0
+		_disegna_pedine(l, Motore.R, Rect2(area.position, Vector2(area.size.x, meta - 1)))
+		_disegna_pedine(l, Motore.I, Rect2(area.position + Vector2(0, meta), Vector2(area.size.x, meta - 1)))
 
 
 func _nome_stato(pid: int) -> String:
@@ -207,6 +255,14 @@ func _disegna_traccia(pid: int, r: Rect2) -> void:
 	var status = dp.get("status", null)
 	if status != null and str(status) != "":
 		_testo(UI.font_testo, hdr.position + Vector2(4, 48), str(status).to_upper(), 13, UI.GRIGIO)
+	if m.livello == "galassia" and m.galattico.segreti.has(pid):
+		var vis: bool = m.galattico.svelati.has(pid) or vista == Motore.I
+		var ts := UI.pedina_tex("segreto_" + str(m.galattico.segreti[pid]) if vis else "segreto")
+		var sr := Rect2(r.position.x + 214, r.position.y + 6, 40, 40)
+		if ts != null:
+			draw_texture_rect(ts, sr, false)
+		if vis:
+			_rect_segreti[sr] = pid
 	# traccia politica: 5 caselle
 	var tx := r.position.x + 8
 	var ty := r.position.y + 58
@@ -251,6 +307,20 @@ func _disegna_traccia(pid: int, r: Rect2) -> void:
 	_testo(UI.font_grassetto, bdp_r.position + Vector2(54, 20), "BDP livello %d" % int(p["bdp"]), 15, Color(0.85, 0.9, 1))
 	var chi: String = "nessuno" if ctrl < 0 else Dati.FAZIONI[ctrl]
 	_testo(UI.font_testo, bdp_r.position + Vector2(54, 40), ("attiva" if p["su"] else "fuori uso") + " · controllo: " + chi, 13, UI.GRIGIO)
+	if m.livello != "sistema":
+		var oy := bdp_r.end.y + 6
+		var orb := Rect2(tx, oy, 5 * (bw + 2) - 2, r.end.y - oy - 4)
+		if orb.size.y > 40:
+			var lo := "%d:o" % pid
+			_rect_luoghi[lo] = orb
+			var ev = evidenziati.get(lo, null)
+			draw_rect(orb, Color(0.03, 0.04, 0.1, 0.95))
+			draw_rect(orb, ev if ev != null else (Color.WHITE if _hover == lo else Color(0.5, 0.6, 0.9, 0.7)), false, 3.0 if ev != null else 1.5)
+			_testo(UI.font_titolo2, orb.position + Vector2(6, 15), "ORBITA", 12, Color(0.7, 0.8, 1.0))
+			var ar := Rect2(orb.position + Vector2(60, 2), Vector2(orb.size.x - 62, orb.size.y - 4))
+			var meta := ar.size.y / 2.0
+			_disegna_pedine(lo, Motore.R, Rect2(ar.position, Vector2(ar.size.x, meta - 1)))
+			_disegna_pedine(lo, Motore.I, Rect2(ar.position + Vector2(0, meta), Vector2(ar.size.x, meta - 1)))
 	# ambienti
 	var amb: Array = dp["ambienti"]
 	var ax := r.position.x + 8 + 5 * (bw + 2) + 14
@@ -375,7 +445,7 @@ func _disegna_pedina(id: int, pr: Rect2) -> void:
 	var u: Dictionary = m.unita[id]
 	var t: Texture2D = null
 	if u["k"] == "pg":
-		t = UI.pedina_tex(UI.chiave_pg(u["nome"]), u["ind"])
+		t = UI.pedina_tex(str(u["ped"]) if u.has("ped") else UI.chiave_pg(u["nome"]), u["ind"])
 	else:
 		var nascosta: bool = u["fz"] == Motore.I and u["mobile"] and not u["scoperta"] and vista == Motore.R
 		t = UI.pedina_tex(UI.chiave_mil(u), nascosta)
@@ -446,6 +516,11 @@ func _gui_input(ev: InputEvent) -> void:
 		for rp in _rect_pedine:
 			if rp[0].has_point(ev.position):
 				info = descrivi(rp[1])
+		for sr in _rect_segreti:
+			if sr.has_point(ev.position):
+				var k: String = m.galattico.segreti[_rect_segreti[sr]]
+				var d: Dictionary = Dati.d()["regole_avanzate"]["segreti"][k]
+				info = "Segreto planetario: %s\n%s" % [d["nome"], d["it"]]
 		if info == "" and _hover != "":
 			info = m.nome_luogo(_hover)
 		tooltip_text = info

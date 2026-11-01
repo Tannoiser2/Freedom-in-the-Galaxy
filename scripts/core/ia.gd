@@ -93,6 +93,41 @@ func scegli(m: Motore, f: int, req: Dictionary) -> int:
 			return 1 if not m._bdp_da_rialzare(Motore.I).is_empty() else 0
 		"assegna_possesso":
 			return _assegna_possesso(m, opz, req)
+		"acquista":
+			return _acquista(m, f, opz, req)
+		"piazza":
+			return _piazza(m, f, opz, req)
+		"tipo_unita":
+			return _tipo_unita(m, f, opz)
+		"mov_truppe", "mov_superficie":
+			return _mov_truppe(m, f, opz)
+		"dichiara_spazio":
+			return 0 if _conviene_spazio(m, f, req.get("luogo", "")) else 1
+		"attacca_bdp":
+			var o: String = req.get("luogo", "")
+			var pid := m.pid_di(o)
+			var forza_bdp: int = [1, 4, 8][clampi(int(m.pianeti[pid]["bdp"]), 0, 2)] if m.pianeti[pid]["su"] else 1
+			var mie := m.av.spazio_mil(m.av.mil_libere(o, f))
+			return 0 if mie >= (forza_bdp + m.av.spazio_mil(m.av.mil_libere(o, m.avversario(f)))) * 2 else 1
+		"radente":
+			return 0
+		"assalto":
+			return 0
+		"domino", "sposta_evento":
+			return _domino(m, f, opz, req)
+		"schiera_nave":
+			return _miglior_luogo(m, f, opz, "")
+		"tasse_modo":
+			return 3
+		"tassa":
+			var lea: int = m.pianeti[int(req.get("pid", 0))]["lealta"]
+			return 0 if lea <= 1 else (1 if lea <= 2 else 2)
+		"base_segreta":
+			return int(m.seme) % opz.size()
+		"atrocita":
+			return _atrocita(m, opz)
+		"insorgi":
+			return 0
 		"giustiziato":
 			var b2 := 0
 			var bv3 := 99
@@ -112,6 +147,8 @@ func scegli(m: Motore, f: int, req: Dictionary) -> int:
 ## Quanto è interessante un ambiente per i personaggi della fazione f.
 func valore_luogo(m: Motore, f: int, l: String) -> float:
 	var pid := m.pid_di(l)
+	if not m.pianeti.has(pid) or m.distrutto(pid):
+		return -50.0
 	var p: Dictionary = m.pianeti[pid]
 	var v := 0.0
 	var nemico := m.avversario(f)
@@ -156,6 +193,8 @@ func valore_luogo(m: Motore, f: int, l: String) -> float:
 func _rischio_volo(m: Motore, f: int, id: int, da: String, a: String) -> float:
 	if da == "" or da == a:
 		return 0.0
+	if m.livello != "sistema":
+		return _rischio_avanzato(m, f, id, da, a)
 	var stesso := m.pid_di(da) == m.pid_di(a)
 	var nave_qui := false
 	for o in m.pg_in(da, f, true):
@@ -200,10 +239,13 @@ func _miglior_luogo(m: Motore, f: int, opz: Array, scopo: String) -> int:
 # ------------------------------------------------------------------------------------
 
 func _pianifica(m: Motore, f: int) -> void:
-	if turno_piano == m.turno * 2 + f:
+	if turno_piano == m.turno * 10 + m.giro * 2 + f:
 		return
-	turno_piano = m.turno * 2 + f
+	turno_piano = m.turno * 10 + m.giro * 2 + f
 	obiettivi.clear()
+	if m.livello != "sistema":
+		_pianifica_avanzato(m, f)
+		return
 	var luoghi := m.luoghi_sistema()
 	if f == Motore.R:
 		# tutti i personaggi verso l'ambiente migliore, raggiungibile in un colpo
@@ -365,14 +407,15 @@ func _assegna(m: Motore, f: int, opz: Array, req: Dictionary) -> int:
 	if f == Motore.R:
 		prior = {"R": 100, "D": 40 + m.val(id, "diplomazia") * 6, "C": 35 + m.val(id, "comando") * 5, "B": 20 + m.val(id, "comando") * 4,
 			"I": 18 + m.val(id, "intelligenza") * 3, "A": 10 + m.val(id, "intelligenza") * 3, "T": 15 + m.val(id, "comando") * 5,
-			"P": 12, "G": 22, "S": 14, "F": 60}
+			"P": 12, "G": 22, "S": 14, "F": 60, "E": 45, "H": 20, "Q": 50}
 		if p["lealta"] <= 1:
 			prior["B"] += 15
 		if p["lealta"] < 4:
 			prior["R"] = 0
 	else:
 		prior = {"R": 100, "D": 25 + m.val(id, "diplomazia") * 6 + p["lealta"] * 6, "C": 20 + m.val(id, "comando") * 4 + p["lealta"] * 4,
-			"A": 30 + m.val(id, "intelligenza") * 3, "I": 14 + m.val(id, "intelligenza") * 3, "S": 18, "G": 16, "F": 60}
+			"A": 30 + m.val(id, "intelligenza") * 3, "I": 14 + m.val(id, "intelligenza") * 3, "S": 18, "G": 16, "F": 60,
+			"E": 45, "H": 35, "Q": 55}
 	var best := 0
 	var bv := 5.0 if m.unita[id]["ferite"] > 0 and m.resistenza_residua(id) <= 2 else 0.0
 	for i in opz.size():
@@ -477,6 +520,18 @@ func _multi(m: Motore, f: int, req: Dictionary) -> int:
 			return mask
 		"accompagna":
 			return 0
+		"intercetta":
+			var loro := int(req.get("forza", 0))
+			var tot := 0
+			for i in opz.size():
+				tot += int(m.unita[opz[i]["id"]].get("spazio", 0))
+				mask |= 1 << i
+			return mask if tot >= loro + 1 else 0
+		"equipaggio":
+			var mx2 := int(req.get("max", opz.size()))
+			for i in mini(mx2, opz.size()):
+				mask |= 1 << i
+			return mask
 		"passeggeri":
 			var mx := int(req.get("max", opz.size()))
 			for i in mini(mx, opz.size()):
@@ -502,3 +557,281 @@ func _multi(m: Motore, f: int, req: Dictionary) -> int:
 	for i in opz.size():
 		mask |= 1 << i
 	return mask
+
+
+# ------------------------------------------------------------------------------------
+# Province Game e Galactic Game
+# ------------------------------------------------------------------------------------
+
+func _pilota_del_gruppo(m: Motore, f: int, l: String) -> int:
+	for o in m.pg_in(l, f, true):
+		if not m.unita[o]["nave"].is_empty() and m.val(o, "navigazione") > 0:
+			return o
+	return -1
+
+
+func _rischio_avanzato(m: Motore, f: int, id: int, da: String, a: String) -> float:
+	var pid_a := m.pid_di(a)
+	var stessa_pid := m.is_amb(da) and m.pid_di(da) == pid_a
+	if stessa_pid:
+		return 0.0
+	var pil := _pilota_del_gruppo(m, f, da)
+	if pil < 0:
+		return 99.0
+	var r := 0.0
+	var s_da := m.av.stella_di(da)
+	var s_a := int(pid_a / 10)
+	if s_da != s_a:
+		var dist := m.av.distanza(s_da, s_a)
+		var nav := m.val(pil, "navigazione")
+		r += maxi(0, dist - nav) * 2.0 + dist * 0.3
+		if not m.galattico.mossa_imperiale_ammessa(f, m.pid_di(da) if m.is_amb(da) or m.is_orbita(da) else -1, pid_a, da):
+			return 99.0
+	var ind: bool = m.unita[id]["ind"]
+	for pid in [m.pid_di(da), pid_a]:
+		if not m.pianeti.has(pid):
+			continue
+		var liv := m.bdp_attiva(pid, f)
+		var orb := m.av.spazio_mil(m.av.mil_libere("%d:o" % pid, m.avversario(f)))
+		if liv >= 0:
+			r += 0.4 + liv * 1.2 + (1.0 if ind else 0.0)
+		r += orb * 0.15
+	if m.distrutto(pid_a):
+		return 99.0
+	return r
+
+
+func _pianifica_avanzato(m: Motore, f: int) -> void:
+	var nemico := m.avversario(f)
+	var luoghi := m.luoghi_sistema()
+	var vicini := {}
+	for id in m.unita:
+		var u: Dictionary = m.unita[id]
+		if u["fz"] != f or not m.vivo(id) or u["k"] != "pg" or u["prig"] >= 0:
+			continue
+		var dove: String = u["luogo"]
+		var best := dove
+		var bv := -9999.0
+		var s_da := m.av.stella_di(dove)
+		for l in luoghi:
+			var pid := m.pid_di(l)
+			# nel Galactic Game si guardano solo i sistemi vicini
+			if m.livello == "galassia":
+				var k := "%d-%d" % [s_da, int(pid / 10)]
+				if not vicini.has(k):
+					vicini[k] = m.av.distanza(s_da, int(pid / 10))
+				if vicini[k] > 3:
+					continue
+			var v := valore_luogo(m, f, l) - _rischio_volo(m, f, id, dove, l)
+			if l == dove:
+				v += 1.5
+			if v > bv:
+				bv = v
+				best = l
+		obiettivi[id] = best
+	# truppe
+	var minacce := []
+	for l in luoghi:
+		var peso := 0.0
+		var p: Dictionary = m.pianeti[m.pid_di(l)]
+		if f == Motore.I:
+			for id in m.pg_in(l, Motore.R, true):
+				if m.unita[id]["ind"]:
+					peso += 2.0
+			peso += m.forza_mil(m.mil_in(l, Motore.R)) * 1.5
+			if p["stato"] == "ribellione":
+				peso += 5.0
+			peso += max(0, p["lealta"] - 2) * 1.0
+		else:
+			if p["stato"] == "ribellione":
+				peso += 6.0 + m.forza_mil(m.mil_in(l, Motore.I)) * 0.5
+			elif p["stato"] in ["imperiale", "fermata"]:
+				peso += p["lealta"] * 0.8 - m.forza_mil(m.mil_in(l, Motore.I)) * 0.6
+		minacce.append([peso, l])
+	minacce.sort_custom(func(a, b): return a[0] > b[0])
+	var usati := {}
+	for id in m.unita:
+		var u3: Dictionary = m.unita[id]
+		if u3["fz"] != f or not m.vivo(id) or u3["k"] != "mil":
+			continue
+		var qui: String = u3["luogo"]
+		obiettivi[id] = qui
+		if not u3["mobile"] or u3.get("atrocita", false):
+			continue
+		var obbligo := qui.begins_with("D") or qui.begins_with("S:")
+		if f == Motore.I and m.is_orbita(qui) and not obbligo:
+			continue
+		if not obbligo and m.is_amb(qui):
+			var pid_q := m.pid_di(qui)
+			# non lasciare un pianeta senza truppe
+			if m.mil_su_pianeta(pid_q, f).size() <= 1:
+				continue
+			if f == Motore.R and m.pianeti[pid_q]["stato"] == "ribellione":
+				continue
+		var s_q := m.av.stella_di(qui)
+		for mn in minacce:
+			var l: String = mn[1]
+			if mn[0] <= 1.0 and not obbligo:
+				break
+			if usati.get(l, 0) >= 3 or l == qui:
+				continue
+			var s_l := int(m.pid_di(l) / 10)
+			if (qui.begins_with("D:") or qui.begins_with("D2:")) and s_l != s_q:
+				continue
+			if m.livello == "galassia" and m.av.distanza(s_q, s_l) > 2:
+				continue
+			if f == Motore.R and u3["amb"] != "" and m.tipo_amb(l) != u3["amb"] and mn[0] < 6.0:
+				continue
+			if not m.galattico.mossa_imperiale_ammessa(f, m.pid_di(qui) if (m.is_amb(qui) or m.is_orbita(qui)) else -1, m.pid_di(l), qui):
+				continue
+			if m.mil_in(l, f).size() + usati.get(l, 0) >= m.taglia(l):
+				continue
+			var liv_l := m.bdp_attiva(m.pid_di(l), f)
+			if liv_l >= 1 and mn[0] < 8.0 + liv_l * 3.0:
+				continue
+			obiettivi[id] = l
+			usati[l] = usati.get(l, 0) + 1
+			break
+		if obbligo and obiettivi[id] == qui:
+			# truppe in deriva o fuori mappa: un'orbita qualsiasi raggiungibile
+			for pid in m.scenario_pianeti():
+				if qui.begins_with("S:") or int(pid / 10) == s_q:
+					obiettivi[id] = "%d:o" % pid
+					break
+
+
+func _mov_truppe(m: Motore, f: int, opz: Array) -> int:
+	_pianifica(m, f)
+	for i in opz.size():
+		var o: Dictionary = opz[i]
+		if o.get("fine", false):
+			continue
+		for id in m.mil_in(o["luogo_da"], f):
+			var u: Dictionary = m.unita[id]
+			if u["mosso"] or u.get("interc", false) or u.get("sup_mosso", false):
+				continue
+			var ob: String = obiettivi.get(id, o["luogo_da"])
+			if ob != o["luogo_da"]:
+				return i
+	return opz.size() - 1
+
+
+func _conviene_spazio(m: Motore, f: int, o: String) -> bool:
+	if o == "":
+		return false
+	var mie := m.av.spazio_mil(m.av.mil_libere(o, f))
+	var loro := m.av.spazio_mil(m.av.mil_libere(o, m.avversario(f)))
+	var pid := m.pid_di(o)
+	if m.controllo(pid) == m.avversario(f) and m.pianeti[pid]["su"]:
+		loro += int(m.pianeti[pid]["bdp"]) * 2
+	return float(mie) / max(1, loro) >= 1.5
+
+
+func _acquista(m: Motore, f: int, opz: Array, req: Dictionary) -> int:
+	var pf := int(req.get("pf", 0))
+	var trova := func(chiave: String, val) -> int:
+		for i in opz.size():
+			if opz[i].get(chiave, null) == val:
+				return i
+		return -1
+	# i BDP spenti si rialzano sempre (servono per il controllo dei pianeti)
+	for i in opz.size():
+		if opz[i].has("bdp_su"):
+			var pid: int = opz[i]["bdp_su"]
+			if f == Motore.R or m.galattico.capitale(pid) or m.pianeti[pid]["lealta"] >= 2 or m.livello == "galassia":
+				return i
+	if f == Motore.R:
+		# nel Galactic Game niente truppe dalla base finché non c'è un pianeta ribelle (38.53)
+		if m.livello == "galassia" and not m.galattico.base_svelata:
+			var ribelli := m.scenario_pianeti().any(func(x): return m.pianeti[x]["stato"] == "ribelle")
+			if not ribelli or pf < 15:
+				return 0
+		for c in ["r44", "r43", "r23", "r21", "r10"]:
+			var k: int = trova.call("cat", c)
+			if k >= 0:
+				return k
+		return 0
+	# Impero: élite, poi Linee e Veterane, poi riempitivi
+	for i in opz.size():
+		if opz[i].has("bdp_liv") and m.galattico.capitale(opz[i]["bdp_liv"]) and pf >= 10:
+			return i
+	var ordine := ["elite_esercito", "elite_flotta", "linea", "veterano", "pattuglia", "milizia"]
+	if m.storia.size() % 3 == 0:
+		ordine = ["elite_flotta", "veterano", "linea", "pattuglia", "milizia"]
+	for c in ordine:
+		var k2: int = trova.call("cat", c)
+		if k2 >= 0:
+			return k2
+	return 0
+
+
+func _piazza(m: Motore, f: int, opz: Array, req: Dictionary) -> int:
+	var cat: String = req.get("cat", "")
+	var d: Dictionary = Dati.d()["regole_avanzate"]["unita"].get(cat, {})
+	var best := 0
+	var bv := -9999.0
+	for i in opz.size():
+		var l: String = opz[i]["luogo"]
+		var v := 0.0
+		if l.begins_with("S:"):
+			v = float(i % 3)
+		elif m.is_orbita(l):
+			var pid := m.pid_di(l)
+			v = 2.0 + int(d.get("s", 0)) * 0.8 - m.av.spazio_mil(m.mil_in(l, f)) * 0.5
+			if m.galattico.capitale(pid):
+				v += 1.5
+			if f == Motore.I and int(d.get("f", 0)) > int(d.get("s", 0)):
+				v -= 3.0
+		else:
+			v = valore_luogo(m, f, l) - m.mil_in(l, f).size() * 2.5 + m.taglia(l) * 0.3
+			if f == Motore.R:
+				v = 5.0 - m.mil_in(l, f).size()
+		if v > bv:
+			bv = v
+			best = i
+	return best
+
+
+func _tipo_unita(m: Motore, f: int, opz: Array) -> int:
+	var conta := {}
+	for id in m.unita:
+		if m.unita[id]["k"] == "mil" and m.unita[id]["fz"] == f and m.vivo(id):
+			conta[m.unita[id]["amb"]] = conta.get(m.unita[id]["amb"], 0) + 1
+	var best := 0
+	var bv := 999
+	for i in opz.size():
+		var c: int = conta.get(opz[i]["amb"], 0)
+		if c < bv:
+			bv = c
+			best = i
+	return best
+
+
+func _domino(m: Motore, f: int, opz: Array, req: Dictionary) -> int:
+	var verso := int(req.get("verso", f))
+	var best := 0
+	var bv := -99
+	for i in opz.size():
+		var pid: int = opz[i].get("pid", -1)
+		if pid < 0:
+			continue
+		var l: int = m.pianeti[pid]["lealta"]
+		var v := l if verso == Motore.R else l
+		if m.galattico.capitale(pid):
+			v += 2
+		if v > bv:
+			bv = v
+			best = i
+	return best
+
+
+func _atrocita(m: Motore, opz: Array) -> int:
+	for i in opz.size():
+		var o: Dictionary = opz[i]
+		if o.get("tipo", "") == "distruggi" and m.pianeti[o["pid"]]["stato"] in ["ribelle", "ribellione"] and not m.galattico.capitale(o["pid"]):
+			return i
+	for i in opz.size():
+		var o2: Dictionary = opz[i]
+		if o2.get("tipo", "") == "bdp" and m.forza_mil(m.mil_su_pianeta(o2["pid"], Motore.R)) >= 6:
+			return i
+	return 0

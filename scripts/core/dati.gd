@@ -19,7 +19,7 @@ static var _d := {}
 
 static func d() -> Dictionary:
 	if _d.is_empty():
-		for nome in ["galassia", "carte", "tabelle", "creature", "scenari", "possessi_effetti"]:
+		for nome in ["galassia", "carte", "tabelle", "creature", "scenari", "possessi_effetti", "regole_avanzate"]:
 			var f := FileAccess.open("res://data/%s.json" % nome, FileAccess.READ)
 			if f == null:
 				push_error("Dati: manca data/%s.json" % nome)
@@ -37,7 +37,8 @@ static func _indicizza() -> void:
 	_d["pianeti"] = pianeti
 	var stelle := {}
 	for s in _d["galassia"].get("stelle", []):
-		stelle[int(s["id"])] = s
+		if not s.get("navigazione", false):
+			stelle[int(s["id"])] = s
 	_d["stelle"] = stelle
 	var pg := {}
 	for c in _d["carte"].get("personaggi", []):
@@ -59,6 +60,8 @@ static func pianeta(pid: int) -> Dictionary:
 
 static func ambiente(luogo: String) -> Dictionary:
 	var p := pianeta(int(luogo.get_slice(":", 0)))
+	if not luogo.get_slice(":", 1).is_valid_int():
+		return {}
 	var i := int(luogo.get_slice(":", 1))
 	if p.is_empty() or i >= p["ambienti"].size():
 		return {}
@@ -70,6 +73,16 @@ static func carta_pg(nome: String) -> Dictionary:
 
 
 static func nome_ambiente(luogo: String) -> String:
+	if luogo.begins_with("D:") or luogo.begins_with("D2:") or luogo.begins_with("S:"):
+		var st: Dictionary = d()["stelle"].get(int(luogo.get_slice(":", 1)), {})
+		var ns: String = str(st.get("nome", "?"))
+		if luogo.begins_with("D2:"):
+			return "Deriva 2 verso %s" % ns
+		if luogo.begins_with("D:"):
+			return "Deriva presso %s" % ns
+		return "Fuori mappa, verso %s" % ns
+	if luogo.ends_with(":o"):
+		return "Orbita di %s" % pianeta(int(luogo.get_slice(":", 0))).get("nome", "?")
 	var p := pianeta(int(luogo.get_slice(":", 0)))
 	var a := ambiente(luogo)
 	if p.is_empty() or a.is_empty():

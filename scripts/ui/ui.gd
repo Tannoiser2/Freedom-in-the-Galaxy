@@ -161,6 +161,16 @@ static func chiave_pg(nome: String) -> String:
 
 
 static func chiave_mil(u: Dictionary) -> String:
+	if u.has("cat"):
+		var d: Dictionary = Dati.d()["regole_avanzate"]["unita"][u["cat"]]
+		if int(u["fz"]) == Motore.I:
+			return str(d["ped"])
+		var c := str(d["ped"])
+		if c == "elite" and not u["amb"] in ["urbano", "selvaggio"]:
+			c = "43"
+		if c == "43" and u["amb"] == "fuoco":
+			c = "23"
+		return "rib_%s_%s" % [u["amb"], c]
 	match u["tipo"]:
 		"milizia":
 			return "imp_milizia"
