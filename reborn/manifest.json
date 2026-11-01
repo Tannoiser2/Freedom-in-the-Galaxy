@@ -19,5 +19,40 @@
     "scheda": "reborn/schede/pg_kogus.md",
     "confronto": "reborn/confronti/pg_kogus.png",
     "stato": "da_approvare"
+  },
+  {
+    "file": "assets_reborn/figure_intere/pg_zina_adora.png",
+    "originale": "assets/carte/scansioni/ribelli_19_fronte.webp",
+    "scheda": "reborn/schede/pg_zina_adora.md",
+    "confronto": "reborn/confronti/pg_zina_adora.png",
+    "stato": "da_approvare"
+  },
+  {
+    "file": "assets_reborn/figure_intere/pg_redjac.png",
+    "originale": "assets/carte/scansioni/imperiali_04_fronte.webp",
+    "scheda": "reborn/schede/pg_redjac.md",
+    "confronto": "reborn/confronti/pg_redjac.png",
+    "stato": "da_approvare"
+  },
+  {
+    "file": "assets_reborn/figure_intere/pg_kogus.png",
+    "originale": "assets/carte/scansioni/ribelli_09_fronte.webp",
+    "scheda": "reborn/schede/pg_kogus.md",
+    "confronto": "reborn/confronti/pg_kogus.png",
+    "stato": "da_approvare"
+  },
+  {
+    "file": "assets_reborn/carte/cornice_ribelli.png",
+    "originale": "assets/carte/scansioni/ribelli_19_fronte.webp",
+    "scheda": null,
+    "confronto": "reborn/anteprime/carta_pg_zina_adora.png",
+    "stato": "da_approvare"
+  },
+  {
+    "file": "assets_reborn/carte/cornice_imperiali.png",
+    "originale": "assets/carte/scansioni/imperiali_04_fronte.webp",
+    "scheda": null,
+    "confronto": "reborn/anteprime/carta_pg_redjac.png",
+    "stato": "da_approvare"
   }
 ]
