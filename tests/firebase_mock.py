@@ -10,7 +10,7 @@ Poi avviare Godot con
 Applica una versione semplificata delle regole di firebase/database.rules.json:
 stanza creata una volta sola, posti occupabili solo se liberi (o dal proprio titolare o dall'host),
 ogni mossa del registro (acts/n) scrivibile una volta sola dal titolare del posto o dall'host.
-Le stanze di Freedom in the Galaxy stanno sotto fellowship/rooms.
+Le stanze di Freedom in the Galaxy stanno sotto fitg/rooms.
 """
 import gzip
 import json
