@@ -119,13 +119,13 @@ func valore_luogo(m: Motore, f: int, l: String) -> float:
 	if f == Motore.R:
 		match p["stato"]:
 			"imperiale", "fermata":
-				v += [0.5, 2.0, 4.0, 6.0, 9.0][p["lealta"]]
+				v += [0.0, 2.5, 5.5, 8.0, 11.0][p["lealta"]]
 			"ribellione":
 				v += 3.0
 			"ribelle":
 				v += 0.5
-		v += m.taglia(l) * 0.8
-		v -= forza_nemica * 1.5
+		v += m.taglia(l) * 0.6
+		v -= forza_nemica * 0.7
 		var liv := m.bdp_attiva(pid, f)
 		if liv > 0:
 			v -= liv * 0.8
@@ -150,6 +150,28 @@ func valore_luogo(m: Motore, f: int, l: String) -> float:
 				v += 3.0
 		v += m.mil_in(l, nemico).size() * 1.0
 	return v
+
+
+## Quanto costa (in rischio) volare da `da` ad `a`: BDP nemici in partenza e in arrivo, peggio se già individuati.
+func _rischio_volo(m: Motore, f: int, id: int, da: String, a: String) -> float:
+	if da == "" or da == a:
+		return 0.0
+	var stesso := m.pid_di(da) == m.pid_di(a)
+	var nave_qui := false
+	for o in m.pg_in(da, f, true):
+		if not m.unita[o]["nave"].is_empty():
+			nave_qui = true
+	if not nave_qui:
+		return 0.0 if stesso else 99.0
+	var r := 0.0
+	var ind: bool = m.unita[id]["ind"]
+	for pid in ([m.pid_di(da)] if stesso else [m.pid_di(da), m.pid_di(a)]):
+		var liv := m.bdp_attiva(pid, f)
+		if liv >= 0:
+			r += 0.4 + liv * 1.2 + (1.0 if ind else 0.0)
+	if stesso:
+		r *= 0.5
+	return r
 
 
 func _miglior_luogo(m: Motore, f: int, opz: Array, scopo: String) -> int:
@@ -185,21 +207,20 @@ func _pianifica(m: Motore, f: int) -> void:
 	var luoghi := m.luoghi_sistema()
 	if f == Motore.R:
 		# tutti i personaggi verso l'ambiente migliore, raggiungibile in un colpo
-		var best := ""
-		var bv := -9999.0
-		for l in luoghi:
-			var v := valore_luogo(m, f, l)
-			if v > bv:
-				bv = v
-				best = l
 		for id in m.unita:
 			var u: Dictionary = m.unita[id]
 			if u["fz"] == f and u["k"] == "pg" and m.vivo(id):
 				var dove: String = u["luogo"]
-				if dove != "" and valore_luogo(m, f, dove) >= bv - 1.5:
-					obiettivi[id] = dove
-				else:
-					obiettivi[id] = best
+				var best := dove
+				var bv := -9999.0
+				for l in luoghi:
+					var v := valore_luogo(m, f, l) - _rischio_volo(m, f, id, dove, l)
+					if l == dove:
+						v += 1.5
+					if v > bv:
+						bv = v
+						best = l
+				obiettivi[id] = best
 		# truppe ribelli: restano nel loro ambiente o vanno a difendere pianeti in ribellione
 		for id in m.unita:
 			var u2: Dictionary = m.unita[id]

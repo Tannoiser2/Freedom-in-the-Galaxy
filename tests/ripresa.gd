@@ -15,11 +15,11 @@ func _init() -> void:
 			var a := _nuovo(sc, seme)
 			await a.gioca()
 			var b := _nuovo(sc, seme)
-			var taglio := int(a.storia.size() / 2)
+			var taglio := a.storia.size()
 			b.riprendi(a.storia.slice(0, taglio))
 			await b.gioca()
 			var uguali: bool = a.esito == b.esito and a.turno == b.turno and a.storia == b.storia and a.punti_vittoria()["totale"] == b.punti_vittoria()["totale"]
-			print("%s seme %d: %s (scelte %d, ripresa da %d)" % [sc, seme, "IDENTICA" if uguali else "DIVERSA", a.storia.size(), taglio])
+			print("%s seme %d: %s (scelte %d, riapplicate %d)" % [sc, seme, "IDENTICA" if uguali else "DIVERSA", a.storia.size(), taglio])
 			ok = ok and uguali
 			a.queue_free()
 			b.queue_free()

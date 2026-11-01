@@ -13,7 +13,7 @@ var _root: Node3D
 var _cam: Camera3D
 var _yaw := 0.6
 var _pitch := 1.0
-var _dist := 60.0
+var _dist := 66.0
 var _target := Vector3.ZERO
 var _trascina := false
 var _pianeti := {}          # pid -> Node3D
