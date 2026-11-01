@@ -1,0 +1,112 @@
+{
+ "egrix": {
+  "nome": "La fuga verso Egrix",
+  "nome_en": "Flight to Egrix",
+  "tipo": "S",
+  "stella": 22,
+  "turni": 6,
+  "soglia_pv": 12,
+  "bdp": {
+   "221": 1,
+   "222": 2,
+   "223": 0
+  },
+  "testo": "Inizio della Ribellione. Frun Sentel e i suoi compagni sbarcano nel sistema di Egrix per spingere il pianeta Angoff, già instabile, verso la causa ribelle. Sei turni. Vittoria immediata dei Ribelli se un pianeta passa sotto Controllo ribelle; dell'Impero se tutti i Ribelli cadono e ogni pianeta è imperiale. Altrimenti ai Ribelli servono 12 Punti Vittoria.",
+  "fazioni": {
+   "0": {
+    "personaggi": [
+     "Boccanegra",
+     "Doctor Sontag",
+     "Frun Sentel"
+    ],
+    "navi": [
+     36
+    ],
+    "militari": []
+   },
+   "1": {
+    "personaggi": [
+     "Jon Kidu",
+     "Vans Ka-Tie-A"
+    ],
+    "navi": [
+     "imperiale"
+    ],
+    "militari": [
+     {
+      "tipo": "linea",
+      "n": 1
+     },
+     {
+      "tipo": "pattuglia",
+      "n": 3
+     },
+     {
+      "tipo": "milizia",
+      "n": 3
+     }
+    ]
+   }
+  }
+ },
+ "varu": {
+  "nome": "La polveriera di Varu",
+  "nome_en": "The Varu Powderkeg",
+  "tipo": "A",
+  "stella": 43,
+  "turni": 7,
+  "soglia_pv": 20,
+  "bdp": {
+   "432": 2,
+   "431": 1,
+   "433": 1
+  },
+  "testo": "Armageddon. Cercis è già insorto contro le persecuzioni dei Piorad e la rivolta può contagiare Solvia e Horon. Sette turni. Vittoria immediata dei Ribelli con Cercis e un altro pianeta sotto Controllo ribelle; dell'Impero con tutti i pianeti imperiali e tre Ribelli morti o catturati. Altrimenti ai Ribelli servono 20 Punti Vittoria.",
+  "fazioni": {
+   "0": {
+    "personaggi": [
+     "Vudot Vodot",
+     "Zina Adora",
+     "Kogus",
+     "Rayner Derban"
+    ],
+    "navi": [
+     38
+    ],
+    "militari": [
+     {
+      "tipo": "rib",
+      "amb": "sotterraneo",
+      "forza": 2,
+      "n": 1
+     },
+     {
+      "tipo": "rib",
+      "amb": "selvaggio",
+      "forza": 2,
+      "n": 2
+     }
+    ]
+   },
+   "1": {
+    "personaggi": [
+     "Redjac",
+     "Gelba"
+    ],
+    "navi": [
+     "redjac"
+    ],
+    "militari": [
+     {
+      "tipo": "linea",
+      "n": 3
+     },
+     {
+      "tipo": "milizia",
+      "n": 3
+     }
+    ]
+   }
+  }
+ }
+}

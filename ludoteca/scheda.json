@@ -1,0 +1,13 @@
+{
+  "titolo": "Freedom in the Galaxy",
+  "sottotitolo": "La Ribellione stellare, 5764 d.C. (SPI, 1979)",
+  "descrizione": "Space opera strategica: una manciata di eroi ribelli prova a sollevare i pianeti contro l'Impero galattico. Star System Game completo con i due scenari (La fuga verso Egrix, La polveriera di Varu), carte in italiano, IA per i Ribelli o per l'Impero, mappa 2D con le pedine originali, sistema stellare in 3D, partite online e salvataggi su Firebase.",
+  "online": true,
+  "sezione": "conversione",
+  "ordine": 198,
+  "bgg": 1717,
+  "generi": [
+    "Fantascienza",
+    "Wargame"
+  ]
+}

@@ -1,0 +1,348 @@
+{
+ "Alweg": {
+  "s": 8,
+  "r": 99,
+  "nb": "sempre",
+  "cod": "UN_ROUND",
+  "it": "Capsula di trasporto pubblico che deraglia: attacca per un solo round a forza 8, senza sganciamento."
+ },
+ "Arags": {
+  "s": 4,
+  "r": 3,
+  "it": "Popolo-talpa disturbato dal passaggio: forza 4, resistenza 3."
+ },
+ "Batranoban": {
+  "s": 4,
+  "r": 3,
+  "sp": 1,
+  "nb": "primo",
+  "it": "Creatura simile a uno pterodattilo: forza 4, resistenza 3; sorpresa di 1 colonna e niente sganciamento al primo round."
+ },
+ "Chantenes": {
+  "s": 5,
+  "r": 5,
+  "cod": "CRESCE_1",
+  "it": "Alberi intelligenti che si svegliano: forza e resistenza 5, +1 a entrambe a ogni round dopo il primo."
+ },
+ "Chardireeds": {
+  "s": 4,
+  "r": 4,
+  "sp": 1,
+  "nb": "primo",
+  "it": "Essere elastico che cambia forma: forza 4, resistenza 4; sorpresa di 1 colonna e niente sganciamento al primo round."
+ },
+ "Chlorofix": {
+  "s": 0,
+  "r": 0,
+  "cod": "MENO_UN_BONUS",
+  "it": "Giardiniere automatico impazzito: nessun combattimento, la missione perde una pescata bonus."
+ },
+ "Crunge": {
+  "s": 0,
+  "r": 0,
+  "cod": "CRUNGE",
+  "it": "Roccia senziente velenosa: ogni personaggio riceve 4 meno la più alta Intelligenza del gruppo in ferite."
+ },
+ "Derigion": {
+  "s": 4,
+  "r": 6,
+  "cod": "PRIME_DUE_NO_FORZA",
+  "it": "Lucertola volante gigante: forza 4, resistenza 6; le prime due ferite non riducono la forza."
+ },
+ "Dindin": {
+  "s": 7,
+  "r": 5,
+  "ms": 1,
+  "cod": "SANGUE",
+  "it": "Carnivoro acquatico gigante: forza 7, resistenza 5; +1 forza per ciascuna delle prime due ferite inflitte; +1 ai tiri di sganciamento."
+ },
+ "Drants": {
+  "s": 0,
+  "r": 0,
+  "cod": "DRANTS",
+  "it": "Sciame di insetti volanti: ogni personaggio è punto una volta sulla colonna 0, senza sganciamento."
+ },
+ "Drusers": {
+  "s": 5,
+  "r": 5,
+  "cod": "INTELLIGENZA",
+  "it": "Setta che sviluppa i poteri della mente: Intelligenza e resistenza 5 contro l'Intelligenza combinata dei personaggi."
+ },
+ "Elilad": {
+  "s": 0,
+  "r": 0,
+  "cod": "ELILAD",
+  "it": "Intelligenza elettrica che intrappola il gruppo: ogni personaggio è attaccato sulla colonna 0 finché non si sgancia; non può reagire."
+ },
+ "Fog": {
+  "s": 0,
+  "r": 0,
+  "cod": "NEBBIA",
+  "it": "Nebbia intelligente: se tutti nel gruppo hanno Intelligenza inferiore a 3, niente pescate bonus."
+ },
+ "Frost Mist": {
+  "s": 5,
+  "r": 5,
+  "nb": "sempre",
+  "cod": "GELO",
+  "it": "Spirito gelido: difende con forza e resistenza 5; non tira, ma dopo ogni round ogni personaggio subisce una ferita. Niente sganciamento."
+ },
+ "Gach": {
+  "s": 7,
+  "r": 6,
+  "cod": "GACH",
+  "it": "Felino a due teste: forza 7, resistenza 6; dopo ogni round attacca se stesso (lato attaccante della colonna +1)."
+ },
+ "Gadhars": {
+  "s": 5,
+  "r": 4,
+  "cod": "BRANCO",
+  "it": "Lupi da branco: forza 5, resistenza 4; dal terzo round, nei round dispari, +2 a forza e resistenza."
+ },
+ "Gamels": {
+  "s": 3,
+  "r": 2,
+  "it": "Quadrupedi pelosi con un corno: forza 3, resistenza 2."
+ },
+ "Gilekite": {
+  "s": 3,
+  "r": 3,
+  "sp": 2,
+  "nb": "primo",
+  "it": "Grande creatura con guscio: forza 3, resistenza 3; sorpresa di 2 colonne e niente sganciamento al primo round."
+ },
+ "Glane": {
+  "s": 6,
+  "r": 6,
+  "fuoco": true,
+  "it": "Umanoide alato ostile: forza 6, resistenza 6; scontro a fuoco."
+ },
+ "Gragg": {
+  "s": 3,
+  "r": 2,
+  "sp": 1,
+  "nb": "primo",
+  "it": "Lucertola a sei zampe nell'erba alta: forza 3, resistenza 2; sorpresa di 1 colonna e niente sganciamento al primo round."
+ },
+ "Gyrogos": {
+  "s": 6,
+  "r": 99,
+  "cod": "NON_REAGISCE",
+  "ms_dopo": -1,
+  "it": "Corrente vivente rotante: forza 6, i personaggi non possono reagire; dopo il primo round -1 ai tiri di sganciamento."
+ },
+ "Hysnatons": {
+  "s": 5,
+  "r": 4,
+  "cod": "IPNOSI",
+  "it": "Serpenti di fogna ipnotici: forza 5, resistenza 4; se sopravvivono ai primi due round, niente pescate bonus."
+ },
+ "Kinsog": {
+  "s": 3,
+  "r": 2,
+  "sp": 2,
+  "nb": "primo",
+  "it": "Verme-drago scavatore: forza 3, resistenza 2; sorpresa di 2 colonne e niente sganciamento al primo round."
+ },
+ "Laboroid": {
+  "s": 3,
+  "r": 3,
+  "sp": 2,
+  "nb": "primo",
+  "it": "Robot operaio impazzito: forza 3, resistenza 3; sorpresa di 2 colonne e niente sganciamento al primo round."
+ },
+ "Lomrels": {
+  "s": 5,
+  "r": 3,
+  "it": "Grandi canidi da cavalcatura: forza 5, resistenza 3."
+ },
+ "Leonus": {
+  "s": 5,
+  "r": 4,
+  "sp": 1,
+  "nb": "primo",
+  "it": "Incrocio di leone e rettile: forza 5, resistenza 4; sorpresa di 1 colonna e niente sganciamento al primo round."
+ },
+ "Magron": {
+  "s": 0,
+  "r": 5,
+  "cod": "MAGRON",
+  "it": "Pianta carnivora: afferra un personaggio a caso; gli altri la combattono (forza 0, resistenza 5); dopo ogni round in cui sopravvive l'afferrato subisce una ferita; se è solo viene divorato."
+ },
+ "Mish": {
+  "s": 6,
+  "r": 3,
+  "nb": "sempre",
+  "it": "Sciame di insetti corazzati tossici: forza 6, resistenza 3; niente sganciamento."
+ },
+ "Morna": {
+  "s": 6,
+  "r": 4,
+  "cod": "MORNA",
+  "it": "Capo di un clan idrico: attacca (forza 6, resistenza 4) solo se tutti nel gruppo hanno Diplomazia inferiore a 3."
+ },
+ "Muggers": {
+  "s": 5,
+  "r": 4,
+  "nb": "sempre",
+  "cod": "LADRI",
+  "it": "Clan di ladri: forza 5, resistenza 4; niente sganciamento; dopo tre round il combattimento finisce e rubano un possesso a caso."
+ },
+ "Namdasn": {
+  "s": 4,
+  "r": 4,
+  "sp": 2,
+  "nb": "primo",
+  "it": "Sabbia senziente: forza 4, resistenza 4; sorpresa di 2 colonne e niente sganciamento al primo round."
+ },
+ "Onflam": {
+  "s": 6,
+  "r": 2,
+  "ms": 1,
+  "it": "Essere volante fiammeggiante: forza 6, resistenza 2; +1 ai tiri di sganciamento."
+ },
+ "Propang": {
+  "s": 5,
+  "r": 3,
+  "ms_primo": 1,
+  "it": "Robot messaggero zelante: forza 5, resistenza 3; +1 al tiro di sganciamento del primo round."
+ },
+ "Prox": {
+  "s": 6,
+  "r": 4,
+  "ms": -1,
+  "it": "Grosso insetto carnivoro lento: forza 6, resistenza 4; -1 ai tiri di sganciamento."
+ },
+ "Queemer": {
+  "s": 3,
+  "r": 5,
+  "cod": "QUEEMER",
+  "it": "Massa gelatinosa: forza 3, resistenza 5; le ferite non riducono la forza, anzi la aumentano di 1 ciascuna."
+ },
+ "Rotron": {
+  "s": 3,
+  "r": 3,
+  "cod": "ROTRON",
+  "it": "Rettile mangia-metallo: attacca l'astronave; difende con forza e resistenza 3; se è vivo dopo due round l'astronave è danneggiata."
+ },
+ "Sandiabs": {
+  "s": 0,
+  "r": 0,
+  "cod": "NO_BONUS",
+  "it": "Ratti del deserto e le loro buche: nessun combattimento, ma niente pescate bonus."
+ },
+ "Sekekers": {
+  "s": 6,
+  "r": 2,
+  "it": "Roditori dagli aculei velenosi: forza 6, resistenza 2."
+ },
+ "Sentry Robot": {
+  "s": 4,
+  "r": 2,
+  "it": "Robot sentinella: forza 4, resistenza 2 (due robot: forza 7, resistenza 4)."
+ },
+ "Snorkas": {
+  "s": 8,
+  "r": 99,
+  "nb": "sempre",
+  "cod": "UN_ROUND",
+  "it": "Alghe velenose: forza 8 per un solo round, poi si distruggono. Niente sganciamento."
+ },
+ "Snow Giants": {
+  "s": 6,
+  "r": 4,
+  "it": "Giganti delle nevi con le clave: forza 6, resistenza 4."
+ },
+ "Spithid": {
+  "s": 6,
+  "r": 1,
+  "it": "Ragno delicato con ragnatele velenose: forza 6, resistenza 1."
+ },
+ "Stromuse": {
+  "s": 2,
+  "r": 2,
+  "sp": 3,
+  "nb": "primo",
+  "it": "Passante che diventa invisibile: forza 2, resistenza 2; sorpresa di 3 colonne e niente sganciamento al primo round."
+ },
+ "Synestins": {
+  "s": 5,
+  "r": 4,
+  "cod": "SYNESTINS",
+  "it": "Setta religiosa: forza 5, resistenza 4; se sconfitta da Ribelli la Lealtà si sposta di uno a favore dei Ribelli."
+ },
+ "Telebots": {
+  "s": 3,
+  "r": 3,
+  "cod": "TELEBOT",
+  "it": "Androide informativo in sovraccarico: duello di Intelligenza (3, resistenza 3) contro un personaggio a scelta."
+ },
+ "Thinagig": {
+  "s": 8,
+  "r": 8,
+  "ms": -1,
+  "it": "Essere di pietra lento e potente: forza e resistenza 8; -1 ai tiri di sganciamento."
+ },
+ "Thunk": {
+  "s": 5,
+  "r": 4,
+  "cod": "THUNK",
+  "it": "Mammut lanoso velenoso: forza 5, resistenza 4; le ferite non riducono la forza, che cresce di 1 a ogni round dal secondo."
+ },
+ "Valaterix": {
+  "s": 0,
+  "r": 0,
+  "cod": "NO_BONUS",
+  "it": "Pianta incantatrice: nessun combattimento, niente pescate bonus."
+ },
+ "Verfusier": {
+  "s": 4,
+  "r": 4,
+  "ms": 1,
+  "it": "Essere metallico velocissimo: forza 4, resistenza 4; +1 ai tiri di sganciamento."
+ },
+ "Virus": {
+  "s": 10,
+  "r": 99,
+  "cod": "NON_REAGISCE",
+  "it": "Germe liquido intelligente: forza 10; i personaggi non reagiscono, possono solo sganciarsi (tutti attivi)."
+ },
+ "Vorozion": {
+  "s": 6,
+  "r": 99,
+  "nb": "sempre",
+  "cod": "VOROZION",
+  "it": "Essere di pensiero ostile: Intelligenza 6 contro l'Intelligenza combinata; niente reazione né sganciamento; se ne va al primo round senza ferite."
+ },
+ "Vrialta": {
+  "s": 10,
+  "r": 10,
+  "fuoco": true,
+  "it": "Cavaliere Imperiale disertore in esoscheletro: forza e resistenza 10, scontro a fuoco."
+ },
+ "Wyths": {
+  "s": 9,
+  "r": 4,
+  "ms": 1,
+  "cod": "WYTHS",
+  "it": "Essere telepatico: forza 9 meno l'Intelligenza di un personaggio a ogni round, resistenza 4; +1 ai tiri di sganciamento."
+ },
+ "Ym-Barror": {
+  "s": 4,
+  "r": 4,
+  "nb": "primo",
+  "cod": "DOPPIO_TIRO",
+  "it": "Simbiosi pianta-animale: forza 4, resistenza 4; due tiri di attacco per round; niente sganciamento al primo round."
+ },
+ "Zernipak": {
+  "s": 5,
+  "r": 4,
+  "it": "Macchina da scavo impazzita: forza 5, resistenza 4."
+ },
+ "Zop": {
+  "s": 0,
+  "r": 0,
+  "cod": "ZOP",
+  "it": "Creatura pelosa amichevole: dona ai Ribelli un possesso (non un'astronave), una sola volta per partita; nessun effetto sugli Imperiali."
+ }
+}

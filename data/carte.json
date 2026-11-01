@@ -1,0 +1,3207 @@
+{
+ "azione": [
+  {
+   "nr": 68,
+   "en": {
+    "urbano": {
+     "lettere": [
+      "R",
+      "H"
+     ],
+     "evento": "Creature attacks one Mission Group. If a creature is named in the Environ, look it up in the Galactic Guide to determine its attributes. If no creature is named, ignore Event."
+    },
+    "speciale": {
+     "lettere": [
+      "B"
+     ],
+     "evento": "Locals raid Enemy forces. Non-Phasing Player must eliminate one of his military units in the Environ, or, if he controls a PDB that is Up on the planet, place it Down (non-Phasing Player’s choice)."
+    },
+    "selvaggio": {
+     "lettere": [
+      "P"
+     ],
+     "evento": "Locals shelter characters from Enemy. No Enemy searches may be conducted in this Environ for the remainder of this Mission Phase."
+    }
+   },
+   "it": {
+    "urbano": {
+     "evento": "Una creatura attacca un Gruppo di Missione. Se nell'Ambiente è indicata una creatura, consultala nella Guida Galattica per determinarne le caratteristiche. Se non è indicata alcuna creatura, ignora l'evento."
+    },
+    "speciale": {
+     "evento": "I locali razziano le forze nemiche. Il giocatore non di turno deve eliminare una delle sue unità militari nell'Ambiente oppure, se controlla una BDP attiva (Up) sul pianeta, disattivarla (Down) (a scelta del giocatore non di turno)."
+    },
+    "selvaggio": {
+     "evento": "I locali offrono riparo ai personaggi. Il Nemico non può effettuare Ricerche in questo Ambiente per il resto di questa Fase delle Missioni."
+    }
+   },
+   "codice": {
+    "urbano": "CREATURA",
+    "speciale": "RAZZIA_LOCALI",
+    "selvaggio": "RIPARO_LOCALI"
+   },
+   "file": "azione_00"
+  },
+  {
+   "nr": 69,
+   "en": {
+    "urbano": {
+     "lettere": [
+      "D"
+     ],
+     "evento": "Creature attacks one Mission Group. If a creature is named in the Environ, look it up in the Galactic Guide to determine its attributes. If no creature is named, the Mission Group is attacked by a sentry robot (see Case 13.46)."
+    },
+    "speciale": {
+     "lettere": [
+      "C",
+      "S"
+     ],
+     "evento": "Weather disturbances hamper Enemy operations. The non-Phasing Player may conduct no searches in this Environ this Mission Phase."
+    },
+    "selvaggio": {
+     "lettere": [
+      "P",
+      "I"
+     ],
+     "evento": "Coup Mission aborted; Characters detected. Roll the die. 1-3, no effect; 4, shift Loyalty marker one space in non-Phasing Player’s favor; 5 or 6, shift Loyalty and entire Mission Group captured."
+    }
+   },
+   "it": {
+    "urbano": {
+     "evento": "Una creatura attacca un Gruppo di Missione. Se nell'Ambiente è indicata una creatura, consultala nella Guida Galattica per determinarne le caratteristiche. Se non è indicata alcuna creatura, il Gruppo di Missione è attaccato da un robot sentinella (vedi Caso 13.46)."
+    },
+    "speciale": {
+     "evento": "Perturbazioni atmosferiche ostacolano le operazioni nemiche. Il giocatore non di turno non può effettuare Ricerche in questo Ambiente in questa Fase delle Missioni."
+    },
+    "selvaggio": {
+     "evento": "Missione Colpo di Stato abortita; Personaggi Individuati. Tira il dado: 1-3, nessun effetto; 4, sposta il segnalino Lealtà di una casella a favore del giocatore non di turno; 5 o 6, sposta la Lealtà e l'intero Gruppo di Missione è catturato."
+    }
+   },
+   "codice": {
+    "urbano": "CREATURA_O_ROBOT",
+    "speciale": "NESSUNA_RICERCA",
+    "selvaggio": "COUP_ABORTITO_1"
+   },
+   "file": "azione_01"
+  },
+  {
+   "nr": 70,
+   "en": {
+    "urbano": {
+     "lettere": [
+      "P",
+      "I"
+     ],
+     "evento": "Creature attacks one Mission Group. If a creature is named in the Environ, look it up in the Galactic Guide to determine its attributes. If no creature is named, the Mission Group is attacked by two sentry robots."
+    },
+    "speciale": {
+     "lettere": [
+      "S",
+      "C"
+     ],
+     "evento": "Characters detected."
+    },
+    "selvaggio": {
+     "lettere": [
+      "R",
+      "G"
+     ],
+     "evento": "Locals raid Enemy forces. Non-Phasing Player must eliminate one of his military units in the Environ, or, if he controls a PDB that is Up on the planet, place it Down (non-Phasing Player’s choice)."
+    }
+   },
+   "it": {
+    "urbano": {
+     "evento": "Una creatura attacca un Gruppo di Missione. Se nell'Ambiente è indicata una creatura, consultala nella Guida Galattica per determinarne le caratteristiche. Se non è indicata alcuna creatura, il Gruppo di Missione è attaccato da due robot sentinella (vedi Caso 13.46)."
+    },
+    "speciale": {
+     "evento": "Personaggi Individuati."
+    },
+    "selvaggio": {
+     "evento": "I locali razziano le forze nemiche. Il giocatore non di turno deve eliminare una delle sue unità militari nell'Ambiente oppure, se controlla una BDP attiva (Up) sul pianeta, disattivarla (Down) (a scelta del giocatore non di turno)."
+    }
+   },
+   "codice": {
+    "urbano": "CREATURA_O_DUE_ROBOT",
+    "speciale": "PERSONAGGI_INDIVIDUATI",
+    "selvaggio": "RAZZIA_LOCALI"
+   },
+   "file": "azione_02"
+  },
+  {
+   "nr": 71,
+   "en": {
+    "urbano": {
+     "lettere": [
+      "C",
+      "J"
+     ],
+     "evento": "Irate locals attack one Mission Group. Refer to the Irate Locals Chart to determine the mob’s attributes."
+    },
+    "speciale": {
+     "lettere": [
+      "B",
+      "T"
+     ],
+     "evento": "Would-be rebels chicken out. Start Rebellion mission aborted. Characters detected."
+    },
+    "selvaggio": {
+     "lettere": [
+      "P",
+      "G"
+     ],
+     "evento": "Weather disturbances hamper Enemy operations. The non-Phasing Player may conduct no searches in this Environ this Mission Phase."
+    }
+   },
+   "it": {
+    "urbano": {
+     "evento": "Locali infuriati attaccano un Gruppo di Missione. Consulta la Tabella dei Locali infuriati per determinare le caratteristiche della folla."
+    },
+    "speciale": {
+     "evento": "Gli aspiranti ribelli si tirano indietro. Missione Avvia Ribellione abortita. Personaggi Individuati."
+    },
+    "selvaggio": {
+     "evento": "Perturbazioni atmosferiche ostacolano le operazioni nemiche. Il giocatore non di turno non può effettuare Ricerche in questo Ambiente in questa Fase delle Missioni."
+    }
+   },
+   "codice": {
+    "urbano": "LOCALI_ARRABBIATI",
+    "speciale": "MISSIONE_R_ABORTITA",
+    "selvaggio": "NESSUNA_RICERCA"
+   },
+   "file": "azione_03"
+  },
+  {
+   "nr": 72,
+   "en": {
+    "urbano": {
+     "lettere": [
+      "P",
+      "G"
+     ],
+     "evento": "Irate locals attack one Mission Group. Refer to the Irate Locals Chart to determine the mob’s attributes."
+    },
+    "speciale": {
+     "lettere": [
+      "C"
+     ],
+     "evento": "Controversial political matters argued. If a Diplomacy mission is being peformed, and no character in the Mission Group has a Diplomacy Rating of two or more, the mission is aborted."
+    },
+    "selvaggio": {
+     "lettere": [
+      "D",
+      "H"
+     ],
+     "evento": "The Imperial Player may commit an Atrocity on this planet (see Section 35.0). Galactic Game only, otherwise ignore event."
+    }
+   },
+   "it": {
+    "urbano": {
+     "evento": "Locali infuriati attaccano un Gruppo di Missione. Consulta la Tabella dei Locali infuriati per determinare le caratteristiche della folla."
+    },
+    "speciale": {
+     "evento": "Si discutono questioni politiche controverse. Se è in corso una missione Diplomazia e nessun personaggio del Gruppo di Missione ha un valore di Diplomazia pari o superiore a due, la missione è abortita."
+    },
+    "selvaggio": {
+     "evento": "Il giocatore Imperiale può commettere un'Atrocità su questo pianeta (vedi Sezione 35.0). Solo nel Gioco Galattico; altrimenti ignora l'evento."
+    }
+   },
+   "codice": {
+    "urbano": "LOCALI_ARRABBIATI",
+    "speciale": "DIPLOMAZIA_CONTROVERSA",
+    "selvaggio": "ATROCITA"
+   },
+   "file": "azione_04"
+  },
+  {
+   "nr": 73,
+   "en": {
+    "urbano": {
+     "lettere": [
+      "D"
+     ],
+     "evento": "Would-be rebels chicken out. Start Rebellion mission aborted. Characters detected."
+    },
+    "speciale": {
+     "lettere": [
+      "G",
+      "I"
+     ],
+     "evento": "Weather disturbances hamper Enemy operations. The non-Phasing Player may conduct no searches in this Environ this Mission Phase."
+    },
+    "selvaggio": {
+     "lettere": [
+      "R",
+      "S"
+     ],
+     "evento": "Wrong soldier contacted. If a Subvert Troops mission is being performed, it is aborted. Mission Group found by Enemy squad. If an Enemy leader is stacked with the Enemy military units, the entire Mission Group is captured."
+    }
+   },
+   "it": {
+    "urbano": {
+     "evento": "Gli aspiranti ribelli si tirano indietro. Missione Avvia Ribellione abortita. Personaggi Individuati."
+    },
+    "speciale": {
+     "evento": "Perturbazioni atmosferiche ostacolano le operazioni nemiche. Il giocatore non di turno non può effettuare Ricerche in questo Ambiente in questa Fase delle Missioni."
+    },
+    "selvaggio": {
+     "evento": "Contattato il soldato sbagliato. Se è in corso una missione Sovvertire Truppe, è abortita. Il Gruppo di Missione è Trovato da una squadra nemica. Se un comandante nemico è impilato con le unità militari nemiche, l'intero Gruppo di Missione è catturato."
+    }
+   },
+   "codice": {
+    "urbano": "MISSIONE_R_ABORTITA",
+    "speciale": "NESSUNA_RICERCA",
+    "selvaggio": "MISSIONE_T_ABORTITA"
+   },
+   "file": "azione_05"
+  },
+  {
+   "nr": 74,
+   "en": {
+    "urbano": {
+     "lettere": [
+      "P"
+     ],
+     "evento": "Enemy agent reveals mission. The non-Phasing Player randomly chooses one mission that the Phasing Player is currently performing in the Environ; that mission is aborted. Characters detected."
+    },
+    "speciale": {
+     "lettere": [
+      "B",
+      "H"
+     ],
+     "evento": "Irate locals attack one Mission Group. Refer to the Irate Locals Chart to determine the mob’s attributes."
+    },
+    "selvaggio": {
+     "lettere": [
+      "C"
+     ],
+     "evento": "Creature attacks one Mission Group. If a creature is named in the Environ, look it up in the Galactic Guide to determine its attributes. If no creature is named, ignore event."
+    }
+   },
+   "it": {
+    "urbano": {
+     "evento": "Un agente nemico rivela la missione. Il giocatore non di turno sceglie a caso una delle missioni che il giocatore di turno sta svolgendo nell'Ambiente; quella missione è abortita. Personaggi Individuati."
+    },
+    "speciale": {
+     "evento": "Locali infuriati attaccano un Gruppo di Missione. Consulta la Tabella dei Locali infuriati per determinare le caratteristiche della folla."
+    },
+    "selvaggio": {
+     "evento": "Una creatura attacca un Gruppo di Missione. Se nell'Ambiente è indicata una creatura, consultala nella Guida Galattica per determinarne le caratteristiche. Se non è indicata alcuna creatura, ignora l'evento."
+    }
+   },
+   "codice": {
+    "urbano": "MISSIONE_CASUALE_ABORTITA",
+    "speciale": "LOCALI_ARRABBIATI",
+    "selvaggio": "CREATURA"
+   },
+   "file": "azione_06"
+  },
+  {
+   "nr": 75,
+   "en": {
+    "urbano": {
+     "lettere": [
+      "F",
+      "G"
+     ],
+     "evento": "Characters detected."
+    },
+    "speciale": {
+     "lettere": [
+      "D"
+     ],
+     "evento": "Populace goes wild. If the planet is placed into rebellion during this Mission Phase, the Rebel Player receives double the resource value in this Environ (see Case 15.46)."
+    },
+    "selvaggio": {
+     "lettere": [
+      "A",
+      "H"
+     ],
+     "evento": "Creature attacks one Mission Group. If a creature is named in the Environ, look it up in the Galactic Guide to determine its attributes. If no creature is named, the Mission Group is attacked by a sentry robot (see Case 13.46)."
+    }
+   },
+   "it": {
+    "urbano": {
+     "evento": "Personaggi Individuati."
+    },
+    "speciale": {
+     "evento": "La popolazione si scatena! Se il pianeta entra in Ribellione durante questa Fase delle Missioni, il giocatore Ribelle riceve il doppio del valore di risorse di questo Ambiente (vedi Caso 15.46)."
+    },
+    "selvaggio": {
+     "evento": "Una creatura attacca un Gruppo di Missione. Se nell'Ambiente è indicata una creatura, consultala nella Guida Galattica per determinarne le caratteristiche. Se non è indicata alcuna creatura, il Gruppo di Missione è attaccato da un robot sentinella (vedi Caso 13.46)."
+    }
+   },
+   "codice": {
+    "urbano": "PERSONAGGI_INDIVIDUATI",
+    "speciale": "POPOLAZIONE_IN_RIVOLTA",
+    "selvaggio": "CREATURA_O_ROBOT"
+   },
+   "file": "azione_07"
+  },
+  {
+   "nr": 76,
+   "en": {
+    "urbano": {
+     "lettere": [
+      "A"
+     ],
+     "evento": "Locals shelter characters from enemy. No enemy searchers may be conducted in this Environ for the remainder of this Mission Phase."
+    },
+    "speciale": {
+     "lettere": [
+      "B",
+      "E"
+     ],
+     "evento": "Creature attacks one Mission Group. If a creature is named in the Environ, look it up in the Galactic Guide to determine its attributes. If no creature is named, the Mission Group is attacked by a sentry robot."
+    },
+    "selvaggio": {
+     "lettere": [
+      "F",
+      "B"
+     ],
+     "evento": "Coup Mission aborted; Characters detected. Roll the die. 1-4, no effect; 5, shift Loyalty marker one space in Non-Phasing Player’s favor; 6, shift Loyalty and entire Mission Group captured."
+    }
+   },
+   "it": {
+    "urbano": {
+     "evento": "I locali offrono riparo ai personaggi. Il Nemico non può effettuare Ricerche in questo Ambiente per il resto di questa Fase delle Missioni."
+    },
+    "speciale": {
+     "evento": "Una creatura attacca un Gruppo di Missione. Se nell'Ambiente è indicata una creatura, consultala nella Guida Galattica per determinarne le caratteristiche. Se non è indicata alcuna creatura, il Gruppo di Missione è attaccato da un robot sentinella (vedi Caso 13.46)."
+    },
+    "selvaggio": {
+     "evento": "Missione Colpo di Stato abortita; Personaggi Individuati. Tira il dado: 1-4, nessun effetto; 5, sposta il segnalino Lealtà di una casella a favore del giocatore non di turno; 6, sposta la Lealtà e l'intero Gruppo di Missione è catturato."
+    }
+   },
+   "codice": {
+    "urbano": "RIPARO_LOCALI",
+    "speciale": "CREATURA_O_ROBOT",
+    "selvaggio": "COUP_ABORTITO_2"
+   },
+   "file": "azione_08"
+  },
+  {
+   "nr": 77,
+   "en": {
+    "urbano": {
+     "lettere": [
+      "C"
+     ],
+     "evento": "Weather disturbances hamper Enemy operations. The non-Phasing Player may conduct no searches in this Environ this Mission Phase."
+    },
+    "speciale": {
+     "lettere": [
+      "S",
+      "E"
+     ],
+     "evento": "Coup mission aborted; characters detected. Roll the die. 1,2, no effect; 3-5, shift Loyalty marker one space in non-Phasing Player’s favor; 6, shift Loyalty marker and Mission Group captured, one character killed (Phasing Player’s choice)."
+    },
+    "selvaggio": {
+     "lettere": [
+      "F",
+      "I"
+     ],
+     "evento": "Local connections expedite missions. All missions receive one extra bonus draw in this Environ this Mission Phase."
+    }
+   },
+   "it": {
+    "urbano": {
+     "evento": "Perturbazioni atmosferiche ostacolano le operazioni nemiche. Il giocatore non di turno non può effettuare Ricerche in questo Ambiente in questa Fase delle Missioni."
+    },
+    "speciale": {
+     "evento": "Missione Colpo di Stato abortita; Personaggi Individuati. Tira il dado: 1-2, nessun effetto; 3-5, sposta il segnalino Lealtà di una casella a favore del giocatore non di turno; 6, sposta il segnalino Lealtà, il Gruppo di Missione è catturato e un personaggio è ucciso (a scelta del giocatore di turno)."
+    },
+    "selvaggio": {
+     "evento": "Le conoscenze locali facilitano le missioni. Tutte le missioni ricevono una pescata bonus extra in questo Ambiente in questa Fase delle Missioni."
+    }
+   },
+   "codice": {
+    "urbano": "NESSUNA_RICERCA",
+    "speciale": "COUP_ABORTITO_3",
+    "selvaggio": "BONUS_EXTRA"
+   },
+   "file": "azione_09"
+  },
+  {
+   "nr": 78,
+   "en": {
+    "urbano": {
+     "lettere": [
+      "C",
+      "S"
+     ],
+     "evento": "Local connections expedite missions. All missions receive one extra bonus draw in this Environ this Mission Phase."
+    },
+    "speciale": {
+     "lettere": [
+      "D",
+      "G"
+     ],
+     "evento": "Coup mission aborted; characters detected. Roll the die. 1-3, no effect; 4,5, shift Loyalty marker one space in non-Phasing Player’s favor; 6, shift Loyalty and entire Mission Group killed."
+    },
+    "selvaggio": {
+     "lettere": [
+      "F",
+      "P"
+     ],
+     "evento": "Characters are delayed by rumors. No bonus draws may be taken in this Environ this Mission Phase."
+    }
+   },
+   "it": {
+    "urbano": {
+     "evento": "Le conoscenze locali facilitano le missioni. Tutte le missioni ricevono una pescata bonus extra in questo Ambiente in questa Fase delle Missioni."
+    },
+    "speciale": {
+     "evento": "Missione Colpo di Stato abortita; Personaggi Individuati. Tira il dado: 1-3, nessun effetto; 4-5, sposta il segnalino Lealtà di una casella a favore del giocatore non di turno; 6, sposta la Lealtà e l'intero Gruppo di Missione è ucciso."
+    },
+    "selvaggio": {
+     "evento": "I personaggi sono rallentati da voci di corridoio. In questo Ambiente non si possono effettuare pescate bonus in questa Fase delle Missioni."
+    }
+   },
+   "codice": {
+    "urbano": "BONUS_EXTRA",
+    "speciale": "COUP_ABORTITO_4",
+    "selvaggio": "NESSUN_BONUS"
+   },
+   "file": "azione_10"
+  },
+  {
+   "nr": 79,
+   "en": {
+    "urbano": {
+     "lettere": [
+      "S",
+      "H"
+     ],
+     "evento": "Local connections expedite missions. All missions receive one extra bonus draw in this Environ this Mission Phase."
+    },
+    "speciale": {
+     "lettere": [
+      "G",
+      "P"
+     ],
+     "evento": "Creature attacks one Mission Group. If a creature is named in the Environ, look it up in the Galactic Guide to determine its attributes. If no creature is named, the Mission Group is attacked by a sentry robot (see Case 13.46)."
+    },
+    "selvaggio": {
+     "lettere": [
+      "B"
+     ],
+     "evento": "Civil war breaks out. The populace blames the Phasing Player. If the Loyalty marker is currently at 1 or 2 in the Player’s favor, move the marker to Neutral. If the Planet is in rebellion or not in the Player’s favor, ignore event."
+    }
+   },
+   "it": {
+    "urbano": {
+     "evento": "Le conoscenze locali facilitano le missioni. Tutte le missioni ricevono una pescata bonus extra in questo Ambiente in questa Fase delle Missioni."
+    },
+    "speciale": {
+     "evento": "Una creatura attacca un Gruppo di Missione. Se nell'Ambiente è indicata una creatura, consultala nella Guida Galattica per determinarne le caratteristiche. Se non è indicata alcuna creatura, il Gruppo di Missione è attaccato da un robot sentinella (vedi Caso 13.46)."
+    },
+    "selvaggio": {
+     "evento": "Scoppia la guerra civile. La popolazione ne incolpa il giocatore di turno. Se il segnalino Lealtà si trova attualmente a 1 o 2 a favore di quel giocatore, spostalo su Neutrale. Se il pianeta è in Ribellione o non è a favore di quel giocatore, ignora l'evento."
+    }
+   },
+   "codice": {
+    "urbano": "BONUS_EXTRA",
+    "speciale": "CREATURA_O_ROBOT",
+    "selvaggio": "GUERRA_CIVILE"
+   },
+   "file": "azione_11"
+  },
+  {
+   "nr": 80,
+   "en": {
+    "urbano": {
+     "lettere": [
+      "R",
+      "E"
+     ],
+     "evento": "Local connections expedite missions. All missions receive one extra bonus draw in this Environ this Mission Phase."
+    },
+    "speciale": {
+     "lettere": [
+      "F",
+      "P"
+     ],
+     "evento": "Confusing local protocol aborts a Diplomacy mission. If one is being performed in the Environ, shift the Loyalty marker one space in the Non-Phasing Player’s favor."
+    },
+    "selvaggio": {
+     "lettere": [
+      "C",
+      "S"
+     ],
+     "evento": "One Mission Group stumbles on Enemy squad. If the Enemy Player controls the planet and has military units in the environ character combat is initiated using the Squad Table to determine the Enemy’s strength."
+    }
+   },
+   "it": {
+    "urbano": {
+     "evento": "Le conoscenze locali facilitano le missioni. Tutte le missioni ricevono una pescata bonus extra in questo Ambiente in questa Fase delle Missioni."
+    },
+    "speciale": {
+     "evento": "Un protocollo locale incomprensibile fa abortire una missione Diplomazia. Se ne è in corso una nell'Ambiente, sposta il segnalino Lealtà di una casella a favore del giocatore non di turno."
+    },
+    "selvaggio": {
+     "evento": "Un Gruppo di Missione si imbatte in una squadra nemica. Se il giocatore nemico controlla il pianeta e ha unità militari nell'Ambiente, si svolge un combattimento tra personaggi usando la Tabella delle Squadre per determinare la forza del Nemico."
+    }
+   },
+   "codice": {
+    "urbano": "BONUS_EXTRA",
+    "speciale": "MISSIONE_D_ABORTITA",
+    "selvaggio": "SQUADRA_NEMICA"
+   },
+   "file": "azione_12"
+  },
+  {
+   "nr": 81,
+   "en": {
+    "urbano": {
+     "lettere": [
+      "F",
+      "I"
+     ],
+     "evento": "Wrong soldier contacted. If a Subvert Troops mission is being performed, it is aborted. Mission Group found by enemy squad. If an Enemy leader is stacked with the enemy military units, entire mission is captured."
+    },
+    "speciale": {
+     "lettere": [
+      "C",
+      "T"
+     ],
+     "evento": "Accidents will happen, especially in an unfamiliar Environ. Any one character performing a mission in the Environ must receive a wound."
+    },
+    "selvaggio": {
+     "lettere": [
+      "E"
+     ],
+     "evento": "Controversial political matters argued. If a Diplomacy mission is being performed, and no character in the Mission Group has a Diplomacy rating of two or more, the mission is aborted."
+    }
+   },
+   "it": {
+    "urbano": {
+     "evento": "Contattato il soldato sbagliato. Se è in corso una missione Sovvertire Truppe, è abortita. Il Gruppo di Missione è Trovato da una squadra nemica. Se un comandante nemico è impilato con le unità militari nemiche, l'intero Gruppo di Missione è catturato."
+    },
+    "speciale": {
+     "evento": "Gli incidenti capitano, soprattutto in un Ambiente poco familiare. Un personaggio qualsiasi che sta svolgendo una missione nell'Ambiente deve subire una ferita."
+    },
+    "selvaggio": {
+     "evento": "Si discutono questioni politiche controverse. Se è in corso una missione Diplomazia e nessun personaggio del Gruppo di Missione ha un valore di Diplomazia pari o superiore a due, la missione è abortita."
+    }
+   },
+   "codice": {
+    "urbano": "MISSIONE_T_ABORTITA",
+    "speciale": "INCIDENTE",
+    "selvaggio": "DIPLOMAZIA_CONTROVERSA"
+   },
+   "file": "azione_13"
+  },
+  {
+   "nr": 82,
+   "en": {
+    "urbano": {
+     "lettere": [
+      "G"
+     ],
+     "evento": "Civil war breaks out. The populace blames the Phasing Player. If the Loyalty marker is currently at 1 or 2 in the Player’s favor, move the marker to neutral. If the planet is in rebellion or not in the Player’s favor, ignore event."
+    },
+    "speciale": {
+     "lettere": [
+      "R",
+      "S"
+     ],
+     "evento": "Weather disturbances hamper Enemy operations. The Non-Phasing Player may conduct no searches in this Environ this Mission Phase."
+    },
+    "selvaggio": {
+     "lettere": [
+      "D"
+     ],
+     "evento": "Populace goes wild! If the planet is placed into rebellion during this Mission Phase, the Rebel Player receives double the resource value in this Environ (see Case 15.46)."
+    }
+   },
+   "it": {
+    "urbano": {
+     "evento": "Scoppia la guerra civile. La popolazione ne incolpa il giocatore di turno. Se il segnalino Lealtà si trova attualmente a 1 o 2 a favore di quel giocatore, spostalo su Neutrale. Se il pianeta è in Ribellione o non è a favore di quel giocatore, ignora l'evento."
+    },
+    "speciale": {
+     "evento": "Perturbazioni atmosferiche ostacolano le operazioni nemiche. Il giocatore non di turno non può effettuare Ricerche in questo Ambiente in questa Fase delle Missioni."
+    },
+    "selvaggio": {
+     "evento": "La popolazione si scatena! Se il pianeta entra in Ribellione durante questa Fase delle Missioni, il giocatore Ribelle riceve il doppio del valore di risorse di questo Ambiente (vedi Caso 15.46)."
+    }
+   },
+   "codice": {
+    "urbano": "GUERRA_CIVILE",
+    "speciale": "NESSUNA_RICERCA",
+    "selvaggio": "POPOLAZIONE_IN_RIVOLTA"
+   },
+   "file": "azione_14"
+  },
+  {
+   "nr": 83,
+   "en": {
+    "urbano": {
+     "lettere": [
+      "D",
+      "S"
+     ],
+     "evento": "Locals raid Enemy forces. Non-Phasing Player must eliminate one of his military units in the Environ, or if he controls a PDB that is Up on the planet, place it Down (Non-Phasing Player’s choice)."
+    },
+    "speciale": {
+     "lettere": [
+      "R",
+      "Q"
+     ],
+     "evento": "Characters detected. Enemy Player may conduct search for one Mission Group in the Environ."
+    },
+    "selvaggio": {
+     "lettere": [
+      "F"
+     ],
+     "evento": "Would-be rebels chicken out. Start Rebellion mission aborted. Characters detected."
+    }
+   },
+   "it": {
+    "urbano": {
+     "evento": "I locali razziano le forze nemiche. Il giocatore non di turno deve eliminare una delle sue unità militari nell'Ambiente oppure, se controlla una BDP attiva (Up) sul pianeta, disattivarla (Down) (a scelta del giocatore non di turno)."
+    },
+    "speciale": {
+     "evento": "Personaggi Individuati. Il giocatore nemico può effettuare una Ricerca contro un Gruppo di Missione nell'Ambiente."
+    },
+    "selvaggio": {
+     "evento": "Gli aspiranti ribelli si tirano indietro. Missione Avvia Ribellione abortita. Personaggi Individuati."
+    }
+   },
+   "codice": {
+    "urbano": "RAZZIA_LOCALI",
+    "speciale": "RICERCA_NEMICA",
+    "selvaggio": "MISSIONE_R_ABORTITA"
+   },
+   "file": "azione_15"
+  },
+  {
+   "nr": 84,
+   "en": {
+    "urbano": {
+     "lettere": [
+      "F",
+      "P"
+     ],
+     "evento": "Locals raid Enemy forces. Non-Phasing Player must eliminate one of his military units in the Environ, or, if he controls a PDB that is Up on the planet, place it Down (Non-Phasing Player’s choice)."
+    },
+    "speciale": {
+     "lettere": [
+      "R"
+     ],
+     "evento": "Creature attacks one Mission Group. If a creature is named in the Environ, look it up in the Galactic Guide to determine its attributes. If no creature is named, the Mission Group is attacked by two sentry robots (see Case 13.46)."
+    },
+    "selvaggio": {
+     "lettere": [
+      "S",
+      "H"
+     ],
+     "evento": "Characters detected."
+    }
+   },
+   "it": {
+    "urbano": {
+     "evento": "I locali razziano le forze nemiche. Il giocatore non di turno deve eliminare una delle sue unità militari nell'Ambiente oppure, se controlla una BDP attiva (Up) sul pianeta, disattivarla (Down) (a scelta del giocatore non di turno)."
+    },
+    "speciale": {
+     "evento": "Una creatura attacca un Gruppo di Missione. Se nell'Ambiente è indicata una creatura, consultala nella Guida Galattica per determinarne le caratteristiche. Se non è indicata alcuna creatura, il Gruppo di Missione è attaccato da due robot sentinella (vedi Caso 13.46)."
+    },
+    "selvaggio": {
+     "evento": "Personaggi Individuati."
+    }
+   },
+   "codice": {
+    "urbano": "RAZZIA_LOCALI",
+    "speciale": "CREATURA_O_DUE_ROBOT",
+    "selvaggio": "PERSONAGGI_INDIVIDUATI"
+   },
+   "file": "azione_16"
+  },
+  {
+   "nr": 85,
+   "en": {
+    "urbano": {
+     "lettere": [
+      "G",
+      "I"
+     ],
+     "evento": "Populace goes wild! If the planet is placed into rebellion during this Mission Phase, the Rebel Player receives double the resource value in this Environ (see Case 15.46)."
+    },
+    "speciale": {
+     "lettere": [
+      "R"
+     ],
+     "evento": "Characters detected. Enemy Player may conduct search for one Mission Group in Environ."
+    },
+    "selvaggio": {
+     "lettere": [
+      "S",
+      "E"
+     ],
+     "evento": "Creature attacks one Mission Group. If a creature is named in the Environ, look it up in the Galactic Guide to determine its attributes. If no creature is named, the Mission Group is attacked by two sentry robots."
+    }
+   },
+   "it": {
+    "urbano": {
+     "evento": "La popolazione si scatena! Se il pianeta entra in Ribellione durante questa Fase delle Missioni, il giocatore Ribelle riceve il doppio del valore di risorse di questo Ambiente (vedi Caso 15.46)."
+    },
+    "speciale": {
+     "evento": "Personaggi Individuati. Il giocatore nemico può effettuare una Ricerca contro un Gruppo di Missione nell'Ambiente."
+    },
+    "selvaggio": {
+     "evento": "Una creatura attacca un Gruppo di Missione. Se nell'Ambiente è indicata una creatura, consultala nella Guida Galattica per determinarne le caratteristiche. Se non è indicata alcuna creatura, il Gruppo di Missione è attaccato da due robot sentinella (vedi Caso 13.46)."
+    }
+   },
+   "codice": {
+    "urbano": "POPOLAZIONE_IN_RIVOLTA",
+    "speciale": "RICERCA_NEMICA",
+    "selvaggio": "CREATURA_O_DUE_ROBOT"
+   },
+   "file": "azione_17"
+  },
+  {
+   "nr": 86,
+   "en": {
+    "urbano": {
+     "lettere": [
+      "F",
+      "I"
+     ],
+     "evento": "Characters detected. Enemy Player may conduct search for one Mission Group in Environ."
+    },
+    "speciale": {
+     "lettere": [
+      "A",
+      "J"
+     ],
+     "evento": "Characters are delayed by rumors. No bonus draws may be taken in this Environ this Mission Phase."
+    },
+    "selvaggio": {
+     "lettere": [
+      "C",
+      "T"
+     ],
+     "evento": "Characters detected. Enemy Player may conduct search for one Mission Group in Environ."
+    }
+   },
+   "it": {
+    "urbano": {
+     "evento": "Personaggi Individuati. Il giocatore nemico può effettuare una Ricerca contro un Gruppo di Missione nell'Ambiente."
+    },
+    "speciale": {
+     "evento": "I personaggi sono rallentati da voci di corridoio. In questo Ambiente non si possono effettuare pescate bonus in questa Fase delle Missioni."
+    },
+    "selvaggio": {
+     "evento": "Personaggi Individuati. Il giocatore nemico può effettuare una Ricerca contro un Gruppo di Missione nell'Ambiente."
+    }
+   },
+   "codice": {
+    "urbano": "RICERCA_NEMICA",
+    "speciale": "NESSUN_BONUS",
+    "selvaggio": "RICERCA_NEMICA"
+   },
+   "file": "azione_18"
+  },
+  {
+   "nr": 87,
+   "en": {
+    "urbano": {
+     "lettere": [
+      "S",
+      "C"
+     ],
+     "evento": "Disagreeable food substance hampers characters. No bonus draws may be taken in this Environ this Mission Phase."
+    },
+    "speciale": {
+     "lettere": [
+      "R"
+     ],
+     "evento": "Coup mission aborted; Characters detected. Roll the die. 1, 2, no effect; 3, 4, shift Loyalty marker one space in Non-Phasing Player’s favor; 5, 6, shift loyalty and Mission Group found by Enemy squad or characters (Non-Phasing Player’s choice)."
+    },
+    "selvaggio": {
+     "lettere": [
+      "F",
+      "G"
+     ],
+     "evento": "Characters detected. Enemy Player may conduct search for one Mission Group in Environ."
+    }
+   },
+   "it": {
+    "urbano": {
+     "evento": "Un cibo disgustoso mette in difficoltà i personaggi. In questo Ambiente non si possono effettuare pescate bonus in questa Fase delle Missioni."
+    },
+    "speciale": {
+     "evento": "Missione Colpo di Stato abortita; Personaggi Individuati. Tira il dado: 1-2, nessun effetto; 3-4, sposta il segnalino Lealtà di una casella a favore del giocatore non di turno; 5-6, sposta la Lealtà e il Gruppo di Missione è Trovato da una squadra o da personaggi nemici (a scelta del giocatore non di turno)."
+    },
+    "selvaggio": {
+     "evento": "Personaggi Individuati. Il giocatore nemico può effettuare una Ricerca contro un Gruppo di Missione nell'Ambiente."
+    }
+   },
+   "codice": {
+    "urbano": "NESSUN_BONUS",
+    "speciale": "COUP_ABORTITO_5",
+    "selvaggio": "RICERCA_NEMICA"
+   },
+   "file": "azione_19"
+  },
+  {
+   "nr": 88,
+   "en": {
+    "urbano": {
+     "lettere": [
+      "T"
+     ],
+     "evento": "Characters are delayed by rumors. No bonus draws may be taken in this Environ this Mission Phase."
+    },
+    "speciale": {
+     "lettere": [
+      "F"
+     ],
+     "evento": "One Mission Group stumbles on Enemy squad. If the Enemy Player controls the planet and has military units in the Environ, character combat is initiated using the Squad Table to determine the Enemy’s strength."
+    },
+    "selvaggio": {
+     "lettere": [
+      "B",
+      "J"
+     ],
+     "evento": "Weather disturbances hamper Enemy operations. The Non-Phasing Player may conduct no searches in this Environ this Mission Phase."
+    }
+   },
+   "it": {
+    "urbano": {
+     "evento": "I personaggi sono rallentati da voci di corridoio. In questo Ambiente non si possono effettuare pescate bonus in questa Fase delle Missioni."
+    },
+    "speciale": {
+     "evento": "Un Gruppo di Missione si imbatte in una squadra nemica. Se il giocatore nemico controlla il pianeta e ha unità militari nell'Ambiente, si svolge un combattimento tra personaggi usando la Tabella delle Squadre per determinare la forza del Nemico."
+    },
+    "selvaggio": {
+     "evento": "Perturbazioni atmosferiche ostacolano le operazioni nemiche. Il giocatore non di turno non può effettuare Ricerche in questo Ambiente in questa Fase delle Missioni."
+    }
+   },
+   "codice": {
+    "urbano": "NESSUN_BONUS",
+    "speciale": "SQUADRA_NEMICA",
+    "selvaggio": "NESSUNA_RICERCA"
+   },
+   "file": "azione_20"
+  },
+  {
+   "nr": 89,
+   "en": {
+    "urbano": {
+     "lettere": [
+      "C",
+      "E"
+     ],
+     "evento": "The Imperial Player may commit an Atrocity on this planet (see Section 35.0). Advanced Game only. Otherwise ignore event."
+    },
+    "speciale": {
+     "lettere": [
+      "P"
+     ],
+     "evento": "Civil war breaks out. The populace blames the Phasing Player. If the Loyalty marker is currently at 1 or 2 in the Player’s favor, move the marker to Neutral. If the planet is in Rebellion or not in the Player’s favor, ignore event."
+    },
+    "selvaggio": {
+     "lettere": [
+      "R"
+     ],
+     "evento": "Local connections expedite mission. All missions receive one extra bonus draw in this Environ this Mission Phase."
+    }
+   },
+   "it": {
+    "urbano": {
+     "evento": "Il giocatore Imperiale può commettere un'Atrocità su questo pianeta (vedi Sezione 35.0). Solo nel Gioco Avanzato; altrimenti ignora l'evento."
+    },
+    "speciale": {
+     "evento": "Scoppia la guerra civile. La popolazione ne incolpa il giocatore di turno. Se il segnalino Lealtà si trova attualmente a 1 o 2 a favore di quel giocatore, spostalo su Neutrale. Se il pianeta è in Ribellione o non è a favore di quel giocatore, ignora l'evento."
+    },
+    "selvaggio": {
+     "evento": "Le conoscenze locali facilitano le missioni. Tutte le missioni ricevono una pescata bonus extra in questo Ambiente in questa Fase delle Missioni."
+    }
+   },
+   "codice": {
+    "urbano": "ATROCITA",
+    "speciale": "GUERRA_CIVILE",
+    "selvaggio": "BONUS_EXTRA"
+   },
+   "file": "azione_21"
+  },
+  {
+   "nr": 90,
+   "en": {
+    "urbano": {
+     "lettere": [
+      "B"
+     ],
+     "evento": "Confusing local protocol aborts a Diplomacy mission. If one is being performed in the Environ, shift the Loyalty marker one space in the Non-Phasing Player’s favor."
+    },
+    "speciale": {
+     "lettere": [
+      "C",
+      "H"
+     ],
+     "evento": "Enemy agent reveals mission. The Non-Phasing Player randomly chooses one mission that the Phasing Player is currently performing in the Environ; that mission is aborted. Characters detected."
+    },
+    "selvaggio": {
+     "lettere": [
+      "G",
+      "I"
+     ],
+     "evento": "Confusing local protocol aborts Diplomacy mission. If one is being performed in the Environ, shift the Loyalty marker one space in the Non-Phasing Player’s favor."
+    }
+   },
+   "it": {
+    "urbano": {
+     "evento": "Un protocollo locale incomprensibile fa abortire una missione Diplomazia. Se ne è in corso una nell'Ambiente, sposta il segnalino Lealtà di una casella a favore del giocatore non di turno."
+    },
+    "speciale": {
+     "evento": "Un agente nemico rivela la missione. Il giocatore non di turno sceglie a caso una delle missioni che il giocatore di turno sta svolgendo nell'Ambiente; quella missione è abortita. Personaggi Individuati."
+    },
+    "selvaggio": {
+     "evento": "Un protocollo locale incomprensibile fa abortire una missione Diplomazia. Se ne è in corso una nell'Ambiente, sposta il segnalino Lealtà di una casella a favore del giocatore non di turno."
+    }
+   },
+   "codice": {
+    "urbano": "MISSIONE_D_ABORTITA",
+    "speciale": "MISSIONE_CASUALE_ABORTITA",
+    "selvaggio": "MISSIONE_D_ABORTITA"
+   },
+   "file": "azione_22"
+  },
+  {
+   "nr": 91,
+   "en": {
+    "urbano": {
+     "lettere": [
+      "B",
+      "E"
+     ],
+     "evento": "Controversial political matters argued. If a Diplomacy mission is being performed, and no character in the Mission Group has a Diplomacy rating of two or more, the mission is aborted."
+    },
+    "speciale": {
+     "lettere": [
+      "P"
+     ],
+     "evento": "Local connections expedite missions. All missions receive one extra bonus draw in this Environ this Mission Phase."
+    },
+    "selvaggio": {
+     "lettere": [
+      "R",
+      "Q"
+     ],
+     "evento": "Irate Locals attack one Mission Group. Refer to the Irate Locals Chart to determine the mob’s attributes."
+    }
+   },
+   "it": {
+    "urbano": {
+     "evento": "Si discutono questioni politiche controverse. Se è in corso una missione Diplomazia e nessun personaggio del Gruppo di Missione ha un valore di Diplomazia pari o superiore a due, la missione è abortita."
+    },
+    "speciale": {
+     "evento": "Le conoscenze locali facilitano le missioni. Tutte le missioni ricevono una pescata bonus extra in questo Ambiente in questa Fase delle Missioni."
+    },
+    "selvaggio": {
+     "evento": "Locali infuriati attaccano un Gruppo di Missione. Consulta la Tabella dei Locali infuriati per determinare le caratteristiche della folla."
+    }
+   },
+   "codice": {
+    "urbano": "DIPLOMAZIA_CONTROVERSA",
+    "speciale": "BONUS_EXTRA",
+    "selvaggio": "LOCALI_ARRABBIATI"
+   },
+   "file": "azione_23"
+  },
+  {
+   "nr": 92,
+   "en": {
+    "urbano": {
+     "lettere": [
+      "S",
+      "G"
+     ],
+     "evento": "Coup mission aborted; characters detected. Roll the die. 1-3, no effect; 4, 5, shift Loyalty marker one space in Non-Phasing Player’s favor; 6, shift Loyalty and entire Mission Group killed."
+    },
+    "speciale": {
+     "lettere": [
+      "F",
+      "I"
+     ],
+     "evento": "Local connections expedite missions. All missions receive one extra bonus draw in this Environ this Mission Phase."
+    },
+    "selvaggio": {
+     "lettere": [
+      "R",
+      "T"
+     ],
+     "evento": "It’s the off-season for the local creatures. Ignore all ‘‘Creature Attacks’’ events in this Environ this Mission Phase."
+    }
+   },
+   "it": {
+    "urbano": {
+     "evento": "Missione Colpo di Stato abortita; Personaggi Individuati. Tira il dado: 1-3, nessun effetto; 4-5, sposta il segnalino Lealtà di una casella a favore del giocatore non di turno; 6, sposta la Lealtà e l'intero Gruppo di Missione è ucciso."
+    },
+    "speciale": {
+     "evento": "Le conoscenze locali facilitano le missioni. Tutte le missioni ricevono una pescata bonus extra in questo Ambiente in questa Fase delle Missioni."
+    },
+    "selvaggio": {
+     "evento": "È la bassa stagione per le creature locali. Ignora tutti gli eventi \"Una creatura attacca\" in questo Ambiente in questa Fase delle Missioni."
+    }
+   },
+   "codice": {
+    "urbano": "COUP_ABORTITO_4",
+    "speciale": "BONUS_EXTRA",
+    "selvaggio": "NESSUNA_CREATURA"
+   },
+   "file": "azione_24"
+  },
+  {
+   "nr": 93,
+   "en": {
+    "urbano": {
+     "lettere": [
+      "R",
+      "B"
+     ],
+     "evento": "Coup mission aborted; Characters detected. Roll the die. 1, 2, no effect; 3, 4, shift Loyalty marker one space in Non-Phasing Player’s favor; 5, 6, shift Loyalty and entire Mission Group captured."
+    },
+    "speciale": {
+     "lettere": [
+      "F"
+     ],
+     "evento": "The Imperial Player may commit an Atrocity on this planet (see Section 35.0). Galactic Game only. Otherwise, ignore event."
+    },
+    "selvaggio": {
+     "lettere": [
+      "S",
+      "C"
+     ],
+     "evento": "Confusing local protocol aborts a Diplomacy mission. If one is being performed in the Environ, shift the Loyalty marker one space in the Non-Phasing Player’s favor."
+    }
+   },
+   "it": {
+    "urbano": {
+     "evento": "Missione Colpo di Stato abortita; Personaggi Individuati. Tira il dado: 1-2, nessun effetto; 3-4, sposta il segnalino Lealtà di una casella a favore del giocatore non di turno; 5-6, sposta la Lealtà e l'intero Gruppo di Missione è catturato."
+    },
+    "speciale": {
+     "evento": "Il giocatore Imperiale può commettere un'Atrocità su questo pianeta (vedi Sezione 35.0). Solo nel Gioco Galattico; altrimenti ignora l'evento."
+    },
+    "selvaggio": {
+     "evento": "Un protocollo locale incomprensibile fa abortire una missione Diplomazia. Se ne è in corso una nell'Ambiente, sposta il segnalino Lealtà di una casella a favore del giocatore non di turno."
+    }
+   },
+   "codice": {
+    "urbano": "COUP_ABORTITO_6",
+    "speciale": "ATROCITA",
+    "selvaggio": "MISSIONE_D_ABORTITA"
+   },
+   "file": "azione_25"
+  },
+  {
+   "nr": 94,
+   "en": {
+    "urbano": {
+     "lettere": [
+      "D",
+      "Q"
+     ],
+     "evento": "Coup mission aborted; Characters detected. Roll the die. 1-3, shift Loyalty marker one space in Non-Phasing Player’s favor; 4-6, shift Loyalty and Mission Group found by Enemy squad or characters (Non-Phasing Player’s choice)."
+    },
+    "speciale": {
+     "lettere": [
+      "F",
+      "G"
+     ],
+     "evento": "Dissagreeable food substance hampers characters. No bonus draws may be taken in this Environ this Mission Phase."
+    },
+    "selvaggio": {
+     "lettere": [
+      "B",
+      "E"
+     ],
+     "evento": "Populace goes wild! If the planet is placed into rebellion during this Mission Phase, the Rebel Player receives double the resource value in this Environ (see Case 15.46)."
+    }
+   },
+   "it": {
+    "urbano": {
+     "evento": "Missione Colpo di Stato abortita; Personaggi Individuati. Tira il dado: 1-3, sposta il segnalino Lealtà di una casella a favore del giocatore non di turno; 4-6, sposta la Lealtà e il Gruppo di Missione è Trovato da una squadra o da personaggi nemici (a scelta del giocatore non di turno)."
+    },
+    "speciale": {
+     "evento": "Un cibo disgustoso mette in difficoltà i personaggi. In questo Ambiente non si possono effettuare pescate bonus in questa Fase delle Missioni."
+    },
+    "selvaggio": {
+     "evento": "La popolazione si scatena! Se il pianeta entra in Ribellione durante questa Fase delle Missioni, il giocatore Ribelle riceve il doppio del valore di risorse di questo Ambiente (vedi Caso 15.46)."
+    }
+   },
+   "codice": {
+    "urbano": "COUP_ABORTITO_7",
+    "speciale": "NESSUN_BONUS",
+    "selvaggio": "POPOLAZIONE_IN_RIVOLTA"
+   },
+   "file": "azione_26"
+  },
+  {
+   "nr": 95,
+   "en": {
+    "urbano": {
+     "lettere": [
+      "R",
+      "H"
+     ],
+     "evento": "Characters detected. Enemy Player may conduct search for one Mission Group in Environ."
+    },
+    "speciale": {
+     "lettere": [
+      "F",
+      "I"
+     ],
+     "evento": "Populace goes wild! If the planet is placed into rebellion during this Mission Phase, the Rebel Player receives double the resource value in this Environ (see Case 15.46)."
+    },
+    "selvaggio": {
+     "lettere": [
+      "B"
+     ],
+     "evento": "Creature attacks one Mission Group. If a creature is named in the Environ, look it up in the Galactic Guide to determine its attributes. If no creature is named, the Mission Group is attacked by two sentry robots (see Case 13.46)."
+    }
+   },
+   "it": {
+    "urbano": {
+     "evento": "Personaggi Individuati. Il giocatore nemico può effettuare una Ricerca contro un Gruppo di Missione nell'Ambiente."
+    },
+    "speciale": {
+     "evento": "La popolazione si scatena! Se il pianeta entra in Ribellione durante questa Fase delle Missioni, il giocatore Ribelle riceve il doppio del valore di risorse di questo Ambiente (vedi Caso 15.46)."
+    },
+    "selvaggio": {
+     "evento": "Una creatura attacca un Gruppo di Missione. Se nell'Ambiente è indicata una creatura, consultala nella Guida Galattica per determinarne le caratteristiche. Se non è indicata alcuna creatura, il Gruppo di Missione è attaccato da due robot sentinella (vedi Caso 13.46)."
+    }
+   },
+   "codice": {
+    "urbano": "RICERCA_NEMICA",
+    "speciale": "POPOLAZIONE_IN_RIVOLTA",
+    "selvaggio": "CREATURA_O_DUE_ROBOT"
+   },
+   "file": "azione_27"
+  },
+  {
+   "nr": 96,
+   "en": {
+    "urbano": {
+     "lettere": [
+      "A",
+      "T"
+     ],
+     "evento": "Characters detected. Enemy Player may conduct search for one Mission Group in Environ."
+    },
+    "speciale": {
+     "lettere": [
+      "D",
+      "E"
+     ],
+     "evento": "Wrong soldier contacted. If a Subvert Troops mission is being performed, it is aborted. Mission Group found by Enemy squad. If an Enemy leader is stacked with the Enemy military units, entire Mission Group is captured."
+    },
+    "selvaggio": {
+     "lettere": [
+      "P"
+     ],
+     "evento": "Dissagreeable food substance hampers characters. No bonus draws may be taken in this Environ this Mission Phase."
+    }
+   },
+   "it": {
+    "urbano": {
+     "evento": "Personaggi Individuati. Il giocatore nemico può effettuare una Ricerca contro un Gruppo di Missione nell'Ambiente."
+    },
+    "speciale": {
+     "evento": "Contattato il soldato sbagliato. Se è in corso una missione Sovvertire Truppe, è abortita. Il Gruppo di Missione è Trovato da una squadra nemica. Se un comandante nemico è impilato con le unità militari nemiche, l'intero Gruppo di Missione è catturato."
+    },
+    "selvaggio": {
+     "evento": "Un cibo disgustoso mette in difficoltà i personaggi. In questo Ambiente non si possono effettuare pescate bonus in questa Fase delle Missioni."
+    }
+   },
+   "codice": {
+    "urbano": "RICERCA_NEMICA",
+    "speciale": "MISSIONE_T_ABORTITA",
+    "selvaggio": "NESSUN_BONUS"
+   },
+   "file": "azione_28"
+  },
+  {
+   "nr": 97,
+   "en": {
+    "urbano": {
+     "lettere": [
+      "F"
+     ],
+     "evento": "Populace goes wild! If the planet is placed into rebellion during this Mission Phase, the Rebel Player receives double the resource value in this Environ (see Case 15.46)."
+    },
+    "speciale": {
+     "lettere": [
+      "S",
+      "H"
+     ],
+     "evento": "Creature attacks one Mission Group. If a Creature is named in the Environ, look it up in the Galactic Guide to determine its attributes. If no creature is named, ignore event."
+    },
+    "selvaggio": {
+     "lettere": [
+      "D"
+     ],
+     "evento": "Enemy agent reveals mission. The Non-Phasing Player randomly chooses one mission that the Phasing Player is currently performing in the Environ; that mission is aborted. Characters detected."
+    }
+   },
+   "it": {
+    "urbano": {
+     "evento": "La popolazione si scatena! Se il pianeta entra in Ribellione durante questa Fase delle Missioni, il giocatore Ribelle riceve il doppio del valore di risorse di questo Ambiente (vedi Caso 15.46)."
+    },
+    "speciale": {
+     "evento": "Una creatura attacca un Gruppo di Missione. Se nell'Ambiente è indicata una creatura, consultala nella Guida Galattica per determinarne le caratteristiche. Se non è indicata alcuna creatura, ignora l'evento."
+    },
+    "selvaggio": {
+     "evento": "Un agente nemico rivela la missione. Il giocatore non di turno sceglie a caso una delle missioni che il giocatore di turno sta svolgendo nell'Ambiente; quella missione è abortita. Personaggi Individuati."
+    }
+   },
+   "codice": {
+    "urbano": "POPOLAZIONE_IN_RIVOLTA",
+    "speciale": "CREATURA",
+    "selvaggio": "MISSIONE_CASUALE_ABORTITA"
+   },
+   "file": "azione_29"
+  }
+ ],
+ "missione": [
+  {
+   "nr": 53,
+   "lettera": "S",
+   "nome_en": "Sabotage",
+   "nome_it": "Sabotaggio",
+   "solo": "entrambi",
+   "en": {
+    "descrizione": "May attempt to damage Enemy PDB or military units by undercover activity.",
+    "restrizioni": "May only be attempted in Environ occupied by Enemy military units and/or if Enemy PDB is on planet.",
+    "risultato": "If the mission letter comes up once in the Action deck, the Player may remove one Enemy 1-0 military unit from the Environ (it is eliminated) or he may place the Enemy PDB Down. Or, if two mission letters come up, he may remove any one Enemy military unit from the Environ or reduce the Enemy PDB by one level and place it Down.",
+    "bonus": ""
+   },
+   "it": {
+    "descrizione": "Tentativo di danneggiare la BDP o le unità militari nemiche con attività clandestine.",
+    "restrizioni": "Può essere tentata solo in un Ambiente occupato da unità militari nemiche e/o se sul pianeta c'è una BDP nemica.",
+    "risultato": "Se la lettera della missione esce una volta nel mazzo Azione, il giocatore può rimuovere dall'Ambiente un'unità militare nemica 1-0 (è eliminata) oppure disattivare (Down) la BDP nemica. Se invece escono due lettere della missione, può rimuovere dall'Ambiente un'unità militare nemica qualsiasi oppure ridurre di un livello la BDP nemica e disattivarla (Down).",
+    "bonus": ""
+   },
+   "usata_star_system": true,
+   "file": "missione_14"
+  },
+  {
+   "nr": 54,
+   "lettera": "D",
+   "nome_en": "Diplomacy",
+   "nome_it": "Diplomazia",
+   "solo": "entrambi",
+   "en": {
+    "descrizione": "May attempt to shift planet Loyalty in Player's favor through negotiation with delegates of local populace.",
+    "restrizioni": "",
+    "risultato": "Every mission letter that comes up in the Action Deck shifts the planet Loyalty marker one space in favor of the Phasing Player, to a maximum of two shifts. May not place a planet in or out of rebellion.",
+    "bonus": "One character's Diplomacy rating plus one for each other character on the mission plus current Loyalty Rating (see Case 15.11)."
+   },
+   "it": {
+    "descrizione": "Tentativo di spostare la Lealtà del pianeta a favore del giocatore negoziando con i delegati della popolazione locale.",
+    "restrizioni": "",
+    "risultato": "Ogni lettera della missione che esce nel mazzo Azione sposta il segnalino Lealtà del pianeta di una casella a favore del giocatore di turno, fino a un massimo di due spostamenti. Non può porre un pianeta in Ribellione né farlo uscire dalla Ribellione.",
+    "bonus": "Il valore di Diplomazia di un personaggio, più uno per ogni altro personaggio in missione, più l'attuale valore di Lealtà (vedi Caso 15.11)."
+   },
+   "usata_star_system": true,
+   "file": "missione_13"
+  },
+  {
+   "nr": 55,
+   "lettera": "R",
+   "nome_en": "Start Rebellion/Stop Rebellion",
+   "nome_it": "Avvia Ribellione/Ferma Ribellione",
+   "solo": "entrambi",
+   "en": {
+    "descrizione": "Rebel Player: May attempt to start full scale rebellion if planet Loyalty at Unrest. Imperial Player: May attempt to halt rebellion by non-military means on planet in Rebellion.",
+    "restrizioni": "Rebel Player: planet Loyalty at Unrest. Imperial Player: planet in Rebellion.",
+    "risultato": "Rebel Player: If the Mission Letter comes up in the Action Deck, flip the Loyalty marker to the Rebellion side. See Case 15.4. Imperial Player: If the mission letter comes up twice in the Action Deck, flip the Rebellion marker to the Loyalty side.",
+    "bonus": "Imperial Player: No bonus draws."
+   },
+   "it": {
+    "descrizione": "Giocatore Ribelle: tentativo di scatenare una ribellione su vasta scala se la Lealtà del pianeta è ad Agitazione. Giocatore Imperiale: tentativo di fermare la ribellione con mezzi non militari su un pianeta in Ribellione.",
+    "restrizioni": "Giocatore Ribelle: Lealtà del pianeta ad Agitazione. Giocatore Imperiale: pianeta in Ribellione.",
+    "risultato": "Giocatore Ribelle: se la lettera della missione esce nel mazzo Azione, gira il segnalino Lealtà sul lato Ribellione. Vedi Caso 15.4. Giocatore Imperiale: se la lettera della missione esce due volte nel mazzo Azione, gira il segnalino Ribellione sul lato Lealtà.",
+    "bonus": "Giocatore Imperiale: nessuna pescata bonus."
+   },
+   "usata_star_system": true,
+   "file": "missione_12"
+  },
+  {
+   "nr": 56,
+   "lettera": "P",
+   "nome_en": "Scavenge for Possessions",
+   "nome_it": "Procurarsi Possessi",
+   "solo": "ribelli",
+   "en": {
+    "descrizione": "Rebel Player only: May attempt to find object of personal use.",
+    "restrizioni": "Rebel Player only.",
+    "risultato": "If the mission letter comes up in the Action Deck, draw a card from the Possessions Deck. The new item may be assigned to any character in the mission group. No more than one new possession may be gained in one mission.",
+    "bonus": ""
+   },
+   "it": {
+    "descrizione": "Solo giocatore Ribelle: tentativo di trovare un oggetto di uso personale.",
+    "restrizioni": "Solo giocatore Ribelle.",
+    "risultato": "Se la lettera della missione esce nel mazzo Azione, pesca una carta dal mazzo dei Possessi. Il nuovo oggetto può essere assegnato a qualsiasi personaggio del Gruppo di Missione. Non si può ottenere più di un nuovo possesso per missione.",
+    "bonus": ""
+   },
+   "usata_star_system": true,
+   "file": "missione_11"
+  },
+  {
+   "nr": 57,
+   "lettera": "G",
+   "nome_en": "Gain Characters",
+   "nome_it": "Reclutare Personaggi",
+   "solo": "entrambi",
+   "en": {
+    "descrizione": "May attempt to find new friend of worth to the Player's cause.",
+    "restrizioni": "In the Star System and Province Games, the Imperial Player may perform this mission only if his current number of characters is equal to or less than the number of characters he started the scenario with.",
+    "risultato": "If the mission letter comes up in the Action Deck, draw a Character Card at random from the appropriate deck. The new character's counter is placed in the Environ with the Mission Group. No more than one character may be gained in one mission.",
+    "bonus": ""
+   },
+   "it": {
+    "descrizione": "Tentativo di trovare un nuovo amico prezioso per la causa del giocatore.",
+    "restrizioni": "Nel Gioco del Sistema Stellare e nel Gioco della Provincia, il giocatore Imperiale può svolgere questa missione solo se il suo numero attuale di personaggi è pari o inferiore a quello con cui ha iniziato lo scenario.",
+    "risultato": "Se la lettera della missione esce nel mazzo Azione, pesca a caso una carta Personaggio dal mazzo appropriato. La pedina del nuovo personaggio è posta nell'Ambiente insieme al Gruppo di Missione. Non si può ottenere più di un personaggio per missione.",
+    "bonus": ""
+   },
+   "usata_star_system": true,
+   "file": "missione_10"
+  },
+  {
+   "nr": 58,
+   "lettera": "I",
+   "nome_en": "Gather Information",
+   "nome_it": "Raccogliere Informazioni",
+   "solo": "entrambi",
+   "en": {
+    "descrizione": "May attempt to learn details of Enemy deployment or strategic plans.",
+    "restrizioni": "May not be performed on a planet that is controlled by the Phasing Player if there are no Enemy units in the Environ.",
+    "risultato": "If one mission letter comes up in the Action Deck, all Enemy military units and characters on the planet are revealed and detected. Star System and Province Games: If two mission letters come up the above occurs and the Phasing Player earns one Victory Point for learning an Enemy secret. Galactic Game: If two mission letters come up, the above happens and the Player learns an Enemy Secret (see Case 37.4).",
+    "bonus": "One character's Intelligence."
+   },
+   "it": {
+    "descrizione": "Tentativo di conoscere i dettagli dello schieramento o dei piani strategici del Nemico.",
+    "restrizioni": "Non può essere svolta su un pianeta controllato dal giocatore di turno se nell'Ambiente non ci sono unità nemiche.",
+    "risultato": "Se esce una lettera della missione nel mazzo Azione, tutte le unità militari e i personaggi nemici sul pianeta sono rivelati e Individuati. Gioco del Sistema Stellare e Gioco della Provincia: se escono due lettere della missione, avviene quanto sopra e il giocatore di turno guadagna un Punto Vittoria per aver scoperto un segreto nemico. Gioco Galattico: se escono due lettere della missione, avviene quanto sopra e il giocatore scopre un Segreto nemico (vedi Caso 37.4).",
+    "bonus": "Il valore di Intelligenza di un personaggio."
+   },
+   "usata_star_system": true,
+   "file": "missione_09"
+  },
+  {
+   "nr": 59,
+   "lettera": "F",
+   "nome_en": "Free Prisoners",
+   "nome_it": "Liberare Prigionieri",
+   "solo": "entrambi",
+   "en": {
+    "descrizione": "May attempt to free Friendly captured characters in the same Environ.",
+    "restrizioni": "",
+    "risultato": "Every time that the mission letter comes up in the Action Deck, one captured character may be freed; place the captured character with the Mission Group. If more than one character is currently captured, the Phasing Player takes the one of his choice from among the Enemy's prisoners (but only those in the same Environ).",
+    "bonus": ""
+   },
+   "it": {
+    "descrizione": "Tentativo di liberare personaggi amici catturati nello stesso Ambiente.",
+    "restrizioni": "",
+    "risultato": "Ogni volta che la lettera della missione esce nel mazzo Azione, può essere liberato un personaggio catturato; ponilo insieme al Gruppo di Missione. Se più personaggi sono attualmente catturati, il giocatore di turno sceglie quale prendere tra i prigionieri del Nemico (ma solo tra quelli nello stesso Ambiente).",
+    "bonus": ""
+   },
+   "usata_star_system": true,
+   "file": "missione_08"
+  },
+  {
+   "nr": 60,
+   "lettera": "A",
+   "nome_en": "Assassination",
+   "nome_it": "Assassinio",
+   "solo": "entrambi",
+   "en": {
+    "descrizione": "May attempt to assassinate any one detected Enemy character in Environ.",
+    "restrizioni": "May only be performed in an Environ occupied by at least one detected Enemy character (who must be named before drawing Action Cards).",
+    "risultato": "If the mission letter comes up in the Action Deck, the named Enemy character is removed from play. If it does not come up, roll the die. On a roll of 4 or 5 all characters on the mission are captured; on a roll of 6, all characters on the mission are killed.",
+    "bonus": "One character's Intelligence rating."
+   },
+   "it": {
+    "descrizione": "Tentativo di assassinare un personaggio nemico Individuato nell'Ambiente.",
+    "restrizioni": "Può essere svolta solo in un Ambiente occupato da almeno un personaggio nemico Individuato (che va dichiarato prima di pescare le carte Azione).",
+    "risultato": "Se la lettera della missione esce nel mazzo Azione, il personaggio nemico dichiarato è rimosso dal gioco. Se non esce, tira il dado: con 4 o 5 tutti i personaggi in missione sono catturati; con 6 tutti i personaggi in missione sono uccisi.",
+    "bonus": "Il valore di Intelligenza di un personaggio."
+   },
+   "usata_star_system": true,
+   "file": "missione_07"
+  },
+  {
+   "nr": 61,
+   "lettera": "B",
+   "nome_en": "Start Rebel Camp",
+   "nome_it": "Fondare Campo Ribelle",
+   "solo": "ribelli",
+   "en": {
+    "descrizione": "Rebel Player only: May attempt to establish a band of locals dedicated to the Rebel cause.",
+    "restrizioni": "May be performed only on a planet that is currently Patriotic or Loyal.",
+    "risultato": "If the mission letter comes up in the Action Deck, place a Rebel Camp marker in the Environ. Beginning with the next Rebel Player-Turn, the camp may perform certain missions, within the restrictions of Case 13.2. The camp is removed from the game immediately if the planet's loyalty becomes Dissent or Unrest, or if there are a number of Imperial military Strength Points in the Environ equal to or greater than the Environ Size plus three.",
+    "bonus": "One character's Leadership rating."
+   },
+   "it": {
+    "descrizione": "Solo giocatore Ribelle: tentativo di creare una banda di locali votata alla causa Ribelle.",
+    "restrizioni": "Può essere svolta solo su un pianeta attualmente Patriottico o Leale.",
+    "risultato": "Se la lettera della missione esce nel mazzo Azione, poni un segnalino Campo Ribelle nell'Ambiente. A partire dal successivo Turno del giocatore Ribelle, il campo può svolgere alcune missioni, entro le restrizioni del Caso 13.2. Il campo è rimosso immediatamente dal gioco se la Lealtà del pianeta diventa Dissenso o Agitazione, oppure se nell'Ambiente ci sono Punti Forza militari Imperiali in numero pari o superiore alla Dimensione dell'Ambiente più tre.",
+    "bonus": "Il valore di Comando di un personaggio."
+   },
+   "usata_star_system": true,
+   "file": "missione_06"
+  },
+  {
+   "nr": 62,
+   "lettera": "T",
+   "nome_en": "Subvert Troops",
+   "nome_it": "Sovvertire Truppe",
+   "solo": "ribelli",
+   "en": {
+    "descrizione": "Rebel Player only: May attempt to subvert Imperial Militia, Patrol, or Line Military units to the Rebel cause.",
+    "restrizioni": "May be performed only in an Environ occupied by an Imperial military unit(s).",
+    "risultato": "If the mission letter comes up in the Action Deck, the Imperial Player must remove one Imperial Milita military unit from the Environ. It is replaced with a 1-0 Rebel military unit of the same Environ type. If the mission letter comes up twice, two Militia, one Patrol or one Line unit is removed and replaced with a 2-1 Rebel military unit.",
+    "bonus": "One character's Leadership rating."
+   },
+   "it": {
+    "descrizione": "Solo giocatore Ribelle: tentativo di portare alla causa Ribelle unità militari Imperiali di Milizia, Pattuglia o Linea.",
+    "restrizioni": "Può essere svolta solo in un Ambiente occupato da una o più unità militari Imperiali.",
+    "risultato": "Se la lettera della missione esce nel mazzo Azione, il giocatore Imperiale deve rimuovere dall'Ambiente un'unità militare Imperiale di Milizia, sostituita da un'unità militare Ribelle 1-0 dello stesso tipo di Ambiente. Se la lettera esce due volte, vengono rimosse due unità di Milizia, oppure una di Pattuglia o una di Linea, sostituite da un'unità militare Ribelle 2-1.",
+    "bonus": "Il valore di Comando di un personaggio."
+   },
+   "usata_star_system": true,
+   "file": "missione_05"
+  },
+  {
+   "nr": 63,
+   "lettera": "C",
+   "nome_en": "Coup",
+   "nome_it": "Colpo di Stato",
+   "solo": "entrambi",
+   "en": {
+    "descrizione": "May attempt to place a small group favorable to the Player's cause in control of an Environ.",
+    "restrizioni": "May be performed only in an Environ with a Coup rating and if at least one character in the Mission Group has an Intelligence rating greater than one.",
+    "risultato": "Every mission letter that comes up in the Action Deck shifts the planet Loyalty marker one space in favor of the Phasing Player. May not place a planet in or out of rebellion. Some Action Events may abort a Coup mission with adverse effects to the Mission Group.",
+    "bonus": "One character's Leadership rating plus the planet's Coup rating."
+   },
+   "it": {
+    "descrizione": "Tentativo di mettere al controllo di un Ambiente un piccolo gruppo favorevole alla causa del giocatore.",
+    "restrizioni": "Può essere svolta solo in un Ambiente con un valore di Colpo di Stato e se almeno un personaggio del Gruppo di Missione ha Intelligenza superiore a uno.",
+    "risultato": "Ogni lettera della missione che esce nel mazzo Azione sposta il segnalino Lealtà del pianeta di una casella a favore del giocatore di turno. Non può porre un pianeta in Ribellione né farlo uscire dalla Ribellione. Alcuni eventi Azione possono far abortire una missione Colpo di Stato con effetti negativi per il Gruppo di Missione.",
+    "bonus": "Il valore di Comando di un personaggio più il valore di Colpo di Stato del pianeta."
+   },
+   "usata_star_system": true,
+   "file": "missione_04"
+  },
+  {
+   "nr": 64,
+   "lettera": "E",
+   "nome_en": "Summon Sovereign",
+   "nome_it": "Convocare Sovrano",
+   "solo": "entrambi",
+   "en": {
+    "descrizione": "May attempt to summon a sovereign and his loyal followers to the Player's cause.",
+    "restrizioni": "May be attempted only in an Environ occupied by a Friendly or neutral sovereign, within the restrictions of Case 25.1.",
+    "risultato": "If one mission letter comes up in the Action Deck, a friendly sovereign has been summoned, see Case 25.1. If two mission letters come up, a neutral sovereign has been summoned, with the same effects as above. If the mission fails, see Case 25.15.",
+    "bonus": "One character's Diplomacy rating plus one character's Leadership rating."
+   },
+   "it": {
+    "descrizione": "Tentativo di chiamare alla causa del giocatore un Sovrano e i suoi fedeli seguaci.",
+    "restrizioni": "Può essere tentata solo in un Ambiente occupato da un Sovrano amico o neutrale, entro le restrizioni del Caso 25.1.",
+    "risultato": "Se esce una lettera della missione nel mazzo Azione, un Sovrano amico è stato convocato, vedi Caso 25.1. Se escono due lettere della missione, è stato convocato un Sovrano neutrale, con gli stessi effetti. Se la missione fallisce, vedi Caso 25.15.",
+    "bonus": "Il valore di Diplomazia di un personaggio più il valore di Comando di un personaggio."
+   },
+   "usata_star_system": false,
+   "file": "missione_03"
+  },
+  {
+   "nr": 65,
+   "lettera": "J",
+   "nome_en": "Spaceship Quest",
+   "nome_it": "Impresa in Astronave",
+   "solo": "entrambi",
+   "en": {
+    "descrizione": "May attempt to free a captured character in an Orbit Box. In the Galactic Game, the Rebel Player may attempt to destroy an Imperial Atrocity unit in an Orbit Box.",
+    "restrizioni": "May be performed only by a character with a Navigation rating of two or higher and a spaceship, in an Orbit Box that contains a captured Friendly character or, if Rebel performing mission, an Imperial Atrocity unit.",
+    "risultato": "If one mission letter comes up in the Action deck, one captured character has been rescued; place his counter with the Mission Group. If two mission letters come up, remove an Imperial Atrocity unit from the Orbit Box. If no mission letters come up, see Section 24.0. The mission receives only bonus draws (see 24.0).",
+    "bonus": "Evasion value of the pilot and spaceship (see Case 14.52) plus the Cannon rating of the spaceship."
+   },
+   "it": {
+    "descrizione": "Tentativo di liberare un personaggio catturato in una Casella d'Orbita. Nel Gioco Galattico il giocatore Ribelle può tentare di distruggere un'unità Atrocità Imperiale in una Casella d'Orbita.",
+    "restrizioni": "Può essere svolta solo da un personaggio con Navigazione pari o superiore a due e un'astronave, in una Casella d'Orbita che contenga un personaggio amico catturato oppure, se la missione è svolta dal Ribelle, un'unità Atrocità Imperiale.",
+    "risultato": "Se esce una lettera della missione nel mazzo Azione, un personaggio catturato è stato salvato; poni la sua pedina con il Gruppo di Missione. Se escono due lettere della missione, rimuovi un'unità Atrocità Imperiale dalla Casella d'Orbita. Se non esce alcuna lettera della missione, vedi Sezione 24.0. La missione riceve solo pescate bonus (vedi 24.0).",
+    "bonus": "Il valore di evasione del pilota e dell'astronave (vedi Caso 14.52) più il valore Cannoni dell'astronave."
+   },
+   "usata_star_system": false,
+   "file": "missione_02"
+  },
+  {
+   "nr": 66,
+   "lettera": "H",
+   "nome_en": "Steal Enemy Resources",
+   "nome_it": "Rubare Risorse Nemiche",
+   "solo": "entrambi",
+   "en": {
+    "descrizione": "May attempt to take Force Points from the Enemy Player's Resource Track and add them to yours.",
+    "restrizioni": "May only be attempted if there are at least two Force Points on the Enemy Resource Track. Rebel Player may only perform on an Imperial-controlled Capital or Throne Planet, or planet in the province scheduled to be taxed this Game-Turn (see Case 33.1). The Imperial Player may only perform on the Rebel secret base, after it is revealed (see Case 34.2).",
+    "risultato": "If one mission letter comes up in the Action Deck, two Force Points are subtracted from the Enemy Player's Resource Track and added to the Phasing Player's Track. If two mission letters come up, eight Force Points are subtracted from the Enemy Track and added to the Phasing Player's.",
+    "bonus": "One character's Intelligence rating plus one for each other character in the Mission Group."
+   },
+   "it": {
+    "descrizione": "Tentativo di prendere Punti Forza dal Tracciato delle Risorse del giocatore nemico e aggiungerli ai propri.",
+    "restrizioni": "Può essere tentata solo se sul Tracciato delle Risorse nemico ci sono almeno due Punti Forza. Il giocatore Ribelle può svolgerla solo su una Capitale o un Pianeta del Trono controllati dagli Imperiali, oppure su un pianeta della provincia che deve essere tassata in questo Turno di Gioco (vedi Caso 33.1). Il giocatore Imperiale può svolgerla solo sulla base segreta Ribelle, dopo che è stata rivelata (vedi Caso 34.2).",
+    "risultato": "Se esce una lettera della missione nel mazzo Azione, due Punti Forza sono sottratti dal Tracciato delle Risorse del giocatore nemico e aggiunti a quello del giocatore di turno. Se escono due lettere della missione, otto Punti Forza sono sottratti dal Tracciato nemico e aggiunti a quello del giocatore di turno.",
+    "bonus": "Il valore di Intelligenza di un personaggio più uno per ogni altro personaggio del Gruppo di Missione."
+   },
+   "usata_star_system": false,
+   "file": "missione_01"
+  },
+  {
+   "nr": 67,
+   "lettera": "Q",
+   "nome_en": "Question Prisoner",
+   "nome_it": "Interrogare Prigioniero",
+   "solo": "entrambi",
+   "en": {
+    "descrizione": "May attempt to learn Enemy secrets by questioning a captured Enemy character. The Imperial Player may choose to torture a captured Rebel character.",
+    "restrizioni": "May be performed by only one character stacked with a captured Enemy character.",
+    "risultato": "If one Mission Letter comes up in the Action Deck, the captured character has revealed an Enemy secret (see Case 37.4). The mission receives only Bonus Draws (see Case 37.11).",
+    "bonus": "Three plus the questioning character's Intelligence rating, minus the prisoner's Intelligence rating. If the Imperial Player announces torture, he receives six draws, plus and minus the characters' Intelligence ratings (however, see Case 37.12)."
+   },
+   "it": {
+    "descrizione": "Tentativo di scoprire segreti nemici interrogando un personaggio nemico catturato. Il giocatore Imperiale può scegliere di torturare un personaggio Ribelle catturato.",
+    "restrizioni": "Può essere svolta da un solo personaggio impilato con un personaggio nemico catturato.",
+    "risultato": "Se esce una lettera della missione nel mazzo Azione, il personaggio catturato ha rivelato un segreto nemico (vedi Caso 37.4). La missione riceve solo pescate bonus (vedi Caso 37.11).",
+    "bonus": "Tre più il valore di Intelligenza del personaggio che interroga, meno il valore di Intelligenza del prigioniero. Se il giocatore Imperiale annuncia la tortura, riceve sei pescate, più e meno i valori di Intelligenza dei personaggi (vedi però Caso 37.12)."
+   },
+   "usata_star_system": false,
+   "file": "missione_00"
+  }
+ ],
+ "evento": [
+  {
+   "nr": 98,
+   "titolo_en": "Space Pirates",
+   "titolo_it": "Pirati spaziali",
+   "en": "Rebel agents make contact with space pirates, who proceed to plunder any one Environ not occupied by Imperial military units on any one Imperial-controlled planet with no Imperial military units in Orbit. Add the resource value of the Environ to the Rebel Resource Track. If no such Environ exists, ignore this event.",
+   "it": "Agenti ribelli prendono contatto con dei pirati spaziali, che saccheggiano un Ambiente qualsiasi non occupato da unità militari Imperiali, su un qualsiasi pianeta controllato dagli Imperiali che non abbia unità militari Imperiali in Orbita. Aggiungi il valore di risorse dell'Ambiente al Tracciato delle Risorse Ribelle. Se non esiste un Ambiente simile, ignora questo evento.",
+   "file": "evento_00"
+  },
+  {
+   "nr": 99,
+   "titolo_en": "Segunden Times-Dispatch",
+   "titolo_it": "Il Segunden Times-Dispatch",
+   "en": "Unattractive Imperial policies revealed in the final issue of the Segunden Times-Dispatch. The Imperial Player must move the loyalty marker on any three planets occupied by Segundens one space in the Rebel Player’s favor.",
+   "it": "Politiche Imperiali impopolari vengono rivelate nell'ultimo numero del Segunden Times-Dispatch. Il giocatore Imperiale deve spostare il segnalino Lealtà di tre pianeti qualsiasi occupati dai Segunden di una casella a favore del giocatore Ribelle.",
+   "file": "evento_01"
+  },
+  {
+   "nr": 100,
+   "titolo_en": "The Emperor's Rare Mood",
+   "titolo_it": "L'umore nero dell'Imperatore",
+   "en": "The Emperor is in a rare mood. If the Action Event “Imperial Player may commit atrocity” comes up at any time during this Galactic Game-Turn, the Imperial Player may immediately commit an Atrocity on any planet (see Case 36.2).",
+   "it": "L'Imperatore è di umore particolare. Se l'evento Azione “Il giocatore Imperiale può commettere un'atrocità” esce in qualsiasi momento durante questo Turno di Gioco Galattico, il giocatore Imperiale può commettere immediatamente un'Atrocità su qualsiasi pianeta (vedi Caso 36.2).",
+   "file": "evento_02"
+  },
+  {
+   "nr": 101,
+   "titolo_en": "Time Singularity",
+   "titolo_it": "Singolarità temporale",
+   "en": "The whole galaxy is caught in a time Singularity. Both Players, during their respective Mission Phases, may assign each of their Mission Groups two missions during their first Player-Turn of this Campaign Game-Turn. Note: Ignore this event on the Hyper World as Mission Groups there can already perform two missions each.",
+   "it": "L'intera galassia è intrappolata in una singolarità temporale. Durante le rispettive Fasi delle Missioni del loro primo Turno del Giocatore di questo Turno di Gioco della Campagna, entrambi i giocatori possono assegnare a ciascuno dei loro Gruppi di Missione due missioni. Nota: ignora questo evento sull'Hyper World, dato che lì i Gruppi di Missione possono già svolgere due missioni ciascuno.",
+   "file": "evento_03"
+  },
+  {
+   "nr": 102,
+   "titolo_en": "Galactic Peace Month",
+   "titolo_it": "Mese della Pace Galattica",
+   "en": "It’s Galactic Peace Month, according to the Imperial calander. Imperial military units and characters are not restricted by the Strategic Assignment routine. The Imperial Player may move his units entirely as he sees fit for the duration of this Campaign Game-Turn.",
+   "it": "È il Mese della Pace Galattica, secondo il calendario Imperiale. Le unità militari e i personaggi Imperiali non sono vincolati dalla procedura delle Assegnazioni Strategiche. Il giocatore Imperiale può muovere le sue unità interamente come preferisce per la durata di questo Turno di Gioco della Campagna.",
+   "file": "evento_04"
+  },
+  {
+   "nr": 103,
+   "titolo_en": "Scholarly Enthusiasm",
+   "titolo_it": "Febbre accademica",
+   "en": "The Empire’s eligible young recruits are struck by a wave of scholarly enthusiasm and march off to institutions of higher learning. The Imperial Player may not purchase military units this Campaign Game-Turn. He still receives his normal taxes; he just cannot use his available Force Points to buy military units. He may expend Force Points on PDB’s.",
+   "it": "Le giovani reclute arruolabili dell'Impero vengono colte da un'ondata di entusiasmo per gli studi e partono per gli istituti di istruzione superiore. Il giocatore Imperiale non può acquistare unità militari in questo Turno di Gioco della Campagna. Riceve comunque le sue tasse normali; semplicemente non può usare i Punti Forza disponibili per acquistare unità militari. Può spendere Punti Forza per le BDP.",
+   "file": "evento_05"
+  },
+  {
+   "nr": 104,
+   "titolo_en": "Galactic Games",
+   "titolo_it": "Giochi Galattici",
+   "en": "Competition and entertainment are at their best ever, as the Imperial-sponsored GALACTIC GAMES tour Province One. The Rebel Player must move the loyalty marker on any three planets in Province One space in the Imperial Player’s favor.",
+   "it": "Competizioni e spettacoli sono al loro apice, mentre i GIOCHI GALATTICI sponsorizzati dall'Impero fanno tappa nella Provincia Uno. Il giocatore Ribelle deve spostare il segnalino Lealtà di tre pianeti qualsiasi della Provincia Uno di una casella a favore del giocatore Imperiale.",
+   "file": "evento_06"
+  },
+  {
+   "nr": 105,
+   "titolo_en": "Galactic Heart Acting Up",
+   "titolo_it": "Il cuore della galassia si agita",
+   "en": "The heart of the galaxy is acting up again. Add two to the Hyperjump distance being travelled by any units that are moving into or out of Province One (but not between other provinces and not within Province One).",
+   "it": "Il cuore della galassia si agita di nuovo. Aggiungi due alla distanza di Iperbalzo percorsa da qualsiasi unità che entri o esca dalla Provincia Uno (ma non tra altre province, né all'interno della Provincia Uno).",
+   "file": "evento_07"
+  },
+  {
+   "nr": 106,
+   "titolo_en": "Ghost Fleet",
+   "titolo_it": "La flotta fantasma",
+   "en": "A ghost fleet from the “Golden Age” mysteriously appears from the nether-dimension. During the Space Combat Segment of the first Rebel Player-Turn of this Campaign Game-Turn, the fleet attacks all Imperial military units in any one Orbit Box in the Fifth Province. It attacks with a strength of 20 (receiving no column shifts, although the Imperial forces may). After attacking in the Orbit Box of the Rebel Player’s choice the fleet vanishes. The attack is resolved before all other space combat.",
+   "it": "Una flotta fantasma dell'“Età dell'Oro” compare misteriosamente dalla dimensione inferiore. Durante il Segmento di Combattimento Spaziale del primo Turno del giocatore Ribelle di questo Turno di Gioco della Campagna, la flotta attacca tutte le unità militari Imperiali in una qualsiasi Casella d'Orbita della Quinta Provincia. Attacca con una forza di 20 (senza ricevere spostamenti di colonna, mentre le forze Imperiali possono riceverne). Dopo aver attaccato nella Casella d'Orbita scelta dal giocatore Ribelle, la flotta svanisce. L'attacco è risolto prima di ogni altro combattimento spaziale.",
+   "file": "evento_08"
+  },
+  {
+   "nr": 107,
+   "titolo_en": "Demonstrations on Lonica",
+   "titolo_it": "Manifestazioni su Lonica",
+   "en": "Rebel demonstrations on Lonica (421) get ugly, generating pro-Imperial feelings. Place Loyalty marker on Loyal, unless it is currently at Patriotic. The Rebel Player may perform no Diplomacy or Coup missions on the planet this Campaign Game-Turn.",
+   "it": "Le manifestazioni ribelli su Lonica (421) degenerano, suscitando sentimenti filo-Imperiali. Poni il segnalino Lealtà su Leale, a meno che non sia attualmente su Patriottico. Il giocatore Ribelle non può svolgere missioni Diplomazia o Colpo di Stato sul pianeta in questo Turno di Gioco della Campagna.",
+   "file": "evento_09"
+  },
+  {
+   "nr": 108,
+   "titolo_en": "Zakir Scandals",
+   "titolo_it": "Scandali su Zakir",
+   "en": "Political scandals and their subsequent coverups are exposed, shocking residents of the Zakir (51) star system into anti-Imperial outrage. Shift Loyalty of all three planets one space in favor of the Rebels.",
+   "it": "Scandali politici e i successivi insabbiamenti vengono smascherati, gettando gli abitanti del sistema stellare Zakir (51) in un'indignazione anti-Imperiale. Sposta la Lealtà di tutti e tre i pianeti di una casella a favore dei Ribelli.",
+   "file": "evento_10"
+  },
+  {
+   "nr": 109,
+   "titolo_en": "Deblon Rebel Cult",
+   "titolo_it": "Il culto ribelle di Deblon",
+   "en": "A fanatical rebel cult that roams the Deblon (44) Star System has sparked fervent Rebel support through their music and other persuasive entertainments. Shift the Loyalty markers on both planets one space in favor of the Rebels. If planet is currently Patriotic, shift it to Neutral, instead. If planet is currently in Unrest, it may be placed into Rebellion. The Domino Effect may be initiated if called for.",
+   "it": "Un fanatico culto ribelle che vaga nel Sistema Stellare Deblon (44) ha acceso un fervente sostegno ai Ribelli con la sua musica e altri persuasivi intrattenimenti. Sposta il segnalino Lealtà di entrambi i pianeti di una casella a favore dei Ribelli. Se un pianeta è attualmente Patriottico, spostalo invece su Neutrale. Se un pianeta è attualmente in Agitazione, può essere posto in Ribellione. Se previsto, può essere avviato l'Effetto Domino.",
+   "file": "evento_11"
+  },
+  {
+   "nr": 110,
+   "titolo_en": "Moons of Tamset",
+   "titolo_it": "Le lune di Tamset",
+   "en": "The many-colored moons of Tamset (312) perform a once-in-a-millenium cosmic dance of eclipses and conjunctions. All characters on the planet stare in wonderment. No bonus draws may be taken for any missions performed on this planet during this Campaign Game-Turn.",
+   "it": "Le lune multicolori di Tamset (312) danno vita a una danza cosmica di eclissi e congiunzioni che avviene una volta ogni millennio. Tutti i personaggi sul pianeta restano a fissarle rapiti. Per le missioni svolte su questo pianeta durante questo Turno di Gioco della Campagna non si possono effettuare pescate bonus.",
+   "file": "evento_12"
+  },
+  {
+   "nr": 111,
+   "titolo_en": "Storms on Varu",
+   "titolo_it": "Tempeste su Varu",
+   "en": "Sun spots and storms on Varu (43) drive all creatures wild. When resolving missions on planets in this system all ‘‘Creature Attacks’’ Action Events are carried out for the duration of the Campaign Game-Turn. Exception to Case 13.42.",
+   "it": "Macchie solari e tempeste su Varu (43) fanno impazzire tutte le creature. Quando si risolvono missioni sui pianeti di questo sistema, tutti gli eventi Azione “Una creatura attacca” vengono applicati per la durata del Turno di Gioco della Campagna. Eccezione al Caso 13.42.",
+   "file": "evento_13"
+  },
+  {
+   "nr": 112,
+   "titolo_en": "Rebel Code Cracked",
+   "titolo_it": "Codice ribelle decifrato",
+   "en": "Imperial intelligence network cracks Rebel communication code. A Rebel Secret must be revealed immediately (see Case 37.4). A new code is hastily devised.",
+   "it": "La rete di intelligence Imperiale decifra il codice di comunicazione dei Ribelli. Un Segreto Ribelle deve essere rivelato immediatamente (vedi Caso 37.4). Un nuovo codice viene messo a punto in fretta e furia.",
+   "file": "evento_14"
+  },
+  {
+   "nr": 113,
+   "titolo_en": "Bungled Transport",
+   "titolo_it": "Trasporti pasticcioni",
+   "en": "Bungled administrative work at Imperial transport control sends valuable military material into surprised Rebel hands. Decrease Imperial resources by five Force Points and increase Rebel resources by five Force Points. If there are not enough points currently on the Imperial Resource Track, it is subtracted from the upcoming Imperial Taxation.",
+   "it": "Un pasticcio amministrativo al controllo trasporti Imperiale fa finire prezioso materiale militare nelle mani di Ribelli sorpresi. Diminuisci le risorse Imperiali di cinque Punti Forza e aumenta le risorse Ribelli di cinque Punti Forza. Se sul Tracciato delle Risorse Imperiale non ci sono abbastanza punti, la differenza viene sottratta dalla prossima Tassazione Imperiale.",
+   "file": "evento_15"
+  },
+  {
+   "nr": 114,
+   "titolo_en": "Nomad Invasion of Egrix",
+   "titolo_it": "Invasione nomade di Egrix",
+   "en": "Independent nomadic star-faring race suddenly invades the Egrix Star System (22). The Player with the most military space Strength Points in the Orbit Box of each planet at the end of this Campaign Game-Turn may shift the Loyalty of that planet one space in his favor, as he has contributed the most to driving off the outside attackers there. Space and land combat between Rebel and Imperial military units is carried out normally and the Imperial Player is still restricted by his Strategic Assignments. If neither Player has units in an Orbit Box that planet’s Loyalty marker is not moved.",
+   "it": "Una razza nomade indipendente di viaggiatori stellari invade improvvisamente il Sistema Stellare Egrix (22). Il giocatore con più Punti Forza militari spaziali nella Casella d'Orbita di ciascun pianeta alla fine di questo Turno di Gioco della Campagna può spostare la Lealtà di quel pianeta di una casella a suo favore, avendo contribuito più di tutti a respingere gli aggressori esterni. Il combattimento spaziale e terrestre tra unità militari Ribelli e Imperiali si svolge normalmente e il giocatore Imperiale resta vincolato dalle sue Assegnazioni Strategiche. Se nessuno dei due giocatori ha unità in una Casella d'Orbita, il segnalino Lealtà di quel pianeta non viene spostato.",
+   "file": "evento_16"
+  },
+  {
+   "nr": 115,
+   "titolo_en": "Inventory Month",
+   "titolo_it": "Mese dell'Inventario",
+   "en": "It’s Military Inventory and Maintenance Month, according to the Imperial calendar. No Imperial military units may be moved outside of the province they currently occupy for the duration of this Campaign Game-Turn. However, Imperial characters may be moved according to the normal Strategic Assignment routine. If the secret Rebel base has already been revealed, ignore this event.",
+   "it": "È il Mese dell'Inventario e della Manutenzione Militare, secondo il calendario Imperiale. Nessuna unità militare Imperiale può essere mossa fuori dalla provincia che occupa attualmente per la durata di questo Turno di Gioco della Campagna. I personaggi Imperiali possono però essere mossi secondo la normale procedura delle Assegnazioni Strategiche. Se la base segreta Ribelle è già stata rivelata, ignora questo evento.",
+   "file": "evento_17"
+  },
+  {
+   "nr": 116,
+   "titolo_en": "Hyperjump Strike",
+   "titolo_it": "Sciopero dell'Iperbalzo",
+   "en": "Hyperjump technicians go on strike. All military units have their Navigation rating reduced by one this Galactic Game-Turn. Character spaceships are unaffected.",
+   "it": "I tecnici dell'Iperbalzo scendono in sciopero. Tutte le unità militari hanno il valore di Navigazione ridotto di uno in questo Turno di Gioco Galattico. Le astronavi dei personaggi non sono interessate.",
+   "file": "evento_18"
+  },
+  {
+   "nr": 117,
+   "titolo_en": "Plague in Province Three",
+   "titolo_it": "Pestilenza nella Provincia Tre",
+   "en": "Plague breaks out in Province Three. All characters currently in the province must receive one wound. Exception: Dr. Sontag and any Rebel character in the same environ, or any Rebel characters in the same environ as a Rebel character who owns the Medi-kit of Ptolus do not receive a wound. Furthermore, a planet in Province Three that has either the Doctor or the Medi-Kit on it shifts on Loyalty space in the Rebel Player’s favor.",
+   "it": "Scoppia una pestilenza nella Provincia Tre. Tutti i personaggi che si trovano attualmente nella provincia devono subire una ferita. Eccezione: non subiscono ferite il Dr. Sontag e qualsiasi personaggio Ribelle nello stesso Ambiente, né i personaggi Ribelli nello stesso Ambiente di un personaggio Ribelle che possiede il Medi-kit di Ptolus. Inoltre, un pianeta della Provincia Tre su cui si trovano il Dottore o il Medi-kit sposta la Lealtà di una casella a favore del giocatore Ribelle.",
+   "file": "evento_19"
+  },
+  {
+   "nr": 118,
+   "titolo_en": "Hyperjump Flux",
+   "titolo_it": "Flusso iperdimensionale",
+   "en": "Hyperjump dimensions in a state of flux. For the duration of this Galactic Game-Turn, when ever a unit is going to hyperjump, the owning Player names its destination and then rolls the die twice, reading the result as a two-digit number (i.e., a roll of 4 and 3 would be 43). If the result matches the number of an existing star on the map, that unit must attempt to Hyperjump to there, or else be automatically placed in the Drift Two box of its original destination. If the rolled number matches no star, it may jump normally.",
+   "it": "Le dimensioni dell'Iperbalzo sono in uno stato di flusso. Per la durata di questo Turno di Gioco Galattico, ogni volta che un'unità sta per effettuare un Iperbalzo, il giocatore che la possiede ne dichiara la destinazione e poi tira il dado due volte, leggendo il risultato come un numero di due cifre (ad es. un 4 e un 3 danno 43). Se il risultato corrisponde al numero di una stella esistente sulla mappa, l'unità deve tentare l'Iperbalzo verso quella stella, oppure viene automaticamente posta nella casella Deriva Due della sua destinazione originale. Se il numero non corrisponde ad alcuna stella, l'unità può balzare normalmente.",
+   "file": "evento_20"
+  },
+  {
+   "nr": 119,
+   "titolo_en": "Clone Experiments",
+   "titolo_it": "Esperimenti di clonazione",
+   "en": "Radical clone experiments are a big success. Draw three characters at random from among the dead Characters. Place each character in any Environ on a planet controlled by the owning Player. If the Rebel Player controls no planets, he may place a character drawn in this manner in any Environ on a Planet in Rebellion. If a player has no planets he can place a character on as described here, the character is returned to the dead characters pile.",
+   "it": "Esperimenti radicali di clonazione hanno un grande successo. Pesca a caso tre personaggi tra quelli morti. Poni ciascun personaggio in un Ambiente qualsiasi di un pianeta controllato dal giocatore che lo possiede. Se il giocatore Ribelle non controlla pianeti, può porre un personaggio pescato in questo modo in un Ambiente qualsiasi di un pianeta in Ribellione. Se un giocatore non ha pianeti su cui porre un personaggio come qui descritto, il personaggio torna nella pila dei personaggi morti.",
+   "file": "evento_21"
+  },
+  {
+   "nr": 120,
+   "titolo_en": "Kayn Racial Disputes",
+   "titolo_it": "Dispute razziali Kayn",
+   "en": "Internal racial disputes among the Kayns supercede any Imperial problems this Galactic Game-Turn. The Loyalty markers on any Planets occupied by the Kayn race may not be moved at all. Kayn characters (both Rebel and Imperial) may not be included in any Mission Groups or be named as a leader this Turn. They may be moved and may heal.",
+   "it": "Dispute razziali interne tra i Kayn hanno la precedenza su qualsiasi problema Imperiale in questo Turno di Gioco Galattico. I segnalini Lealtà dei pianeti occupati dalla razza Kayn non possono essere mossi in alcun modo. I personaggi Kayn (sia Ribelli sia Imperiali) non possono far parte di Gruppi di Missione né essere nominati comandanti in questo Turno. Possono essere mossi e possono guarire.",
+   "file": "evento_22"
+  },
+  {
+   "nr": 121,
+   "titolo_en": "Jamming Signals",
+   "titolo_it": "Segnali di disturbo",
+   "en": "Strange jamming signals from an unknown source shut down galactic communication for the duration of this Galactic Game-Turn. No Imperial units may be moved across a province boundary (even if a planet is in rebellion), and no Domino Effects may be initiated this Game-Turn.",
+   "it": "Strani segnali di disturbo provenienti da una fonte sconosciuta interrompono le comunicazioni galattiche per la durata di questo Turno di Gioco Galattico. Nessuna unità Imperiale può essere mossa attraverso un confine di provincia (anche se un pianeta è in Ribellione), e in questo Turno di Gioco non può essere avviato alcun Effetto Domino.",
+   "file": "evento_23"
+  },
+  {
+   "nr": 122,
+   "titolo_en": "Industrial Disaster",
+   "titolo_it": "Disastro industriale",
+   "en": "Industrial disaster at Defense Concepts Ltd., the manufacturer of all PDB equipment, cancels Imperial PDB output for this Galactic Game-Turn. The Imperial Player may not put any Down PDBs up or increase the levels of any of his PDBs.",
+   "it": "Un disastro industriale alla Defense Concepts Ltd., produttrice di tutti gli equipaggiamenti delle BDP, blocca la produzione di BDP Imperiali per questo Turno di Gioco Galattico. Il giocatore Imperiale non può riattivare (Up) BDP disattivate (Down) né aumentare il livello di alcuna sua BDP.",
+   "file": "evento_24"
+  },
+  {
+   "nr": 123,
+   "titolo_en": "Anti-Suicide Squad Sentiment",
+   "titolo_it": "Contro le Squadre Suicide",
+   "en": "Public horror and outrage at the increasing suicide rate and apparant reckless habits among the youth, spark anti-Suicide Squad sentiments. The Imperial Player must remove one Suicide Squad unit from play. It may be re-purchased in a future turn (how quickly they forget).",
+   "it": "L'orrore e lo sdegno dell'opinione pubblica per il crescente tasso di suicidi e le apparenti abitudini sconsiderate dei giovani alimentano un sentimento contrario alle Squadre Suicide. Il giocatore Imperiale deve rimuovere dal gioco un'unità Squadra Suicida. Potrà essere riacquistata in un turno successivo (si dimentica in fretta).",
+   "file": "evento_25"
+  },
+  {
+   "nr": 124,
+   "titolo_en": "Suvan Religious Leader",
+   "titolo_it": "Il capo religioso suvan",
+   "en": "Suvan religious leader denounces alleged Imperial atrocities. The Rebel Player may shift the Loyalty marker on the home planet of the Suvans one space in his favor, or shift the Loyalty markers on two other Suvan-occupied planets one space in his favor.",
+   "it": "Un capo religioso suvan denuncia presunte atrocità Imperiali. Il giocatore Ribelle può spostare di una casella a suo favore il segnalino Lealtà del pianeta natale dei Suvan, oppure spostare di una casella a suo favore i segnalini Lealtà di altri due pianeti occupati dai Suvan.",
+   "file": "evento_26"
+  },
+  {
+   "nr": 125,
+   "titolo_en": "Deltronics Recall",
+   "titolo_it": "Il richiamo della Deltronics",
+   "en": "Imperial Deltronics recall all standard Imperial character spaceships due to mechanical defect. All Imperial character spaceships (except Redjac’s ship) may not be moved for the duration of this Galactic Game-Turn.",
+   "it": "La Deltronics Imperiale richiama tutte le astronavi standard dei personaggi Imperiali per un difetto meccanico. Tutte le astronavi dei personaggi Imperiali (eccetto quella di Redjac) non possono essere mosse per la durata di questo Turno di Gioco Galattico.",
+   "file": "evento_27"
+  },
+  {
+   "nr": 126,
+   "titolo_en": "Propaganda Campaign",
+   "titolo_it": "Campagna di propaganda",
+   "en": "An unprecedented amount of propaganda and publicity for both the Imperial and Rebel causes inspire all characters to overcome any obstacles between them and total victory. When resolving all missions this Campaign Game-Turn, ignore any Actions Events that specifically prevent bonus draws.",
+   "it": "Una quantità senza precedenti di propaganda e pubblicità a favore delle cause Imperiale e Ribelle spinge tutti i personaggi a superare qualsiasi ostacolo tra loro e la vittoria totale. Quando si risolvono tutte le missioni di questo Turno di Gioco della Campagna, ignora qualsiasi evento Azione che impedisca specificamente le pescate bonus.",
+   "file": "evento_28"
+  }
+ ],
+ "strategico": [
+  {
+   "nr": 127,
+   "en": "Province One to Province Two",
+   "it": "Dalla Provincia Uno alla Provincia Due",
+   "da": 1,
+   "a": 2,
+   "file": "strategico_13"
+  },
+  {
+   "nr": 128,
+   "en": "Province One to Province Two",
+   "it": "Dalla Provincia Uno alla Provincia Due",
+   "da": 1,
+   "a": 2,
+   "file": "strategico_12"
+  },
+  {
+   "nr": 129,
+   "en": "Province One to Province Three",
+   "it": "Dalla Provincia Uno alla Provincia Tre",
+   "da": 1,
+   "a": 3,
+   "file": "strategico_11"
+  },
+  {
+   "nr": 130,
+   "en": "Province One to Province Three",
+   "it": "Dalla Provincia Uno alla Provincia Tre",
+   "da": 1,
+   "a": 3,
+   "file": "strategico_10"
+  },
+  {
+   "nr": 131,
+   "en": "Province One to Province Four",
+   "it": "Dalla Provincia Uno alla Provincia Quattro",
+   "da": 1,
+   "a": 4,
+   "file": "strategico_09"
+  },
+  {
+   "nr": 132,
+   "en": "Province One to Province Four",
+   "it": "Dalla Provincia Uno alla Provincia Quattro",
+   "da": 1,
+   "a": 4,
+   "file": "strategico_08"
+  },
+  {
+   "nr": 133,
+   "en": "Province One to Province Five",
+   "it": "Dalla Provincia Uno alla Provincia Cinque",
+   "da": 1,
+   "a": 5,
+   "file": "strategico_07"
+  },
+  {
+   "nr": 134,
+   "en": "Province One to Province Five",
+   "it": "Dalla Provincia Uno alla Provincia Cinque",
+   "da": 1,
+   "a": 5,
+   "file": "strategico_06"
+  },
+  {
+   "nr": 135,
+   "en": "Province Two to Province Three",
+   "it": "Dalla Provincia Due alla Provincia Tre",
+   "da": 2,
+   "a": 3,
+   "file": "strategico_05"
+  },
+  {
+   "nr": 136,
+   "en": "Province Two to Province Three",
+   "it": "Dalla Provincia Due alla Provincia Tre",
+   "da": 2,
+   "a": 3,
+   "file": "strategico_04"
+  },
+  {
+   "nr": 137,
+   "en": "Province Four to Province Five",
+   "it": "Dalla Provincia Quattro alla Provincia Cinque",
+   "da": 4,
+   "a": 5,
+   "file": "strategico_03"
+  },
+  {
+   "nr": 138,
+   "en": "Province Four to Province Five",
+   "it": "Dalla Provincia Quattro alla Provincia Cinque",
+   "da": 4,
+   "a": 5,
+   "file": "strategico_02"
+  },
+  {
+   "nr": 139,
+   "en": "Province Two to Province Five",
+   "it": "Dalla Provincia Due alla Provincia Cinque",
+   "da": 2,
+   "a": 5,
+   "file": "strategico_01"
+  },
+  {
+   "nr": 140,
+   "en": "Province Three to Province Four",
+   "it": "Dalla Provincia Tre alla Provincia Quattro",
+   "da": 3,
+   "a": 4,
+   "file": "strategico_00"
+  }
+ ],
+ "personaggi": [
+  {
+   "nr": 1,
+   "fazione": "ribelli",
+   "razza_en": "Rhone",
+   "nome": "Zina Adora",
+   "titolo_en": "Princess of Adare",
+   "titolo_it": "Principessa di Adare",
+   "combattimento": 1,
+   "resistenza": 2,
+   "intelligenza": 3,
+   "comando": 2,
+   "comando_spazio": null,
+   "diplomazia": 2,
+   "navigazione": 1,
+   "pianeti_natali": [
+    "Adare"
+   ],
+   "cavaliere_imperiale": false,
+   "speciale_en": "Receives one bonus draw on Gather Information mission (I).",
+   "speciale_it": "Riceve una pescata bonus nella missione Raccogliere Informazioni (I).",
+   "file": "ribelli_19"
+  },
+  {
+   "nr": 2,
+   "fazione": "ribelli",
+   "razza_en": "Rhone",
+   "nome": "Adam Starlight",
+   "titolo_en": null,
+   "titolo_it": null,
+   "combattimento": 3,
+   "resistenza": 4,
+   "intelligenza": 2,
+   "comando": 1,
+   "comando_spazio": 1,
+   "diplomazia": 0,
+   "navigazione": 4,
+   "pianeti_natali": [
+    "Liomax"
+   ],
+   "cavaliere_imperiale": false,
+   "speciale_en": "",
+   "speciale_it": "",
+   "file": "ribelli_18"
+  },
+  {
+   "nr": 3,
+   "fazione": "ribelli",
+   "razza_en": "Rhone",
+   "nome": "Agan Rafa",
+   "titolo_en": null,
+   "titolo_it": null,
+   "combattimento": 5,
+   "resistenza": 6,
+   "intelligenza": 1,
+   "comando": 2,
+   "comando_spazio": null,
+   "diplomazia": 0,
+   "navigazione": 3,
+   "pianeti_natali": [
+    "Pronox"
+   ],
+   "cavaliere_imperiale": false,
+   "speciale_en": "Receives one bonus draw on Gather Information mission (I) and two bonus draws on Assassination mission (A).",
+   "speciale_it": "Riceve una pescata bonus nella missione Raccogliere Informazioni (I) e due pescate bonus nella missione Assassinio (A).",
+   "file": "ribelli_17"
+  },
+  {
+   "nr": 4,
+   "fazione": "ribelli",
+   "razza_en": "Xanthon",
+   "nome": "Frun Sentel",
+   "titolo_en": "Prince of Xan",
+   "titolo_it": "Principe di Xan",
+   "combattimento": 5,
+   "resistenza": 5,
+   "intelligenza": 1,
+   "comando": 1,
+   "comando_spazio": null,
+   "diplomazia": 1,
+   "navigazione": 3,
+   "pianeti_natali": [
+    "Xan"
+   ],
+   "cavaliere_imperiale": false,
+   "speciale_en": "Receives one bonus draw on Rebel Camp mission (B) and two bonus draws on Assassination mission (A).",
+   "speciale_it": "Riceve una pescata bonus nella missione Fondare Campo Ribelle (B) e due pescate bonus nella missione Assassinio (A).",
+   "file": "ribelli_16"
+  },
+  {
+   "nr": 5,
+   "fazione": "ribelli",
+   "razza_en": "Leonid",
+   "nome": "Odene Hobar",
+   "titolo_en": "Prince of Heliax",
+   "titolo_it": "Principe di Heliax",
+   "combattimento": 3,
+   "resistenza": 4,
+   "intelligenza": 3,
+   "comando": 2,
+   "comando_spazio": 1,
+   "diplomazia": 2,
+   "navigazione": 2,
+   "pianeti_natali": [
+    "Heliax"
+   ],
+   "cavaliere_imperiale": false,
+   "speciale_en": "",
+   "speciale_it": "",
+   "file": "ribelli_15"
+  },
+  {
+   "nr": 6,
+   "fazione": "ribelli",
+   "razza_en": "Saurian",
+   "nome": "Ly Mantok",
+   "titolo_en": null,
+   "titolo_it": null,
+   "combattimento": 5,
+   "resistenza": 4,
+   "intelligenza": 4,
+   "comando": 3,
+   "comando_spazio": 2,
+   "diplomazia": 1,
+   "navigazione": 5,
+   "pianeti_natali": [
+    "Jura"
+   ],
+   "cavaliere_imperiale": false,
+   "speciale_en": "Receives two bonus draws on Subvert Troops mission (T). Owns the Explorer.",
+   "speciale_it": "Riceve due pescate bonus nella missione Sovvertire Truppe (T). Possiede l'Explorer.",
+   "file": "ribelli_14"
+  },
+  {
+   "nr": 7,
+   "fazione": "ribelli",
+   "razza_en": "Suvan",
+   "nome": "Vudot Vodot",
+   "titolo_en": null,
+   "titolo_it": null,
+   "combattimento": 1,
+   "resistenza": 2,
+   "intelligenza": 4,
+   "comando": 2,
+   "comando_spazio": null,
+   "diplomazia": 4,
+   "navigazione": 0,
+   "pianeti_natali": [
+    "Akubera"
+   ],
+   "cavaliere_imperiale": false,
+   "speciale_en": "Receives two bonus draws on Coup mission (C) and Summon Sovereign mission (E).",
+   "speciale_it": "Riceve due pescate bonus nelle missioni Colpo di Stato (C) e Convocare Sovrano (E).",
+   "file": "ribelli_13"
+  },
+  {
+   "nr": 8,
+   "fazione": "ribelli",
+   "razza_en": "Piorad",
+   "nome": "Ran Jayma",
+   "titolo_en": null,
+   "titolo_it": null,
+   "combattimento": 4,
+   "resistenza": 5,
+   "intelligenza": 2,
+   "comando": 1,
+   "comando_spazio": null,
+   "diplomazia": 0,
+   "navigazione": 5,
+   "pianeti_natali": [
+    "Ownex"
+   ],
+   "cavaliere_imperiale": false,
+   "speciale_en": "Receives one bonus draw on Assassination mission (A).",
+   "speciale_it": "Riceve una pescata bonus nella missione Assassinio (A).",
+   "file": "ribelli_12"
+  },
+  {
+   "nr": 9,
+   "fazione": "ribelli",
+   "razza_en": "Rhone",
+   "nome": "Tourag",
+   "titolo_en": null,
+   "titolo_it": null,
+   "combattimento": 3,
+   "resistenza": 3,
+   "intelligenza": 2,
+   "comando": 1,
+   "comando_spazio": 1,
+   "diplomazia": 2,
+   "navigazione": 4,
+   "pianeti_natali": [
+    "Diomas"
+   ],
+   "cavaliere_imperiale": false,
+   "speciale_en": "Receives one bonus draw for Subvert Troops mission (T) and two for Possessions mission (P). Owns the Solar Merchant.",
+   "speciale_it": "Riceve una pescata bonus nella missione Sovvertire Truppe (T) e due nella missione Procurarsi Possessi (P). Possiede il Mercante Solare.",
+   "file": "ribelli_11"
+  },
+  {
+   "nr": 10,
+   "fazione": "ribelli",
+   "razza_en": "Rhone",
+   "nome": "Rayner Derban",
+   "titolo_en": null,
+   "titolo_it": null,
+   "combattimento": 5,
+   "resistenza": 5,
+   "intelligenza": 4,
+   "comando": 4,
+   "comando_spazio": 1,
+   "diplomazia": 3,
+   "navigazione": 4,
+   "pianeti_natali": [
+    "Orlog"
+   ],
+   "cavaliere_imperiale": false,
+   "speciale_en": "Receives two bonus draws on Sabotage missions (S).",
+   "speciale_it": "Riceve due pescate bonus nelle missioni Sabotaggio (S).",
+   "file": "ribelli_10"
+  },
+  {
+   "nr": 11,
+   "fazione": "ribelli",
+   "razza_en": "Kayn",
+   "nome": "Kogus",
+   "titolo_en": null,
+   "titolo_it": null,
+   "combattimento": 5,
+   "resistenza": 5,
+   "intelligenza": 2,
+   "comando": 0,
+   "comando_spazio": null,
+   "diplomazia": 0,
+   "navigazione": 3,
+   "pianeti_natali": [
+    "Niconi"
+   ],
+   "cavaliere_imperiale": false,
+   "speciale_en": "Increase all ratings (except Endurance) by one if with Zina Adora.",
+   "speciale_it": "Aumenta di uno tutti i valori (tranne Resistenza) se è insieme a Zina Adora.",
+   "file": "ribelli_09"
+  },
+  {
+   "nr": 12,
+   "fazione": "ribelli",
+   "razza_en": "Rhone",
+   "nome": "Doctor Sontag",
+   "titolo_en": null,
+   "titolo_it": null,
+   "combattimento": 2,
+   "resistenza": 2,
+   "intelligenza": 4,
+   "comando": 1,
+   "comando_spazio": null,
+   "diplomazia": 3,
+   "navigazione": 0,
+   "pianeti_natali": [
+    "Orlog"
+   ],
+   "cavaliere_imperiale": false,
+   "speciale_en": "May heal other characters (see Case 13.72). Receives two bonus draws on Gather Information mission (I).",
+   "speciale_it": "Può curare altri personaggi (vedi Caso 13.72). Riceve due pescate bonus nella missione Raccogliere Informazioni (I).",
+   "file": "ribelli_08"
+  },
+  {
+   "nr": 13,
+   "fazione": "ribelli",
+   "razza_en": "Rhone",
+   "nome": "Scott Rubel",
+   "titolo_en": null,
+   "titolo_it": null,
+   "combattimento": 3,
+   "resistenza": 4,
+   "intelligenza": 1,
+   "comando": 1,
+   "comando_spazio": null,
+   "diplomazia": 0,
+   "navigazione": 5,
+   "pianeti_natali": [
+    "Adrax"
+   ],
+   "cavaliere_imperiale": false,
+   "speciale_en": "",
+   "speciale_it": "",
+   "file": "ribelli_07"
+  },
+  {
+   "nr": 14,
+   "fazione": "ribelli",
+   "razza_en": "Piorad",
+   "nome": "Boccanegra",
+   "titolo_en": null,
+   "titolo_it": null,
+   "combattimento": 5,
+   "resistenza": 5,
+   "intelligenza": 2,
+   "comando": 2,
+   "comando_spazio": 1,
+   "diplomazia": 0,
+   "navigazione": 4,
+   "pianeti_natali": [
+    "Ayod"
+   ],
+   "cavaliere_imperiale": false,
+   "speciale_en": "Add one to hiding value of group he is with. Owns the Planetary Privateer.",
+   "speciale_it": "Aggiunge uno al valore di occultamento del gruppo di cui fa parte. Possiede il Corsaro Planetario.",
+   "file": "ribelli_06"
+  },
+  {
+   "nr": 15,
+   "fazione": "ribelli",
+   "razza_en": "Calma",
+   "nome": "Drakir Grebb",
+   "titolo_en": "Prince of Suti",
+   "titolo_it": "Principe di Suti",
+   "combattimento": 3,
+   "resistenza": 4,
+   "intelligenza": 3,
+   "comando": 1,
+   "comando_spazio": null,
+   "diplomazia": 1,
+   "navigazione": 2,
+   "pianeti_natali": [
+    "Suti"
+   ],
+   "cavaliere_imperiale": false,
+   "speciale_en": "",
+   "speciale_it": "",
+   "file": "ribelli_05"
+  },
+  {
+   "nr": 16,
+   "fazione": "ribelli",
+   "razza_en": "Theshian",
+   "nome": "Yarro Latac",
+   "titolo_en": null,
+   "titolo_it": null,
+   "combattimento": 2,
+   "resistenza": 3,
+   "intelligenza": 3,
+   "comando": 1,
+   "comando_spazio": null,
+   "diplomazia": 0,
+   "navigazione": 4,
+   "pianeti_natali": [
+    "Rhexia"
+   ],
+   "cavaliere_imperiale": false,
+   "speciale_en": "May repair damaged spaceships and inoperable possessions (see Case 27.3). Ignore “creature attacks” by Imperial sentry robots.",
+   "speciale_it": "Può riparare astronavi danneggiate e possessi inutilizzabili (vedi Caso 27.3). Ignora gli eventi “una creatura attacca” dei robot sentinella Imperiali.",
+   "file": "ribelli_04"
+  },
+  {
+   "nr": 17,
+   "fazione": "ribelli",
+   "razza_en": "Illias",
+   "nome": "Professor Mareg",
+   "titolo_en": null,
+   "titolo_it": null,
+   "combattimento": 3,
+   "resistenza": 4,
+   "intelligenza": 4,
+   "comando": 0,
+   "comando_spazio": null,
+   "diplomazia": 0,
+   "navigazione": 2,
+   "pianeti_natali": [
+    "Cercis"
+   ],
+   "cavaliere_imperiale": false,
+   "speciale_en": "Ignore first “creature attacks characters” event in Special or Wild Environ. Reveal Planet Secret.",
+   "speciale_it": "Ignora il primo evento “una creatura attacca” in un Ambiente Speciale o Selvaggio. Rivela il Segreto Planetario.",
+   "file": "ribelli_03"
+  },
+  {
+   "nr": 18,
+   "fazione": "ribelli",
+   "razza_en": "Henone",
+   "nome": "Oneste Woada",
+   "titolo_en": null,
+   "titolo_it": null,
+   "combattimento": 0,
+   "resistenza": 3,
+   "intelligenza": 3,
+   "comando": 0,
+   "comando_spazio": null,
+   "diplomazia": 3,
+   "navigazione": 1,
+   "pianeti_natali": [
+    "Horon"
+   ],
+   "cavaliere_imperiale": false,
+   "speciale_en": "Ignore all “irate locals attack” events.",
+   "speciale_it": "Ignora tutti gli eventi “Locali infuriati attaccano”.",
+   "file": "ribelli_02"
+  },
+  {
+   "nr": 19,
+   "fazione": "ribelli",
+   "razza_en": "Segunden",
+   "nome": "Sidir Ganang",
+   "titolo_en": null,
+   "titolo_it": null,
+   "combattimento": 3,
+   "resistenza": 3,
+   "intelligenza": 3,
+   "comando": 0,
+   "comando_spazio": null,
+   "diplomazia": 1,
+   "navigazione": 3,
+   "pianeti_natali": [
+    "Bajukai"
+   ],
+   "cavaliere_imperiale": false,
+   "speciale_en": "Receives one bonus draw on Coup mission (C) and Rebel Camp mission (B).",
+   "speciale_it": "Riceve una pescata bonus nelle missioni Colpo di Stato (C) e Fondare Campo Ribelle (B).",
+   "file": "ribelli_01"
+  },
+  {
+   "nr": 20,
+   "fazione": "ribelli",
+   "razza_en": "Ursi",
+   "nome": "Bridne Murcada",
+   "titolo_en": null,
+   "titolo_it": null,
+   "combattimento": 3,
+   "resistenza": 3,
+   "intelligenza": 4,
+   "comando": 0,
+   "comando_spazio": null,
+   "diplomazia": 0,
+   "navigazione": 3,
+   "pianeti_natali": [
+    "Lysenda"
+   ],
+   "cavaliere_imperiale": false,
+   "speciale_en": "Receives three bonus draws for Assassination mission (A). Add two to hiding value of group she is with.",
+   "speciale_it": "Riceve tre pescate bonus nella missione Assassinio (A). Aggiunge due al valore di occultamento del gruppo di cui fa parte.",
+   "file": "ribelli_00"
+  },
+  {
+   "nr": 21,
+   "fazione": "imperiali",
+   "razza_en": "Rhone",
+   "nome": "Thysa Kymbo",
+   "titolo_en": "Princess of Orlog",
+   "titolo_it": "Principessa di Orlog",
+   "combattimento": 1,
+   "resistenza": 2,
+   "intelligenza": 3,
+   "comando": 1,
+   "comando_spazio": 1,
+   "diplomazia": 1,
+   "navigazione": 0,
+   "pianeti_natali": [
+    "Orlog"
+   ],
+   "cavaliere_imperiale": false,
+   "speciale_en": "Receives two bonus draws for Gather Information mission (I), one bonus draw for Coup mission (C), and two bonus draws for Summon Sovereign mission (E).",
+   "speciale_it": "Riceve due pescate bonus nella missione Raccogliere Informazioni (I), una pescata bonus nella missione Colpo di Stato (C) e due pescate bonus nella missione Convocare Sovrano (E).",
+   "file": "imperiali_11"
+  },
+  {
+   "nr": 22,
+   "fazione": "imperiali",
+   "razza_en": "Kayn",
+   "nome": "Barca",
+   "titolo_en": null,
+   "titolo_it": null,
+   "combattimento": 5,
+   "resistenza": 4,
+   "intelligenza": 4,
+   "comando": 4,
+   "comando_spazio": 3,
+   "diplomazia": 1,
+   "navigazione": 4,
+   "pianeti_natali": [
+    "Kalgar"
+   ],
+   "cavaliere_imperiale": false,
+   "speciale_en": "Receives two bonus draws for Sabotage mission (S).",
+   "speciale_it": "Riceve due pescate bonus nella missione Sabotaggio (S).",
+   "file": "imperiali_10"
+  },
+  {
+   "nr": 23,
+   "fazione": "imperiali",
+   "razza_en": "Charkhan",
+   "nome": "Saytar",
+   "titolo_en": null,
+   "titolo_it": null,
+   "combattimento": 4,
+   "resistenza": 4,
+   "intelligenza": 2,
+   "comando": 2,
+   "comando_spazio": 2,
+   "diplomazia": 1,
+   "navigazione": 3,
+   "pianeti_natali": [
+    "Charkhan"
+   ],
+   "cavaliere_imperiale": false,
+   "speciale_en": "",
+   "speciale_it": "",
+   "file": "imperiali_09"
+  },
+  {
+   "nr": 24,
+   "fazione": "imperiali",
+   "razza_en": "Rhone",
+   "nome": "Telmen",
+   "titolo_en": null,
+   "titolo_it": null,
+   "combattimento": 4,
+   "resistenza": 4,
+   "intelligenza": 3,
+   "comando": 3,
+   "comando_spazio": 2,
+   "diplomazia": 0,
+   "navigazione": 4,
+   "pianeti_natali": [
+    "Tsipa"
+   ],
+   "cavaliere_imperiale": false,
+   "speciale_en": "",
+   "speciale_it": "",
+   "file": "imperiali_08"
+  },
+  {
+   "nr": 25,
+   "fazione": "imperiali",
+   "razza_en": "Saurian",
+   "nome": "Jon Kidu",
+   "titolo_en": "Governor of Chim",
+   "titolo_it": "Governatore di Chim",
+   "combattimento": 3,
+   "resistenza": 4,
+   "intelligenza": 3,
+   "comando": 3,
+   "comando_spazio": 1,
+   "diplomazia": 1,
+   "navigazione": 1,
+   "pianeti_natali": [
+    "Chim",
+    "Squamot"
+   ],
+   "cavaliere_imperiale": false,
+   "speciale_en": "Receives one bonus draw on Assassination mission (A) Coup mission (C).",
+   "speciale_it": "Riceve una pescata bonus nelle missioni Assassinio (A) e Colpo di Stato (C).",
+   "file": "imperiali_07"
+  },
+  {
+   "nr": 26,
+   "fazione": "imperiali",
+   "razza_en": "Rhone",
+   "nome": "Gelba",
+   "titolo_en": "Governor of Trov",
+   "titolo_it": "Governatore di Trov",
+   "combattimento": 3,
+   "resistenza": 3,
+   "intelligenza": 2,
+   "comando": 3,
+   "comando_spazio": 1,
+   "diplomazia": 2,
+   "navigazione": 1,
+   "pianeti_natali": [
+    "Trov",
+    "Adrax"
+   ],
+   "cavaliere_imperiale": false,
+   "speciale_en": "Receives one bonus draw on Coup mission (C).",
+   "speciale_it": "Riceve una pescata bonus nella missione Colpo di Stato (C).",
+   "file": "imperiali_06"
+  },
+  {
+   "nr": 27,
+   "fazione": "imperiali",
+   "razza_en": "Rhone",
+   "nome": "Senator Dermond",
+   "titolo_en": null,
+   "titolo_it": null,
+   "combattimento": 2,
+   "resistenza": 2,
+   "intelligenza": 4,
+   "comando": 0,
+   "comando_spazio": null,
+   "diplomazia": 4,
+   "navigazione": 0,
+   "pianeti_natali": [
+    "Diomas"
+   ],
+   "cavaliere_imperiale": false,
+   "speciale_en": "Receives two bonus draws for Coup mission (C).",
+   "speciale_it": "Riceve due pescate bonus nella missione Colpo di Stato (C).",
+   "file": "imperiali_05"
+  },
+  {
+   "nr": 28,
+   "fazione": "imperiali",
+   "razza_en": "Rhone",
+   "nome": "Redjac",
+   "titolo_en": "Knight of the Empire",
+   "titolo_it": "Cavaliere dell'Impero",
+   "combattimento": 6,
+   "resistenza": 6,
+   "intelligenza": 3,
+   "comando": 2,
+   "comando_spazio": 2,
+   "diplomazia": 1,
+   "navigazione": 5,
+   "pianeti_natali": [
+    "Magro",
+    "Diomas",
+    "Orlog"
+   ],
+   "cavaliere_imperiale": true,
+   "speciale_en": "Receives one bonus draw for Assassination mission (A), Sabotage mission (S), and Summon Sovereign mission (E).",
+   "speciale_it": "Riceve una pescata bonus nelle missioni Assassinio (A), Sabotaggio (S) e Convocare Sovrano (E).",
+   "file": "imperiali_04"
+  },
+  {
+   "nr": 29,
+   "fazione": "imperiali",
+   "razza_en": "Segunden",
+   "nome": "Jin Voles",
+   "titolo_en": "Knight of the Empire",
+   "titolo_it": "Cavaliere dell'Impero",
+   "combattimento": 5,
+   "resistenza": 5,
+   "intelligenza": 2,
+   "comando": 1,
+   "comando_spazio": 1,
+   "diplomazia": 0,
+   "navigazione": 5,
+   "pianeti_natali": [
+    "Tiglyf"
+   ],
+   "cavaliere_imperiale": true,
+   "speciale_en": "Receives one bonus draw for Assassination mission (A).",
+   "speciale_it": "Riceve una pescata bonus nella missione Assassinio (A).",
+   "file": "imperiali_03"
+  },
+  {
+   "nr": 30,
+   "fazione": "imperiali",
+   "razza_en": "Rhone",
+   "nome": "Vans Ka-Tie-A",
+   "titolo_en": "Knight of the Empire",
+   "titolo_it": "Cavaliere dell'Impero",
+   "combattimento": 4,
+   "resistenza": 5,
+   "intelligenza": 2,
+   "comando": 1,
+   "comando_spazio": 1,
+   "diplomazia": 1,
+   "navigazione": 4,
+   "pianeti_natali": [
+    "Lonica"
+   ],
+   "cavaliere_imperiale": true,
+   "speciale_en": "Receives one bonus draw for Gather Information mission (I).",
+   "speciale_it": "Riceve una pescata bonus nella missione Raccogliere Informazioni (I).",
+   "file": "imperiali_02"
+  },
+  {
+   "nr": 31,
+   "fazione": "imperiali",
+   "razza_en": "Rhone",
+   "nome": "Els Taroff",
+   "titolo_en": "Knight of the Empire",
+   "titolo_it": "Cavaliere dell'Impero",
+   "combattimento": 4,
+   "resistenza": 5,
+   "intelligenza": 3,
+   "comando": 1,
+   "comando_spazio": 1,
+   "diplomazia": 0,
+   "navigazione": 5,
+   "pianeti_natali": [
+    "Liomax"
+   ],
+   "cavaliere_imperiale": true,
+   "speciale_en": "Receives one bonus draw for Sabotage mission (S).",
+   "speciale_it": "Riceve una pescata bonus nella missione Sabotaggio (S).",
+   "file": "imperiali_01"
+  },
+  {
+   "nr": 32,
+   "fazione": "imperiali",
+   "razza_en": "Rhone",
+   "nome": "Emperor Coreguya",
+   "titolo_en": "King of Orlog",
+   "titolo_it": "Re di Orlog",
+   "combattimento": 2,
+   "resistenza": 3,
+   "intelligenza": 2,
+   "comando": 2,
+   "comando_spazio": 1,
+   "diplomazia": 2,
+   "navigazione": 1,
+   "pianeti_natali": [
+    "Orlog"
+   ],
+   "cavaliere_imperiale": false,
+   "speciale_en": "Receives one bonus draw for Coup mission (C) and three bonus draws for Summon Sovereign mission (E).",
+   "speciale_it": "Riceve una pescata bonus nella missione Colpo di Stato (C) e tre pescate bonus nella missione Convocare Sovrano (E).",
+   "file": "imperiali_00"
+  }
+ ],
+ "possessi": [
+  {
+   "nr": 33,
+   "tipo": "astronave",
+   "nome_en": "Explorer",
+   "nome_it": "Explorer",
+   "manovra": 4,
+   "passeggeri": 8,
+   "cannoni": 2,
+   "scudi": 2,
+   "proprietario": "Ly Mantok",
+   "riparazione_en": "Never needs repair",
+   "riparazione_it": "Non necessita mai di riparazioni",
+   "en": "Cannons/Shields: 2/2. Maneuver: 4. Max Passengers: 8. Owned by Ly Mantock.",
+   "it": "Cannoni/Scudi: 2/2. Manovra: 4. Passeggeri max: 8. Di proprietà di Ly Mantok.",
+   "file": "possessi_00",
+   "danneggiabile": true,
+   "riparabile": true
+  },
+  {
+   "nr": 34,
+   "tipo": "astronave",
+   "nome_en": "Galactic Freighter",
+   "nome_it": "Cargo Galattico",
+   "manovra": 0,
+   "passeggeri": 16,
+   "cannoni": 0,
+   "scudi": 1,
+   "proprietario": null,
+   "riparazione_en": "Never needs repair",
+   "riparazione_it": "Non necessita mai di riparazioni",
+   "en": "Cannons/Shields: 0/1. Maneuver: 0. Max Passengers: 16.",
+   "it": "Cannoni/Scudi: 0/1. Manovra: 0. Passeggeri max: 16.",
+   "file": "possessi_01",
+   "danneggiabile": true,
+   "riparabile": true
+  },
+  {
+   "nr": 35,
+   "tipo": "astronave",
+   "nome_en": "Interstellar Sloop",
+   "nome_it": "Sloop Interstellare",
+   "manovra": 2,
+   "passeggeri": 4,
+   "cannoni": 2,
+   "scudi": 1,
+   "proprietario": null,
+   "riparazione_en": "Never needs repair",
+   "riparazione_it": "Non necessita mai di riparazioni",
+   "en": "Cannons/Shields: 2/1. Maneuver: 2. Max Passengers: 4.",
+   "it": "Cannoni/Scudi: 2/1. Manovra: 2. Passeggeri max: 4.",
+   "file": "possessi_02",
+   "danneggiabile": true,
+   "riparabile": true
+  },
+  {
+   "nr": 36,
+   "tipo": "astronave",
+   "nome_en": "Planetary Privateer",
+   "nome_it": "Corsaro Planetario",
+   "manovra": 3,
+   "passeggeri": 6,
+   "cannoni": 3,
+   "scudi": 2,
+   "proprietario": "Boccanegra",
+   "riparazione_en": "Never needs repair",
+   "riparazione_it": "Non necessita mai di riparazioni",
+   "en": "Cannons/Shields: 3/2. Maneuver: 3. Max Passengers: 6. Owned by Boccanegra.",
+   "it": "Cannoni/Scudi: 3/2. Manovra: 3. Passeggeri max: 6. Di proprietà di Boccanegra.",
+   "file": "possessi_03",
+   "danneggiabile": true,
+   "riparabile": true
+  },
+  {
+   "nr": 37,
+   "tipo": "astronave",
+   "nome_en": "Solar Merchant",
+   "nome_it": "Mercante Solare",
+   "manovra": 1,
+   "passeggeri": 14,
+   "cannoni": 0,
+   "scudi": 1,
+   "proprietario": "Tourag",
+   "riparazione_en": "Never needs repair",
+   "riparazione_it": "Non necessita mai di riparazioni",
+   "en": "Cannons/Shields: 0/1. Maneuver: 1. Max Passengers: 14. Owned by Tourag.",
+   "it": "Cannoni/Scudi: 0/1. Manovra: 1. Passeggeri max: 14. Di proprietà di Tourag.",
+   "file": "possessi_04",
+   "danneggiabile": true,
+   "riparabile": true
+  },
+  {
+   "nr": 38,
+   "tipo": "astronave",
+   "nome_en": "Star Cruiser",
+   "nome_it": "Incrociatore Stellare",
+   "manovra": 2,
+   "passeggeri": 10,
+   "cannoni": 1,
+   "scudi": 2,
+   "proprietario": null,
+   "riparazione_en": "Never needs repair",
+   "riparazione_it": "Non necessita mai di riparazioni",
+   "en": "Cannons/Shields: 1/2. Maneuver: 2. Max Passengers: 10.",
+   "it": "Cannoni/Scudi: 1/2. Manovra: 2. Passeggeri max: 10.",
+   "file": "possessi_05",
+   "danneggiabile": true,
+   "riparabile": true
+  },
+  {
+   "nr": 39,
+   "tipo": "astronave",
+   "nome_en": "Stellar Courier",
+   "nome_it": "Corriere Stellare",
+   "manovra": 4,
+   "passeggeri": 4,
+   "cannoni": 2,
+   "scudi": 3,
+   "proprietario": null,
+   "riparazione_en": "Never needs repair",
+   "riparazione_it": "Non necessita mai di riparazioni",
+   "en": "Cannons/Shields: 2/3. Maneuver: 4. Max Passengers: 4.",
+   "it": "Cannoni/Scudi: 2/3. Manovra: 4. Passeggeri max: 4.",
+   "file": "possessi_06",
+   "danneggiabile": true,
+   "riparabile": true
+  },
+  {
+   "nr": 40,
+   "tipo": "astronave",
+   "nome_en": "S-XIII",
+   "nome_it": "S-XIII",
+   "manovra": 6,
+   "passeggeri": 5,
+   "cannoni": 0,
+   "scudi": 4,
+   "proprietario": null,
+   "riparazione_en": "Never needs repair",
+   "riparazione_it": "Non necessita mai di riparazioni",
+   "en": "Cannons/Shields: 0/4. Maneuver: 6*. Max Passengers: 5. * See Case 14.58. Province and Galactic Games: Add one to Pilot's Navigation rating for Hyperjump.",
+   "it": "Cannoni/Scudi: 0/4. Manovra: 6*. Passeggeri max: 5. * Vedi Caso 14.58. Gioco della Provincia e Gioco Galattico: aggiunge uno al valore di Navigazione del pilota per l'Iperbalzo.",
+   "file": "possessi_07",
+   "danneggiabile": true,
+   "riparabile": false
+  },
+  {
+   "nr": 41,
+   "tipo": "arma",
+   "nome_en": "High Energy Sniper's Rifle",
+   "nome_it": "Fucile da cecchino ad alta energia",
+   "manovra": null,
+   "passeggeri": null,
+   "cannoni": null,
+   "scudi": null,
+   "proprietario": null,
+   "riparazione_en": "Never needs repair",
+   "riparazione_it": "Non necessita mai di riparazioni",
+   "en": "Adds one to owner's Combat Rating. Owner receives one bonus draw on Assassination mission (A).",
+   "it": "Aggiunge uno al valore di Combattimento del possessore. Il possessore riceve una pescata bonus nella missione Assassinio (A).",
+   "file": "possessi_08"
+  },
+  {
+   "nr": 42,
+   "tipo": "arma",
+   "nome_en": "Assassin's Blade",
+   "nome_it": "Lama dell'assassino",
+   "manovra": null,
+   "passeggeri": null,
+   "cannoni": null,
+   "scudi": null,
+   "proprietario": null,
+   "riparazione_en": "Lost after one use",
+   "riparazione_it": "Perso dopo un solo uso",
+   "en": "Owner receives three bonus draws on an Assassination mission (A). Adds three to owner's Combat rating for one round of combat. When the blade is used once, it is removed from play.",
+   "it": "Il possessore riceve tre pescate bonus in una missione Assassinio (A). Aggiunge tre al valore di Combattimento del possessore per un round di combattimento. Dopo essere stata usata una volta, la lama è rimossa dal gioco.",
+   "file": "possessi_09"
+  },
+  {
+   "nr": 43,
+   "tipo": "oggetto",
+   "nome_en": "Helian Drug",
+   "nome_it": "Droga heliana",
+   "manovra": null,
+   "passeggeri": null,
+   "cannoni": null,
+   "scudi": null,
+   "proprietario": null,
+   "riparazione_en": "Lost after one use",
+   "riparazione_it": "Perso dopo un solo uso",
+   "en": "Adds two to any one characteristic of the owner for one Game-Turn (see Case 14.4). When the drug is used once, it is removed from play.",
+   "it": "Aggiunge due a una caratteristica a scelta del possessore per un Turno di Gioco (vedi Caso 14.4). Dopo essere stata usata una volta, la droga è rimossa dal gioco.",
+   "file": "possessi_10"
+  },
+  {
+   "nr": 44,
+   "tipo": "oggetto",
+   "nome_en": "Scanner",
+   "nome_it": "Scanner",
+   "manovra": null,
+   "passeggeri": null,
+   "cannoni": null,
+   "scudi": null,
+   "proprietario": null,
+   "riparazione_en": "Never needs repair",
+   "riparazione_it": "Non necessita mai di riparazioni",
+   "en": "Reduces PDB effectiveness by one level during Enemy detection. Adds two to hiding value of characters undergoing Enemy search (exception: has no effect on search by Enemy characters).",
+   "it": "Riduce di un livello l'efficacia della BDP durante l'individuazione nemica. Aggiunge due al valore di occultamento dei personaggi sottoposti a Ricerca nemica (eccezione: nessun effetto sulla Ricerca condotta da personaggi nemici).",
+   "file": "possessi_11"
+  },
+  {
+   "nr": 45,
+   "tipo": "oggetto",
+   "nome_en": "Scrambler",
+   "nome_it": "Disturbatore",
+   "manovra": null,
+   "passeggeri": null,
+   "cannoni": null,
+   "scudi": null,
+   "proprietario": null,
+   "riparazione_en": "May become inoperative after use",
+   "riparazione_it": "Può diventare inutilizzabile dopo l'uso",
+   "en": "Adds four to hiding value of characters undergoing Enemy Search. Halves combat strength of Irate Locals. Places Enemy PDB on same planet Down. After each use, roll the die. On a roll of 3 or higher, the Scrambler is inoperative.",
+   "it": "Aggiunge quattro al valore di occultamento dei personaggi sottoposti a Ricerca nemica. Dimezza la forza di combattimento dei Locali infuriati. Disattiva (Down) la BDP nemica sullo stesso pianeta. Dopo ogni uso, tira il dado: con 3 o più il Disturbatore diventa inutilizzabile.",
+   "file": "possessi_12"
+  },
+  {
+   "nr": 46,
+   "tipo": "oggetto",
+   "nome_en": "Medi-kit of Ptolus",
+   "nome_it": "Medi-kit di Ptolus",
+   "manovra": null,
+   "passeggeri": null,
+   "cannoni": null,
+   "scudi": null,
+   "proprietario": null,
+   "riparazione_en": "May become inoperative after use",
+   "riparazione_it": "Può diventare inutilizzabile dopo l'uso",
+   "en": "Immediately heals all wounds incurred by owner or characters with owner (see Case 13.72). May not be used between rounds of one combat. After each use, roll the die. On a roll of 6, the Medi-kit is inoperative.",
+   "it": "Cura immediatamente tutte le ferite subite dal possessore o dai personaggi insieme a lui (vedi Caso 13.72). Non può essere usato tra i round di uno stesso combattimento. Dopo ogni uso, tira il dado: con 6 il Medi-kit diventa inutilizzabile.",
+   "file": "possessi_13"
+  },
+  {
+   "nr": 47,
+   "tipo": "oggetto",
+   "nome_en": "Personal Body Shield",
+   "nome_it": "Scudo corporeo personale",
+   "manovra": null,
+   "passeggeri": null,
+   "cannoni": null,
+   "scudi": null,
+   "proprietario": null,
+   "riparazione_en": "Never needs repair",
+   "riparazione_it": "Non necessita mai di riparazioni",
+   "en": "Subtract one from any character combat result incurred by owner or group that the owner is with (in a firefight, the subtraction is made before doubling).",
+   "it": "Sottrae uno da qualsiasi risultato di combattimento tra personaggi subito dal possessore o dal gruppo di cui fa parte (in uno scontro a fuoco, la sottrazione avviene prima del raddoppio).",
+   "file": "possessi_14"
+  },
+  {
+   "nr": 48,
+   "tipo": "oggetto",
+   "nome_en": "Cache of Rare Gems",
+   "nome_it": "Scrigno di gemme rare",
+   "manovra": null,
+   "passeggeri": null,
+   "cannoni": null,
+   "scudi": null,
+   "proprietario": null,
+   "riparazione_en": "Never needs repair",
+   "riparazione_it": "Non necessita mai di riparazioni",
+   "en": "May purchase any available spaceship (choose one from the Possession Deck), except the S-XIII. Negates an Enemy Gather Information mission (I) in the same Environ. Receives two bonus draws for missions A, C, D, E, S, F, I, or H.",
+   "it": "Può acquistare qualsiasi astronave disponibile (scegline una dal mazzo dei Possessi), tranne la S-XIII. Annulla una missione nemica Raccogliere Informazioni (I) nello stesso Ambiente. Riceve due pescate bonus nelle missioni A, C, D, E, S, F, I o H.",
+   "file": "possessi_15"
+  },
+  {
+   "nr": 49,
+   "tipo": "compagno",
+   "nome_en": "Cervac MK V",
+   "nome_it": "Cervac MK V",
+   "manovra": null,
+   "passeggeri": null,
+   "cannoni": null,
+   "scudi": null,
+   "proprietario": null,
+   "riparazione_en": "May become inoperative after use",
+   "riparazione_it": "Può diventare inutilizzabile dopo l'uso",
+   "en": "Adds one to owner's Intelligence rating. Disables identified Enemy character on same planet. Disabled character may not do anything (inactive defender if attacked) for any one Phase. When Cervac initiates disabling, roll the die. On a roll of 5 or 6, Cervac is inoperative (disabling still takes effect).",
+   "it": "Aggiunge uno al valore di Intelligenza del possessore. Neutralizza un personaggio nemico identificato sullo stesso pianeta: il personaggio neutralizzato non può fare nulla (difensore inattivo se attaccato) per una Fase a scelta. Quando Cervac tenta una neutralizzazione, tira il dado: con 5 o 6 Cervac diventa inutilizzabile (la neutralizzazione ha comunque effetto).",
+   "file": "possessi_16"
+  },
+  {
+   "nr": 50,
+   "tipo": "compagno",
+   "nome_en": "Norrocks",
+   "nome_it": "Norrocks",
+   "manovra": null,
+   "passeggeri": null,
+   "cannoni": null,
+   "scudi": null,
+   "proprietario": null,
+   "riparazione_en": "May become inoperative after use",
+   "riparazione_it": "Può diventare inutilizzabile dopo l'uso",
+   "en": "Adds two to owner's Combat rating (only if part of defending force). Ignore first “Creature Attacks” Action Event when performing a mission. May take one wound in combat, but is then removed from play. After each use, roll the die. On a roll of 6, Norrocks is inoperative.",
+   "it": "Aggiunge due al valore di Combattimento del possessore (solo se fa parte della forza in difesa). Ignora il primo evento Azione “Una creatura attacca” mentre si svolge una missione. Può subire una ferita in combattimento, ma poi è rimosso dal gioco. Dopo ogni uso, tira il dado: con 6 Norrocks diventa inutilizzabile.",
+   "file": "possessi_17"
+  },
+  {
+   "nr": 51,
+   "tipo": "compagno",
+   "nome_en": "Charsot",
+   "nome_it": "Charsot",
+   "manovra": null,
+   "passeggeri": null,
+   "cannoni": null,
+   "scudi": null,
+   "proprietario": null,
+   "riparazione_en": "Never needs repair",
+   "riparazione_it": "Non necessita mai di riparazioni",
+   "en": "Adds one to the owner's Diplomacy rating. No creature may receive a surprise column shift when attacking the owner. Ignore all attacks from creatures that attack with an Intelligence rating.",
+   "it": "Aggiunge uno al valore di Diplomazia del possessore. Nessuna creatura può ricevere uno spostamento di colonna per sorpresa quando attacca il possessore. Ignora tutti gli attacchi delle creature che attaccano con un valore di Intelligenza.",
+   "file": "possessi_18"
+  },
+  {
+   "nr": 52,
+   "tipo": "oggetto",
+   "nome_en": "Advisor Android",
+   "nome_it": "Androide consigliere",
+   "manovra": null,
+   "passeggeri": null,
+   "cannoni": null,
+   "scudi": null,
+   "proprietario": null,
+   "riparazione_en": "Never needs repair",
+   "riparazione_it": "Non necessita mai di riparazioni",
+   "en": "Adds one to the owner's Diplomacy and Intelligence ratings. If on a Diplomacy mission, ignore first “Abort Diplomacy” Action Event. Galactic Game: Reveals Planet Secret (see Case 31.21).",
+   "it": "Aggiunge uno ai valori di Diplomazia e Intelligenza del possessore. Se in missione Diplomazia, ignora il primo evento Azione “Aborta Diplomazia”. Gioco Galattico: rivela il Segreto Planetario (vedi Caso 31.21).",
+   "file": "possessi_19"
+  }
+ ],
+ "codici_azione": {
+  "CREATURA": {
+   "descrizione": "Una creatura attacca UN solo Gruppo di Missione (scelto a caso, Caso 13.43). Se l'Ambiente indica una creatura, si usano le sue caratteristiche dalla Guida Galattica (Caso 13.45). Se nessuna creatura è indicata, l'evento è ignorato. Dopo il primo 'Creatura attacca' nell'Ambiente in questa Fase delle Missioni, i successivi sono ignorati (Caso 13.42).",
+   "parametri": {
+    "bersaglio": "un_gruppo",
+    "robot_se_nessuna_creatura": 0
+   }
+  },
+  "CREATURA_O_ROBOT": {
+   "descrizione": "Come CREATURA, ma se nessuna creatura è indicata il Gruppo è attaccato da 1 robot sentinella (Guida Galattica). L'attacco dei robot avviene solo se il giocatore non di turno controlla il pianeta (Caso 13.46).",
+   "parametri": {
+    "bersaglio": "un_gruppo",
+    "robot_se_nessuna_creatura": 1
+   }
+  },
+  "CREATURA_O_DUE_ROBOT": {
+   "descrizione": "Come CREATURA, ma se nessuna creatura è indicata il Gruppo è attaccato da 2 robot sentinella. L'attacco dei robot avviene solo se il giocatore non di turno controlla il pianeta (Caso 13.46).",
+   "parametri": {
+    "bersaglio": "un_gruppo",
+    "robot_se_nessuna_creatura": 2
+   }
+  },
+  "NESSUNA_CREATURA": {
+   "descrizione": "Bassa stagione: tutti gli eventi 'Creatura attacca' (CREATURA, CREATURA_O_ROBOT, CREATURA_O_DUE_ROBOT) pescati in questo Ambiente per il resto di questa Fase delle Missioni sono ignorati.",
+   "parametri": {
+    "durata": "fase_missioni",
+    "ambito": "ambiente"
+   }
+  },
+  "LOCALI_ARRABBIATI": {
+   "descrizione": "Locali infuriati attaccano UN solo Gruppo di Missione (a caso, Caso 13.43). Forza e Resistenza dalla Tabella dei Locali infuriati (12.17) in base alla prima razza indicata nell'Ambiente. Se il pianeta è in Ribellione o controllato dai Ribelli, l'evento è ignorato quando è il Ribelle a svolgere missioni (Caso 13.47).",
+   "parametri": {
+    "bersaglio": "un_gruppo"
+   }
+  },
+  "RAZZIA_LOCALI": {
+   "descrizione": "Il giocatore non di turno deve, a sua scelta, eliminare una propria unità militare nell'Ambiente oppure, se controlla una BDP attiva (Up) sul pianeta, disattivarla (Down). Se non ha né unità né BDP attiva, nessun effetto.",
+   "parametri": {
+    "chi_sceglie": "non_di_turno"
+   }
+  },
+  "RIPARO_LOCALI": {
+   "descrizione": "Il Nemico (giocatore non di turno) non può effettuare Ricerche in questo Ambiente per il resto di questa Fase delle Missioni; i successivi eventi che concedono una Ricerca nemica sono ignorati (Caso 13.48). Effetto identico a NESSUNA_RICERCA (testo diverso).",
+   "parametri": {
+    "durata": "fase_missioni",
+    "ambito": "ambiente"
+   }
+  },
+  "NESSUNA_RICERCA": {
+   "descrizione": "Maltempo: il giocatore non di turno non può effettuare Ricerche in questo Ambiente per questa Fase delle Missioni; i successivi eventi che concedono una Ricerca nemica sono ignorati (Caso 13.48). Effetto identico a RIPARO_LOCALI.",
+   "parametri": {
+    "durata": "fase_missioni",
+    "ambito": "ambiente"
+   }
+  },
+  "PERSONAGGI_INDIVIDUATI": {
+   "descrizione": "Tutti i personaggi in missione nell'Ambiente diventano Individuati (Detected). Nessuna Ricerca immediata.",
+   "parametri": {}
+  },
+  "RICERCA_NEMICA": {
+   "descrizione": "I personaggi in missione diventano Individuati e il giocatore nemico (non di turno) può effettuare subito una Ricerca contro UN Gruppo di Missione dell'Ambiente (scelto a caso, Caso 13.43). Eccezione al Caso 13.42: un secondo evento di questo tipo permette di cercare un altro Gruppo non ancora cercato in questa Fase; quando tutti i Gruppi sono stati cercati una volta non si fanno altre Ricerche. Ignorato se è attivo RIPARO_LOCALI o NESSUNA_RICERCA (Caso 13.48).",
+   "parametri": {
+    "bersaglio": "un_gruppo"
+   }
+  },
+  "BONUS_EXTRA": {
+   "descrizione": "Tutte le missioni in questo Ambiente ricevono +1 pescata bonus in questa Fase delle Missioni (anche missioni che normalmente non hanno pescate bonus, Caso 13.6). Se prima è stato pescato NESSUN_BONUS, questo evento è ignorato (contraddittorio, Caso 13.42) e viceversa.",
+   "parametri": {
+    "pescate_bonus": 1,
+    "durata": "fase_missioni",
+    "ambito": "ambiente"
+   }
+  },
+  "NESSUN_BONUS": {
+   "descrizione": "Nessuna pescata bonus in questo Ambiente in questa Fase delle Missioni (due testi diversi: voci di corridoio / cibo disgustoso, stesso effetto). Ignorato se prima è stato pescato BONUS_EXTRA (Caso 13.42). L'evento galattico nr. 126 fa ignorare questo evento per un Turno di Campagna.",
+   "parametri": {
+    "durata": "fase_missioni",
+    "ambito": "ambiente"
+   }
+  },
+  "POPOLAZIONE_IN_RIVOLTA": {
+   "descrizione": "Se il pianeta viene posto in Ribellione durante questa Fase delle Missioni, il giocatore Ribelle riceve il doppio del valore di risorse di questo Ambiente (Caso 15.46). Altrimenti nessun effetto.",
+   "parametri": {
+    "moltiplicatore_risorse": 2
+   }
+  },
+  "GUERRA_CIVILE": {
+   "descrizione": "Se il segnalino Lealtà del pianeta è a 1 o 2 caselle a favore del giocatore di turno, viene spostato su Neutrale. Se il pianeta è in Ribellione o la Lealtà non è a favore del giocatore di turno (o è già Neutrale), nessun effetto. Nota: con Lealtà a 3 caselle a favore (Patriottico per l'Imperiale) il testo non prevede effetti.",
+   "parametri": {
+    "distanze_valide": [
+     1,
+     2
+    ],
+    "nuova_lealta": "Neutrale"
+   }
+  },
+  "SQUADRA_NEMICA": {
+   "descrizione": "UN Gruppo di Missione (a caso) si imbatte in una squadra nemica: se il giocatore nemico controlla il pianeta e ha unità militari nell'Ambiente, si risolve un combattimento tra personaggi contro una squadra la cui forza è data dalla Tabella delle Squadre. Altrimenti nessun effetto.",
+   "parametri": {
+    "bersaglio": "un_gruppo"
+   }
+  },
+  "INCIDENTE": {
+   "descrizione": "Un personaggio a scelta tra quelli che svolgono missioni nell'Ambiente subisce una ferita. Il testo non specifica chi sceglie (presumibilmente il giocatore di turno).",
+   "parametri": {
+    "ferite": 1,
+    "bersaglio": "un_personaggio"
+   }
+  },
+  "ATROCITA": {
+   "descrizione": "Il giocatore Imperiale può commettere un'Atrocità su questo pianeta (le carte rimandano alla Sezione 35.0, ma nel regolamento le Atrocità sono la Sezione 36.0). Solo nel Gioco Galattico, altrimenti ignorato. La carta nr. 89 stampa 'Advanced Game only': nel regolamento non esiste un 'Gioco Avanzato', va trattato come Gioco Galattico. Con l'evento galattico nr. 100 attivo, l'Atrocità può essere commessa subito su qualsiasi pianeta (Caso 36.2).",
+   "parametri": {
+    "solo_gioco": "galattico"
+   }
+  },
+  "MISSIONE_R_ABORTITA": {
+   "descrizione": "Se è in corso una missione Avvia Ribellione (R), è abortita e i personaggi del Gruppo sono Individuati. Per il Caso 13.41 l'evento si applica solo se quella missione è in corso nell'Ambiente e non ancora completata; altrimenti l'intero evento (compreso l'eventuale Individuato) è ignorato.",
+   "parametri": {
+    "missione": "R",
+    "individuati": true
+   }
+  },
+  "MISSIONE_T_ABORTITA": {
+   "descrizione": "Se è in corso una missione Sovvertire Truppe (T), è abortita e il Gruppo di Missione è Trovato (Found) da una squadra nemica: si risolve il combattimento con la squadra; se un comandante nemico (personaggio nemico) è impilato con le unità militari nemiche dell'Ambiente, l'intero Gruppo di Missione è invece catturato. Per il Caso 13.41 l'evento si applica solo se quella missione è in corso nell'Ambiente e non ancora completata; altrimenti l'intero evento (compreso l'eventuale Individuato) è ignorato.",
+   "parametri": {
+    "missione": "T",
+    "trovati_da": "squadra",
+    "catturati_se_comandante_nemico": true
+   }
+  },
+  "MISSIONE_D_ABORTITA": {
+   "descrizione": "Se è in corso una missione Diplomazia (D) nell'Ambiente, è abortita e il segnalino Lealtà del pianeta si sposta di una casella a favore del giocatore non di turno. Per il Caso 13.41 l'evento si applica solo se quella missione è in corso nell'Ambiente e non ancora completata; altrimenti l'intero evento (compreso l'eventuale Individuato) è ignorato.",
+   "parametri": {
+    "missione": "D",
+    "spostamento_lealta": 1,
+    "a_favore": "non_di_turno"
+   }
+  },
+  "DIPLOMAZIA_CONTROVERSA": {
+   "descrizione": "Se è in corso una missione Diplomazia (D) e nessun personaggio del Gruppo di Missione ha Diplomazia >= 2, la missione è abortita (nessun altro effetto). Se almeno un personaggio ha Diplomazia >= 2, nessun effetto. I bonus dei possessi al valore di Diplomazia (es. Androide Consigliere, Charsot) contano. Per il Caso 13.41 l'evento si applica solo se quella missione è in corso nell'Ambiente e non ancora completata; altrimenti l'intero evento (compreso l'eventuale Individuato) è ignorato.",
+   "parametri": {
+    "missione": "D",
+    "diplomazia_minima": 2
+   }
+  },
+  "MISSIONE_CASUALE_ABORTITA": {
+   "descrizione": "Il giocatore non di turno sceglie a caso una delle missioni che il giocatore di turno sta svolgendo nell'Ambiente (non ancora completate): quella missione è abortita. Tutti i personaggi in missione nell'Ambiente sono Individuati.",
+   "parametri": {
+    "scelta": "casuale",
+    "individuati": true
+   }
+  },
+  "COUP_ABORTITO_1": {
+   "descrizione": "La missione Colpo di Stato (C) in corso nell'Ambiente è abortita (nessuno spostamento di Lealtà ottenuto) e i personaggi del Gruppo sono Individuati; poi il giocatore di turno tira un dado e applica la tabella. 'sposta' = sposta il segnalino Lealtà del pianeta di una casella a favore del giocatore non di turno. Per il Caso 13.41 l'evento si applica solo se quella missione è in corso nell'Ambiente e non ancora completata; altrimenti l'intero evento (compreso l'eventuale Individuato) è ignorato.",
+   "parametri": {
+    "missione": "C",
+    "tabella_dado": {
+     "1-3": "nessun_effetto",
+     "4": "sposta",
+     "5-6": "sposta+gruppo_catturato"
+    }
+   }
+  },
+  "COUP_ABORTITO_2": {
+   "descrizione": "La missione Colpo di Stato (C) in corso nell'Ambiente è abortita (nessuno spostamento di Lealtà ottenuto) e i personaggi del Gruppo sono Individuati; poi il giocatore di turno tira un dado e applica la tabella. 'sposta' = sposta il segnalino Lealtà del pianeta di una casella a favore del giocatore non di turno. Per il Caso 13.41 l'evento si applica solo se quella missione è in corso nell'Ambiente e non ancora completata; altrimenti l'intero evento (compreso l'eventuale Individuato) è ignorato.",
+   "parametri": {
+    "missione": "C",
+    "tabella_dado": {
+     "1-4": "nessun_effetto",
+     "5": "sposta",
+     "6": "sposta+gruppo_catturato"
+    }
+   }
+  },
+  "COUP_ABORTITO_3": {
+   "descrizione": "La missione Colpo di Stato (C) in corso nell'Ambiente è abortita (nessuno spostamento di Lealtà ottenuto) e i personaggi del Gruppo sono Individuati; poi il giocatore di turno tira un dado e applica la tabella. 'sposta' = sposta il segnalino Lealtà del pianeta di una casella a favore del giocatore non di turno. Con 6 il Gruppo è catturato e uno dei suoi personaggi è ucciso, scelto dal giocatore di turno. Per il Caso 13.41 l'evento si applica solo se quella missione è in corso nell'Ambiente e non ancora completata; altrimenti l'intero evento (compreso l'eventuale Individuato) è ignorato.",
+   "parametri": {
+    "missione": "C",
+    "tabella_dado": {
+     "1-2": "nessun_effetto",
+     "3-5": "sposta",
+     "6": "sposta+gruppo_catturato+un_personaggio_ucciso"
+    }
+   }
+  },
+  "COUP_ABORTITO_4": {
+   "descrizione": "La missione Colpo di Stato (C) in corso nell'Ambiente è abortita (nessuno spostamento di Lealtà ottenuto) e i personaggi del Gruppo sono Individuati; poi il giocatore di turno tira un dado e applica la tabella. 'sposta' = sposta il segnalino Lealtà del pianeta di una casella a favore del giocatore non di turno. Per il Caso 13.41 l'evento si applica solo se quella missione è in corso nell'Ambiente e non ancora completata; altrimenti l'intero evento (compreso l'eventuale Individuato) è ignorato.",
+   "parametri": {
+    "missione": "C",
+    "tabella_dado": {
+     "1-3": "nessun_effetto",
+     "4-5": "sposta",
+     "6": "sposta+gruppo_ucciso"
+    }
+   }
+  },
+  "COUP_ABORTITO_5": {
+   "descrizione": "La missione Colpo di Stato (C) in corso nell'Ambiente è abortita (nessuno spostamento di Lealtà ottenuto) e i personaggi del Gruppo sono Individuati; poi il giocatore di turno tira un dado e applica la tabella. 'sposta' = sposta il segnalino Lealtà del pianeta di una casella a favore del giocatore non di turno. 'gruppo_trovato' = il Gruppo è Trovato (Found) da una squadra nemica o da personaggi nemici, a scelta del giocatore non di turno. Per il Caso 13.41 l'evento si applica solo se quella missione è in corso nell'Ambiente e non ancora completata; altrimenti l'intero evento (compreso l'eventuale Individuato) è ignorato.",
+   "parametri": {
+    "missione": "C",
+    "tabella_dado": {
+     "1-2": "nessun_effetto",
+     "3-4": "sposta",
+     "5-6": "sposta+gruppo_trovato"
+    }
+   }
+  },
+  "COUP_ABORTITO_6": {
+   "descrizione": "La missione Colpo di Stato (C) in corso nell'Ambiente è abortita (nessuno spostamento di Lealtà ottenuto) e i personaggi del Gruppo sono Individuati; poi il giocatore di turno tira un dado e applica la tabella. 'sposta' = sposta il segnalino Lealtà del pianeta di una casella a favore del giocatore non di turno. Per il Caso 13.41 l'evento si applica solo se quella missione è in corso nell'Ambiente e non ancora completata; altrimenti l'intero evento (compreso l'eventuale Individuato) è ignorato.",
+   "parametri": {
+    "missione": "C",
+    "tabella_dado": {
+     "1-2": "nessun_effetto",
+     "3-4": "sposta",
+     "5-6": "sposta+gruppo_catturato"
+    }
+   }
+  },
+  "COUP_ABORTITO_7": {
+   "descrizione": "La missione Colpo di Stato (C) in corso nell'Ambiente è abortita (nessuno spostamento di Lealtà ottenuto) e i personaggi del Gruppo sono Individuati; poi il giocatore di turno tira un dado e applica la tabella. 'sposta' = sposta il segnalino Lealtà del pianeta di una casella a favore del giocatore non di turno. Nessun risultato senza effetto: la Lealtà si sposta sempre. 'gruppo_trovato' = Trovato da una squadra o da personaggi nemici, a scelta del giocatore non di turno. Per il Caso 13.41 l'evento si applica solo se quella missione è in corso nell'Ambiente e non ancora completata; altrimenti l'intero evento (compreso l'eventuale Individuato) è ignorato.",
+   "parametri": {
+    "missione": "C",
+    "tabella_dado": {
+     "1-3": "sposta",
+     "4-6": "sposta+gruppo_trovato"
+    }
+   }
+  }
+ }
+}

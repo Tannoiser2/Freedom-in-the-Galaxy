@@ -1,0 +1,1192 @@
+{
+ "rilevamento": {
+  "colonne": [
+   "0",
+   "1",
+   "2",
+   "3",
+   "4",
+   "5-6",
+   "7-8",
+   "9+"
+  ],
+  "righe_dado": [
+   [
+    "Dd",
+    "D",
+    "U",
+    "U",
+    "U",
+    "U",
+    "U",
+    "U"
+   ],
+   [
+    "Dd",
+    "D*",
+    "D*",
+    "D",
+    "U",
+    "U",
+    "U",
+    "U"
+   ],
+   [
+    "Dd",
+    "Dd",
+    "D*",
+    "D*",
+    "D",
+    "U",
+    "U",
+    "U"
+   ],
+   [
+    "E*",
+    "Dd",
+    "Dd",
+    "D*",
+    "D*",
+    "D",
+    "U",
+    "U"
+   ],
+   [
+    "E*",
+    "Dd",
+    "Dd",
+    "Dd",
+    "D*",
+    "D*",
+    "D",
+    "U"
+   ],
+   [
+    "E*",
+    "E*",
+    "E*",
+    "Dd",
+    "Dd",
+    "D*",
+    "D*",
+    "D"
+   ]
+  ],
+  "note": "Livello 0: Dd ed E diventano D. Livello 2: 2 colonne a sinistra. Già individuati: 1 colonna a sinistra. * ignorato nello Star System Game."
+ },
+ "combattimento_militare": {
+  "colonne": [
+   "1-6",
+   "1-5",
+   "1-4",
+   "1-3",
+   "1-2",
+   "1-1",
+   "2-1",
+   "3-1",
+   "4-1",
+   "5-1",
+   "6-1"
+  ],
+  "righe_dado": [
+   [
+    [
+     8,
+     0
+    ],
+    [
+     7,
+     0
+    ],
+    [
+     6,
+     0
+    ],
+    [
+     5,
+     0
+    ],
+    [
+     5,
+     0
+    ],
+    [
+     4,
+     0
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     3,
+     2
+    ],
+    [
+     2,
+     2
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     1,
+     4
+    ]
+   ],
+   [
+    [
+     7,
+     0
+    ],
+    [
+     6,
+     0
+    ],
+    [
+     5,
+     0
+    ],
+    [
+     5,
+     0
+    ],
+    [
+     4,
+     0
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     2,
+     2
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     1,
+     3
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     1,
+     5
+    ]
+   ],
+   [
+    [
+     7,
+     0
+    ],
+    [
+     5,
+     0
+    ],
+    [
+     5,
+     0
+    ],
+    [
+     4,
+     0
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     2,
+     1
+    ],
+    [
+     2,
+     2
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     1,
+     5
+    ]
+   ],
+   [
+    [
+     6,
+     0
+    ],
+    [
+     5,
+     0
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     2,
+     2
+    ],
+    [
+     1,
+     3
+    ],
+    [
+     1,
+     3
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     5
+    ],
+    [
+     0,
+     6
+    ]
+   ],
+   [
+    [
+     5,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     2,
+     2
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     1,
+     3
+    ],
+    [
+     0,
+     4
+    ],
+    [
+     0,
+     5
+    ],
+    [
+     0,
+     6
+    ],
+    [
+     0,
+     7
+    ]
+   ],
+   [
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     3,
+     2
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     0,
+     3
+    ],
+    [
+     0,
+     4
+    ],
+    [
+     0,
+     5
+    ],
+    [
+     0,
+     6
+    ],
+    [
+     0,
+     7
+    ],
+    [
+     0,
+     8
+    ]
+   ]
+  ],
+  "note": "[perdite attaccante (dado del difensore), perdite difensore (dado dell'attaccante)]. 1-6 e 6-1 solo con spostamenti. Rapporti arrotondati a favore del difensore, prima degli spostamenti limitati a 1-5..5-1."
+ },
+ "ricerca": {
+  "colonne_valore_ricerca": [
+   "1",
+   "2-3",
+   "4-6",
+   "7-9",
+   "10-13",
+   "14-17",
+   "18-22",
+   "23+"
+  ],
+  "righe_valore_occultamento": [
+   "<=1",
+   "2-3",
+   "4-5",
+   "6-7",
+   "8+"
+  ],
+  "tabella": [
+   [
+    1,
+    2,
+    3,
+    4,
+    4,
+    5,
+    "T",
+    "T"
+   ],
+   [
+    1,
+    1,
+    2,
+    3,
+    4,
+    4,
+    5,
+    "T"
+   ],
+   [
+    0,
+    1,
+    1,
+    2,
+    3,
+    4,
+    4,
+    5
+   ],
+   [
+    0,
+    0,
+    1,
+    1,
+    2,
+    2,
+    3,
+    4
+   ],
+   [
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    2,
+    3
+   ]
+  ],
+  "note": "0 = impossibile; T = trovati automaticamente; altrimenti trovati con dado <= numero."
+ },
+ "squadra": [
+  {
+   "da": 1,
+   "a": 1,
+   "comb": 4,
+   "res": 4
+  },
+  {
+   "da": 2,
+   "a": 2,
+   "comb": 6,
+   "res": 4
+  },
+  {
+   "da": 3,
+   "a": 4,
+   "comb": 8,
+   "res": 6
+  },
+  {
+   "da": 5,
+   "a": 7,
+   "comb": 10,
+   "res": 6
+  },
+  {
+   "da": 8,
+   "a": 11,
+   "comb": 12,
+   "res": 8
+  },
+  {
+   "da": 12,
+   "a": 999,
+   "comb": 14,
+   "res": 8
+  }
+ ],
+ "combattimento_personaggi": {
+  "colonne": [
+   "<=-7",
+   "-6..-4",
+   "-3..-2",
+   "-1",
+   "0",
+   "+1",
+   "+2..+3",
+   "+4..+6",
+   "+7..+10",
+   ">=+11"
+  ],
+  "limiti_superiori": [
+   -7,
+   -4,
+   -2,
+   -1,
+   0,
+   1,
+   3,
+   6,
+   10,
+   999
+  ],
+  "sganciamento_attivi": [
+   4,
+   4,
+   3,
+   3,
+   3,
+   2,
+   2,
+   2,
+   2,
+   1
+  ],
+  "sganciamento_inattivi": [
+   6,
+   6,
+   5,
+   5,
+   4,
+   4,
+   4,
+   3,
+   3,
+   3
+  ],
+  "righe_dado": [
+   [
+    [
+     4,
+     false,
+     0,
+     false
+    ],
+    [
+     3,
+     false,
+     0,
+     false
+    ],
+    [
+     3,
+     false,
+     0,
+     false
+    ],
+    [
+     2,
+     false,
+     0,
+     false
+    ],
+    [
+     2,
+     false,
+     0,
+     false
+    ],
+    [
+     2,
+     true,
+     0,
+     false
+    ],
+    [
+     2,
+     false,
+     0,
+     false
+    ],
+    [
+     1,
+     false,
+     1,
+     false
+    ],
+    [
+     1,
+     false,
+     1,
+     false
+    ],
+    [
+     1,
+     false,
+     2,
+     false
+    ]
+   ],
+   [
+    [
+     4,
+     false,
+     0,
+     false
+    ],
+    [
+     3,
+     false,
+     0,
+     false
+    ],
+    [
+     2,
+     false,
+     0,
+     false
+    ],
+    [
+     2,
+     true,
+     0,
+     false
+    ],
+    [
+     2,
+     true,
+     0,
+     false
+    ],
+    [
+     1,
+     false,
+     0,
+     false
+    ],
+    [
+     1,
+     true,
+     1,
+     false
+    ],
+    [
+     1,
+     true,
+     1,
+     false
+    ],
+    [
+     1,
+     false,
+     2,
+     false
+    ],
+    [
+     0,
+     false,
+     2,
+     false
+    ]
+   ],
+   [
+    [
+     3,
+     false,
+     0,
+     false
+    ],
+    [
+     3,
+     true,
+     0,
+     false
+    ],
+    [
+     2,
+     false,
+     0,
+     false
+    ],
+    [
+     2,
+     false,
+     0,
+     false
+    ],
+    [
+     1,
+     false,
+     0,
+     true
+    ],
+    [
+     1,
+     false,
+     1,
+     false
+    ],
+    [
+     1,
+     false,
+     1,
+     false
+    ],
+    [
+     1,
+     false,
+     1,
+     true
+    ],
+    [
+     0,
+     false,
+     2,
+     false
+    ],
+    [
+     0,
+     false,
+     3,
+     false
+    ]
+   ],
+   [
+    [
+     3,
+     false,
+     0,
+     false
+    ],
+    [
+     2,
+     false,
+     0,
+     false
+    ],
+    [
+     2,
+     true,
+     0,
+     false
+    ],
+    [
+     1,
+     false,
+     1,
+     true
+    ],
+    [
+     1,
+     false,
+     1,
+     false
+    ],
+    [
+     1,
+     false,
+     1,
+     true
+    ],
+    [
+     0,
+     false,
+     1,
+     true
+    ],
+    [
+     0,
+     false,
+     2,
+     true
+    ],
+    [
+     0,
+     false,
+     3,
+     false
+    ],
+    [
+     0,
+     false,
+     3,
+     false
+    ]
+   ],
+   [
+    [
+     2,
+     false,
+     0,
+     false
+    ],
+    [
+     2,
+     false,
+     0,
+     false
+    ],
+    [
+     1,
+     false,
+     1,
+     false
+    ],
+    [
+     1,
+     false,
+     1,
+     false
+    ],
+    [
+     0,
+     false,
+     1,
+     false
+    ],
+    [
+     0,
+     false,
+     1,
+     false
+    ],
+    [
+     0,
+     false,
+     2,
+     true
+    ],
+    [
+     0,
+     true,
+     2,
+     false
+    ],
+    [
+     0,
+     false,
+     3,
+     false
+    ],
+    [
+     0,
+     false,
+     4,
+     false
+    ]
+   ],
+   [
+    [
+     2,
+     false,
+     1,
+     false
+    ],
+    [
+     1,
+     false,
+     1,
+     false
+    ],
+    [
+     0,
+     false,
+     1,
+     false
+    ],
+    [
+     0,
+     false,
+     1,
+     false
+    ],
+    [
+     0,
+     false,
+     2,
+     false
+    ],
+    [
+     0,
+     false,
+     2,
+     false
+    ],
+    [
+     0,
+     false,
+     2,
+     false
+    ],
+    [
+     0,
+     false,
+     3,
+     false
+    ],
+    [
+     0,
+     false,
+     3,
+     false
+    ],
+    [
+     0,
+     false,
+     4,
+     false
+    ]
+   ]
+  ],
+  "note": "ogni cella: [ferite attaccante (dado del difensore), cattura, ferite difensore (dado dell'attaccante), cattura]. Cattura: 2 colonne a sinistra per tutta la mischia. Sganciamento fallito: 1 colonna a destra. Scontro a fuoco: risultati raddoppiati."
+ },
+ "locali_infuriati": {
+  "stellari": {
+   "Rhones": {
+    "urbano": {
+     "comb": 5,
+     "res": 4,
+     "corpo_a_corpo": false
+    },
+    "selvaggio": {
+     "comb": 4,
+     "res": 4,
+     "corpo_a_corpo": false
+    },
+    "sotterraneo": {
+     "comb": 4,
+     "res": 4,
+     "corpo_a_corpo": false
+    }
+   },
+   "Saurians": {
+    "urbano": {
+     "comb": 5,
+     "res": 6,
+     "corpo_a_corpo": false
+    },
+    "selvaggio": {
+     "comb": 5,
+     "res": 4,
+     "corpo_a_corpo": false
+    },
+    "sotterraneo": {
+     "comb": 5,
+     "res": 2,
+     "corpo_a_corpo": false
+    },
+    "liquido": {
+     "comb": 5,
+     "res": 2,
+     "corpo_a_corpo": false
+    }
+   },
+   "Segundens": {
+    "urbano": {
+     "comb": 6,
+     "res": 4,
+     "corpo_a_corpo": false
+    },
+    "liquido": {
+     "comb": 5,
+     "res": 2,
+     "corpo_a_corpo": false
+    }
+   },
+   "Suvans": {
+    "urbano": {
+     "comb": 6,
+     "res": 2,
+     "corpo_a_corpo": false
+    },
+    "liquido": {
+     "comb": 7,
+     "res": 4,
+     "corpo_a_corpo": false
+    }
+   },
+   "Piorads": {
+    "urbano": {
+     "comb": 4,
+     "res": 4,
+     "corpo_a_corpo": false
+    },
+    "sotterraneo": {
+     "comb": 6,
+     "res": 6,
+     "corpo_a_corpo": false
+    }
+   },
+   "Xanthons": {
+    "fuoco": {
+     "comb": 8,
+     "res": 6,
+     "corpo_a_corpo": false
+    }
+   },
+   "Yesters": {
+    "urbano": {
+     "comb": 6,
+     "res": 2,
+     "corpo_a_corpo": false
+    },
+    "aereo": {
+     "comb": 6,
+     "res": 4,
+     "corpo_a_corpo": false
+    }
+   },
+   "Kayns": {
+    "selvaggio": {
+     "comb": 7,
+     "res": 6,
+     "corpo_a_corpo": false
+    },
+    "sotterraneo": {
+     "comb": 6,
+     "res": 4,
+     "corpo_a_corpo": false
+    }
+   }
+  },
+  "altri": {
+   "Anons": {
+    "pianeta": 151,
+    "ambiente": "aereo",
+    "comb": 4,
+    "res": 2,
+    "corpo_a_corpo": true
+   },
+   "Ardorats": {
+    "pianeta": 512,
+    "ambiente": "selvaggio",
+    "comb": 4,
+    "res": 4,
+    "corpo_a_corpo": false
+   },
+   "Borks": {
+    "pianeta": 122,
+    "ambiente": "selvaggio",
+    "comb": 8,
+    "res": 2,
+    "corpo_a_corpo": false
+   },
+   "Calmas": {
+    "pianeta": 322,
+    "ambiente": "sotterraneo",
+    "comb": 5,
+    "res": 4,
+    "corpo_a_corpo": false
+   },
+   "Charkhans": {
+    "pianeta": 223,
+    "ambiente": "selvaggio",
+    "comb": 5,
+    "res": 4,
+    "corpo_a_corpo": false
+   },
+   "Cavalkus": {
+    "pianeta": 541,
+    "ambiente": "aereo",
+    "comb": 4,
+    "res": 3,
+    "corpo_a_corpo": true
+   },
+   "Deaxins": {
+    "pianeta": 341,
+    "ambiente": "selvaggio",
+    "comb": 5,
+    "res": 5,
+    "corpo_a_corpo": true
+   },
+   "Illias": {
+    "pianeta": 433,
+    "ambiente": "selvaggio",
+    "comb": 4,
+    "res": 4,
+    "corpo_a_corpo": false
+   },
+   "Henones": {
+    "pianeta": 431,
+    "ambiente": "liquido",
+    "comb": 6,
+    "res": 6,
+    "corpo_a_corpo": false
+   },
+   "Kirts": {
+    "pianeta": 312,
+    "ambiente": "selvaggio",
+    "comb": 5,
+    "res": 4,
+    "corpo_a_corpo": false
+   },
+   "Jopers": {
+    "pianeta": 511,
+    "ambiente": "urbano",
+    "comb": 6,
+    "res": 2,
+    "corpo_a_corpo": false
+   },
+   "Leonids": {
+    "pianeta": 412,
+    "ambiente": "selvaggio",
+    "comb": 6,
+    "res": 4,
+    "corpo_a_corpo": false
+   },
+   "Moghas": {
+    "pianeta": 322,
+    "ambiente": "selvaggio",
+    "comb": 7,
+    "res": 3,
+    "corpo_a_corpo": true
+   },
+   "Mowevs": {
+    "pianeta": 311,
+    "ambiente": "selvaggio",
+    "comb": 4,
+    "res": 4,
+    "corpo_a_corpo": true
+   },
+   "Ornotins": {
+    "pianeta": 513,
+    "ambiente": "urbano",
+    "comb": 6,
+    "res": 4,
+    "corpo_a_corpo": false
+   },
+   "Phans": {
+    "pianeta": 412,
+    "ambiente": "liquido",
+    "comb": 4,
+    "res": 4,
+    "corpo_a_corpo": false
+   },
+   "Rylians": {
+    "pianeta": 342,
+    "ambiente": "sotterraneo",
+    "comb": 8,
+    "res": 2,
+    "corpo_a_corpo": true
+   },
+   "Susperans": {
+    "pianeta": 432,
+    "ambiente": "urbano",
+    "comb": 4,
+    "res": 4,
+    "corpo_a_corpo": false
+   },
+   "Theshians": {
+    "pianeta": 441,
+    "ambiente": "selvaggio",
+    "comb": 4,
+    "res": 2,
+    "corpo_a_corpo": false
+   },
+   "Thoks": {
+    "pianeta": 432,
+    "ambiente": "selvaggio",
+    "comb": 6,
+    "res": 5,
+    "corpo_a_corpo": true
+   },
+   "Ultraks": {
+    "pianeta": 212,
+    "ambiente": "urbano",
+    "comb": 4,
+    "res": 4,
+    "corpo_a_corpo": false
+   },
+   "Ursi": {
+    "pianeta": 232,
+    "ambiente": "selvaggio",
+    "comb": 7,
+    "res": 6,
+    "corpo_a_corpo": true
+   }
+  },
+  "note": "Se la forza ha l'asterisco il combattimento è corpo a corpo, altrimenti scontro a fuoco. Per le razze stellari la tabella è in forma comb-res senza asterisco: scontro a fuoco."
+ },
+ "punti_vittoria_star_system": {
+  "pianeta_controllo_ribelle": 9,
+  "pianeta_in_ribellione": 6,
+  "pianeta_in_agitazione": 3,
+  "pianeta_patriottico": -2,
+  "imperiale_ucciso": 1,
+  "imperiale_catturato": 2,
+  "ribelle_ucciso": -1,
+  "ribelle_catturato": -2,
+  "raccogli_informazioni_ribelle": 1,
+  "raccogli_informazioni_imperiale": -1
+ },
+ "lealta": [
+  "patriottico",
+  "leale",
+  "neutrale",
+  "dissenso",
+  "agitazione"
+ ]
+}

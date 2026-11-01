@@ -1,0 +1,40 @@
+; Engine configuration file.
+config_version=5
+
+[application]
+
+config/name="Freedom in the Galaxy"
+config/description="Versione digitale di Freedom in the Galaxy (SPI, 1979): la Ribellione contro l'Impero galattico, 5764 d.C. Star System Game con IA per entrambe le parti, partite online e salvataggi su Firebase."
+run/main_scene="res://scenes/Main.tscn"
+config/features=PackedStringArray("4.7")
+config/icon="res://assets/misc/icona.png"
+boot_splash/bg_color=Color(0.02, 0.02, 0.05, 1)
+boot_splash/fullsize=false
+boot_splash/use_filter=true
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=2
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+window/handheld/orientation=6
+
+[input_devices]
+
+pointing/emulate_mouse_from_touch=true
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=1
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+
+[importer_defaults]
+
+texture={
+"compress/mode": 1,
+"compress/lossy_quality": 0.92,
+"mipmaps/generate": true
+}

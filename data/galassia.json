@@ -1,0 +1,2951 @@
+{
+ "immagine": {
+  "file": "httpiimgurcompsvIgTrjpg.jpg",
+  "larghezza": 3874,
+  "altezza": 2844
+ },
+ "province": [
+  {
+   "id": 1,
+   "nome": "Prima Provincia"
+  },
+  {
+   "id": 2,
+   "nome": "Seconda Provincia"
+  },
+  {
+   "id": 3,
+   "nome": "Terza Provincia"
+  },
+  {
+   "id": 4,
+   "nome": "Quarta Provincia"
+  },
+  {
+   "id": 5,
+   "nome": "Quinta Provincia"
+  }
+ ],
+ "stelle": [
+  {
+   "id": 11,
+   "nome": "Tardyn",
+   "provincia": 1,
+   "x": 2019,
+   "y": 610,
+   "raggio_px": 296,
+   "navigazione": false
+  },
+  {
+   "id": 12,
+   "nome": "Uracus",
+   "provincia": 1,
+   "x": 1670,
+   "y": 1015,
+   "raggio_px": 227,
+   "navigazione": false
+  },
+  {
+   "id": 13,
+   "nome": "Zamorax",
+   "provincia": 1,
+   "x": 1803,
+   "y": 1503,
+   "raggio_px": 155,
+   "navigazione": false
+  },
+  {
+   "id": 14,
+   "nome": "Atriard",
+   "provincia": 1,
+   "x": 2198,
+   "y": 1200,
+   "raggio_px": 296,
+   "navigazione": false
+  },
+  {
+   "id": 15,
+   "nome": "Bex",
+   "provincia": 1,
+   "x": 1340,
+   "y": 1460,
+   "raggio_px": 252,
+   "navigazione": false
+  },
+  {
+   "id": 16,
+   "nome": "Osirius",
+   "provincia": 1,
+   "x": 2002,
+   "y": 1874,
+   "raggio_px": 296,
+   "navigazione": false
+  },
+  {
+   "id": 21,
+   "nome": "Phisaria",
+   "provincia": 2,
+   "x": 2687,
+   "y": 466,
+   "raggio_px": 227,
+   "navigazione": false
+  },
+  {
+   "id": 22,
+   "nome": "Egrix",
+   "provincia": 2,
+   "x": 3173,
+   "y": 535,
+   "raggio_px": 296,
+   "navigazione": false
+  },
+  {
+   "id": 23,
+   "nome": "Ancore",
+   "provincia": 2,
+   "x": 2795,
+   "y": 980,
+   "raggio_px": 252,
+   "navigazione": false
+  },
+  {
+   "id": 24,
+   "nome": "Gellas",
+   "provincia": 2,
+   "x": 3261,
+   "y": 1107,
+   "raggio_px": 182,
+   "navigazione": false
+  },
+  {
+   "id": 31,
+   "nome": "Pycius",
+   "provincia": 3,
+   "x": 2581,
+   "y": 1662,
+   "raggio_px": 252,
+   "navigazione": false
+  },
+  {
+   "id": 32,
+   "nome": "Ribex",
+   "provincia": 3,
+   "x": 3171,
+   "y": 1656,
+   "raggio_px": 296,
+   "navigazione": false
+  },
+  {
+   "id": 33,
+   "nome": "Rorth",
+   "provincia": 3,
+   "x": 2286,
+   "y": 2277,
+   "raggio_px": 155,
+   "navigazione": false
+  },
+  {
+   "id": 34,
+   "nome": "Aziza",
+   "provincia": 3,
+   "x": 2724,
+   "y": 2186,
+   "raggio_px": 252,
+   "navigazione": false
+  },
+  {
+   "id": 35,
+   "nome": "Luine",
+   "provincia": 3,
+   "x": 3244,
+   "y": 2208,
+   "raggio_px": 227,
+   "navigazione": false
+  },
+  {
+   "id": 41,
+   "nome": "Erwind",
+   "provincia": 4,
+   "x": 734,
+   "y": 1584,
+   "raggio_px": 227,
+   "navigazione": false
+  },
+  {
+   "id": 42,
+   "nome": "Wex",
+   "provincia": 4,
+   "x": 1147,
+   "y": 1892,
+   "raggio_px": 182,
+   "navigazione": false
+  },
+  {
+   "id": 43,
+   "nome": "Varu",
+   "provincia": 4,
+   "x": 683,
+   "y": 2133,
+   "raggio_px": 296,
+   "navigazione": false
+  },
+  {
+   "id": 44,
+   "nome": "Deblon",
+   "provincia": 4,
+   "x": 1349,
+   "y": 2205,
+   "raggio_px": 227,
+   "navigazione": false
+  },
+  {
+   "id": 45,
+   "nome": "Martigna",
+   "provincia": 4,
+   "x": 1841,
+   "y": 2275,
+   "raggio_px": 155,
+   "navigazione": false
+  },
+  {
+   "id": 51,
+   "nome": "Zakir",
+   "provincia": 5,
+   "x": 627,
+   "y": 526,
+   "raggio_px": 296,
+   "navigazione": false
+  },
+  {
+   "id": 52,
+   "nome": "Eudox",
+   "provincia": 5,
+   "x": 1206,
+   "y": 529,
+   "raggio_px": 296,
+   "navigazione": false
+  },
+  {
+   "id": 53,
+   "nome": "Corusa",
+   "provincia": 5,
+   "x": 1751,
+   "y": 387,
+   "raggio_px": 155,
+   "navigazione": false
+  },
+  {
+   "id": 54,
+   "nome": "Irajeba",
+   "provincia": 5,
+   "x": 695,
+   "y": 1081,
+   "raggio_px": 227,
+   "navigazione": false
+  },
+  {
+   "id": 55,
+   "nome": "Moda",
+   "provincia": 5,
+   "x": 1115,
+   "y": 1009,
+   "raggio_px": 155,
+   "navigazione": false
+  },
+  {
+   "id": "N1",
+   "nome": null,
+   "provincia": null,
+   "x": 2105,
+   "y": 278,
+   "raggio_px": 25,
+   "navigazione": true
+  },
+  {
+   "id": "N2",
+   "nome": null,
+   "provincia": null,
+   "x": 1002,
+   "y": 355,
+   "raggio_px": 25,
+   "navigazione": true
+  },
+  {
+   "id": "N3",
+   "nome": null,
+   "provincia": null,
+   "x": 1980,
+   "y": 410,
+   "raggio_px": 25,
+   "navigazione": true
+  },
+  {
+   "id": "N4",
+   "nome": null,
+   "provincia": null,
+   "x": 1626,
+   "y": 588,
+   "raggio_px": 25,
+   "navigazione": true
+  },
+  {
+   "id": "N5",
+   "nome": null,
+   "provincia": null,
+   "x": 1634,
+   "y": 711,
+   "raggio_px": 25,
+   "navigazione": true
+  },
+  {
+   "id": "N6",
+   "nome": null,
+   "provincia": null,
+   "x": 2438,
+   "y": 734,
+   "raggio_px": 25,
+   "navigazione": true
+  },
+  {
+   "id": "N7",
+   "nome": null,
+   "provincia": null,
+   "x": 550,
+   "y": 861,
+   "raggio_px": 25,
+   "navigazione": true
+  },
+  {
+   "id": "N8",
+   "nome": null,
+   "provincia": null,
+   "x": 3360,
+   "y": 867,
+   "raggio_px": 25,
+   "navigazione": true
+  },
+  {
+   "id": "N9",
+   "nome": null,
+   "provincia": null,
+   "x": 2480,
+   "y": 880,
+   "raggio_px": 25,
+   "navigazione": true
+  },
+  {
+   "id": "N10",
+   "nome": null,
+   "provincia": null,
+   "x": 3025,
+   "y": 1224,
+   "raggio_px": 25,
+   "navigazione": true
+  },
+  {
+   "id": "N11",
+   "nome": null,
+   "provincia": null,
+   "x": 978,
+   "y": 1290,
+   "raggio_px": 25,
+   "navigazione": true
+  },
+  {
+   "id": "N12",
+   "nome": null,
+   "provincia": null,
+   "x": 530,
+   "y": 1383,
+   "raggio_px": 25,
+   "navigazione": true
+  },
+  {
+   "id": "N13",
+   "nome": null,
+   "provincia": null,
+   "x": 3088,
+   "y": 1389,
+   "raggio_px": 25,
+   "navigazione": true
+  },
+  {
+   "id": "N14",
+   "nome": null,
+   "provincia": null,
+   "x": 1441,
+   "y": 1860,
+   "raggio_px": 25,
+   "navigazione": true
+  },
+  {
+   "id": "N15",
+   "nome": null,
+   "provincia": null,
+   "x": 1622,
+   "y": 1915,
+   "raggio_px": 25,
+   "navigazione": true
+  },
+  {
+   "id": "N16",
+   "nome": null,
+   "provincia": null,
+   "x": 3102,
+   "y": 1989,
+   "raggio_px": 25,
+   "navigazione": true
+  },
+  {
+   "id": "N17",
+   "nome": null,
+   "provincia": null,
+   "x": 2401,
+   "y": 2038,
+   "raggio_px": 25,
+   "navigazione": true
+  },
+  {
+   "id": "N18",
+   "nome": null,
+   "provincia": null,
+   "x": 2097,
+   "y": 2206,
+   "raggio_px": 25,
+   "navigazione": true
+  },
+  {
+   "id": "N19",
+   "nome": null,
+   "provincia": null,
+   "x": 998,
+   "y": 2346,
+   "raggio_px": 25,
+   "navigazione": true
+  },
+  {
+   "id": "N20",
+   "nome": null,
+   "provincia": null,
+   "x": 2989,
+   "y": 2385,
+   "raggio_px": 25,
+   "navigazione": true
+  }
+ ],
+ "rotte": [
+  {
+   "da": 11,
+   "a": 13,
+   "distanza": 1
+  },
+  {
+   "da": 11,
+   "a": 14,
+   "distanza": 1
+  },
+  {
+   "da": 11,
+   "a": "N3",
+   "distanza": 1
+  },
+  {
+   "da": 11,
+   "a": "N4",
+   "distanza": 1
+  },
+  {
+   "da": 11,
+   "a": "N5",
+   "distanza": 1
+  },
+  {
+   "da": 11,
+   "a": "N6",
+   "distanza": 1
+  },
+  {
+   "da": 12,
+   "a": 15,
+   "distanza": 1
+  },
+  {
+   "da": 12,
+   "a": "N11",
+   "distanza": 1
+  },
+  {
+   "da": 12,
+   "a": "N5",
+   "distanza": 1
+  },
+  {
+   "da": 13,
+   "a": 16,
+   "distanza": 1
+  },
+  {
+   "da": 14,
+   "a": 13,
+   "distanza": 1
+  },
+  {
+   "da": 14,
+   "a": 16,
+   "distanza": 1
+  },
+  {
+   "da": 14,
+   "a": 31,
+   "distanza": 1
+  },
+  {
+   "da": 14,
+   "a": "N9",
+   "distanza": 1
+  },
+  {
+   "da": 15,
+   "a": 13,
+   "distanza": 1
+  },
+  {
+   "da": 15,
+   "a": 16,
+   "distanza": 1
+  },
+  {
+   "da": 15,
+   "a": "N14",
+   "distanza": 1
+  },
+  {
+   "da": 15,
+   "a": "N15",
+   "distanza": 1
+  },
+  {
+   "da": 16,
+   "a": "N17",
+   "distanza": 1
+  },
+  {
+   "da": 21,
+   "a": 23,
+   "distanza": 1
+  },
+  {
+   "da": 21,
+   "a": "N1",
+   "distanza": 1
+  },
+  {
+   "da": 21,
+   "a": "N6",
+   "distanza": 1
+  },
+  {
+   "da": 22,
+   "a": 23,
+   "distanza": 1
+  },
+  {
+   "da": 22,
+   "a": "N8",
+   "distanza": 1
+  },
+  {
+   "da": 23,
+   "a": "N10",
+   "distanza": 1
+  },
+  {
+   "da": 23,
+   "a": "N9",
+   "distanza": 1
+  },
+  {
+   "da": 24,
+   "a": "N10",
+   "distanza": 1
+  },
+  {
+   "da": 24,
+   "a": "N13",
+   "distanza": 1
+  },
+  {
+   "da": 24,
+   "a": "N8",
+   "distanza": 1
+  },
+  {
+   "da": 31,
+   "a": 34,
+   "distanza": 1
+  },
+  {
+   "da": 32,
+   "a": 31,
+   "distanza": 1
+  },
+  {
+   "da": 32,
+   "a": "N13",
+   "distanza": 1
+  },
+  {
+   "da": 32,
+   "a": "N16",
+   "distanza": 1
+  },
+  {
+   "da": 33,
+   "a": "N17",
+   "distanza": 1
+  },
+  {
+   "da": 33,
+   "a": "N18",
+   "distanza": 1
+  },
+  {
+   "da": 34,
+   "a": 33,
+   "distanza": 1
+  },
+  {
+   "da": 34,
+   "a": "N20",
+   "distanza": 1
+  },
+  {
+   "da": 35,
+   "a": "N16",
+   "distanza": 1
+  },
+  {
+   "da": 35,
+   "a": "N20",
+   "distanza": 1
+  },
+  {
+   "da": 41,
+   "a": 42,
+   "distanza": 1
+  },
+  {
+   "da": 41,
+   "a": 43,
+   "distanza": 1
+  },
+  {
+   "da": 41,
+   "a": "N12",
+   "distanza": 1
+  },
+  {
+   "da": 42,
+   "a": 44,
+   "distanza": 1
+  },
+  {
+   "da": 42,
+   "a": "N11",
+   "distanza": 1
+  },
+  {
+   "da": 43,
+   "a": "N19",
+   "distanza": 1
+  },
+  {
+   "da": 44,
+   "a": 45,
+   "distanza": 1
+  },
+  {
+   "da": 44,
+   "a": "N14",
+   "distanza": 1
+  },
+  {
+   "da": 44,
+   "a": "N19",
+   "distanza": 1
+  },
+  {
+   "da": 45,
+   "a": "N15",
+   "distanza": 1
+  },
+  {
+   "da": 45,
+   "a": "N18",
+   "distanza": 1
+  },
+  {
+   "da": 51,
+   "a": "N2",
+   "distanza": 1
+  },
+  {
+   "da": 51,
+   "a": "N7",
+   "distanza": 1
+  },
+  {
+   "da": 52,
+   "a": 55,
+   "distanza": 1
+  },
+  {
+   "da": 52,
+   "a": "N2",
+   "distanza": 1
+  },
+  {
+   "da": 52,
+   "a": "N4",
+   "distanza": 1
+  },
+  {
+   "da": 53,
+   "a": 52,
+   "distanza": 1
+  },
+  {
+   "da": 53,
+   "a": "N1",
+   "distanza": 1
+  },
+  {
+   "da": 53,
+   "a": "N3",
+   "distanza": 1
+  },
+  {
+   "da": 53,
+   "a": "N4",
+   "distanza": 1
+  },
+  {
+   "da": 54,
+   "a": "N12",
+   "distanza": 1
+  },
+  {
+   "da": 54,
+   "a": "N7",
+   "distanza": 1
+  },
+  {
+   "da": 55,
+   "a": 12,
+   "distanza": 1
+  },
+  {
+   "da": 55,
+   "a": 54,
+   "distanza": 1
+  }
+ ],
+ "pianeti": [
+  {
+   "id": 111,
+   "nome": "Mimulus",
+   "stella": 11,
+   "anello": 1,
+   "status": "Kayns",
+   "politica": {
+    "S": "patriottico",
+    "A": "leale",
+    "AC": false
+   },
+   "ambienti": [
+    {
+     "tipo": "selvaggio",
+     "taglia": 4,
+     "razze": [
+      {
+       "nome": "Kayns",
+       "stellare": true
+      }
+     ],
+     "risorse": 4,
+     "risorse_stella": false,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Prox"
+    }
+   ],
+   "x_orbita": 2074,
+   "y_orbita": 497
+  },
+  {
+   "id": 112,
+   "nome": "Magro",
+   "stella": 11,
+   "anello": 2,
+   "status": null,
+   "politica": {
+    "S": "patriottico",
+    "A": "leale",
+    "AC": false
+   },
+   "ambienti": [
+    {
+     "tipo": "urbano",
+     "taglia": 3,
+     "razze": [
+      {
+       "nome": "Rhones",
+       "stellare": true
+      }
+     ],
+     "risorse": 6,
+     "risorse_stella": true,
+     "coup": 3,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Dindin"
+    },
+    {
+     "tipo": "aereo",
+     "taglia": 5,
+     "razze": [
+      {
+       "nome": "Yesters",
+       "stellare": true
+      }
+     ],
+     "risorse": 7,
+     "risorse_stella": true,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Glane"
+    }
+   ],
+   "x_orbita": 2082,
+   "y_orbita": 423
+  },
+  {
+   "id": 113,
+   "nome": "Fliad",
+   "stella": 11,
+   "anello": 3,
+   "status": "secret",
+   "politica": {
+    "S": "patriottico",
+    "A": "neutrale",
+    "AC": false
+   },
+   "ambienti": [
+    {
+     "tipo": "liquido",
+     "taglia": 4,
+     "razze": [
+      {
+       "nome": "Suvans",
+       "stellare": true
+      }
+     ],
+     "risorse": 4,
+     "risorse_stella": false,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": null
+    },
+    {
+     "tipo": "selvaggio",
+     "taglia": 4,
+     "razze": [
+      {
+       "nome": "Urgaks",
+       "stellare": false
+      }
+     ],
+     "risorse": 4,
+     "risorse_stella": false,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": null
+    }
+   ],
+   "x_orbita": 2083,
+   "y_orbita": 350
+  },
+  {
+   "id": 121,
+   "nome": "Kalgar",
+   "stella": 12,
+   "anello": 1,
+   "status": null,
+   "politica": {
+    "S": "patriottico",
+    "A": "leale",
+    "AC": false
+   },
+   "ambienti": [
+    {
+     "tipo": "sotterraneo",
+     "taglia": 6,
+     "razze": [
+      {
+       "nome": "Kayns",
+       "stellare": true
+      },
+      {
+       "nome": "Saurians",
+       "stellare": true
+      }
+     ],
+     "risorse": 7,
+     "risorse_stella": true,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Crunge"
+    }
+   ],
+   "x_orbita": 1725,
+   "y_orbita": 902
+  },
+  {
+   "id": 122,
+   "nome": "Bajukai",
+   "stella": 12,
+   "anello": 2,
+   "status": "Segundens",
+   "politica": {
+    "S": "leale",
+    "A": "neutrale",
+    "AC": false
+   },
+   "ambienti": [
+    {
+     "tipo": "urbano",
+     "taglia": 3,
+     "razze": [
+      {
+       "nome": "Segundens",
+       "stellare": true
+      }
+     ],
+     "risorse": 8,
+     "risorse_stella": true,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": null
+    },
+    {
+     "tipo": "liquido",
+     "taglia": 3,
+     "razze": [
+      {
+       "nome": "Segundens",
+       "stellare": true
+      }
+     ],
+     "risorse": 7,
+     "risorse_stella": true,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": null
+    },
+    {
+     "tipo": "selvaggio",
+     "taglia": 4,
+     "razze": [
+      {
+       "nome": "Borks",
+       "stellare": false
+      }
+     ],
+     "risorse": 6,
+     "risorse_stella": false,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Ym-Barror"
+    }
+   ],
+   "x_orbita": 1733,
+   "y_orbita": 828
+  },
+  {
+   "id": 131,
+   "nome": "Tiglyf",
+   "stella": 13,
+   "anello": 1,
+   "status": "secret",
+   "politica": {
+    "S": "patriottico",
+    "A": "dissenso",
+    "AC": false
+   },
+   "ambienti": [
+    {
+     "tipo": "urbano",
+     "taglia": 5,
+     "razze": [
+      {
+       "nome": "Segundens",
+       "stellare": true
+      }
+     ],
+     "risorse": 10,
+     "risorse_stella": true,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Vorozion"
+    }
+   ],
+   "x_orbita": 1858,
+   "y_orbita": 1390
+  },
+  {
+   "id": 141,
+   "nome": "Ownex",
+   "stella": 14,
+   "anello": 1,
+   "status": null,
+   "politica": {
+    "S": "neutrale",
+    "A": "agitazione",
+    "AC": true
+   },
+   "ambienti": [
+    {
+     "tipo": "sotterraneo",
+     "taglia": 5,
+     "razze": [
+      {
+       "nome": "Piorads",
+       "stellare": true
+      }
+     ],
+     "risorse": 5,
+     "risorse_stella": true,
+     "coup": null,
+     "sovrano": "Nam Nhuk",
+     "sovrano_fedelta": "R",
+     "creatura": "Stromuse"
+    }
+   ],
+   "x_orbita": 2253,
+   "y_orbita": 1087
+  },
+  {
+   "id": 142,
+   "nome": "Adare",
+   "stella": 14,
+   "anello": 2,
+   "status": null,
+   "politica": {
+    "S": "leale",
+    "A": "neutrale",
+    "AC": false
+   },
+   "ambienti": [
+    {
+     "tipo": "urbano",
+     "taglia": 4,
+     "razze": [
+      {
+       "nome": "Rhones",
+       "stellare": true
+      }
+     ],
+     "risorse": 7,
+     "risorse_stella": true,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Zernipak"
+    },
+    {
+     "tipo": "selvaggio",
+     "taglia": 5,
+     "razze": [
+      {
+       "nome": "Rhones",
+       "stellare": true
+      }
+     ],
+     "risorse": 7,
+     "risorse_stella": true,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": null
+    }
+   ],
+   "x_orbita": 2261,
+   "y_orbita": 1013
+  },
+  {
+   "id": 143,
+   "nome": "Mitrith",
+   "stella": 14,
+   "anello": 3,
+   "status": "secret",
+   "politica": {
+    "S": "patriottico",
+    "A": "dissenso",
+    "AC": false
+   },
+   "ambienti": [
+    {
+     "tipo": "fuoco",
+     "taglia": 2,
+     "razze": [
+      {
+       "nome": "Xanthons",
+       "stellare": true
+      }
+     ],
+     "risorse": 2,
+     "risorse_stella": false,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": null
+    },
+    {
+     "tipo": "selvaggio",
+     "taglia": 4,
+     "razze": [
+      {
+       "nome": "Saurians",
+       "stellare": true
+      }
+     ],
+     "risorse": 6,
+     "risorse_stella": true,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Zop"
+    }
+   ],
+   "x_orbita": 2262,
+   "y_orbita": 940
+  },
+  {
+   "id": 151,
+   "nome": "Jura",
+   "stella": 15,
+   "anello": 1,
+   "status": null,
+   "politica": {
+    "S": "patriottico",
+    "A": "leale",
+    "AC": false
+   },
+   "ambienti": [
+    {
+     "tipo": "urbano",
+     "taglia": 4,
+     "razze": [
+      {
+       "nome": "Saurians",
+       "stellare": true
+      },
+      {
+       "nome": "Rhones",
+       "stellare": true
+      }
+     ],
+     "risorse": 7,
+     "risorse_stella": true,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": null
+    },
+    {
+     "tipo": "aereo",
+     "taglia": 3,
+     "razze": [
+      {
+       "nome": "Anons",
+       "stellare": false
+      }
+     ],
+     "risorse": 1,
+     "risorse_stella": false,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": null
+    }
+   ],
+   "x_orbita": 1396,
+   "y_orbita": 1317
+  },
+  {
+   "id": 152,
+   "nome": "Diomas",
+   "stella": 15,
+   "anello": 2,
+   "status": "capital",
+   "politica": {
+    "S": "patriottico",
+    "A": "patriottico",
+    "AC": false
+   },
+   "ambienti": [
+    {
+     "tipo": "urbano",
+     "taglia": 5,
+     "razze": [
+      {
+       "nome": "Rhones",
+       "stellare": true
+      }
+     ],
+     "risorse": 7,
+     "risorse_stella": true,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Muggers"
+    },
+    {
+     "tipo": "selvaggio",
+     "taglia": 3,
+     "razze": [
+      {
+       "nome": "Rhones",
+       "stellare": true
+      }
+     ],
+     "risorse": 4,
+     "risorse_stella": false,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Chlorofix"
+    }
+   ],
+   "x_orbita": 1403,
+   "y_orbita": 1245
+  },
+  {
+   "id": 161,
+   "nome": "Liomax",
+   "stella": 16,
+   "anello": 1,
+   "status": null,
+   "politica": {
+    "S": "patriottico",
+    "A": "neutrale",
+    "AC": false
+   },
+   "ambienti": [
+    {
+     "tipo": "selvaggio",
+     "taglia": 6,
+     "razze": [
+      {
+       "nome": "Rhones",
+       "stellare": true
+      }
+     ],
+     "risorse": 8,
+     "risorse_stella": true,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Lomrels"
+    }
+   ],
+   "x_orbita": 2057,
+   "y_orbita": 1761
+  },
+  {
+   "id": 162,
+   "nome": "Orlog",
+   "stella": 16,
+   "anello": 2,
+   "status": "throne",
+   "politica": {
+    "S": "patriottico",
+    "A": "patriottico",
+    "AC": false
+   },
+   "ambienti": [
+    {
+     "tipo": "urbano",
+     "taglia": 6,
+     "razze": [
+      {
+       "nome": "Rhones",
+       "stellare": true
+      }
+     ],
+     "risorse": 7,
+     "risorse_stella": true,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": null
+    },
+    {
+     "tipo": "sotterraneo",
+     "taglia": 2,
+     "razze": [
+      {
+       "nome": "Rhones",
+       "stellare": true
+      }
+     ],
+     "risorse": 2,
+     "risorse_stella": false,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": null
+    },
+    {
+     "tipo": "selvaggio",
+     "taglia": 3,
+     "razze": [
+      {
+       "nome": "Rhones",
+       "stellare": true
+      }
+     ],
+     "risorse": 3,
+     "risorse_stella": false,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": null
+    }
+   ],
+   "x_orbita": 2065,
+   "y_orbita": 1687
+  },
+  {
+   "id": 163,
+   "nome": "Icid",
+   "stella": 16,
+   "anello": 3,
+   "status": null,
+   "politica": {
+    "S": "patriottico",
+    "A": "leale",
+    "AC": false
+   },
+   "ambienti": [
+    {
+     "tipo": "selvaggio",
+     "taglia": 5,
+     "razze": [
+      {
+       "nome": "Saurians",
+       "stellare": true
+      }
+     ],
+     "risorse": 7,
+     "risorse_stella": true,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Rotron"
+    }
+   ],
+   "x_orbita": 2066,
+   "y_orbita": 1614
+  },
+  {
+   "id": 211,
+   "nome": "Cieson",
+   "stella": 21,
+   "anello": 1,
+   "status": "Yesters",
+   "politica": {
+    "S": "leale",
+    "A": "neutrale",
+    "AC": false
+   },
+   "ambienti": [
+    {
+     "tipo": "aereo",
+     "taglia": 3,
+     "razze": [
+      {
+       "nome": "Yesters",
+       "stellare": true
+      }
+     ],
+     "risorse": 5,
+     "risorse_stella": true,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Derigion"
+    }
+   ],
+   "x_orbita": 2742,
+   "y_orbita": 353
+  },
+  {
+   "id": 212,
+   "nome": "Etreg",
+   "stella": 21,
+   "anello": 2,
+   "status": "secret",
+   "politica": {
+    "S": "patriottico",
+    "A": "neutrale",
+    "AC": false
+   },
+   "ambienti": [
+    {
+     "tipo": "urbano",
+     "taglia": 3,
+     "razze": [
+      {
+       "nome": "Ultraks",
+       "stellare": false
+      }
+     ],
+     "risorse": 8,
+     "risorse_stella": false,
+     "coup": null,
+     "sovrano": "Treb Eyro",
+     "sovrano_fedelta": "I",
+     "creatura": null
+    },
+    {
+     "tipo": "selvaggio",
+     "taglia": 4,
+     "razze": [
+      {
+       "nome": "Kayns",
+       "stellare": true
+      }
+     ],
+     "risorse": 4,
+     "risorse_stella": false,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Magron"
+    }
+   ],
+   "x_orbita": 2750,
+   "y_orbita": 279
+  },
+  {
+   "id": 221,
+   "nome": "Quibron",
+   "stella": 22,
+   "anello": 1,
+   "status": "secret",
+   "politica": {
+    "S": "leale",
+    "A": "agitazione",
+    "AC": false
+   },
+   "ambienti": [
+    {
+     "tipo": "selvaggio",
+     "taglia": 4,
+     "razze": [
+      {
+       "nome": "Saurians",
+       "stellare": true
+      }
+     ],
+     "risorse": 6,
+     "risorse_stella": true,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Snow Giants"
+    }
+   ],
+   "x_orbita": 3228,
+   "y_orbita": 422
+  },
+  {
+   "id": 222,
+   "nome": "Angoff",
+   "stella": 22,
+   "anello": 2,
+   "status": "secret",
+   "politica": {
+    "S": "neutrale",
+    "A": "agitazione",
+    "AC": true
+   },
+   "ambienti": [
+    {
+     "tipo": "urbano",
+     "taglia": 6,
+     "razze": [
+      {
+       "nome": "Yesters",
+       "stellare": true
+      }
+     ],
+     "risorse": 9,
+     "risorse_stella": true,
+     "coup": 3,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Laboroid"
+    }
+   ],
+   "x_orbita": 3236,
+   "y_orbita": 348
+  },
+  {
+   "id": 223,
+   "nome": "Charkhan",
+   "stella": 22,
+   "anello": 3,
+   "status": null,
+   "politica": {
+    "S": "patriottico",
+    "A": "dissenso",
+    "AC": false
+   },
+   "ambienti": [
+    {
+     "tipo": "aereo",
+     "taglia": 5,
+     "razze": [
+      {
+       "nome": "Yesters",
+       "stellare": true
+      }
+     ],
+     "risorse": 7,
+     "risorse_stella": true,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Drants"
+    },
+    {
+     "tipo": "selvaggio",
+     "taglia": 3,
+     "razze": [
+      {
+       "nome": "Charkhans",
+       "stellare": false
+      }
+     ],
+     "risorse": 5,
+     "risorse_stella": true,
+     "coup": null,
+     "sovrano": "Megda Sheels",
+     "sovrano_fedelta": "I",
+     "creatura": null
+    }
+   ],
+   "x_orbita": 3237,
+   "y_orbita": 275
+  },
+  {
+   "id": 231,
+   "nome": "Pronox",
+   "stella": 23,
+   "anello": 1,
+   "status": null,
+   "politica": {
+    "S": "patriottico",
+    "A": "leale",
+    "AC": false
+   },
+   "ambienti": [
+    {
+     "tipo": "urbano",
+     "taglia": 3,
+     "razze": [
+      {
+       "nome": "Rhones",
+       "stellare": true
+      }
+     ],
+     "risorse": 6,
+     "risorse_stella": true,
+     "coup": null,
+     "sovrano": "Ascaill",
+     "sovrano_fedelta": "I",
+     "creatura": "Propang"
+    },
+    {
+     "tipo": "aereo",
+     "taglia": 3,
+     "razze": [
+      {
+       "nome": "Yesters",
+       "stellare": true
+      }
+     ],
+     "risorse": 5,
+     "risorse_stella": true,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": null
+    }
+   ],
+   "x_orbita": 2851,
+   "y_orbita": 837
+  },
+  {
+   "id": 232,
+   "nome": "Lysenda",
+   "stella": 23,
+   "anello": 2,
+   "status": null,
+   "politica": {
+    "S": "leale",
+    "A": "dissenso",
+    "AC": false
+   },
+   "ambienti": [
+    {
+     "tipo": "urbano",
+     "taglia": 4,
+     "razze": [
+      {
+       "nome": "Segundens",
+       "stellare": true
+      },
+      {
+       "nome": "Piorads",
+       "stellare": true
+      }
+     ],
+     "risorse": 7,
+     "risorse_stella": true,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Drusers"
+    },
+    {
+     "tipo": "sotterraneo",
+     "taglia": 2,
+     "razze": [
+      {
+       "nome": "Piorads",
+       "stellare": true
+      }
+     ],
+     "risorse": 2,
+     "risorse_stella": false,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": null
+    },
+    {
+     "tipo": "selvaggio",
+     "taglia": 3,
+     "razze": [
+      {
+       "nome": "Ursi",
+       "stellare": false
+      }
+     ],
+     "risorse": 3,
+     "risorse_stella": false,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Batranoban"
+    }
+   ],
+   "x_orbita": 2858,
+   "y_orbita": 765
+  },
+  {
+   "id": 241,
+   "nome": "Orning",
+   "stella": 24,
+   "anello": 1,
+   "status": "capital",
+   "politica": {
+    "S": "patriottico",
+    "A": "leale",
+    "AC": false
+   },
+   "ambienti": [
+    {
+     "tipo": "liquido",
+     "taglia": 3,
+     "razze": [
+      {
+       "nome": "Suvans",
+       "stellare": true
+      }
+     ],
+     "risorse": 3,
+     "risorse_stella": false,
+     "coup": 1,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Gilekite"
+    },
+    {
+     "tipo": "selvaggio",
+     "taglia": 5,
+     "razze": [
+      {
+       "nome": "Rhones",
+       "stellare": true
+      }
+     ],
+     "risorse": 7,
+     "risorse_stella": true,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Sandiabs"
+    }
+   ],
+   "x_orbita": 3317,
+   "y_orbita": 964
+  },
+  {
+   "id": 311,
+   "nome": "Chim",
+   "stella": 31,
+   "anello": 1,
+   "status": "capital",
+   "politica": {
+    "S": "patriottico",
+    "A": "patriottico",
+    "AC": false
+   },
+   "ambienti": [
+    {
+     "tipo": "urbano",
+     "taglia": 3,
+     "razze": [
+      {
+       "nome": "Rhones",
+       "stellare": true
+      }
+     ],
+     "risorse": 5,
+     "risorse_stella": true,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Namdasn"
+    },
+    {
+     "tipo": "selvaggio",
+     "taglia": 4,
+     "razze": [
+      {
+       "nome": "Mowevs",
+       "stellare": false
+      }
+     ],
+     "risorse": 1,
+     "risorse_stella": false,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": null
+    }
+   ],
+   "x_orbita": 2637,
+   "y_orbita": 1519
+  },
+  {
+   "id": 312,
+   "nome": "Tamset",
+   "stella": 31,
+   "anello": 2,
+   "status": "secret",
+   "politica": {
+    "S": "dissenso",
+    "A": "agitazione",
+    "AC": true
+   },
+   "ambienti": [
+    {
+     "tipo": "aereo",
+     "taglia": 4,
+     "razze": [
+      {
+       "nome": "Yesters",
+       "stellare": true
+      }
+     ],
+     "risorse": 6,
+     "risorse_stella": true,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Verfusier"
+    },
+    {
+     "tipo": "selvaggio",
+     "taglia": 5,
+     "razze": [
+      {
+       "nome": "Kirts",
+       "stellare": false
+      }
+     ],
+     "risorse": 5,
+     "risorse_stella": false,
+     "coup": null,
+     "sovrano": "Shirofune",
+     "sovrano_fedelta": "R",
+     "creatura": "Gragg"
+    }
+   ],
+   "x_orbita": 2644,
+   "y_orbita": 1447
+  },
+  {
+   "id": 321,
+   "nome": "Unarpha",
+   "stella": 32,
+   "anello": 1,
+   "status": "Saurians",
+   "politica": {
+    "S": "leale",
+    "A": "neutrale",
+    "AC": false
+   },
+   "ambienti": [
+    {
+     "tipo": "urbano",
+     "taglia": 3,
+     "razze": [
+      {
+       "nome": "Saurians",
+       "stellare": true
+      }
+     ],
+     "risorse": 6,
+     "risorse_stella": true,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Alweg"
+    }
+   ],
+   "x_orbita": 3226,
+   "y_orbita": 1543
+  },
+  {
+   "id": 322,
+   "nome": "Suti",
+   "stella": 32,
+   "anello": 2,
+   "status": null,
+   "politica": {
+    "S": "neutrale",
+    "A": "agitazione",
+    "AC": false
+   },
+   "ambienti": [
+    {
+     "tipo": "sotterraneo",
+     "taglia": 3,
+     "razze": [
+      {
+       "nome": "Calmas",
+       "stellare": false
+      }
+     ],
+     "risorse": 5,
+     "risorse_stella": true,
+     "coup": null,
+     "sovrano": "Xela Grebb",
+     "sovrano_fedelta": "N",
+     "creatura": "Arags"
+    },
+    {
+     "tipo": "selvaggio",
+     "taglia": 4,
+     "razze": [
+      {
+       "nome": "Moghas",
+       "stellare": false
+      }
+     ],
+     "risorse": 2,
+     "risorse_stella": false,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Chantenes"
+    }
+   ],
+   "x_orbita": 3234,
+   "y_orbita": 1469
+  },
+  {
+   "id": 323,
+   "nome": "Tsipa",
+   "stella": 32,
+   "anello": 3,
+   "status": null,
+   "politica": {
+    "S": "patriottico",
+    "A": "leale",
+    "AC": false
+   },
+   "ambienti": [
+    {
+     "tipo": "urbano",
+     "taglia": 5,
+     "razze": [
+      {
+       "nome": "Rhones",
+       "stellare": true
+      }
+     ],
+     "risorse": 8,
+     "risorse_stella": true,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": null
+    },
+    {
+     "tipo": "selvaggio",
+     "taglia": 4,
+     "razze": [
+      {
+       "nome": "Rhones",
+       "stellare": true
+      }
+     ],
+     "risorse": 6,
+     "risorse_stella": true,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Queemer"
+    }
+   ],
+   "x_orbita": 3235,
+   "y_orbita": 1396
+  },
+  {
+   "id": 331,
+   "nome": "Squamot",
+   "stella": 33,
+   "anello": 1,
+   "status": "secret",
+   "politica": {
+    "S": "neutrale",
+    "A": "agitazione",
+    "AC": true
+   },
+   "ambienti": [
+    {
+     "tipo": "urbano",
+     "taglia": 4,
+     "razze": [
+      {
+       "nome": "Saurians",
+       "stellare": true
+      }
+     ],
+     "risorse": 7,
+     "risorse_stella": true,
+     "coup": 3,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": null
+    }
+   ],
+   "x_orbita": 2341,
+   "y_orbita": 2164
+  },
+  {
+   "id": 341,
+   "nome": "Midest",
+   "stella": 34,
+   "anello": 1,
+   "status": "secret",
+   "politica": {
+    "S": "patriottico",
+    "A": "dissenso",
+    "AC": false
+   },
+   "ambienti": [
+    {
+     "tipo": "liquido",
+     "taglia": 3,
+     "razze": [
+      {
+       "nome": "Suvans",
+       "stellare": true
+      }
+     ],
+     "risorse": 3,
+     "risorse_stella": false,
+     "coup": 2,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Morna"
+    },
+    {
+     "tipo": "selvaggio",
+     "taglia": 4,
+     "razze": [
+      {
+       "nome": "Deaxins",
+       "stellare": false
+      }
+     ],
+     "risorse": 2,
+     "risorse_stella": false,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Vrialta"
+    }
+   ],
+   "x_orbita": 2780,
+   "y_orbita": 2043
+  },
+  {
+   "id": 342,
+   "nome": "Akubera",
+   "stella": 34,
+   "anello": 2,
+   "status": null,
+   "politica": {
+    "S": "patriottico",
+    "A": "neutrale",
+    "AC": false
+   },
+   "ambienti": [
+    {
+     "tipo": "urbano",
+     "taglia": 2,
+     "razze": [
+      {
+       "nome": "Suvans",
+       "stellare": true
+      },
+      {
+       "nome": "Rhones",
+       "stellare": true
+      }
+     ],
+     "risorse": 4,
+     "risorse_stella": false,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Synestins"
+    },
+    {
+     "tipo": "liquido",
+     "taglia": 3,
+     "razze": [
+      {
+       "nome": "Suvans",
+       "stellare": true
+      }
+     ],
+     "risorse": 3,
+     "risorse_stella": false,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": null
+    },
+    {
+     "tipo": "sotterraneo",
+     "taglia": 4,
+     "razze": [
+      {
+       "nome": "Rylians",
+       "stellare": false
+      }
+     ],
+     "risorse": 6,
+     "risorse_stella": false,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Elilad"
+    }
+   ],
+   "x_orbita": 2787,
+   "y_orbita": 1971
+  },
+  {
+   "id": 351,
+   "nome": "Mrane",
+   "stella": 35,
+   "anello": 1,
+   "status": "Suvans",
+   "politica": {
+    "S": "leale",
+    "A": "neutrale",
+    "AC": false
+   },
+   "ambienti": [
+    {
+     "tipo": "liquido",
+     "taglia": 3,
+     "razze": [
+      {
+       "nome": "Suvans",
+       "stellare": true
+      }
+     ],
+     "risorse": 3,
+     "risorse_stella": false,
+     "coup": null,
+     "sovrano": "Balgar",
+     "sovrano_fedelta": "N",
+     "creatura": "Gyrogos"
+    }
+   ],
+   "x_orbita": 3299,
+   "y_orbita": 2095
+  },
+  {
+   "id": 352,
+   "nome": "Kelta",
+   "stella": 35,
+   "anello": 2,
+   "status": "secret",
+   "politica": {
+    "S": "leale",
+    "A": "dissenso",
+    "AC": false
+   },
+   "ambienti": [
+    {
+     "tipo": "selvaggio",
+     "taglia": 2,
+     "razze": [
+      {
+       "nome": "Saurians",
+       "stellare": true
+      }
+     ],
+     "risorse": 4,
+     "risorse_stella": false,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Leonus"
+    }
+   ],
+   "x_orbita": 3307,
+   "y_orbita": 2021
+  },
+  {
+   "id": 411,
+   "nome": "Troliso",
+   "stella": 41,
+   "anello": 1,
+   "status": "capital",
+   "politica": {
+    "S": "patriottico",
+    "A": "patriottico",
+    "AC": false
+   },
+   "ambienti": [
+    {
+     "tipo": "urbano",
+     "taglia": 6,
+     "razze": [
+      {
+       "nome": "Rhones",
+       "stellare": true
+      }
+     ],
+     "risorse": 8,
+     "risorse_stella": true,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Sekekers"
+    }
+   ],
+   "x_orbita": 789,
+   "y_orbita": 1471
+  },
+  {
+   "id": 412,
+   "nome": "Heliax",
+   "stella": 41,
+   "anello": 2,
+   "status": null,
+   "politica": {
+    "S": "patriottico",
+    "A": "neutrale",
+    "AC": false
+   },
+   "ambienti": [
+    {
+     "tipo": "liquido",
+     "taglia": 5,
+     "razze": [
+      {
+       "nome": "Phans",
+       "stellare": false
+      }
+     ],
+     "risorse": 7,
+     "risorse_stella": true,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Virus"
+    },
+    {
+     "tipo": "selvaggio",
+     "taglia": 5,
+     "razze": [
+      {
+       "nome": "Leonids",
+       "stellare": false
+      }
+     ],
+     "risorse": 7,
+     "risorse_stella": false,
+     "coup": null,
+     "sovrano": "Odel Hobar",
+     "sovrano_fedelta": "I",
+     "creatura": null
+    }
+   ],
+   "x_orbita": 797,
+   "y_orbita": 1397
+  },
+  {
+   "id": 421,
+   "nome": "Lonica",
+   "stella": 42,
+   "anello": 1,
+   "status": null,
+   "politica": {
+    "S": "patriottico",
+    "A": "leale",
+    "AC": false
+   },
+   "ambienti": [
+    {
+     "tipo": "urbano",
+     "taglia": 3,
+     "razze": [
+      {
+       "nome": "Segundens",
+       "stellare": true
+      },
+      {
+       "nome": "Rhones",
+       "stellare": true
+      }
+     ],
+     "risorse": 8,
+     "risorse_stella": true,
+     "coup": 1,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": null
+    },
+    {
+     "tipo": "selvaggio",
+     "taglia": 4,
+     "razze": [
+      {
+       "nome": "Rhones",
+       "stellare": true
+      }
+     ],
+     "risorse": 6,
+     "risorse_stella": true,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Frost Mist"
+    }
+   ],
+   "x_orbita": 1203,
+   "y_orbita": 1749
+  },
+  {
+   "id": 431,
+   "nome": "Horon",
+   "stella": 43,
+   "anello": 1,
+   "status": null,
+   "politica": {
+    "S": "patriottico",
+    "A": "neutrale",
+    "AC": false
+   },
+   "ambienti": [
+    {
+     "tipo": "liquido",
+     "taglia": 6,
+     "razze": [
+      {
+       "nome": "Henones",
+       "stellare": false
+      }
+     ],
+     "risorse": 10,
+     "risorse_stella": true,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Snorkas"
+    }
+   ],
+   "x_orbita": 738,
+   "y_orbita": 2020
+  },
+  {
+   "id": 432,
+   "nome": "Solvia",
+   "stella": 43,
+   "anello": 2,
+   "status": null,
+   "politica": {
+    "S": "leale",
+    "A": "dissenso",
+    "AC": false
+   },
+   "ambienti": [
+    {
+     "tipo": "urbano",
+     "taglia": 4,
+     "razze": [
+      {
+       "nome": "Susperans",
+       "stellare": false
+      }
+     ],
+     "risorse": 7,
+     "risorse_stella": false,
+     "coup": 2,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Telebots"
+    },
+    {
+     "tipo": "sotterraneo",
+     "taglia": 3,
+     "razze": [
+      {
+       "nome": "Piorads",
+       "stellare": true
+      }
+     ],
+     "risorse": 3,
+     "risorse_stella": false,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": null
+    },
+    {
+     "tipo": "selvaggio",
+     "taglia": 5,
+     "razze": [
+      {
+       "nome": "Thoks",
+       "stellare": false
+      }
+     ],
+     "risorse": 3,
+     "risorse_stella": false,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Gadhars"
+    }
+   ],
+   "x_orbita": 746,
+   "y_orbita": 1946
+  },
+  {
+   "id": 433,
+   "nome": "Cercis",
+   "stella": 43,
+   "anello": 3,
+   "status": null,
+   "politica": {
+    "S": "neutrale",
+    "A": "agitazione",
+    "AC": true
+   },
+   "ambienti": [
+    {
+     "tipo": "sotterraneo",
+     "taglia": 4,
+     "razze": [
+      {
+       "nome": "Piorads",
+       "stellare": true
+      }
+     ],
+     "risorse": 4,
+     "risorse_stella": false,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Kinsog"
+    },
+    {
+     "tipo": "selvaggio",
+     "taglia": 3,
+     "razze": [
+      {
+       "nome": "Illias",
+       "stellare": false
+      }
+     ],
+     "risorse": 5,
+     "risorse_stella": true,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": null
+    }
+   ],
+   "x_orbita": 747,
+   "y_orbita": 1873
+  },
+  {
+   "id": 441,
+   "nome": "Rhexia",
+   "stella": 44,
+   "anello": 1,
+   "status": null,
+   "politica": {
+    "S": "dissenso",
+    "A": "agitazione",
+    "AC": true
+   },
+   "ambienti": [
+    {
+     "tipo": "selvaggio",
+     "taglia": 3,
+     "razze": [
+      {
+       "nome": "Theshians",
+       "stellare": false
+      }
+     ],
+     "risorse": 7,
+     "risorse_stella": true,
+     "coup": null,
+     "sovrano": "Yaldor",
+     "sovrano_fedelta": "R",
+     "creatura": "Thunk"
+    }
+   ],
+   "x_orbita": 1404,
+   "y_orbita": 2092
+  },
+  {
+   "id": 442,
+   "nome": "Tartio",
+   "stella": 44,
+   "anello": 2,
+   "status": "secret",
+   "politica": {
+    "S": "leale",
+    "A": "dissenso",
+    "AC": false
+   },
+   "ambienti": [
+    {
+     "tipo": "urbano",
+     "taglia": 3,
+     "razze": [
+      {
+       "nome": "Piorads",
+       "stellare": true
+      }
+     ],
+     "risorse": 4,
+     "risorse_stella": false,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": null
+    },
+    {
+     "tipo": "sotterraneo",
+     "taglia": 4,
+     "razze": [
+      {
+       "nome": "Piorads",
+       "stellare": true
+      }
+     ],
+     "risorse": 4,
+     "risorse_stella": false,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Gamels"
+    }
+   ],
+   "x_orbita": 1412,
+   "y_orbita": 2018
+  },
+  {
+   "id": 451,
+   "nome": "Ayod",
+   "stella": 45,
+   "anello": 1,
+   "status": "Piorads",
+   "politica": {
+    "S": "leale",
+    "A": "neutrale",
+    "AC": false
+   },
+   "ambienti": [
+    {
+     "tipo": "sotterraneo",
+     "taglia": 4,
+     "razze": [
+      {
+       "nome": "Piorads",
+       "stellare": true
+      }
+     ],
+     "risorse": 4,
+     "risorse_stella": false,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Spithid"
+    }
+   ],
+   "x_orbita": 1896,
+   "y_orbita": 2162
+  },
+  {
+   "id": 511,
+   "nome": "Barak",
+   "stella": 51,
+   "anello": 1,
+   "status": null,
+   "politica": {
+    "S": "neutrale",
+    "A": "agitazione",
+    "AC": true
+   },
+   "ambienti": [
+    {
+     "tipo": "urbano",
+     "taglia": 5,
+     "razze": [
+      {
+       "nome": "Jopers",
+       "stellare": false
+      }
+     ],
+     "risorse": 10,
+     "risorse_stella": false,
+     "coup": null,
+     "sovrano": "Inzenzia III",
+     "sovrano_fedelta": "R",
+     "creatura": "Hysnatons"
+    }
+   ],
+   "x_orbita": 682,
+   "y_orbita": 413
+  },
+  {
+   "id": 512,
+   "nome": "Liatris",
+   "stella": 51,
+   "anello": 2,
+   "status": "secret",
+   "politica": {
+    "S": "patriottico",
+    "A": "neutrale",
+    "AC": false
+   },
+   "ambienti": [
+    {
+     "tipo": "selvaggio",
+     "taglia": 5,
+     "razze": [
+      {
+       "nome": "Ardorats",
+       "stellare": false
+      }
+     ],
+     "risorse": 7,
+     "risorse_stella": false,
+     "coup": 1,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Gach"
+    }
+   ],
+   "x_orbita": 690,
+   "y_orbita": 339
+  },
+  {
+   "id": 513,
+   "nome": "Xan",
+   "stella": 51,
+   "anello": 3,
+   "status": "Xanthons",
+   "politica": {
+    "S": "leale",
+    "A": "dissenso",
+    "AC": false
+   },
+   "ambienti": [
+    {
+     "tipo": "urbano",
+     "taglia": 3,
+     "razze": [
+      {
+       "nome": "Ornotins",
+       "stellare": false
+      }
+     ],
+     "risorse": 6,
+     "risorse_stella": false,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": null
+    },
+    {
+     "tipo": "fuoco",
+     "taglia": 5,
+     "razze": [
+      {
+       "nome": "Xanthons",
+       "stellare": true
+      }
+     ],
+     "risorse": 4,
+     "risorse_stella": false,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Mish"
+    }
+   ],
+   "x_orbita": 691,
+   "y_orbita": 266
+  },
+  {
+   "id": 521,
+   "nome": "Aras",
+   "stella": 52,
+   "anello": 1,
+   "status": "secret",
+   "politica": {
+    "S": "leale",
+    "A": "neutrale",
+    "AC": false
+   },
+   "ambienti": [
+    {
+     "tipo": "urbano",
+     "taglia": 4,
+     "razze": [
+      {
+       "nome": "Segundens",
+       "stellare": true
+      }
+     ],
+     "risorse": 9,
+     "risorse_stella": true,
+     "coup": null,
+     "sovrano": "Tensok Phi",
+     "sovrano_fedelta": "N",
+     "creatura": "Chardireeds"
+    }
+   ],
+   "x_orbita": 1261,
+   "y_orbita": 416
+  },
+  {
+   "id": 522,
+   "nome": "Capilax",
+   "stella": 52,
+   "anello": 2,
+   "status": "secret",
+   "politica": {
+    "S": "leale",
+    "A": "dissenso",
+    "AC": false
+   },
+   "ambienti": [
+    {
+     "tipo": "fuoco",
+     "taglia": 4,
+     "razze": [
+      {
+       "nome": "Xanthons",
+       "stellare": true
+      }
+     ],
+     "risorse": 3,
+     "risorse_stella": false,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Onflam"
+    }
+   ],
+   "x_orbita": 1269,
+   "y_orbita": 342
+  },
+  {
+   "id": 523,
+   "nome": "Adrax",
+   "stella": 52,
+   "anello": 3,
+   "status": null,
+   "politica": {
+    "S": "patriottico",
+    "A": "leale",
+    "AC": false
+   },
+   "ambienti": [
+    {
+     "tipo": "sotterraneo",
+     "taglia": 2,
+     "razze": [
+      {
+       "nome": "Rhones",
+       "stellare": true
+      }
+     ],
+     "risorse": 4,
+     "risorse_stella": false,
+     "coup": 2,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": null
+    },
+    {
+     "tipo": "selvaggio",
+     "taglia": 3,
+     "razze": [
+      {
+       "nome": "Rhones",
+       "stellare": true
+      }
+     ],
+     "risorse": 5,
+     "risorse_stella": true,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Thinagig"
+    }
+   ],
+   "x_orbita": 1270,
+   "y_orbita": 269
+  },
+  {
+   "id": 531,
+   "nome": "Scythia",
+   "stella": 53,
+   "anello": 1,
+   "status": "secret",
+   "politica": {
+    "S": "leale",
+    "A": "agitazione",
+    "AC": true
+   },
+   "ambienti": [
+    {
+     "tipo": "fuoco",
+     "taglia": 4,
+     "razze": [
+      {
+       "nome": "Xanthons",
+       "stellare": true
+      }
+     ],
+     "risorse": 3,
+     "risorse_stella": false,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": null
+    }
+   ],
+   "x_orbita": 1806,
+   "y_orbita": 274
+  },
+  {
+   "id": 541,
+   "nome": "Anell",
+   "stella": 54,
+   "anello": 1,
+   "status": "secret",
+   "politica": {
+    "S": "neutrale",
+    "A": "agitazione",
+    "AC": false
+   },
+   "ambienti": [
+    {
+     "tipo": "aereo",
+     "taglia": 4,
+     "razze": [
+      {
+       "nome": "Cavalkus",
+       "stellare": false
+      }
+     ],
+     "risorse": 8,
+     "risorse_stella": true,
+     "coup": null,
+     "sovrano": "Darb Selesh",
+     "sovrano_fedelta": "N",
+     "creatura": "Fog"
+    }
+   ],
+   "x_orbita": 750,
+   "y_orbita": 968
+  },
+  {
+   "id": 542,
+   "nome": "Trov",
+   "stella": 54,
+   "anello": 2,
+   "status": "capital",
+   "politica": {
+    "S": "patriottico",
+    "A": "patriottico",
+    "AC": false
+   },
+   "ambienti": [
+    {
+     "tipo": "urbano",
+     "taglia": 4,
+     "razze": [
+      {
+       "nome": "Rhones",
+       "stellare": true
+      }
+     ],
+     "risorse": 6,
+     "risorse_stella": true,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Valaterix"
+    },
+    {
+     "tipo": "selvaggio",
+     "taglia": 3,
+     "razze": [
+      {
+       "nome": "Rhones",
+       "stellare": true
+      }
+     ],
+     "risorse": 4,
+     "risorse_stella": false,
+     "coup": null,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": null
+    }
+   ],
+   "x_orbita": 758,
+   "y_orbita": 894
+  },
+  {
+   "id": 551,
+   "nome": "Niconi",
+   "stella": 55,
+   "anello": 1,
+   "status": null,
+   "politica": {
+    "S": "patriottico",
+    "A": "neutrale",
+    "AC": false
+   },
+   "ambienti": [
+    {
+     "tipo": "selvaggio",
+     "taglia": 4,
+     "razze": [
+      {
+       "nome": "Kayns",
+       "stellare": true
+      }
+     ],
+     "risorse": 5,
+     "risorse_stella": true,
+     "coup": 2,
+     "sovrano": null,
+     "sovrano_fedelta": null,
+     "creatura": "Wyths"
+    }
+   ],
+   "x_orbita": 1170,
+   "y_orbita": 896
+  }
+ ],
+ "dubbi": [
+  {
+   "pianeta": 421,
+   "nome": "Lonica",
+   "campo": "ambienti[1].risorse",
+   "nota": "Il valore risorse dell'Environ Wild (letto 6 seguito da stella) e' parzialmente coperto dalla rotta tratteggiata rossa; lettura probabile ma non certa al 100%."
+  },
+  {
+   "pianeta": 311,
+   "nome": "Chim",
+   "campo": "ambienti[1].razze",
+   "nota": "Sulla mappa si legge 'Mowevs'; la tabella Irate Locals del regolamento (OCR) riporta 'Mowevys'. Mantenuta la grafia della mappa."
+  },
+  {
+   "pianeta": null,
+   "nome": "rotte",
+   "campo": "distanza",
+   "nota": "Sulla mappa le rotte NON riportano numeri di distanza. Ogni rotta collega due nodi adiacenti (stella con pianeti o Navigation Star, id 'N1'..'N20'); per la Case 21.1 la distanza di iperbalzo = numero di nodi attraversati, origine esclusa e destinazione inclusa, quindi ogni segmento vale 1. Le Navigation Star non hanno nome ne' numero sulla mappa; provincia lasciata null (i confini di provincia non influenzano l'iperbalzo, Case 21.15)."
+  },
+  {
+   "pianeta": null,
+   "nome": "creature e sovrani",
+   "campo": "creatura, sovrano_fedelta",
+   "nota": "I nomi delle creature sono normalizzati sul lemma della Galactic Guide (la mappa usa spesso il plurale, es. 'LABOROIDS' -> 'Laboroid', 'KINSOGS' -> 'Kinsog'; su Trov la mappa stampa 'VACATERIX', la Guide 'Valaterix'). I sovrani sulla mappa hanno un suffisso (I)/(R)/(N), riportato in sovrano_fedelta (presumibilmente Imperiale/Ribelle/Neutrale)."
+  },
+  {
+   "pianeta": null,
+   "nome": "coordinate",
+   "campo": "x_orbita/y_orbita, raggio_px",
+   "nota": "Centri delle Orbit Box calcolati geometricamente dagli anelli misurati (precisione circa +/-10 px); raggio_px = bordo esterno dell'ultimo anello pianeta, esclusi i riquadri Drift 2."
+  }
+ ]
+}

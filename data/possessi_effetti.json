@@ -1,0 +1,196 @@
+{
+ "41": {
+  "combattimento": 1,
+  "bonus": {
+   "A": 1
+  }
+ },
+ "42": {
+  "bonus": {
+   "A": 3
+  },
+  "lama": 3
+ },
+ "43": {
+  "droga": 2
+ },
+ "44": {
+  "bdp_meno": 1,
+  "occultamento_truppe": 2
+ },
+ "45": {
+  "occultamento": 4,
+  "locali_dimezzati": true,
+  "rompe_su": 3
+ },
+ "46": {
+  "medikit": true,
+  "rompe_su": 6
+ },
+ "47": {
+  "scudo": 1
+ },
+ "48": {
+  "bonus": {
+   "A": 2,
+   "C": 2,
+   "D": 2,
+   "E": 2,
+   "S": 2,
+   "F": 2,
+   "I": 2,
+   "H": 2
+  },
+  "annulla_info": true
+ },
+ "49": {
+  "intelligenza": 1
+ },
+ "50": {
+  "combattimento_difesa": 2,
+  "ignora_prima_creatura": true
+ },
+ "51": {
+  "diplomazia": 1,
+  "no_sorpresa": true,
+  "ignora_intelligenza": true
+ },
+ "52": {
+  "diplomazia": 1,
+  "intelligenza": 1,
+  "ignora_prima_abort_d": true
+ },
+ "pg_Zina Adora": {
+  "bonus": {
+   "I": 1
+  }
+ },
+ "pg_Agan Rafa": {
+  "bonus": {
+   "I": 1,
+   "A": 2
+  }
+ },
+ "pg_Frun Sentel": {
+  "bonus": {
+   "B": 1,
+   "A": 2
+  }
+ },
+ "pg_Ly Mantok": {
+  "bonus": {
+   "T": 2
+  }
+ },
+ "pg_Vudot Vodot": {
+  "bonus": {
+   "C": 2,
+   "E": 2
+  }
+ },
+ "pg_Ran Jayma": {
+  "bonus": {
+   "A": 1
+  }
+ },
+ "pg_Tourag": {
+  "bonus": {
+   "T": 1,
+   "P": 2
+  }
+ },
+ "pg_Rayner Derban": {
+  "bonus": {
+   "S": 2
+  }
+ },
+ "pg_Kogus": {
+  "con_zina": true
+ },
+ "pg_Doctor Sontag": {
+  "bonus": {
+   "I": 2
+  },
+  "medico": true
+ },
+ "pg_Boccanegra": {
+  "occultamento": 1
+ },
+ "pg_Yarro Latac": {
+  "ignora_robot": true
+ },
+ "pg_Professor Mareg": {
+  "ignora_prima_creatura_sw": true
+ },
+ "pg_Oneste Woada": {
+  "ignora_locali": true
+ },
+ "pg_Sidir Ganang": {
+  "bonus": {
+   "C": 1,
+   "B": 1
+  }
+ },
+ "pg_Bridne Murcada": {
+  "bonus": {
+   "A": 3
+  },
+  "occultamento": 2
+ },
+ "pg_Thysa Kymbo": {
+  "bonus": {
+   "I": 2,
+   "C": 1,
+   "E": 2
+  }
+ },
+ "pg_Barca": {
+  "bonus": {
+   "S": 2
+  }
+ },
+ "pg_Jon Kidu": {
+  "bonus": {
+   "A": 1,
+   "C": 1
+  }
+ },
+ "pg_Gelba": {
+  "bonus": {
+   "C": 1
+  }
+ },
+ "pg_Senator Dermond": {
+  "bonus": {
+   "C": 2
+  }
+ },
+ "pg_Redjac": {
+  "bonus": {
+   "A": 1,
+   "S": 1,
+   "E": 1
+  }
+ },
+ "pg_Jin Voles": {
+  "bonus": {
+   "A": 1
+  }
+ },
+ "pg_Vans Ka-Tie-A": {
+  "bonus": {
+   "I": 1
+  }
+ },
+ "pg_Els Taroff": {
+  "bonus": {
+   "S": 1
+  }
+ },
+ "pg_Emperor Coreguya": {
+  "bonus": {
+   "C": 1,
+   "E": 3
+  }
+ }
+}
