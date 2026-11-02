@@ -102,6 +102,9 @@ jobs:
                   assert len(atlas['planets']) == 51 and len(atlas['systems']) == 25
                   assert len(atlas['materials']) == 6 and all(len(v) == 3 for v in atlas['materials'].values())
                   assert all('material' in e for p in atlas['planets'] for e in p['ambienti'])
+                  with urllib.request.urlopen(base + 'carte/data.json', timeout=20) as response:
+                      cards = json.load(response)
+                  assert [c['nome'] for c in cards] == ['Redjac','Zina Adora']
                   print('Anteprima verificata su ' + base)
                   with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as summary:
                       summary.write('## Anteprima Reborn pubblicata\n\n' + base + '\n')

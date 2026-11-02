@@ -1,0 +1,48 @@
+[
+  {
+    "nr": 28,
+    "fazione": "imperiali",
+    "razza_en": "Rhone",
+    "nome": "Redjac",
+    "titolo_en": "Knight of the Empire",
+    "titolo_it": "Cavaliere dell'Impero",
+    "combattimento": 6,
+    "resistenza": 6,
+    "intelligenza": 3,
+    "comando": 2,
+    "comando_spazio": 2,
+    "diplomazia": 1,
+    "navigazione": 5,
+    "pianeti_natali": [
+      "Magro",
+      "Diomas",
+      "Orlog"
+    ],
+    "cavaliere_imperiale": true,
+    "speciale_en": "Receives one bonus draw for Assassination mission (A), Sabotage mission (S), and Summon Sovereign mission (E).",
+    "speciale_it": "Riceve una pescata bonus nelle missioni Assassinio (A), Sabotaggio (S) e Convocare Sovrano (E).",
+    "file": "imperiali_04"
+  },
+  {
+    "nr": 1,
+    "fazione": "ribelli",
+    "razza_en": "Rhone",
+    "nome": "Zina Adora",
+    "titolo_en": "Princess of Adare",
+    "titolo_it": "Principessa di Adare",
+    "combattimento": 1,
+    "resistenza": 2,
+    "intelligenza": 3,
+    "comando": 2,
+    "comando_spazio": null,
+    "diplomazia": 2,
+    "navigazione": 1,
+    "pianeti_natali": [
+      "Adare"
+    ],
+    "cavaliere_imperiale": false,
+    "speciale_en": "Receives one bonus draw on Gather Information mission (I).",
+    "speciale_it": "Riceve una pescata bonus nella missione Raccogliere Informazioni (I).",
+    "file": "ribelli_19"
+  }
+]
