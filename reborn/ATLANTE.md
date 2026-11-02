@@ -74,3 +74,7 @@ stati modificati i dati di gioco in `data/`.
 
 [Apri Solvia con la skin pittorica](https://tannoiser2.github.io/Freedom-in-the-Galaxy/reborn/atlante/?planet=432&skin=painterly&isolated=1).
 Il selettore “Skin di Solvia” confronta la prova con la superficie attuale. Le altre 50 superfici non cambiano. Tre materiali illustrati hanno colori base fissi: bronzo per Urbano, terracotta per Sotterraneo, verde per Selvaggio. La maschera originale conserva 4/12, 3/12 e 5/12 della superficie; non ci sono oceani. Fonti e descrizione in `atlante/painterly/`. Controllo dedicato: `python tests/solvia_painterly_browser.py`; verifica globo, variante, assenza dei cubetti procedurali e confronto con la skin precedente.
+
+### Midest con acqua
+
+[Apri Midest pittorico](https://tannoiser2.github.io/Freedom-in-the-Galaxy/reborn/atlante/?planet=341&skin=painterly&isolated=1): Liquido 3/7 e Selvaggio 4/7, maschera originale a 2048×1024. Il materiale verde è condiviso con Solvia; il nuovo materiale blu petrolio definisce la palette di Liquido. Controllo dedicato: `python tests/midest_painterly_browser.py`.
