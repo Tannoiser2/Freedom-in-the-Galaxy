@@ -1,0 +1,18 @@
+{
+  "total": 108,
+  "counts": {
+    "azione": 30,
+    "missione": 15,
+    "evento": 29,
+    "strategico": 14,
+    "possessi": 20
+  },
+  "proof": [
+    "possessi_00",
+    "missione_01",
+    "azione_01",
+    "evento_16",
+    "strategico_13",
+    "possessi_16"
+  ]
+}

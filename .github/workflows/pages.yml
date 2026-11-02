@@ -107,6 +107,10 @@ jobs:
                   assert len(cards) == 32 and {c['fazione'] for c in cards} == {'ribelli','imperiali'}
                   assert {'Emperor Coreguya','Thysa Kymbo'} <= {c['nome'] for c in cards}
                   assert version['character_cards'] == 32
+                  with urllib.request.urlopen(base + 'carte/mazzi/data.json', timeout=20) as response:
+                      decks = json.load(response)
+                  assert decks['counts'] == {'azione':30,'missione':15,'evento':29,'strategico':14,'possessi':20}
+                  assert decks['total'] == version['other_cards'] == 108 and version['total_cards'] == 140
                   print('Anteprima verificata su ' + base)
                   with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as summary:
                       summary.write('## Anteprima Reborn pubblicata\n\n' + base + '\n')
