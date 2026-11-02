@@ -5,6 +5,8 @@ extends SubViewportContainer
 
 signal luogo_cliccato(luogo: String)
 
+const DifesaPlanetaria3D = preload("res://scripts/ui/difesa_planetaria3d.gd")
+
 var m: Motore
 var vista := -1
 var evidenziati: Dictionary = {}
@@ -17,6 +19,7 @@ var _dist := 66.0
 var _target := Vector3.ZERO
 var _trascina := false
 var _pianeti := {}          # pid -> Node3D
+var _difese := {}           # pid -> animated planetary defense
 var _piattaforme := {}      # luogo -> {nodo, mat}
 var _pedine_root: Node3D
 var _tempo := 0.0
@@ -119,6 +122,7 @@ func _costruisci_sistema() -> void:
 	_sis = Node3D.new()
 	_root.add_child(_sis)
 	_pianeti.clear()
+	_difese.clear()
 	_piattaforme.clear()
 	# stella
 	var stella := MeshInstance3D.new()
@@ -156,12 +160,21 @@ func _costruisci_sistema() -> void:
 		_pianeti[pid] = nodo
 		var pm := MeshInstance3D.new()
 		var ps := SphereMesh.new()
-		ps.radius = 1.9 + anello * 0.2
+		# Area proportional to environment size; orbital ring is not planet size.
+		ps.radius = raggio_pianeta(dp)
 		ps.height = ps.radius * 2
 		pm.mesh = ps
 		pm.material_override = _materiale_pianeta(dp)
 		pm.name = "Globo"
 		nodo.add_child(pm)
+		var difesa := DifesaPlanetaria3D.new()
+		difesa.rotation_degrees = Vector3(12, 0, 6)
+		nodo.add_child(difesa)
+		var stato_pianeta: Dictionary = m.pianeti.get(pid, {})
+		difesa.configura(ps.radius, int(stato_pianeta.get("bdp", 0)), bool(stato_pianeta.get("su", true)))
+		# The existing planet status label carries strength/DOWN; avoid overlap.
+		difesa.mostra_etichetta(false)
+		_difese[pid] = difesa
 		var lp := _etichetta("%s %d" % [dp["nome"].to_upper(), pid], 90, Color(0.98, 0.86, 0.42))
 		lp.position = Vector3(0, ps.radius + 2.2 + (2.6 if m.livello != "sistema" else 0.0), 0)
 		if m.livello != "sistema":
@@ -250,6 +263,14 @@ func _costruisci_sistema() -> void:
 			nodo.add_child(trave)
 
 
+static func raggio_pianeta(dp: Dictionary) -> float:
+	var superficie := 0.0
+	for ambiente in dp.get("ambienti", []):
+		superficie += float(ambiente.get("taglia", 0))
+	# Adare (9) keeps radius 2.3; Kelta (2) and Solvia (12) set the range.
+	return 2.3 * sqrt(maxf(superficie, 1.0) / 9.0)
+
+
 func _materiale_pianeta(dp: Dictionary) -> StandardMaterial3D:
 	var mt := StandardMaterial3D.new()
 	var nt := NoiseTexture2D.new()
@@ -317,6 +338,8 @@ func aggiorna() -> void:
 		var st: Label3D = _pianeti[pid].get_node("Stato")
 		var ctrl := m.controllo(pid)
 		var p: Dictionary = m.pianeti[pid]
+		if _difese.has(pid):
+			_difese[pid].aggiorna(int(p["bdp"]), bool(p["su"]))
 		var testo: String = Dati.LEALTA_NOMI[p["lealta"]]
 		match p["stato"]:
 			"ribellione":
@@ -325,7 +348,7 @@ func aggiorna() -> void:
 				testo = "CONTROLLO RIBELLE"
 			"fermata":
 				testo = "Ribellione fermata"
-		st.text = "%s · BDP %d%s" % [testo, int(p["bdp"]), "" if p["su"] else " fuori uso"]
+		st.text = "%s · PDB %d%s" % [testo, int(p["bdp"]), "" if p["su"] else " · DOWN"]
 		st.modulate = UI.colore_fazione(ctrl) if ctrl >= 0 else Color(0.75, 0.78, 0.85)
 	for l in _piattaforme:
 		var piat: Node3D = _piattaforme[l]["nodo"]

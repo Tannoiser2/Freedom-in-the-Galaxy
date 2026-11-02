@@ -1,0 +1,68 @@
+{
+  "metodo": "projected quad bounds in actual orthographic Blender camera; visual occlusion checked separately",
+  "immagine": [
+    1920,
+    1080
+  ],
+  "elementi": [
+    {
+      "nome": "Linea imperiale",
+      "tipo": "unita",
+      "larghezza_px_1920": 135.2,
+      "altezza_px_1920": 144.0,
+      "altezza_px_960": 72.0,
+      "interamente_inquadrato": true
+    },
+    {
+      "nome": "Milizia imperiale",
+      "tipo": "unita",
+      "larghezza_px_1920": 137.9,
+      "altezza_px_1920": 139.3,
+      "altezza_px_960": 69.7,
+      "interamente_inquadrato": true
+    },
+    {
+      "nome": "Zina Adora",
+      "tipo": "personaggio",
+      "larghezza_px_1920": 141.9,
+      "altezza_px_1920": 209.1,
+      "altezza_px_960": 104.5,
+      "interamente_inquadrato": true
+    },
+    {
+      "nome": "Adam Starlight",
+      "tipo": "personaggio",
+      "larghezza_px_1920": 130.9,
+      "altezza_px_1920": 212.2,
+      "altezza_px_960": 106.1,
+      "interamente_inquadrato": true
+    },
+    {
+      "nome": "Truppe ribelli",
+      "tipo": "unita",
+      "larghezza_px_1920": 109.3,
+      "altezza_px_1920": 112.0,
+      "altezza_px_960": 56.0,
+      "interamente_inquadrato": true
+    }
+  ],
+  "ancore_superficie": [
+    {
+      "ambiente": "urbano",
+      "uv": [
+        0.035156235098838806,
+        0.4765625298023224
+      ],
+      "maschera_verificata": true
+    },
+    {
+      "ambiente": "selvaggio",
+      "uv": [
+        0.2929687201976776,
+        0.4609375
+      ],
+      "maschera_verificata": true
+    }
+  ],
+  "nota": "Bounding boxes include transparent art padding; visibility is not a user recognition study. Names are short labels; full detail requires close view."
+}

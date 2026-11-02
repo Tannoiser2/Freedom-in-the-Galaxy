@@ -7,7 +7,13 @@
 <main><section id="stage"><canvas id="gl" aria-label="Pianeta Adare tridimensionale ruotabile"></canvas><div class="brand">FREEDOM IN THE GALAXY / REBORN</div><div class="badge">ATLANTE PLANETARIO · PROTOTIPO 01</div><div class="hint">Trascina per esplorare · Rotella per avvicinarti</div><div id="error" role="alert"></div></section>
 <aside><div class="eyebrow">ATRIARD / SISTEMA 14</div><h1>Adare</h1><div class="subtitle">Pianeta 142 · Mondo di Zina Adora</div><div class="eyebrow">DISTRIBUZIONE DELLA SUPERFICIE</div><div class="bar"><span class="urban"></span><span class="wild"></span></div><div class="row"><span><i class="swatch" style="background:#8ba6ad"></i>Urbano · 4 environ</span><b>44,44%</b></div><div class="row"><span><i class="swatch" style="background:#467b48"></i>Selvaggio · 5 environ</span><b>55,56%</b></div><p>Foreste e rilievi coprono poco più della metà del mondo. Il resto è un mosaico di territori urbanizzati; sul lato notturno emergono le reti delle città.</p><div class="rule"><div class="row"><span class="muted">Dimensione totale</span><span class="big">9</span></div><p>La somma degli environ determina la superficie. Raggio relativo = √(somma / 9): Adare = 1,00. Un mondo con 18 environ avrà superficie doppia e raggio 1,41.</p></div><h2>Osservazione</h2><div class="buttons"><button class="active" data-mode="0">Superficie</button><button data-mode="1">Ambienti</button><button data-mode="2">Notte</button></div><label for="sun">Posizione della stella</label><input id="sun" type="range" min="-180" max="180" value="-38"><label for="relief">Rilievo</label><input id="relief" type="range" min="0" max="2" value="0.7" step="0.05"><div class="buttons" style="margin-top:22px"><button id="spin" aria-pressed="true">Ferma rotazione</button><button id="reset">Ripristina vista</button></div><div class="footer">Sfera 3D WebGL · Texture equirettangolare 2048 × 1024<br>Quote calcolate sull'area sferica, non sui pixel della mappa.<br>Illuminazione e atmosfera sono effetti di visualizzazione.<br>Nessuna connessione Internet necessaria.</div></aside></main>
 <script>
-const ASSETS=/*ASSET_DATA*/null;
+// The source viewer also works from the checkout; the builder embeds pixels.
+const ASSETS=/*ASSET_DATA_START*/{
+albedo:{src:'../../assets_reborn/pianeti/142.png'},
+emission:{src:'../../assets_reborn/pianeti/142_emission.png'},
+terrain:{src:'../../assets_reborn/pianeti/142_ambienti.png'},
+heightmap:{src:'../../assets_reborn/pianeti/142_height.png'}
+}/*ASSET_DATA_END*/;
 const canvas=document.querySelector('#gl'), gl=canvas.getContext('webgl',{alpha:false,antialias:true});
 function fail(t){const e=document.querySelector('#error');e.style.display='block';e.textContent=t;throw Error(t)}
 if(!gl)fail('WebGL non disponibile: apri questa pagina in un browser con accelerazione grafica.');
@@ -24,7 +30,37 @@ const program=gl.createProgram();gl.attachShader(program,shader(gl.VERTEX_SHADER
 const b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,-1,1,1,-1,1,1]),gl.STATIC_DRAW);const p=gl.getAttribLocation(program,'p');gl.enableVertexAttribArray(p);gl.vertexAttribPointer(p,2,gl.FLOAT,false,0,0);
 function uniform(k,v){gl.uniform1f(gl.getUniformLocation(program,k),v)}
 let ready=false,yaw=.65,pitch=.12,zoom=1,auto=true,mode=0,drag=null,last=0;
-Promise.all(['albedo','emission','terrain','heightmap'].map((name,index)=>new Promise((resolve,reject)=>{const img=new Image();img.onload=()=>{const tex=gl.createTexture();gl.activeTexture(gl.TEXTURE0+index);gl.bindTexture(gl.TEXTURE_2D,tex);gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL,false);gl.texImage2D(gl.TEXTURE_2D,0,gl.RGB,gl.RGB,gl.UNSIGNED_BYTE,img);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.REPEAT);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);gl.uniform1i(gl.getUniformLocation(program,name),index);resolve()};img.onerror=reject;img.src=ASSETS[name]}))).then(()=>{ready=true;document.body.dataset.ready='true'}).catch(()=>fail('Impossibile caricare le texture incorporate.'));
+function upload(name,index,asset,image){
+ const tex=gl.createTexture();gl.activeTexture(gl.TEXTURE0+index);gl.bindTexture(gl.TEXTURE_2D,tex);
+ gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL,false);gl.pixelStorei(gl.UNPACK_ALIGNMENT,1);
+ if(asset.pixels){
+  const raw=atob(asset.pixels),channels=asset.format==='L'?1:3;
+  if(raw.length!==asset.width*asset.height*channels)throw Error(name+': dati incompleti; riscarica il file HTML');
+  const pixels=new Uint8Array(raw.length);for(let i=0;i<raw.length;i++)pixels[i]=raw.charCodeAt(i);
+  const format=channels===1?gl.LUMINANCE:gl.RGB;
+  gl.texImage2D(gl.TEXTURE_2D,0,format,asset.width,asset.height,0,format,gl.UNSIGNED_BYTE,pixels);
+ }else gl.texImage2D(gl.TEXTURE_2D,0,gl.RGB,gl.RGB,gl.UNSIGNED_BYTE,image);
+ gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.REPEAT);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);
+ if(gl.getError()!==gl.NO_ERROR)throw Error(name+': caricamento nella scheda grafica non riuscito');
+ gl.uniform1i(gl.getUniformLocation(program,name),index);
+}
+function loadTexture(name,index){
+ const asset=ASSETS&&ASSETS[name];
+ if(!asset)return Promise.reject(Error(name+': texture assente nel file HTML'));
+ if(asset.pixels)return Promise.resolve().then(()=>upload(name,index,asset));
+ return new Promise((resolve,reject)=>{
+  const img=new Image();img.onload=()=>{try{upload(name,index,asset,img);resolve()}catch(e){reject(e)}};
+  img.onerror=()=>reject(Error(name+': file non trovato. Apri adare_3d.html, la versione autonoma, oppure conserva le cartelle del repository.'));
+  img.src=asset.src;
+ });
+}
+Promise.all(['albedo','emission','terrain','heightmap'].map(loadTexture)).then(()=>{
+ ready=true;document.body.dataset.ready='true';
+}).catch(e=>{
+ const box=document.querySelector('#error');box.style.display='block';
+ box.textContent='Impossibile avviare il pianeta. '+e.message;
+ document.body.dataset.ready='error';console.error(e);
+});
 function frame(time){requestAnimationFrame(frame);const d=Math.min((time-last)/1000,.05);last=time;if(!ready)return;if(auto&&!drag)yaw+=d*.055;const ratio=Math.min(devicePixelRatio,2),w=Math.round(canvas.clientWidth*ratio),h=Math.round(canvas.clientHeight*ratio);if(canvas.width!==w||canvas.height!==h){canvas.width=w;canvas.height=h;gl.viewport(0,0,w,h)}gl.uniform2f(gl.getUniformLocation(program,'resolution'),w,h);for(const [k,v]of Object.entries({yaw,pitch,zoom,mode,sun:Number(document.querySelector('#sun').value)*Math.PI/180,relief:Number(document.querySelector('#relief').value)}))uniform(k,v);gl.drawArrays(gl.TRIANGLES,0,6)}requestAnimationFrame(frame);
 canvas.onpointerdown=e=>{drag=[e.clientX,e.clientY];canvas.setPointerCapture(e.pointerId)};canvas.onpointermove=e=>{if(!drag)return;yaw-=(e.clientX-drag[0])*.007;pitch=Math.max(-1.45,Math.min(1.45,pitch+(e.clientY-drag[1])*.007));drag=[e.clientX,e.clientY]};canvas.onpointerup=canvas.onpointercancel=()=>drag=null;canvas.addEventListener('wheel',e=>{e.preventDefault();zoom=Math.max(.65,Math.min(1.75,zoom-e.deltaY*.0008))},{passive:false});document.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>{mode=Number(b.dataset.mode);document.querySelectorAll('[data-mode]').forEach(x=>x.classList.toggle('active',x===b))});document.querySelector('#spin').onclick=e=>{auto=!auto;e.target.textContent=auto?'Ferma rotazione':'Avvia rotazione';e.target.setAttribute('aria-pressed',String(auto))};document.querySelector('#reset').onclick=()=>{yaw=.65;pitch=.12;zoom=1;document.querySelector('#sun').value=-38;document.querySelector('#relief').value=.7};
 </script></html>

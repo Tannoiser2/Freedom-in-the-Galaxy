@@ -2,6 +2,47 @@
 
 Pacchetto autonomo di produzione grafica. Le carte definitive restano volutamente fuori da questa fase.
 
+## Pianeti e unità: seconda iterazione
+
+Aggiornati tutti i 51 set planetari con profili artistici distinti: sei famiglie
+del Selvaggio e parametri individuali per geografia, montagne, città e acqua.
+Nei sei mondi misti con Liquido sono presenti 6–8 continenti separati. Mrane e
+Horon hanno circa il 5% di isole scenografiche, senza nuovi environ di gioco.
+Il controllo sulle maschere mantiene le quote entro 0,00016 punti percentuali.
+
+Scala 3D calibrata su Kelta (2 environ, raggio 1,08423) e Solvia (12, 2,65581),
+con Adare (9, 2,3) come riferimento. Il rapporto Solvia/Kelta è 2,44949.
+Applicata la formula alla vista Godot: l'anello orbitale non modifica più il raggio.
+
+Render Blender effettivi, senza ricostruzione generativa dell'immagine:
+
+- `anteprime/adare_unita_3d.png`: piattaforme, truppe, Zina, Adam e PDB operativo.
+- `anteprime/adare_unita_pdb_down.png`: stessa scena con PDB DOWN, orbita rossa.
+- `anteprime/adare_unita_dettaglio.png`: figure sagomate e pedine in dettaglio.
+- `anteprime/scala_pianeti_3d.png`: Kelta, Adare e Solvia alla stessa scala.
+- `anteprime/varianti_selvaggio.png` e `anteprime/pianeti_acqua_continenti.png`:
+  confronti dei materiali; qui i globi hanno diametro uniforme per confronto.
+- `modelli/adare_unita.blend`: scena sorgente con risorse incorporate.
+
+Il PDB usa gli stati di gioco esistenti (`bdp`, `su`): 1/2/3 basi per forza 0/1/2,
+orbita verde e rotazione UP, rossa e ferma DOWN, ripresa senza salto di posizione.
+Gli indicatori non aggiungono unità o forza al motore. Il test
+`godot --headless --path . -s tests/vista3d.gd` controlla scala, stati e binding.
+
+Il check di visibilità è in `verifica_visibilita_adare.json`: personaggi alti circa
+105–106 px e pedine 56–72 px in una riduzione a 960 px di larghezza. Etichette
+spostate sopra il bordo; ancore delle piattaforme verificate sulle maschere.
+I personaggi sono standee trasparenti, non mesh riggate. Lo schieramento è una
+dimostrazione grafica, non una situazione salvata o una nuova regola.
+I render usano le nuove texture; la sostituzione del materiale planetario della
+vista Godot rimane separata dalla scala e dal componente PDB già collegati.
+
+Corretto anche il caricamento dell'HTML autonomo: upload dei pixel direttamente
+in WebGL, verificato offline e con `img-src 'none'`. Il file sorgente HTML funziona
+dal checkout con percorsi relativi; il file `adare_3d.html` non richiede le PNG.
+`reborn/.gdignore` evita che Godot importi scene Blender, confronti e altri file
+di produzione come risorse del gioco.
+
 ## Completamento del 2 novembre 2026
 
 Creati i 35 asset prima assenti: cinque pedine (`rib_fuoco_43` e le élite

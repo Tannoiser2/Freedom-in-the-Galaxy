@@ -8,6 +8,48 @@
       "nome": "Mimulus",
       "somma_environ": 4.0,
       "raggio_relativo_adare": 0.6666666666666666,
+      "raggio_scena": 1.5333333333333332,
+      "profilo_artistico": {
+        "bioma_selvaggio": "foreste ramate e altipiani",
+        "palette_selvaggio": [
+          [
+            43,
+            25,
+            24
+          ],
+          [
+            138,
+            85,
+            52
+          ]
+        ],
+        "roccia": [
+          123,
+          98,
+          87
+        ],
+        "frequenza_continenti": 2.0819711252296735,
+        "densita_montagne": 0.6906583238013138,
+        "frequenza_citta": 865.7955966252059,
+        "tinta_citta": [
+          1.116293760149366,
+          1.0783748398572712,
+          0.9300306451400271
+        ],
+        "tinta_acqua": [
+          1.1333717268028247,
+          1.1776553222539328,
+          1.0298562037709016
+        ],
+        "colore_luci": [
+          255,
+          159,
+          104
+        ]
+      },
+      "continenti_maggiori": 0,
+      "aree_continenti": [],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "selvaggio",
@@ -28,18 +70,60 @@
       "nome": "Magro",
       "somma_environ": 8.0,
       "raggio_relativo_adare": 0.9428090415820634,
+      "raggio_scena": 2.1684607956387456,
+      "profilo_artistico": {
+        "bioma_selvaggio": "giungle turchesi e muschio",
+        "palette_selvaggio": [
+          [
+            10,
+            40,
+            35
+          ],
+          [
+            61,
+            128,
+            89
+          ]
+        ],
+        "roccia": [
+          88,
+          104,
+          77
+        ],
+        "frequenza_continenti": 2.896800874765024,
+        "densita_montagne": 0.629839576388155,
+        "frequenza_citta": 994.4784522188933,
+        "tinta_citta": [
+          0.9175760814083417,
+          0.8704859672073927,
+          1.1428939319342521
+        ],
+        "tinta_acqua": [
+          1.0827128984075616,
+          0.9598154014324585,
+          0.8749097127572719
+        ],
+        "colore_luci": [
+          255,
+          203,
+          78
+        ]
+      },
+      "continenti_maggiori": 0,
+      "aree_continenti": [],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "urbano",
           "taglia": 3.0,
           "frazione_richiesta": 0.375,
-          "frazione_superficie": 0.3749988079071045
+          "frazione_superficie": 0.374999463558197
         },
         {
           "tipo": "aereo",
           "taglia": 5.0,
           "frazione_richiesta": 0.625,
-          "frazione_superficie": 0.625001072883606
+          "frazione_superficie": 0.6250004172325134
         }
       ],
       "texture": "assets_reborn/pianeti/112.png",
@@ -54,18 +138,81 @@
       "nome": "Fliad",
       "somma_environ": 8.0,
       "raggio_relativo_adare": 0.9428090415820634,
+      "raggio_scena": 2.1684607956387456,
+      "profilo_artistico": {
+        "bioma_selvaggio": "brughiere fredde e abeti",
+        "palette_selvaggio": [
+          [
+            25,
+            37,
+            30
+          ],
+          [
+            108,
+            123,
+            91
+          ]
+        ],
+        "roccia": [
+          137,
+          140,
+          128
+        ],
+        "frequenza_continenti": 1.6304414163641905,
+        "densita_montagne": 0.4248511267527558,
+        "frequenza_citta": 863.7007333049206,
+        "tinta_citta": [
+          1.064723158353508,
+          0.8827534589716858,
+          0.9723865612652824
+        ],
+        "tinta_acqua": [
+          0.8940270246259,
+          0.7871901200287788,
+          1.03521875775583
+        ],
+        "colore_luci": [
+          255,
+          203,
+          97
+        ]
+      },
+      "continenti_maggiori": 8,
+      "aree_continenti": [
+        0.06951056094958996,
+        0.06944293053896991,
+        0.06480055547449091,
+        0.06247372890007439,
+        0.06020611729120902,
+        0.05904587913059727,
+        0.05872809423415867,
+        0.054925567845292976,
+        9.668792936306672e-05,
+        8.49083783341095e-05,
+        5.793601700624365e-05,
+        5.6628940655883766e-05,
+        4.512543052778859e-05,
+        4.200424994649996e-05,
+        3.875960316085945e-05,
+        3.532640712843323e-05,
+        3.18039315256291e-05,
+        2.943482538513159e-05,
+        2.5301631514429133e-05,
+        2.4985700709716276e-05
+      ],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "liquido",
           "taglia": 4.0,
           "frazione_richiesta": 0.5,
-          "frazione_superficie": 0.49999985098838806
+          "frazione_superficie": 0.4999992549419403
         },
         {
           "tipo": "selvaggio",
           "taglia": 4.0,
           "frazione_richiesta": 0.5,
-          "frazione_superficie": 0.5000000596046448
+          "frazione_superficie": 0.5000006556510925
         }
       ],
       "texture": "assets_reborn/pianeti/113.png",
@@ -80,6 +227,48 @@
       "nome": "Kalgar",
       "somma_environ": 6.0,
       "raggio_relativo_adare": 0.816496580927726,
+      "raggio_scena": 1.8779421361337698,
+      "profilo_artistico": {
+        "bioma_selvaggio": "taiga blu e conifere",
+        "palette_selvaggio": [
+          [
+            10,
+            32,
+            39
+          ],
+          [
+            58,
+            100,
+            103
+          ]
+        ],
+        "roccia": [
+          109,
+          128,
+          137
+        ],
+        "frequenza_continenti": 1.666932766561061,
+        "densita_montagne": 0.548860634809829,
+        "frequenza_citta": 919.8771411896444,
+        "tinta_citta": [
+          1.082598510045531,
+          0.8690587005942165,
+          0.9039754784345353
+        ],
+        "tinta_acqua": [
+          0.9326120782601006,
+          1.233636096596118,
+          0.9067577335868172
+        ],
+        "colore_luci": [
+          255,
+          190,
+          100
+        ]
+      },
+      "continenti_maggiori": 0,
+      "aree_continenti": [],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "sotterraneo",
@@ -100,6 +289,69 @@
       "nome": "Bajukai",
       "somma_environ": 10.0,
       "raggio_relativo_adare": 1.0540925533894598,
+      "raggio_scena": 2.4244128727957572,
+      "profilo_artistico": {
+        "bioma_selvaggio": "savane dorate e boschi radi",
+        "palette_selvaggio": [
+          [
+            47,
+            44,
+            19
+          ],
+          [
+            157,
+            143,
+            67
+          ]
+        ],
+        "roccia": [
+          144,
+          105,
+          64
+        ],
+        "frequenza_continenti": 2.463666805370726,
+        "densita_montagne": 0.8255030962307794,
+        "frequenza_citta": 1176.638636014799,
+        "tinta_citta": [
+          1.0432155559877732,
+          0.9711326996624063,
+          1.0615249626101746
+        ],
+        "tinta_acqua": [
+          0.7333257311994803,
+          1.0510325663318478,
+          1.0194037428491982
+        ],
+        "colore_luci": [
+          255,
+          177,
+          120
+        ]
+      },
+      "continenti_maggiori": 8,
+      "aree_continenti": [
+        0.0955210499055151,
+        0.09433130766884164,
+        0.09284660294859454,
+        0.0869068259692234,
+        0.08415940792701003,
+        0.08344406353731039,
+        0.08188345139652946,
+        0.0798796337993339,
+        0.00010679199341773746,
+        8.78898570115231e-05,
+        7.997109870822096e-05,
+        6.66908090213951e-05,
+        4.878300658692142e-05,
+        4.298049330816043e-05,
+        4.2400363548128546e-05,
+        4.124751093114761e-05,
+        3.870651732230258e-05,
+        3.5756262290145076e-05,
+        3.2478924241458584e-05,
+        2.8320022775437152e-05
+      ],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "urbano",
@@ -111,13 +363,13 @@
           "tipo": "liquido",
           "taglia": 3.0,
           "frazione_richiesta": 0.3,
-          "frazione_superficie": 0.29999980330467224
+          "frazione_superficie": 0.2999996542930603
         },
         {
           "tipo": "selvaggio",
           "taglia": 4.0,
           "frazione_richiesta": 0.4,
-          "frazione_superficie": 0.40000036358833313
+          "frazione_superficie": 0.4000004827976227
         }
       ],
       "texture": "assets_reborn/pianeti/122.png",
@@ -132,6 +384,48 @@
       "nome": "Tiglyf",
       "somma_environ": 5.0,
       "raggio_relativo_adare": 0.7453559924999299,
+      "raggio_scena": 1.7143187827498387,
+      "profilo_artistico": {
+        "bioma_selvaggio": "brughiere fredde e abeti",
+        "palette_selvaggio": [
+          [
+            25,
+            37,
+            30
+          ],
+          [
+            108,
+            123,
+            91
+          ]
+        ],
+        "roccia": [
+          137,
+          140,
+          128
+        ],
+        "frequenza_continenti": 1.664787251744059,
+        "densita_montagne": 0.602650649102908,
+        "frequenza_citta": 821.3258611363401,
+        "tinta_citta": [
+          0.9018651513071222,
+          0.8545168091014579,
+          1.0176535948721004
+        ],
+        "tinta_acqua": [
+          1.1468206525905456,
+          1.2041774729746175,
+          1.1266930337641237
+        ],
+        "colore_luci": [
+          255,
+          195,
+          87
+        ]
+      },
+      "continenti_maggiori": 0,
+      "aree_continenti": [],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "urbano",
@@ -152,6 +446,48 @@
       "nome": "Ownex",
       "somma_environ": 5.0,
       "raggio_relativo_adare": 0.7453559924999299,
+      "raggio_scena": 1.7143187827498387,
+      "profilo_artistico": {
+        "bioma_selvaggio": "foreste ramate e altipiani",
+        "palette_selvaggio": [
+          [
+            43,
+            25,
+            24
+          ],
+          [
+            138,
+            85,
+            52
+          ]
+        ],
+        "roccia": [
+          123,
+          98,
+          87
+        ],
+        "frequenza_continenti": 2.1763096447253054,
+        "densita_montagne": 0.7261969874891716,
+        "frequenza_citta": 1137.2158407709185,
+        "tinta_citta": [
+          0.9400382567385821,
+          1.135908453535462,
+          0.8939835988793797
+        ],
+        "tinta_acqua": [
+          1.0693390170623553,
+          1.0278991525987475,
+          0.7724723015822131
+        ],
+        "colore_luci": [
+          255,
+          155,
+          102
+        ]
+      },
+      "continenti_maggiori": 0,
+      "aree_continenti": [],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "sotterraneo",
@@ -172,18 +508,60 @@
       "nome": "Adare",
       "somma_environ": 9.0,
       "raggio_relativo_adare": 1.0,
+      "raggio_scena": 2.3,
+      "profilo_artistico": {
+        "bioma_selvaggio": "foreste temperate smeraldo",
+        "palette_selvaggio": [
+          [
+            11,
+            37,
+            24
+          ],
+          [
+            87,
+            120,
+            60
+          ]
+        ],
+        "roccia": [
+          88,
+          79,
+          62
+        ],
+        "frequenza_continenti": 1.7600018194286742,
+        "densita_montagne": 0.7703412874456361,
+        "frequenza_citta": 1090.23823793686,
+        "tinta_citta": [
+          0.8392257836738142,
+          1.1230841349543854,
+          1.0322944143630355
+        ],
+        "tinta_acqua": [
+          1.1515214423679727,
+          0.7606994661520398,
+          1.2440486861309767
+        ],
+        "colore_luci": [
+          255,
+          201,
+          68
+        ]
+      },
+      "continenti_maggiori": 0,
+      "aree_continenti": [],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "urbano",
           "taglia": 4.0,
           "frazione_richiesta": 0.4444444444444444,
-          "frazione_superficie": 0.4444437325000763
+          "frazione_superficie": 0.4444434344768524
         },
         {
           "tipo": "selvaggio",
           "taglia": 5.0,
           "frazione_richiesta": 0.5555555555555556,
-          "frazione_superficie": 0.5555562376976013
+          "frazione_superficie": 0.5555564761161804
         }
       ],
       "texture": "assets_reborn/pianeti/142.png",
@@ -198,18 +576,60 @@
       "nome": "Mitrith",
       "somma_environ": 6.0,
       "raggio_relativo_adare": 0.816496580927726,
+      "raggio_scena": 1.8779421361337698,
+      "profilo_artistico": {
+        "bioma_selvaggio": "brughiere fredde e abeti",
+        "palette_selvaggio": [
+          [
+            25,
+            37,
+            30
+          ],
+          [
+            108,
+            123,
+            91
+          ]
+        ],
+        "roccia": [
+          137,
+          140,
+          128
+        ],
+        "frequenza_continenti": 1.6841127102138689,
+        "densita_montagne": 0.45458827344642827,
+        "frequenza_citta": 1083.9297481307003,
+        "tinta_citta": [
+          1.1685462696822284,
+          0.9886684715949342,
+          0.8418967605410612
+        ],
+        "tinta_acqua": [
+          0.9413355196233176,
+          0.9302759988521219,
+          0.8002276592041663
+        ],
+        "colore_luci": [
+          255,
+          166,
+          120
+        ]
+      },
+      "continenti_maggiori": 0,
+      "aree_continenti": [],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "fuoco",
           "taglia": 2.0,
           "frazione_richiesta": 0.3333333333333333,
-          "frazione_superficie": 0.3333333432674408
+          "frazione_superficie": 0.33333203196525574
         },
         {
           "tipo": "selvaggio",
           "taglia": 4.0,
           "frazione_richiesta": 0.6666666666666666,
-          "frazione_superficie": 0.6666666865348816
+          "frazione_superficie": 0.6666679978370667
         }
       ],
       "texture": "assets_reborn/pianeti/143.png",
@@ -224,18 +644,60 @@
       "nome": "Jura",
       "somma_environ": 7.0,
       "raggio_relativo_adare": 0.8819171036881969,
+      "raggio_scena": 2.0284093384828528,
+      "profilo_artistico": {
+        "bioma_selvaggio": "taiga blu e conifere",
+        "palette_selvaggio": [
+          [
+            10,
+            32,
+            39
+          ],
+          [
+            58,
+            100,
+            103
+          ]
+        ],
+        "roccia": [
+          109,
+          128,
+          137
+        ],
+        "frequenza_continenti": 2.401411363568158,
+        "densita_montagne": 0.5542924603222678,
+        "frequenza_citta": 794.3751342415268,
+        "tinta_citta": [
+          1.0111490159092738,
+          1.1568320197099558,
+          0.9062497005046006
+        ],
+        "tinta_acqua": [
+          0.9325112895186441,
+          1.0983702226069902,
+          1.0320026234032036
+        ],
+        "colore_luci": [
+          255,
+          182,
+          89
+        ]
+      },
+      "continenti_maggiori": 0,
+      "aree_continenti": [],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "urbano",
           "taglia": 4.0,
           "frazione_richiesta": 0.5714285714285714,
-          "frazione_superficie": 0.5714280009269714
+          "frazione_superficie": 0.5714282393455505
         },
         {
           "tipo": "aereo",
           "taglia": 3.0,
           "frazione_richiesta": 0.42857142857142855,
-          "frazione_superficie": 0.4285719394683838
+          "frazione_superficie": 0.4285717308521271
         }
       ],
       "texture": "assets_reborn/pianeti/151.png",
@@ -250,18 +712,60 @@
       "nome": "Diomas",
       "somma_environ": 8.0,
       "raggio_relativo_adare": 0.9428090415820634,
+      "raggio_scena": 2.1684607956387456,
+      "profilo_artistico": {
+        "bioma_selvaggio": "savane dorate e boschi radi",
+        "palette_selvaggio": [
+          [
+            47,
+            44,
+            19
+          ],
+          [
+            157,
+            143,
+            67
+          ]
+        ],
+        "roccia": [
+          144,
+          105,
+          64
+        ],
+        "frequenza_continenti": 1.7065185751599845,
+        "densita_montagne": 0.678191645451351,
+        "frequenza_citta": 1107.742458555309,
+        "tinta_citta": [
+          0.8737429148572001,
+          0.9585790851881162,
+          1.1298534225978343
+        ],
+        "tinta_acqua": [
+          1.2482770043395064,
+          1.1904016294965338,
+          0.795408792398811
+        ],
+        "colore_luci": [
+          255,
+          190,
+          76
+        ]
+      },
+      "continenti_maggiori": 0,
+      "aree_continenti": [],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "urbano",
           "taglia": 5.0,
           "frazione_richiesta": 0.625,
-          "frazione_superficie": 0.6249999403953552
+          "frazione_superficie": 0.6249997019767761
         },
         {
           "tipo": "selvaggio",
           "taglia": 3.0,
           "frazione_richiesta": 0.375,
-          "frazione_superficie": 0.3749999701976776
+          "frazione_superficie": 0.3750001788139343
         }
       ],
       "texture": "assets_reborn/pianeti/152.png",
@@ -276,6 +780,48 @@
       "nome": "Liomax",
       "somma_environ": 6.0,
       "raggio_relativo_adare": 0.816496580927726,
+      "raggio_scena": 1.8779421361337698,
+      "profilo_artistico": {
+        "bioma_selvaggio": "brughiere fredde e abeti",
+        "palette_selvaggio": [
+          [
+            25,
+            37,
+            30
+          ],
+          [
+            108,
+            123,
+            91
+          ]
+        ],
+        "roccia": [
+          137,
+          140,
+          128
+        ],
+        "frequenza_continenti": 1.9174208258416687,
+        "densita_montagne": 0.5507837012874736,
+        "frequenza_citta": 748.4766755716831,
+        "tinta_citta": [
+          0.9377097354606337,
+          0.8586526531505849,
+          0.9255543430622819
+        ],
+        "tinta_acqua": [
+          1.0485659668932212,
+          1.2416441510010174,
+          1.1330791367916953
+        ],
+        "colore_luci": [
+          255,
+          186,
+          64
+        ]
+      },
+      "continenti_maggiori": 0,
+      "aree_continenti": [],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "selvaggio",
@@ -296,24 +842,66 @@
       "nome": "Orlog",
       "somma_environ": 11.0,
       "raggio_relativo_adare": 1.1055415967851334,
+      "raggio_scena": 2.5427456726058066,
+      "profilo_artistico": {
+        "bioma_selvaggio": "foreste temperate smeraldo",
+        "palette_selvaggio": [
+          [
+            11,
+            37,
+            24
+          ],
+          [
+            87,
+            120,
+            60
+          ]
+        ],
+        "roccia": [
+          88,
+          79,
+          62
+        ],
+        "frequenza_continenti": 2.717293729610777,
+        "densita_montagne": 0.5910951892920739,
+        "frequenza_citta": 992.8437797690574,
+        "tinta_citta": [
+          1.1210881172339795,
+          1.0545702717123473,
+          0.909128316795356
+        ],
+        "tinta_acqua": [
+          1.0321283059287842,
+          0.9415524805349182,
+          1.1025402056049223
+        ],
+        "colore_luci": [
+          255,
+          149,
+          79
+        ]
+      },
+      "continenti_maggiori": 0,
+      "aree_continenti": [],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "urbano",
           "taglia": 6.0,
           "frazione_richiesta": 0.5454545454545454,
-          "frazione_superficie": 0.5454539060592651
+          "frazione_superficie": 0.5454543232917786
         },
         {
           "tipo": "sotterraneo",
           "taglia": 2.0,
           "frazione_richiesta": 0.18181818181818182,
-          "frazione_superficie": 0.1818183809518814
+          "frazione_superficie": 0.18181835114955902
         },
         {
           "tipo": "selvaggio",
           "taglia": 3.0,
           "frazione_richiesta": 0.2727272727272727,
-          "frazione_superficie": 0.2727276682853699
+          "frazione_superficie": 0.27272728085517883
         }
       ],
       "texture": "assets_reborn/pianeti/162.png",
@@ -328,6 +916,48 @@
       "nome": "Icid",
       "somma_environ": 5.0,
       "raggio_relativo_adare": 0.7453559924999299,
+      "raggio_scena": 1.7143187827498387,
+      "profilo_artistico": {
+        "bioma_selvaggio": "taiga blu e conifere",
+        "palette_selvaggio": [
+          [
+            10,
+            32,
+            39
+          ],
+          [
+            58,
+            100,
+            103
+          ]
+        ],
+        "roccia": [
+          109,
+          128,
+          137
+        ],
+        "frequenza_continenti": 1.688579373458465,
+        "densita_montagne": 0.8174926216037889,
+        "frequenza_citta": 983.901407515353,
+        "tinta_citta": [
+          0.9789601075420564,
+          0.9317141120449642,
+          0.842776913300674
+        ],
+        "tinta_acqua": [
+          1.202729183941247,
+          0.8495958621332071,
+          0.7584677125789953
+        ],
+        "colore_luci": [
+          255,
+          185,
+          101
+        ]
+      },
+      "continenti_maggiori": 0,
+      "aree_continenti": [],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "selvaggio",
@@ -348,6 +978,48 @@
       "nome": "Cieson",
       "somma_environ": 3.0,
       "raggio_relativo_adare": 0.5773502691896257,
+      "raggio_scena": 1.3279056191361391,
+      "profilo_artistico": {
+        "bioma_selvaggio": "taiga blu e conifere",
+        "palette_selvaggio": [
+          [
+            10,
+            32,
+            39
+          ],
+          [
+            58,
+            100,
+            103
+          ]
+        ],
+        "roccia": [
+          109,
+          128,
+          137
+        ],
+        "frequenza_continenti": 1.7811838267333593,
+        "densita_montagne": 0.6800326052157332,
+        "frequenza_citta": 894.3598099869923,
+        "tinta_citta": [
+          1.098733632579907,
+          1.0375784985399819,
+          0.9392802496424353
+        ],
+        "tinta_acqua": [
+          0.8539614915532708,
+          0.9241377669132848,
+          0.8744407349250548
+        ],
+        "colore_luci": [
+          255,
+          169,
+          107
+        ]
+      },
+      "continenti_maggiori": 0,
+      "aree_continenti": [],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "aereo",
@@ -368,18 +1040,60 @@
       "nome": "Etreg",
       "somma_environ": 7.0,
       "raggio_relativo_adare": 0.8819171036881969,
+      "raggio_scena": 2.0284093384828528,
+      "profilo_artistico": {
+        "bioma_selvaggio": "savane dorate e boschi radi",
+        "palette_selvaggio": [
+          [
+            47,
+            44,
+            19
+          ],
+          [
+            157,
+            143,
+            67
+          ]
+        ],
+        "roccia": [
+          144,
+          105,
+          64
+        ],
+        "frequenza_continenti": 2.150851950434691,
+        "densita_montagne": 0.4123213613656287,
+        "frequenza_citta": 1093.0698790511997,
+        "tinta_citta": [
+          1.0981074292844113,
+          0.9965316879731619,
+          0.8469117955914343
+        ],
+        "tinta_acqua": [
+          1.0398777453894597,
+          0.7271109517076664,
+          0.9926318270408383
+        ],
+        "colore_luci": [
+          255,
+          146,
+          61
+        ]
+      },
+      "continenti_maggiori": 0,
+      "aree_continenti": [],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "urbano",
           "taglia": 3.0,
           "frazione_richiesta": 0.42857142857142855,
-          "frazione_superficie": 0.4285709857940674
+          "frazione_superficie": 0.4285712242126465
         },
         {
           "tipo": "selvaggio",
           "taglia": 4.0,
           "frazione_richiesta": 0.5714285714285714,
-          "frazione_superficie": 0.5714289546012878
+          "frazione_superficie": 0.5714287757873535
         }
       ],
       "texture": "assets_reborn/pianeti/212.png",
@@ -394,6 +1108,48 @@
       "nome": "Quibron",
       "somma_environ": 4.0,
       "raggio_relativo_adare": 0.6666666666666666,
+      "raggio_scena": 1.5333333333333332,
+      "profilo_artistico": {
+        "bioma_selvaggio": "brughiere fredde e abeti",
+        "palette_selvaggio": [
+          [
+            25,
+            37,
+            30
+          ],
+          [
+            108,
+            123,
+            91
+          ]
+        ],
+        "roccia": [
+          137,
+          140,
+          128
+        ],
+        "frequenza_continenti": 2.141609703406261,
+        "densita_montagne": 0.4599526879446236,
+        "frequenza_citta": 879.5955970430939,
+        "tinta_citta": [
+          1.1501022349679273,
+          1.1319992814508557,
+          0.9123476441491191
+        ],
+        "tinta_acqua": [
+          1.213237857256278,
+          0.8823347496368051,
+          1.112852685921365
+        ],
+        "colore_luci": [
+          255,
+          202,
+          81
+        ]
+      },
+      "continenti_maggiori": 0,
+      "aree_continenti": [],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "selvaggio",
@@ -414,6 +1170,48 @@
       "nome": "Angoff",
       "somma_environ": 6.0,
       "raggio_relativo_adare": 0.816496580927726,
+      "raggio_scena": 1.8779421361337698,
+      "profilo_artistico": {
+        "bioma_selvaggio": "foreste temperate smeraldo",
+        "palette_selvaggio": [
+          [
+            11,
+            37,
+            24
+          ],
+          [
+            87,
+            120,
+            60
+          ]
+        ],
+        "roccia": [
+          88,
+          79,
+          62
+        ],
+        "frequenza_continenti": 1.825780547413197,
+        "densita_montagne": 0.4506479679543242,
+        "frequenza_citta": 963.581992604682,
+        "tinta_citta": [
+          0.9392015823714537,
+          1.1578781212455276,
+          0.968664138629441
+        ],
+        "tinta_acqua": [
+          1.1490844438806407,
+          1.150772024952789,
+          0.905178749488914
+        ],
+        "colore_luci": [
+          255,
+          166,
+          115
+        ]
+      },
+      "continenti_maggiori": 0,
+      "aree_continenti": [],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "urbano",
@@ -434,6 +1232,48 @@
       "nome": "Charkhan",
       "somma_environ": 8.0,
       "raggio_relativo_adare": 0.9428090415820634,
+      "raggio_scena": 2.1684607956387456,
+      "profilo_artistico": {
+        "bioma_selvaggio": "taiga blu e conifere",
+        "palette_selvaggio": [
+          [
+            10,
+            32,
+            39
+          ],
+          [
+            58,
+            100,
+            103
+          ]
+        ],
+        "roccia": [
+          109,
+          128,
+          137
+        ],
+        "frequenza_continenti": 2.062968879675904,
+        "densita_montagne": 0.40445694874964516,
+        "frequenza_citta": 1185.2966007559137,
+        "tinta_citta": [
+          0.8009300900939534,
+          1.1290658294649127,
+          1.0194019671435717
+        ],
+        "tinta_acqua": [
+          1.1891185688820136,
+          0.7498589380516305,
+          1.1309318065457217
+        ],
+        "colore_luci": [
+          255,
+          148,
+          85
+        ]
+      },
+      "continenti_maggiori": 0,
+      "aree_continenti": [],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "aereo",
@@ -460,18 +1300,60 @@
       "nome": "Pronox",
       "somma_environ": 6.0,
       "raggio_relativo_adare": 0.816496580927726,
+      "raggio_scena": 1.8779421361337698,
+      "profilo_artistico": {
+        "bioma_selvaggio": "foreste ramate e altipiani",
+        "palette_selvaggio": [
+          [
+            43,
+            25,
+            24
+          ],
+          [
+            138,
+            85,
+            52
+          ]
+        ],
+        "roccia": [
+          123,
+          98,
+          87
+        ],
+        "frequenza_continenti": 2.584341421999709,
+        "densita_montagne": 0.5102389462030847,
+        "frequenza_citta": 1067.119976101305,
+        "tinta_citta": [
+          0.9887895410851777,
+          0.8156560067650672,
+          1.1099301479432173
+        ],
+        "tinta_acqua": [
+          0.9129846918624511,
+          0.9953846391514267,
+          0.8382663153604347
+        ],
+        "colore_luci": [
+          255,
+          146,
+          96
+        ]
+      },
+      "continenti_maggiori": 0,
+      "aree_continenti": [],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "urbano",
           "taglia": 3.0,
           "frazione_richiesta": 0.5,
-          "frazione_superficie": 0.4999999403953552
+          "frazione_superficie": 0.49999865889549255
         },
         {
           "tipo": "aereo",
           "taglia": 3.0,
           "frazione_richiesta": 0.5,
-          "frazione_superficie": 0.5
+          "frazione_superficie": 0.5000013113021851
         }
       ],
       "texture": "assets_reborn/pianeti/231.png",
@@ -486,24 +1368,66 @@
       "nome": "Lysenda",
       "somma_environ": 9.0,
       "raggio_relativo_adare": 1.0,
+      "raggio_scena": 2.3,
+      "profilo_artistico": {
+        "bioma_selvaggio": "giungle turchesi e muschio",
+        "palette_selvaggio": [
+          [
+            10,
+            40,
+            35
+          ],
+          [
+            61,
+            128,
+            89
+          ]
+        ],
+        "roccia": [
+          88,
+          104,
+          77
+        ],
+        "frequenza_continenti": 2.582806023668359,
+        "densita_montagne": 0.446374036751043,
+        "frequenza_citta": 1103.3714595316706,
+        "tinta_citta": [
+          0.9593824893862224,
+          0.8952538860855811,
+          1.0588554668740144
+        ],
+        "tinta_acqua": [
+          1.1741034578739424,
+          0.9837750674597177,
+          1.0121748764951228
+        ],
+        "colore_luci": [
+          255,
+          196,
+          87
+        ]
+      },
+      "continenti_maggiori": 0,
+      "aree_continenti": [],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "urbano",
           "taglia": 4.0,
           "frazione_richiesta": 0.4444444444444444,
-          "frazione_superficie": 0.4444442689418793
+          "frazione_superficie": 0.44444432854652405
         },
         {
           "tipo": "sotterraneo",
           "taglia": 2.0,
           "frazione_richiesta": 0.2222222222222222,
-          "frazione_superficie": 0.22222237288951874
+          "frazione_superficie": 0.22222165763378143
         },
         {
           "tipo": "selvaggio",
           "taglia": 3.0,
           "frazione_richiesta": 0.3333333333333333,
-          "frazione_superficie": 0.3333333432674408
+          "frazione_superficie": 0.3333339989185333
         }
       ],
       "texture": "assets_reborn/pianeti/232.png",
@@ -518,18 +1442,81 @@
       "nome": "Orning",
       "somma_environ": 8.0,
       "raggio_relativo_adare": 0.9428090415820634,
+      "raggio_scena": 2.1684607956387456,
+      "profilo_artistico": {
+        "bioma_selvaggio": "taiga blu e conifere",
+        "palette_selvaggio": [
+          [
+            10,
+            32,
+            39
+          ],
+          [
+            58,
+            100,
+            103
+          ]
+        ],
+        "roccia": [
+          109,
+          128,
+          137
+        ],
+        "frequenza_continenti": 2.5085733405602024,
+        "densita_montagne": 0.6507215273008767,
+        "frequenza_citta": 1226.920383646634,
+        "tinta_citta": [
+          1.0964047559348138,
+          0.9777926105084749,
+          0.9045260239119913
+        ],
+        "tinta_acqua": [
+          1.0970984222929574,
+          1.1181655298879867,
+          1.0852383418730853
+        ],
+        "colore_luci": [
+          255,
+          199,
+          106
+        ]
+      },
+      "continenti_maggiori": 7,
+      "aree_continenti": [
+        0.09506466199912096,
+        0.0947246790643354,
+        0.09448809641071082,
+        0.09078663398685702,
+        0.08539621409619656,
+        0.08300788059619153,
+        0.08096560620895986,
+        5.808416962692375e-05,
+        5.591719914547152e-05,
+        4.043623210853279e-05,
+        3.914126431582933e-05,
+        3.904746052897381e-05,
+        3.604739179873681e-05,
+        3.595350338755859e-05,
+        3.5360235018974713e-05,
+        2.707346100525187e-05,
+        2.2819609229293295e-05,
+        1.7117698801249625e-05,
+        1.421121729239718e-05,
+        1.4205857751960087e-05
+      ],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "liquido",
           "taglia": 3.0,
           "frazione_richiesta": 0.375,
-          "frazione_superficie": 0.3749999701976776
+          "frazione_superficie": 0.3749995529651642
         },
         {
           "tipo": "selvaggio",
           "taglia": 5.0,
           "frazione_richiesta": 0.625,
-          "frazione_superficie": 0.6249999403953552
+          "frazione_superficie": 0.6250002980232239
         }
       ],
       "texture": "assets_reborn/pianeti/241.png",
@@ -544,18 +1531,60 @@
       "nome": "Chim",
       "somma_environ": 7.0,
       "raggio_relativo_adare": 0.8819171036881969,
+      "raggio_scena": 2.0284093384828528,
+      "profilo_artistico": {
+        "bioma_selvaggio": "brughiere fredde e abeti",
+        "palette_selvaggio": [
+          [
+            25,
+            37,
+            30
+          ],
+          [
+            108,
+            123,
+            91
+          ]
+        ],
+        "roccia": [
+          137,
+          140,
+          128
+        ],
+        "frequenza_continenti": 1.8376388474672334,
+        "densita_montagne": 0.6744922876926495,
+        "frequenza_citta": 889.9463243535718,
+        "tinta_citta": [
+          0.8949246121463904,
+          1.109073817673491,
+          0.9014062845141086
+        ],
+        "tinta_acqua": [
+          0.8153492634641983,
+          0.8525301758793669,
+          1.1770672322660074
+        ],
+        "colore_luci": [
+          255,
+          170,
+          67
+        ]
+      },
+      "continenti_maggiori": 0,
+      "aree_continenti": [],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "urbano",
           "taglia": 3.0,
           "frazione_richiesta": 0.42857142857142855,
-          "frazione_superficie": 0.42857083678245544
+          "frazione_superficie": 0.42857131361961365
         },
         {
           "tipo": "selvaggio",
           "taglia": 4.0,
           "frazione_richiesta": 0.5714285714285714,
-          "frazione_superficie": 0.5714291334152222
+          "frazione_superficie": 0.5714285969734192
         }
       ],
       "texture": "assets_reborn/pianeti/311.png",
@@ -570,18 +1599,60 @@
       "nome": "Tamset",
       "somma_environ": 9.0,
       "raggio_relativo_adare": 1.0,
+      "raggio_scena": 2.3,
+      "profilo_artistico": {
+        "bioma_selvaggio": "foreste temperate smeraldo",
+        "palette_selvaggio": [
+          [
+            11,
+            37,
+            24
+          ],
+          [
+            87,
+            120,
+            60
+          ]
+        ],
+        "roccia": [
+          88,
+          79,
+          62
+        ],
+        "frequenza_continenti": 2.675400881134215,
+        "densita_montagne": 0.43196758778491556,
+        "frequenza_citta": 1244.4859352413705,
+        "tinta_citta": [
+          1.1737531113259088,
+          1.1331205843535477,
+          0.9076328250317341
+        ],
+        "tinta_acqua": [
+          0.9060243453278073,
+          0.9372158007196453,
+          0.8558065975215869
+        ],
+        "colore_luci": [
+          255,
+          199,
+          81
+        ]
+      },
+      "continenti_maggiori": 0,
+      "aree_continenti": [],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "aereo",
           "taglia": 4.0,
           "frazione_richiesta": 0.4444444444444444,
-          "frazione_superficie": 0.4444437623023987
+          "frazione_superficie": 0.4444442093372345
         },
         {
           "tipo": "selvaggio",
           "taglia": 5.0,
           "frazione_richiesta": 0.5555555555555556,
-          "frazione_superficie": 0.5555562376976013
+          "frazione_superficie": 0.5555557608604431
         }
       ],
       "texture": "assets_reborn/pianeti/312.png",
@@ -596,6 +1667,48 @@
       "nome": "Unarpha",
       "somma_environ": 3.0,
       "raggio_relativo_adare": 0.5773502691896257,
+      "raggio_scena": 1.3279056191361391,
+      "profilo_artistico": {
+        "bioma_selvaggio": "foreste ramate e altipiani",
+        "palette_selvaggio": [
+          [
+            43,
+            25,
+            24
+          ],
+          [
+            138,
+            85,
+            52
+          ]
+        ],
+        "roccia": [
+          123,
+          98,
+          87
+        ],
+        "frequenza_continenti": 1.8770583489538843,
+        "densita_montagne": 0.7796836055919362,
+        "frequenza_citta": 756.8627183269798,
+        "tinta_citta": [
+          0.8995506691750281,
+          1.1551272800253654,
+          1.0156531858958517
+        ],
+        "tinta_acqua": [
+          1.0679834169784772,
+          0.9981881863503272,
+          0.9564343530932773
+        ],
+        "colore_luci": [
+          255,
+          167,
+          95
+        ]
+      },
+      "continenti_maggiori": 0,
+      "aree_continenti": [],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "urbano",
@@ -616,18 +1729,60 @@
       "nome": "Suti",
       "somma_environ": 7.0,
       "raggio_relativo_adare": 0.8819171036881969,
+      "raggio_scena": 2.0284093384828528,
+      "profilo_artistico": {
+        "bioma_selvaggio": "giungle turchesi e muschio",
+        "palette_selvaggio": [
+          [
+            10,
+            40,
+            35
+          ],
+          [
+            61,
+            128,
+            89
+          ]
+        ],
+        "roccia": [
+          88,
+          104,
+          77
+        ],
+        "frequenza_continenti": 1.6996584243341482,
+        "densita_montagne": 0.6415756492163406,
+        "frequenza_citta": 1112.2400435299137,
+        "tinta_citta": [
+          0.8375807845683173,
+          1.0948341045790637,
+          1.0384759246950872
+        ],
+        "tinta_acqua": [
+          0.8249730851137623,
+          1.0900064481872023,
+          0.9835002273039627
+        ],
+        "colore_luci": [
+          255,
+          145,
+          72
+        ]
+      },
+      "continenti_maggiori": 0,
+      "aree_continenti": [],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "sotterraneo",
           "taglia": 3.0,
           "frazione_richiesta": 0.42857142857142855,
-          "frazione_superficie": 0.4285711348056793
+          "frazione_superficie": 0.4285706579685211
         },
         {
           "tipo": "selvaggio",
           "taglia": 4.0,
           "frazione_richiesta": 0.5714285714285714,
-          "frazione_superficie": 0.5714288353919983
+          "frazione_superficie": 0.5714293122291565
         }
       ],
       "texture": "assets_reborn/pianeti/322.png",
@@ -642,18 +1797,60 @@
       "nome": "Tsipa",
       "somma_environ": 9.0,
       "raggio_relativo_adare": 1.0,
+      "raggio_scena": 2.3,
+      "profilo_artistico": {
+        "bioma_selvaggio": "brughiere fredde e abeti",
+        "palette_selvaggio": [
+          [
+            25,
+            37,
+            30
+          ],
+          [
+            108,
+            123,
+            91
+          ]
+        ],
+        "roccia": [
+          137,
+          140,
+          128
+        ],
+        "frequenza_continenti": 1.994712761528459,
+        "densita_montagne": 0.4776617964585358,
+        "frequenza_citta": 1005.3217301199327,
+        "tinta_citta": [
+          0.9811376485458203,
+          1.1663137401925678,
+          0.9978674079364567
+        ],
+        "tinta_acqua": [
+          0.8622618545581895,
+          1.208738114915427,
+          1.0056949460441453
+        ],
+        "colore_luci": [
+          255,
+          165,
+          90
+        ]
+      },
+      "continenti_maggiori": 0,
+      "aree_continenti": [],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "urbano",
           "taglia": 5.0,
           "frazione_richiesta": 0.5555555555555556,
-          "frazione_superficie": 0.5555552840232849
+          "frazione_superficie": 0.5555554032325745
         },
         {
           "tipo": "selvaggio",
           "taglia": 4.0,
           "frazione_richiesta": 0.4444444444444444,
-          "frazione_superficie": 0.4444446563720703
+          "frazione_superficie": 0.44444456696510315
         }
       ],
       "texture": "assets_reborn/pianeti/323.png",
@@ -668,6 +1865,48 @@
       "nome": "Squamot",
       "somma_environ": 4.0,
       "raggio_relativo_adare": 0.6666666666666666,
+      "raggio_scena": 1.5333333333333332,
+      "profilo_artistico": {
+        "bioma_selvaggio": "taiga blu e conifere",
+        "palette_selvaggio": [
+          [
+            10,
+            32,
+            39
+          ],
+          [
+            58,
+            100,
+            103
+          ]
+        ],
+        "roccia": [
+          109,
+          128,
+          137
+        ],
+        "frequenza_continenti": 1.603134349072253,
+        "densita_montagne": 0.7491523720727284,
+        "frequenza_citta": 1203.8909471519514,
+        "tinta_citta": [
+          1.0159341561406785,
+          0.8417035771669604,
+          0.9517107470601279
+        ],
+        "tinta_acqua": [
+          1.0527430046433013,
+          0.8549118601244228,
+          0.866313078075862
+        ],
+        "colore_luci": [
+          255,
+          174,
+          89
+        ]
+      },
+      "continenti_maggiori": 0,
+      "aree_continenti": [],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "urbano",
@@ -688,18 +1927,81 @@
       "nome": "Midest",
       "somma_environ": 7.0,
       "raggio_relativo_adare": 0.8819171036881969,
+      "raggio_scena": 2.0284093384828528,
+      "profilo_artistico": {
+        "bioma_selvaggio": "brughiere fredde e abeti",
+        "palette_selvaggio": [
+          [
+            25,
+            37,
+            30
+          ],
+          [
+            108,
+            123,
+            91
+          ]
+        ],
+        "roccia": [
+          137,
+          140,
+          128
+        ],
+        "frequenza_continenti": 2.318679993901048,
+        "densita_montagne": 0.6566703171774695,
+        "frequenza_citta": 1198.2663750042761,
+        "tinta_citta": [
+          0.9942051409473693,
+          0.9173709400424218,
+          0.9377799270364806
+        ],
+        "tinta_acqua": [
+          0.9110980782623923,
+          0.7298877079061651,
+          0.9392060806548106
+        ],
+        "colore_luci": [
+          255,
+          151,
+          63
+        ]
+      },
+      "continenti_maggiori": 8,
+      "aree_continenti": [
+        0.07632072495876681,
+        0.07545873624806894,
+        0.07532247409269674,
+        0.07357991231446796,
+        0.06921823181217314,
+        0.0685974379170636,
+        0.06833000976014898,
+        0.0638944946296888,
+        4.3306910249375334e-05,
+        4.1793643551992625e-05,
+        3.9225779445845837e-05,
+        3.833617944767212e-05,
+        3.7129745985343515e-05,
+        3.333563540609099e-05,
+        3.3111877777628695e-05,
+        2.90915345359599e-05,
+        2.865860742034048e-05,
+        2.8639768044243776e-05,
+        2.731213071328685e-05,
+        2.6093722454327996e-05
+      ],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "liquido",
           "taglia": 3.0,
           "frazione_richiesta": 0.42857142857142855,
-          "frazione_superficie": 0.42857083678245544
+          "frazione_superficie": 0.4285712242126465
         },
         {
           "tipo": "selvaggio",
           "taglia": 4.0,
           "frazione_richiesta": 0.5714285714285714,
-          "frazione_superficie": 0.5714291930198669
+          "frazione_superficie": 0.5714287161827087
         }
       ],
       "texture": "assets_reborn/pianeti/341.png",
@@ -714,24 +2016,87 @@
       "nome": "Akubera",
       "somma_environ": 9.0,
       "raggio_relativo_adare": 1.0,
+      "raggio_scena": 2.3,
+      "profilo_artistico": {
+        "bioma_selvaggio": "foreste temperate smeraldo",
+        "palette_selvaggio": [
+          [
+            11,
+            37,
+            24
+          ],
+          [
+            87,
+            120,
+            60
+          ]
+        ],
+        "roccia": [
+          88,
+          79,
+          62
+        ],
+        "frequenza_continenti": 2.733878855521195,
+        "densita_montagne": 0.6426017064634989,
+        "frequenza_citta": 1119.583019600046,
+        "tinta_citta": [
+          0.9323995874021869,
+          1.0190352961966629,
+          1.1291975408685972
+        ],
+        "tinta_acqua": [
+          0.9092082945686957,
+          1.1760064206029872,
+          0.8764800778260164
+        ],
+        "colore_luci": [
+          255,
+          151,
+          124
+        ]
+      },
+      "continenti_maggiori": 6,
+      "aree_continenti": [
+        0.1197988532023261,
+        0.11467535846615588,
+        0.11186731912988092,
+        0.10843601048691777,
+        0.10550575477963288,
+        0.10525100791540208,
+        0.000164105779608441,
+        0.0001613294139103291,
+        0.00010345007836641772,
+        7.400530598361413e-05,
+        6.023634268111146e-05,
+        5.794142204362843e-05,
+        5.53247997685884e-05,
+        4.3488643712171e-05,
+        4.049239319952595e-05,
+        3.888685994340756e-05,
+        3.369010212549161e-05,
+        3.299208385940908e-05,
+        2.7575275959297537e-05,
+        2.6013112782300626e-05
+      ],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "urbano",
           "taglia": 2.0,
           "frazione_richiesta": 0.2222222222222222,
-          "frazione_superficie": 0.2222215235233307
+          "frazione_superficie": 0.22222204506397247
         },
         {
           "tipo": "liquido",
           "taglia": 3.0,
           "frazione_richiesta": 0.3333333333333333,
-          "frazione_superficie": 0.33333393931388855
+          "frazione_superficie": 0.33333316445350647
         },
         {
           "tipo": "sotterraneo",
           "taglia": 4.0,
           "frazione_richiesta": 0.4444444444444444,
-          "frazione_superficie": 0.4444445073604584
+          "frazione_superficie": 0.4444447457790375
         }
       ],
       "texture": "assets_reborn/pianeti/342.png",
@@ -746,6 +2111,69 @@
       "nome": "Mrane",
       "somma_environ": 3.0,
       "raggio_relativo_adare": 0.5773502691896257,
+      "raggio_scena": 1.3279056191361391,
+      "profilo_artistico": {
+        "bioma_selvaggio": "foreste ramate e altipiani",
+        "palette_selvaggio": [
+          [
+            43,
+            25,
+            24
+          ],
+          [
+            138,
+            85,
+            52
+          ]
+        ],
+        "roccia": [
+          123,
+          98,
+          87
+        ],
+        "frequenza_continenti": 2.428918471545806,
+        "densita_montagne": 0.5714417007930652,
+        "frequenza_citta": 743.3936357857061,
+        "tinta_citta": [
+          0.9630390103951675,
+          0.9481719882607906,
+          0.9207587623719301
+        ],
+        "tinta_acqua": [
+          1.1560311237576106,
+          1.020227179006688,
+          0.8994309878493909
+        ],
+        "colore_luci": [
+          255,
+          162,
+          56
+        ]
+      },
+      "continenti_maggiori": 1,
+      "aree_continenti": [
+        0.010770647274839697,
+        0.00879675598221421,
+        0.005513805835098083,
+        0.0043769331616673075,
+        0.0032101401907421896,
+        0.0022568154951754424,
+        0.0018543356794558717,
+        0.0009137090054593775,
+        0.0004567547406625646,
+        0.000388305216190547,
+        0.00038651713746485917,
+        0.0003834241653323613,
+        0.00031859478567067853,
+        0.00028330037927536784,
+        0.000263522659570622,
+        0.00023902825310076912,
+        0.00023690843019626216,
+        0.00023620757337561367,
+        0.0002315391934496788,
+        0.0002167660360769335
+      ],
+      "isole_scenografiche_frazione": 0.049999285489320755,
       "ambienti": [
         {
           "tipo": "liquido",
@@ -766,6 +2194,48 @@
       "nome": "Kelta",
       "somma_environ": 2.0,
       "raggio_relativo_adare": 0.4714045207910317,
+      "raggio_scena": 1.0842303978193728,
+      "profilo_artistico": {
+        "bioma_selvaggio": "giungle turchesi e muschio",
+        "palette_selvaggio": [
+          [
+            10,
+            40,
+            35
+          ],
+          [
+            61,
+            128,
+            89
+          ]
+        ],
+        "roccia": [
+          88,
+          104,
+          77
+        ],
+        "frequenza_continenti": 1.7490179841192641,
+        "densita_montagne": 0.535983740622497,
+        "frequenza_citta": 1156.2343617421068,
+        "tinta_citta": [
+          0.8856446499098852,
+          1.1416654059425708,
+          1.1118235964370853
+        ],
+        "tinta_acqua": [
+          0.756787739517809,
+          0.8217473719352919,
+          0.8378515417698976
+        ],
+        "colore_luci": [
+          255,
+          186,
+          110
+        ]
+      },
+      "continenti_maggiori": 0,
+      "aree_continenti": [],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "selvaggio",
@@ -786,6 +2256,48 @@
       "nome": "Troliso",
       "somma_environ": 6.0,
       "raggio_relativo_adare": 0.816496580927726,
+      "raggio_scena": 1.8779421361337698,
+      "profilo_artistico": {
+        "bioma_selvaggio": "foreste ramate e altipiani",
+        "palette_selvaggio": [
+          [
+            43,
+            25,
+            24
+          ],
+          [
+            138,
+            85,
+            52
+          ]
+        ],
+        "roccia": [
+          123,
+          98,
+          87
+        ],
+        "frequenza_continenti": 2.245760745068747,
+        "densita_montagne": 0.49345193456099146,
+        "frequenza_citta": 995.6698727468877,
+        "tinta_citta": [
+          0.9802953221259311,
+          1.1603609474880054,
+          0.804191053696067
+        ],
+        "tinta_acqua": [
+          1.1547558837649192,
+          0.7804103346454875,
+          0.9074309452578532
+        ],
+        "colore_luci": [
+          255,
+          204,
+          118
+        ]
+      },
+      "continenti_maggiori": 0,
+      "aree_continenti": [],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "urbano",
@@ -806,18 +2318,81 @@
       "nome": "Heliax",
       "somma_environ": 10.0,
       "raggio_relativo_adare": 1.0540925533894598,
+      "raggio_scena": 2.4244128727957572,
+      "profilo_artistico": {
+        "bioma_selvaggio": "giungle turchesi e muschio",
+        "palette_selvaggio": [
+          [
+            10,
+            40,
+            35
+          ],
+          [
+            61,
+            128,
+            89
+          ]
+        ],
+        "roccia": [
+          88,
+          104,
+          77
+        ],
+        "frequenza_continenti": 1.7130687323036304,
+        "densita_montagne": 0.6348640015021031,
+        "frequenza_citta": 1233.4919642882087,
+        "tinta_citta": [
+          0.9560827505288874,
+          1.108688140684448,
+          0.8293168576018827
+        ],
+        "tinta_acqua": [
+          0.8762514774587664,
+          0.8696405511634216,
+          0.8191574796258304
+        ],
+        "colore_luci": [
+          255,
+          153,
+          97
+        ]
+      },
+      "continenti_maggiori": 7,
+      "aree_continenti": [
+        0.07879985848800461,
+        0.07857513177194059,
+        0.07726398314357324,
+        0.07427413007856003,
+        0.06447986135614857,
+        0.06433981216827102,
+        0.06155915551573604,
+        0.00018578355376160435,
+        8.291525350963309e-05,
+        6.353515346922655e-05,
+        5.515708346040449e-05,
+        3.790441705391339e-05,
+        3.595007564752013e-05,
+        3.0689845037891194e-05,
+        2.8873163746103305e-05,
+        2.5576746097436346e-05,
+        2.1532900952472268e-05,
+        2.0728755141315237e-05,
+        1.681587569007441e-05,
+        1.5875712204123377e-05
+      ],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "liquido",
           "taglia": 5.0,
           "frazione_richiesta": 0.5,
-          "frazione_superficie": 0.4999999701976776
+          "frazione_superficie": 0.4999994933605194
         },
         {
           "tipo": "selvaggio",
           "taglia": 5.0,
           "frazione_richiesta": 0.5,
-          "frazione_superficie": 0.5000000596046448
+          "frazione_superficie": 0.5000004768371582
         }
       ],
       "texture": "assets_reborn/pianeti/412.png",
@@ -832,18 +2407,60 @@
       "nome": "Lonica",
       "somma_environ": 7.0,
       "raggio_relativo_adare": 0.8819171036881969,
+      "raggio_scena": 2.0284093384828528,
+      "profilo_artistico": {
+        "bioma_selvaggio": "taiga blu e conifere",
+        "palette_selvaggio": [
+          [
+            10,
+            32,
+            39
+          ],
+          [
+            58,
+            100,
+            103
+          ]
+        ],
+        "roccia": [
+          109,
+          128,
+          137
+        ],
+        "frequenza_continenti": 2.8166556863651837,
+        "densita_montagne": 0.5876103037780422,
+        "frequenza_citta": 885.4090743840784,
+        "tinta_citta": [
+          1.0813829912666808,
+          1.0167546397878466,
+          1.1002815855150785
+        ],
+        "tinta_acqua": [
+          1.2379164514351153,
+          1.1907577086343233,
+          0.7624772072531638
+        ],
+        "colore_luci": [
+          255,
+          180,
+          83
+        ]
+      },
+      "continenti_maggiori": 0,
+      "aree_continenti": [],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "urbano",
           "taglia": 3.0,
           "frazione_richiesta": 0.42857142857142855,
-          "frazione_superficie": 0.4285711348056793
+          "frazione_superficie": 0.4285709261894226
         },
         {
           "tipo": "selvaggio",
           "taglia": 4.0,
           "frazione_richiesta": 0.5714285714285714,
-          "frazione_superficie": 0.5714288353919983
+          "frazione_superficie": 0.5714290738105774
         }
       ],
       "texture": "assets_reborn/pianeti/421.png",
@@ -858,6 +2475,69 @@
       "nome": "Horon",
       "somma_environ": 6.0,
       "raggio_relativo_adare": 0.816496580927726,
+      "raggio_scena": 1.8779421361337698,
+      "profilo_artistico": {
+        "bioma_selvaggio": "brughiere fredde e abeti",
+        "palette_selvaggio": [
+          [
+            25,
+            37,
+            30
+          ],
+          [
+            108,
+            123,
+            91
+          ]
+        ],
+        "roccia": [
+          137,
+          140,
+          128
+        ],
+        "frequenza_continenti": 2.736140017284916,
+        "densita_montagne": 0.6912852771850386,
+        "frequenza_citta": 746.3095834500051,
+        "tinta_citta": [
+          1.1539530052738634,
+          0.9534257324292807,
+          0.9895763454573689
+        ],
+        "tinta_acqua": [
+          0.7424605760181285,
+          1.1702358731628388,
+          1.09709119064894
+        ],
+        "colore_luci": [
+          255,
+          155,
+          109
+        ]
+      },
+      "continenti_maggiori": 1,
+      "aree_continenti": [
+        0.012295530573203421,
+        0.00798123061349581,
+        0.006772424954874017,
+        0.006443538257009845,
+        0.002542139565603391,
+        0.002245375131170976,
+        0.001278846953864482,
+        0.0009579267100050353,
+        0.0009394410945151058,
+        0.0004347352007179159,
+        0.00040975130532708374,
+        0.00040121534999053315,
+        0.00036598788598416577,
+        0.0003625670996991896,
+        0.00031164893773639194,
+        0.00028157688210200804,
+        0.00021732880784148528,
+        0.00021218956726483054,
+        0.00020198107133632547,
+        0.00018268816710609293
+      ],
+      "isole_scenografiche_frazione": 0.04999987781047821,
       "ambienti": [
         {
           "tipo": "liquido",
@@ -878,24 +2558,66 @@
       "nome": "Solvia",
       "somma_environ": 12.0,
       "raggio_relativo_adare": 1.1547005383792515,
+      "raggio_scena": 2.6558112382722783,
+      "profilo_artistico": {
+        "bioma_selvaggio": "foreste temperate smeraldo",
+        "palette_selvaggio": [
+          [
+            11,
+            37,
+            24
+          ],
+          [
+            87,
+            120,
+            60
+          ]
+        ],
+        "roccia": [
+          88,
+          79,
+          62
+        ],
+        "frequenza_continenti": 2.436099468673686,
+        "densita_montagne": 0.7994452344806502,
+        "frequenza_citta": 1057.9510138283063,
+        "tinta_citta": [
+          0.9532973893397093,
+          0.9427655678792675,
+          0.8250888044261141
+        ],
+        "tinta_acqua": [
+          0.9060709180532268,
+          0.7513543873644739,
+          0.9735141576735797
+        ],
+        "colore_luci": [
+          255,
+          182,
+          70
+        ]
+      },
+      "continenti_maggiori": 0,
+      "aree_continenti": [],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "urbano",
           "taglia": 4.0,
           "frazione_richiesta": 0.3333333333333333,
-          "frazione_superficie": 0.33333292603492737
+          "frazione_superficie": 0.33333316445350647
         },
         {
           "tipo": "sotterraneo",
           "taglia": 3.0,
           "frazione_richiesta": 0.25,
-          "frazione_superficie": 0.24999918043613434
+          "frazione_superficie": 0.24999859929084778
         },
         {
           "tipo": "selvaggio",
           "taglia": 5.0,
           "frazione_richiesta": 0.4166666666666667,
-          "frazione_superficie": 0.4166678190231323
+          "frazione_superficie": 0.416668176651001
         }
       ],
       "texture": "assets_reborn/pianeti/432.png",
@@ -910,12 +2632,54 @@
       "nome": "Cercis",
       "somma_environ": 7.0,
       "raggio_relativo_adare": 0.8819171036881969,
+      "raggio_scena": 2.0284093384828528,
+      "profilo_artistico": {
+        "bioma_selvaggio": "taiga blu e conifere",
+        "palette_selvaggio": [
+          [
+            10,
+            32,
+            39
+          ],
+          [
+            58,
+            100,
+            103
+          ]
+        ],
+        "roccia": [
+          109,
+          128,
+          137
+        ],
+        "frequenza_continenti": 2.482810414161451,
+        "densita_montagne": 0.8326306983337686,
+        "frequenza_citta": 832.128751642249,
+        "tinta_citta": [
+          0.9581692694727939,
+          1.059467279473547,
+          1.0164336922311397
+        ],
+        "tinta_acqua": [
+          1.1134515882266407,
+          1.0976228463428654,
+          0.7968499813240537
+        ],
+        "colore_luci": [
+          255,
+          151,
+          96
+        ]
+      },
+      "continenti_maggiori": 0,
+      "aree_continenti": [],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "sotterraneo",
           "taglia": 4.0,
           "frazione_richiesta": 0.5714285714285714,
-          "frazione_superficie": 0.5714282989501953
+          "frazione_superficie": 0.5714283585548401
         },
         {
           "tipo": "selvaggio",
@@ -936,6 +2700,48 @@
       "nome": "Rhexia",
       "somma_environ": 3.0,
       "raggio_relativo_adare": 0.5773502691896257,
+      "raggio_scena": 1.3279056191361391,
+      "profilo_artistico": {
+        "bioma_selvaggio": "foreste ramate e altipiani",
+        "palette_selvaggio": [
+          [
+            43,
+            25,
+            24
+          ],
+          [
+            138,
+            85,
+            52
+          ]
+        ],
+        "roccia": [
+          123,
+          98,
+          87
+        ],
+        "frequenza_continenti": 2.3074571245565947,
+        "densita_montagne": 0.4983552140141101,
+        "frequenza_citta": 1132.8657071345447,
+        "tinta_citta": [
+          0.9694521220202177,
+          1.0662485202619885,
+          1.1672792398111071
+        ],
+        "tinta_acqua": [
+          0.9165335101810501,
+          1.2493677420750016,
+          0.801289795641438
+        ],
+        "colore_luci": [
+          255,
+          174,
+          87
+        ]
+      },
+      "continenti_maggiori": 0,
+      "aree_continenti": [],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "selvaggio",
@@ -956,18 +2762,60 @@
       "nome": "Tartio",
       "somma_environ": 7.0,
       "raggio_relativo_adare": 0.8819171036881969,
+      "raggio_scena": 2.0284093384828528,
+      "profilo_artistico": {
+        "bioma_selvaggio": "giungle turchesi e muschio",
+        "palette_selvaggio": [
+          [
+            10,
+            40,
+            35
+          ],
+          [
+            61,
+            128,
+            89
+          ]
+        ],
+        "roccia": [
+          88,
+          104,
+          77
+        ],
+        "frequenza_continenti": 1.6501348451236424,
+        "densita_montagne": 0.6175744743638503,
+        "frequenza_citta": 1162.8000189140994,
+        "tinta_citta": [
+          0.8083322654873017,
+          0.9616070921857087,
+          1.0798128807080791
+        ],
+        "tinta_acqua": [
+          0.954855034573914,
+          1.2206910437472072,
+          1.055159270616036
+        ],
+        "colore_luci": [
+          255,
+          162,
+          58
+        ]
+      },
+      "continenti_maggiori": 0,
+      "aree_continenti": [],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "urbano",
           "taglia": 3.0,
           "frazione_richiesta": 0.42857142857142855,
-          "frazione_superficie": 0.42857080698013306
+          "frazione_superficie": 0.4285711646080017
         },
         {
           "tipo": "sotterraneo",
           "taglia": 4.0,
           "frazione_richiesta": 0.5714285714285714,
-          "frazione_superficie": 0.5714291930198669
+          "frazione_superficie": 0.5714287757873535
         }
       ],
       "texture": "assets_reborn/pianeti/442.png",
@@ -982,6 +2830,48 @@
       "nome": "Ayod",
       "somma_environ": 4.0,
       "raggio_relativo_adare": 0.6666666666666666,
+      "raggio_scena": 1.5333333333333332,
+      "profilo_artistico": {
+        "bioma_selvaggio": "taiga blu e conifere",
+        "palette_selvaggio": [
+          [
+            10,
+            32,
+            39
+          ],
+          [
+            58,
+            100,
+            103
+          ]
+        ],
+        "roccia": [
+          109,
+          128,
+          137
+        ],
+        "frequenza_continenti": 2.646055772645041,
+        "densita_montagne": 0.5159868977663756,
+        "frequenza_citta": 730.7484202114047,
+        "tinta_citta": [
+          0.9418250526569635,
+          0.9250595204250094,
+          0.9304077895933351
+        ],
+        "tinta_acqua": [
+          1.1202028795441215,
+          1.0814475295893609,
+          1.0135313766208096
+        ],
+        "colore_luci": [
+          255,
+          186,
+          78
+        ]
+      },
+      "continenti_maggiori": 0,
+      "aree_continenti": [],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "sotterraneo",
@@ -1002,6 +2892,48 @@
       "nome": "Barak",
       "somma_environ": 5.0,
       "raggio_relativo_adare": 0.7453559924999299,
+      "raggio_scena": 1.7143187827498387,
+      "profilo_artistico": {
+        "bioma_selvaggio": "taiga blu e conifere",
+        "palette_selvaggio": [
+          [
+            10,
+            32,
+            39
+          ],
+          [
+            58,
+            100,
+            103
+          ]
+        ],
+        "roccia": [
+          109,
+          128,
+          137
+        ],
+        "frequenza_continenti": 1.9983409477935998,
+        "densita_montagne": 0.7810912831203103,
+        "frequenza_citta": 822.0774499775422,
+        "tinta_citta": [
+          0.9669333163183083,
+          1.122375442330482,
+          0.9300594078670789
+        ],
+        "tinta_acqua": [
+          0.9152949419515555,
+          1.1968212616957157,
+          0.8913857562191638
+        ],
+        "colore_luci": [
+          255,
+          170,
+          58
+        ]
+      },
+      "continenti_maggiori": 0,
+      "aree_continenti": [],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "urbano",
@@ -1022,6 +2954,48 @@
       "nome": "Liatris",
       "somma_environ": 5.0,
       "raggio_relativo_adare": 0.7453559924999299,
+      "raggio_scena": 1.7143187827498387,
+      "profilo_artistico": {
+        "bioma_selvaggio": "savane dorate e boschi radi",
+        "palette_selvaggio": [
+          [
+            47,
+            44,
+            19
+          ],
+          [
+            157,
+            143,
+            67
+          ]
+        ],
+        "roccia": [
+          144,
+          105,
+          64
+        ],
+        "frequenza_continenti": 2.888607999253085,
+        "densita_montagne": 0.6567433481330766,
+        "frequenza_citta": 964.3265054920732,
+        "tinta_citta": [
+          0.9954381137713677,
+          1.126537924159992,
+          1.057358129258775
+        ],
+        "tinta_acqua": [
+          0.9999610280625635,
+          1.0397281767619033,
+          1.1792330810144422
+        ],
+        "colore_luci": [
+          255,
+          148,
+          61
+        ]
+      },
+      "continenti_maggiori": 0,
+      "aree_continenti": [],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "selvaggio",
@@ -1042,18 +3016,60 @@
       "nome": "Xan",
       "somma_environ": 8.0,
       "raggio_relativo_adare": 0.9428090415820634,
+      "raggio_scena": 2.1684607956387456,
+      "profilo_artistico": {
+        "bioma_selvaggio": "foreste ramate e altipiani",
+        "palette_selvaggio": [
+          [
+            43,
+            25,
+            24
+          ],
+          [
+            138,
+            85,
+            52
+          ]
+        ],
+        "roccia": [
+          123,
+          98,
+          87
+        ],
+        "frequenza_continenti": 2.450290193342101,
+        "densita_montagne": 0.6019637175657842,
+        "frequenza_citta": 973.7073371821532,
+        "tinta_citta": [
+          0.8783927712582942,
+          1.0802060824783695,
+          0.8876509175121774
+        ],
+        "tinta_acqua": [
+          0.9445768541074216,
+          0.9974634119795682,
+          1.2191219220212135
+        ],
+        "colore_luci": [
+          255,
+          200,
+          85
+        ]
+      },
+      "continenti_maggiori": 0,
+      "aree_continenti": [],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "urbano",
           "taglia": 3.0,
           "frazione_richiesta": 0.375,
-          "frazione_superficie": 0.37499964237213135
+          "frazione_superficie": 0.3749997913837433
         },
         {
           "tipo": "fuoco",
           "taglia": 5.0,
           "frazione_richiesta": 0.625,
-          "frazione_superficie": 0.6250002980232239
+          "frazione_superficie": 0.6250001788139343
         }
       ],
       "texture": "assets_reborn/pianeti/513.png",
@@ -1068,6 +3084,48 @@
       "nome": "Aras",
       "somma_environ": 4.0,
       "raggio_relativo_adare": 0.6666666666666666,
+      "raggio_scena": 1.5333333333333332,
+      "profilo_artistico": {
+        "bioma_selvaggio": "brughiere fredde e abeti",
+        "palette_selvaggio": [
+          [
+            25,
+            37,
+            30
+          ],
+          [
+            108,
+            123,
+            91
+          ]
+        ],
+        "roccia": [
+          137,
+          140,
+          128
+        ],
+        "frequenza_continenti": 1.829582090063271,
+        "densita_montagne": 0.7532568751193862,
+        "frequenza_citta": 863.1352192340847,
+        "tinta_citta": [
+          1.0255845943507929,
+          0.9698824414675608,
+          1.1446147862853062
+        ],
+        "tinta_acqua": [
+          1.1690971069410756,
+          1.0738062058670774,
+          1.084782076452372
+        ],
+        "colore_luci": [
+          255,
+          184,
+          75
+        ]
+      },
+      "continenti_maggiori": 0,
+      "aree_continenti": [],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "urbano",
@@ -1088,6 +3146,48 @@
       "nome": "Capilax",
       "somma_environ": 4.0,
       "raggio_relativo_adare": 0.6666666666666666,
+      "raggio_scena": 1.5333333333333332,
+      "profilo_artistico": {
+        "bioma_selvaggio": "foreste temperate smeraldo",
+        "palette_selvaggio": [
+          [
+            11,
+            37,
+            24
+          ],
+          [
+            87,
+            120,
+            60
+          ]
+        ],
+        "roccia": [
+          88,
+          79,
+          62
+        ],
+        "frequenza_continenti": 1.8752674336086996,
+        "densita_montagne": 0.5825840012591512,
+        "frequenza_citta": 787.447112046118,
+        "tinta_citta": [
+          1.0548492118761792,
+          1.1173074685031437,
+          0.9971760823924323
+        ],
+        "tinta_acqua": [
+          0.9695210220626945,
+          0.8215500057170981,
+          1.1867158123502275
+        ],
+        "colore_luci": [
+          255,
+          157,
+          103
+        ]
+      },
+      "continenti_maggiori": 0,
+      "aree_continenti": [],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "fuoco",
@@ -1108,18 +3208,60 @@
       "nome": "Adrax",
       "somma_environ": 5.0,
       "raggio_relativo_adare": 0.7453559924999299,
+      "raggio_scena": 1.7143187827498387,
+      "profilo_artistico": {
+        "bioma_selvaggio": "taiga blu e conifere",
+        "palette_selvaggio": [
+          [
+            10,
+            32,
+            39
+          ],
+          [
+            58,
+            100,
+            103
+          ]
+        ],
+        "roccia": [
+          109,
+          128,
+          137
+        ],
+        "frequenza_continenti": 1.8562518075921897,
+        "densita_montagne": 0.46652184890114884,
+        "frequenza_citta": 987.636332488374,
+        "tinta_citta": [
+          1.044803589279496,
+          1.1298101734240085,
+          1.0775105884822227
+        ],
+        "tinta_acqua": [
+          0.7783313615017771,
+          1.071140955106214,
+          0.9088785997846967
+        ],
+        "colore_luci": [
+          255,
+          175,
+          106
+        ]
+      },
+      "continenti_maggiori": 0,
+      "aree_continenti": [],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "sotterraneo",
           "taglia": 2.0,
           "frazione_richiesta": 0.4,
-          "frazione_superficie": 0.3999998867511749
+          "frazione_superficie": 0.399999737739563
         },
         {
           "tipo": "selvaggio",
           "taglia": 3.0,
           "frazione_richiesta": 0.6,
-          "frazione_superficie": 0.6000000834465027
+          "frazione_superficie": 0.6000002026557922
         }
       ],
       "texture": "assets_reborn/pianeti/523.png",
@@ -1134,6 +3276,48 @@
       "nome": "Scythia",
       "somma_environ": 4.0,
       "raggio_relativo_adare": 0.6666666666666666,
+      "raggio_scena": 1.5333333333333332,
+      "profilo_artistico": {
+        "bioma_selvaggio": "foreste ramate e altipiani",
+        "palette_selvaggio": [
+          [
+            43,
+            25,
+            24
+          ],
+          [
+            138,
+            85,
+            52
+          ]
+        ],
+        "roccia": [
+          123,
+          98,
+          87
+        ],
+        "frequenza_continenti": 2.0007537123104884,
+        "densita_montagne": 0.6610556989577963,
+        "frequenza_citta": 1077.0972802608276,
+        "tinta_citta": [
+          1.0276698487429548,
+          0.943134324446799,
+          0.8748848158956934
+        ],
+        "tinta_acqua": [
+          1.1345150115032498,
+          1.1939511008723958,
+          0.795853335993221
+        ],
+        "colore_luci": [
+          255,
+          171,
+          64
+        ]
+      },
+      "continenti_maggiori": 0,
+      "aree_continenti": [],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "fuoco",
@@ -1154,6 +3338,48 @@
       "nome": "Anell",
       "somma_environ": 4.0,
       "raggio_relativo_adare": 0.6666666666666666,
+      "raggio_scena": 1.5333333333333332,
+      "profilo_artistico": {
+        "bioma_selvaggio": "taiga blu e conifere",
+        "palette_selvaggio": [
+          [
+            10,
+            32,
+            39
+          ],
+          [
+            58,
+            100,
+            103
+          ]
+        ],
+        "roccia": [
+          109,
+          128,
+          137
+        ],
+        "frequenza_continenti": 2.0305189649043633,
+        "densita_montagne": 0.6070919389462909,
+        "frequenza_citta": 1024.2588704801228,
+        "tinta_citta": [
+          0.8555702975945909,
+          1.0768094141741031,
+          1.1121943138991999
+        ],
+        "tinta_acqua": [
+          1.0620658391075044,
+          0.787609516699017,
+          1.058308601893696
+        ],
+        "colore_luci": [
+          255,
+          191,
+          69
+        ]
+      },
+      "continenti_maggiori": 0,
+      "aree_continenti": [],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "aereo",
@@ -1174,18 +3400,60 @@
       "nome": "Trov",
       "somma_environ": 7.0,
       "raggio_relativo_adare": 0.8819171036881969,
+      "raggio_scena": 2.0284093384828528,
+      "profilo_artistico": {
+        "bioma_selvaggio": "savane dorate e boschi radi",
+        "palette_selvaggio": [
+          [
+            47,
+            44,
+            19
+          ],
+          [
+            157,
+            143,
+            67
+          ]
+        ],
+        "roccia": [
+          144,
+          105,
+          64
+        ],
+        "frequenza_continenti": 2.2429045438449666,
+        "densita_montagne": 0.5189461364982535,
+        "frequenza_citta": 787.7754144839262,
+        "tinta_citta": [
+          0.904856337883771,
+          0.957827077160623,
+          1.1351314504206718
+        ],
+        "tinta_acqua": [
+          1.139231499008698,
+          0.9451804833383083,
+          1.1616392645590885
+        ],
+        "colore_luci": [
+          255,
+          171,
+          55
+        ]
+      },
+      "continenti_maggiori": 0,
+      "aree_continenti": [],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "urbano",
           "taglia": 4.0,
           "frazione_richiesta": 0.5714285714285714,
-          "frazione_superficie": 0.5714281797409058
+          "frazione_superficie": 0.5714284777641296
         },
         {
           "tipo": "selvaggio",
           "taglia": 3.0,
           "frazione_richiesta": 0.42857142857142855,
-          "frazione_superficie": 0.42857179045677185
+          "frazione_superficie": 0.428571492433548
         }
       ],
       "texture": "assets_reborn/pianeti/542.png",
@@ -1200,6 +3468,48 @@
       "nome": "Niconi",
       "somma_environ": 4.0,
       "raggio_relativo_adare": 0.6666666666666666,
+      "raggio_scena": 1.5333333333333332,
+      "profilo_artistico": {
+        "bioma_selvaggio": "brughiere fredde e abeti",
+        "palette_selvaggio": [
+          [
+            25,
+            37,
+            30
+          ],
+          [
+            108,
+            123,
+            91
+          ]
+        ],
+        "roccia": [
+          137,
+          140,
+          128
+        ],
+        "frequenza_continenti": 1.767283453100465,
+        "densita_montagne": 0.5030498427101489,
+        "frequenza_citta": 1169.5352356747228,
+        "tinta_citta": [
+          0.8277075138369909,
+          1.0328027423419273,
+          1.051171184015009
+        ],
+        "tinta_acqua": [
+          0.7732273385225712,
+          1.0158424627485885,
+          1.189572929143077
+        ],
+        "colore_luci": [
+          255,
+          165,
+          69
+        ]
+      },
+      "continenti_maggiori": 0,
+      "aree_continenti": [],
+      "isole_scenografiche_frazione": 0.0,
       "ambienti": [
         {
           "tipo": "selvaggio",

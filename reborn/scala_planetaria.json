@@ -1,0 +1,15 @@
+{
+  "criterio": "surface_area_proportional_to_sum_environ",
+  "minimo": {
+    "id": 352,
+    "nome": "Kelta",
+    "somma": 2
+  },
+  "massimo": {
+    "id": 432,
+    "nome": "Solvia",
+    "somma": 12
+  },
+  "raggio_adare": 2.3,
+  "formula": "2.3 * sqrt(sum(taglia)/9)"
+}
