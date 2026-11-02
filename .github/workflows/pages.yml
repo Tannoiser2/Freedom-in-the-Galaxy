@@ -22,6 +22,8 @@ jobs:
   build:
     if: ${{ github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[pubblica]') }}
     runs-on: ubuntu-latest
+    outputs:
+      preview_sha256: ${{ steps.reborn.outputs.sha256 }}
     steps:
       - uses: actions/checkout@v4
 
@@ -44,9 +46,12 @@ jobs:
           touch build/web/.nojekyll
 
       - name: Aggiungi l'anteprima Reborn al sito
+        id: reborn
         run: |
           python3 tools/prepare_reborn_preview.py
-          cp -R build/reborn-preview build/web/reborn
+          mkdir -p build/web/reborn
+          cp -R build/reborn-preview/. build/web/reborn/
+          python3 -c 'import json; print("sha256=" + json.load(open("build/reborn-preview/version.json"))["viewer_sha256"])' >> "$GITHUB_OUTPUT"
 
       # Ludoteca privata: con i segreti CLOUDFLARE_API_TOKEN e CLOUDFLARE_ACCOUNT_ID pubblica il gioco su
       # https://freedom-in-the-galaxy.<dominio>/ protetto da email e codice. Senza segreti non fa nulla.
@@ -76,18 +81,18 @@ jobs:
       - name: Verifica l'anteprima pubblicata
         env:
           PAGE_URL: ${{ steps.deployment.outputs.page_url }}
+          EXPECTED_SHA256: ${{ needs.build.outputs.preview_sha256 }}
         run: |
           python3 - <<'PY'
           import json, os, time, urllib.request
           base = os.environ['PAGE_URL'].rstrip('/') + '/reborn/'
-          expected = json.load(open('build/reborn-preview/version.json')) if os.path.exists('build/reborn-preview/version.json') else None
+          expected = os.environ['EXPECTED_SHA256']
           for attempt in range(12):
               try:
                   with urllib.request.urlopen(base + 'version.json', timeout=20) as response:
                       version = json.load(response)
                   assert version['standalone'] and version['render_count'] == 6
-                  if expected:
-                      assert version['viewer_sha256'] == expected['viewer_sha256']
+                  assert version['viewer_sha256'] == expected
                   with urllib.request.urlopen(base, timeout=20) as response:
                       assert 'Adare e il nuovo atlante planetario' in response.read().decode()
                   print('Anteprima verificata su ' + base)
