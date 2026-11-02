@@ -8,6 +8,8 @@
 - creati i confronti affiancati tra originale e ritratto nuovo;
 - create le cornici senza testo `cornice_ribelli.png` e `cornice_imperiali.png` in formato 764×1154;
 - composte tre anteprime complete con figura intera, cornice, testi e valori reali del gioco;
+- sostituita la prima proposta vettoriale con cornici pittoriche materiche ispirate ai riferimenti approvati;
+- recuperati statistiche, abilità e profili narrativi dalla `Guida Galattica.pdf`, traducendo i profili in italiano;
 - registrati i tre file nel manifest con stato `da_approvare`.
 
 ## Da approvare
