@@ -1,7 +1,7 @@
-# Fondali delle piattaforme
+# Basi degli ambienti
 
-Sei immagini condivise a 512×256, con una palette fissa per ambiente. Urbano, Sotterraneo, Selvaggio e Liquido derivano dai materiali pittorici in `../painterly/`; Aereo e Fuoco sono nuove illustrazioni per le piattaforme. Tutti i file restano locali, senza servizi esterni a runtime.
+La versione corrente è `v3/`: sei immagini condivise a 512×256, con palette fissa per ambiente. Urbano grigio con strade luminose; Sotterraneo con crepacci scuri, rocce rosse e ocra; Selvaggio con montagne e vari verdi; Liquido con isolotti radi; Aereo con nubi acide e tempeste; Fuoco con lava e basalto.
 
-Ogni piattaforma usa la stessa immagine sul piano e sul fondale. Il fondale è dietro personaggi e truppe; nome, bordo colorato e collegamento alla superficie identificano lo stesso ambiente. La piattaforma segue la rotazione del pianeta ma rivolge il fondale verso l'osservatore, per mantenere leggibili le unità.
+L’immagine compare soltanto sulla base rotonda. Nessun pannello o fondale verticale dietro personaggi e truppe. Nome, bordo colorato e collegamento al globo identificano l’ambiente. Le unità restano una rappresentazione tattica ingrandita.
 
-Le piattaforme sono una vista tattica ingrandita. Sul globo di Solvia e Midest i dettagli dei materiali sono circa 24 volte più piccoli della prima prova; la scala tiene conto del raggio del pianeta. Campionamento variato e mipmap riducono ripetizioni e sfarfallio. Le maschere degli ambienti restano quelle originali.
+Cinque immagini derivano dai materiali in `../painterly/v3/`; Fuoco conserva l’illustrazione precedente. File locali, senza servizi esterni durante l’uso.

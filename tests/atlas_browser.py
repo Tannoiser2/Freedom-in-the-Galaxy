@@ -48,13 +48,13 @@ def main():
                 assert current(page)['objects'][0]['bases']==level+1
             page.locator('#pdb-toggle').click()
             before=current(page)['objects'][0]
-            page.wait_for_timeout(650)
+            page.wait_for_function('spin => window.__atlas.snapshot().objects[0].spin !== spin',arg=before['spin'],timeout=15000)
             after=current(page)['objects'][0]
             assert after['defense']==before['defense'] and after['spin']!=before['spin']
             assert after['defenseColor']=='ff6651' and not after['up']
             page.locator('#pdb-toggle').click()
             before=current(page)['objects'][0]['defense']
-            page.wait_for_timeout(500)
+            page.wait_for_function('angle => window.__atlas.snapshot().objects[0].defense !== angle',arg=before,timeout=15000)
             assert current(page)['objects'][0]['defense']!=before
             assert current(page)['objects'][0]['defenseColor']=='55e887'
             page.locator('#pause').click()
@@ -72,7 +72,7 @@ def main():
                 assert snap['objects'][0]['unitCount']==len(p['ambienti'])+len(p['units'])
                 stages=snap['objects'][0]['platforms']
                 assert [stage['environ'] for stage in stages]==[e['tipo'] for e in p['ambienti']]
-                assert all(stage['backdrop'] and stage['floor'] for stage in stages)
+                assert all(not stage['backdrop'] and stage['floor'] for stage in stages)
                 assert sum(stage['units'] for stage in stages)==len(p['ambienti'])+len(p['units'])
                 character_env=next((e['tipo'] for e in p['ambienti'] if e['tipo']=='selvaggio'),p['ambienti'][0]['tipo'])
                 assert all(stage['units']==(1+len(p['units']) if stage['environ']==character_env else 1) for stage in stages)
@@ -90,7 +90,7 @@ def main():
             page.select_option('#system-select','14');wait(page)
             page.locator('#pause').click()
             before=current(page)
-            page.wait_for_timeout(700)
+            page.wait_for_function('before => window.__atlas.snapshot().objects.every((o,i) => o.spin !== before.objects[i].spin)',arg=before,timeout=15000)
             after=current(page)
             assert any(a['position']!=b['position'] for a,b in zip(before['objects'],after['objects']))
             assert all(a['spin']!=b['spin'] for a,b in zip(before['objects'],after['objects']))

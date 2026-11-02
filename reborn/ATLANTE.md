@@ -70,21 +70,21 @@ e gli errori WebGL vengono trattati come fallimenti.
 cuciture, poli e limiti delle emissioni per i 51 set di produzione. Non sono
 stati modificati i dati di gioco in `data/`.
 
-## Prova pittorica: Solvia
+## Prove pittoriche correnti
 
-[Apri Solvia con la skin pittorica](https://tannoiser2.github.io/Freedom-in-the-Galaxy/reborn/atlante/?planet=432&skin=painterly&isolated=1).
-Il selettore “Skin di Solvia” confronta la prova con la superficie attuale. Le altre 50 superfici non cambiano. Tre materiali illustrati hanno colori base fissi: bronzo per Urbano, terracotta per Sotterraneo, verde per Selvaggio. La maschera originale conserva 4/12, 3/12 e 5/12 della superficie; non ci sono oceani. Fonti e descrizione in `atlante/painterly/`. Controllo dedicato: `python tests/solvia_painterly_browser.py`; verifica globo, variante, assenza dei cubetti procedurali e confronto con la skin precedente.
+Quattro pianeti permettono il confronto tra skin attuale e pittorica; le altre 47 superfici non cambiano:
 
-### Midest con acqua
+- [Solvia](https://tannoiser2.github.io/Freedom-in-the-Galaxy/reborn/atlante/?planet=432&skin=painterly): Urbano 4/12, Sotterraneo 3/12, Selvaggio 5/12.
+- [Midest](https://tannoiser2.github.io/Freedom-in-the-Galaxy/reborn/atlante/?planet=341&skin=painterly): Liquido 3/7, Selvaggio 4/7.
+- [Magro](https://tannoiser2.github.io/Freedom-in-the-Galaxy/reborn/atlante/?planet=112&skin=painterly): Urbano 3/8, Aereo 5/8.
+- [Cieson](https://tannoiser2.github.io/Freedom-in-the-Galaxy/reborn/atlante/?planet=211&skin=painterly): solo Aereo.
 
-[Apri Midest pittorico](https://tannoiser2.github.io/Freedom-in-the-Galaxy/reborn/atlante/?planet=341&skin=painterly&isolated=1): Liquido 3/7 e Selvaggio 4/7, maschera originale a 2048×1024. Il materiale verde è condiviso con Solvia; il nuovo materiale blu petrolio definisce la palette di Liquido. Controllo dedicato: `python tests/midest_painterly_browser.py`.
+Materiali in `atlante/painterly/v3/`: grigi urbani con strade emissive tra conglomerati; crepacci scuri, rosso cupo e ocra per Sotterraneo; montagne e diversi verdi per Selvaggio; oceani blu con isolotti decorativi radi per Liquido; bande acide e grandi tempeste rosse per Aereo. Maschere originali a 2048×1024, senza modifiche ai dati di gioco. Gli isolotti illustrativi restano classificati Liquido.
 
-## Scala planetaria e piattaforme con fondale
+## Scala planetaria e basi degli ambienti
 
-Le skin pittoriche di Solvia e Midest usano dettagli circa 24 volte più piccoli rispetto alla prima prova, con densità corretta in base al raggio. Il campionamento varia la trama per evitare una griglia di ripetizioni; mipmap e filtro anisotropico limitano lo sfarfallio. I blocchi urbani della vista attuale sono ridotti anch'essi alla scala del globo.
+Edifici e alberi restano dettagli minuti. Montagne e crepacci hanno una scala regionale distinta, per evitare un risultato monocolore; isole e tempeste conservano le loro forme sulla mappa completa. Mipmap e filtro anisotropico limitano lo sfarfallio. I piccoli blocchi urbani della skin attuale conservano la riduzione di scala precedente.
 
-Su tutti i pianeti, ciascuna piattaforma ha terreno e fondale del proprio ambiente, condivisi per mantenere la palette. Fondali per tutti e sei gli ambienti in `atlante/environs/`; personaggi e truppe sono davanti al fondale. Le piattaforme si orientano verso la camera e conservano il collegamento al bioma corretto. Il test browser verifica per tutti i 51 pianeti la presenza di fondale e terreno e la collocazione delle unità su ciascun ambiente.
+Su tutti i 51 pianeti, l’immagine dell’ambiente compare **solo sulla base rotonda**. Nessun pannello verticale dietro le unità. Nome, bordo colorato e collegamento al bioma identificano la collocazione di truppe e personaggi. Immagini di tutti e sei gli ambienti in `atlante/environs/v3/`.
 
-Per vedere anche le piattaforme, aprire i link senza `isolated=1`:
-- [Solvia](https://tannoiser2.github.io/Freedom-in-the-Galaxy/reborn/atlante/?planet=432&skin=painterly)
-- [Midest](https://tannoiser2.github.io/Freedom-in-the-Galaxy/reborn/atlante/?planet=341&skin=painterly)
+Il test `python tests/atlas_browser.py` verifica per tutti i pianeti la presenza del terreno, l’assenza di fondali e la collocazione delle unità. `python tests/materials_v3_browser.py` verifica i quattro globi pittorici, le basi e la rete urbana sul lato notturno. Le prove precedenti di Solvia e Midest restano verificabili con i relativi test dedicati. Aggiungere `&isolated=1` al link nasconde inizialmente unità, PDB e nomi.
