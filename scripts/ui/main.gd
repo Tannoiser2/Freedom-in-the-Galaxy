@@ -17,6 +17,7 @@ func get_net() -> Net:
 
 
 func _ready() -> void:
+	UI.carica_impostazioni()
 	theme = UI.make_theme()
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	var fondo := ColorRect.new()

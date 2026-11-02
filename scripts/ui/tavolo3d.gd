@@ -230,6 +230,13 @@ func _costruisci_sistema() -> void:
 			mt.emission_energy_multiplier = 0.35
 			mt.metallic = 0.3
 			mt.roughness = 0.4
+			var ta := UI.reborn_tex("ambienti/" + str(amb[k]["tipo"]))
+			if ta != null:
+				mt.albedo_texture = ta
+				mt.albedo_color = Color(1, 1, 1)
+				mt.emission_energy_multiplier = 0.12
+				mt.metallic = 0.0
+				mt.roughness = 0.8
 			disco.material_override = mt
 			piat.add_child(disco)
 			var la := _etichetta("%s · %d" % [Dati.AMBIENTI_NOMI[amb[k]["tipo"]].to_upper(), int(amb[k]["taglia"])], 54, col.lightened(0.4))
@@ -273,6 +280,19 @@ static func raggio_pianeta(dp: Dictionary) -> float:
 
 func _materiale_pianeta(dp: Dictionary) -> StandardMaterial3D:
 	var mt := StandardMaterial3D.new()
+	var tr := UI.reborn_tex("pianeti/%d" % int(dp["id"]))
+	if tr != null:
+		mt.albedo_texture = tr
+		mt.albedo_color = Color(0.82, 0.82, 0.82)
+		mt.roughness = 1.0
+		mt.specular_mode = BaseMaterial3D.SPECULAR_DISABLED
+		var te := UI.reborn_tex("pianeti/%d_emission" % int(dp["id"]))
+		if te != null:
+			mt.emission_enabled = true
+			mt.emission_texture = te
+			mt.emission = Color(1.0, 0.85, 0.6)
+			mt.emission_energy_multiplier = 0.25
+		return mt
 	var nt := NoiseTexture2D.new()
 	nt.width = 256
 	nt.height = 128
@@ -348,7 +368,7 @@ func aggiorna() -> void:
 				testo = "CONTROLLO RIBELLE"
 			"fermata":
 				testo = "Ribellione fermata"
-		st.text = "%s · PDB %d%s" % [testo, int(p["bdp"]), "" if p["su"] else " · DOWN"]
+		st.text = "%s · BDP %d%s" % [testo, int(p["bdp"]), "" if p["su"] else " fuori uso"]
 		st.modulate = UI.colore_fazione(ctrl) if ctrl >= 0 else Color(0.75, 0.78, 0.85)
 	for l in _piattaforme:
 		var piat: Node3D = _piattaforme[l]["nodo"]

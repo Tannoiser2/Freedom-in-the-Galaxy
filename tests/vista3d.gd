@@ -61,7 +61,7 @@ func _init() -> void:
 	if not _check(not view._difese[pid].operativa and view._difese[pid]._basi.get_child_count() == 2, "Game state must drive PDB presentation"):
 		return
 	var status = view._pianeti[pid].get_node("Stato")
-	if not _check("PDB 1" in status.text and "DOWN" in status.text and not view._difese[pid]._label.visible, "Planet status must show strength/DOWN without overlapping labels"):
+	if not _check("BDP 1" in status.text and "fuori uso" in status.text and not view._difese[pid]._label.visible, "Planet status must show strength/DOWN without overlapping labels"):
 		return
 	motor.pianeti[pid]["su"] = true
 	view.aggiorna()

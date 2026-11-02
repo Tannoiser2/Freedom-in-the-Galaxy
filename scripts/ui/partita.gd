@@ -346,7 +346,11 @@ func _aggiorna_carte() -> void:
 			var c = preload("res://scripts/ui/carta.gd").new("personaggio", u2["c"])
 			c.m = motore
 			c.id_unita = id
-			c.custom_minimum_size = Vector2(158, 224)
+			c.custom_minimum_size = Vector2(130, 224) if UI.carta_reborn(u2["nome"]) != null else Vector2(158, 224)
+			if UI.carta_reborn(u2["nome"]) != null:
+				var nome_c: String = u2["nome"]
+				c.mouse_entered.connect(func(): _anteprima_carta(nome_c))
+				c.mouse_exited.connect(func(): _svuota(popup_carta))
 			c.modulate = Color(1, 1, 1, 0.45) if u2["luogo"] == "morto" else Color.WHITE
 			carte_box.add_child(c)
 			for nr in u2["poss"]:
@@ -602,6 +606,23 @@ func _al_evento(tipo: String, dati: Dictionary) -> void:
 		"fine":
 			pass
 	_aggiorna()
+
+
+## Carta personaggio Reborn ingrandita mentre il mouse le passa sopra.
+func _anteprima_carta(nome: String) -> void:
+	_svuota(popup_carta)
+	var t := UI.carta_reborn(nome)
+	if t == null:
+		return
+	var tr := TextureRect.new()
+	tr.texture = t
+	tr.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	tr.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	tr.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	var h := minf(area_mappa.size.y - 20, 760.0)
+	tr.size = Vector2(h * t.get_width() / t.get_height(), h)
+	tr.position = Vector2(area_mappa.size.x - tr.size.x - 12, area_mappa.size.y - h - 10)
+	popup_carta.add_child(tr)
 
 
 func _mostra_popup_carta(tipo: String, dati: Dictionary, sezione := "") -> void:

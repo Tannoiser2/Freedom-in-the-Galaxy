@@ -44,6 +44,8 @@ func _draw() -> void:
 			else:
 				draw_texture_rect(t, r, false)
 			return
+	if tipo == "personaggio" and _reborn():
+		return
 	match tipo:
 		"personaggio":
 			_personaggio(r)
@@ -53,6 +55,36 @@ func _draw() -> void:
 			_missione(r)
 		"azione":
 			_azione(r)
+
+
+## Carta personaggio Reborn: l'immagine intera, con lo stato del personaggio sovrapposto.
+func _reborn() -> bool:
+	var t := UI.carta_reborn(str(dati.get("nome", "")))
+	if t == null:
+		return false
+	draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+	var k := minf(size.x / t.get_width(), size.y / t.get_height())
+	var sz := Vector2(t.get_width(), t.get_height()) * k
+	var r := Rect2((size - sz) * 0.5, sz)
+	draw_rect(Rect2(r.position + Vector2(3, 4), r.size), Color(0, 0, 0, 0.45))
+	draw_texture_rect(t, r, false)
+	if m != null and id_unita >= 0 and m.unita.has(id_unita):
+		var u: Dictionary = m.unita[id_unita]
+		var stato := []
+		if u["luogo"] == "morto":
+			stato.append("MORTO")
+		elif u["prig"] >= 0:
+			stato.append("PRIGIONIERO")
+		if u["ind"] and u["luogo"] != "morto":
+			stato.append("INDIVIDUATO")
+		if int(u["ferite"]) > 0 and u["luogo"] != "morto":
+			stato.append("FERITE %d" % int(u["ferite"]))
+		if not stato.is_empty():
+			var fs := clampi(int(sz.x / 12.0), 10, 22)
+			var sr := Rect2(r.position.x + 4, r.end.y - fs - 14, r.size.x - 8, fs + 10)
+			draw_rect(sr, Color(0.7, 0.08, 0.05, 0.92))
+			_t(UI.font_titolo, sr.position + Vector2(6, fs + 3), " · ".join(stato), fs, Color.WHITE)
+	return true
 
 
 func _cornice(r: Rect2, col: Color, fondo := Color(0.96, 0.93, 0.85)) -> void:

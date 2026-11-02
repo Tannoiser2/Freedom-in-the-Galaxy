@@ -68,6 +68,11 @@ func _ready() -> void:
 	c3.button_pressed = vista3d
 	c3.toggled.connect(func(b): vista3d = b)
 	v.add_child(c3)
+	var c4 := CheckBox.new()
+	c4.text = "Grafica Reborn (carte personaggio, pedine e pianeti ridisegnati)"
+	c4.button_pressed = UI.reborn
+	c4.toggled.connect(func(b): UI.salva_reborn(b))
+	v.add_child(c4)
 	var hb := HBoxContainer.new()
 	hb.add_theme_constant_override("separation", 12)
 	v.add_child(hb)

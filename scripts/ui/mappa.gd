@@ -230,6 +230,12 @@ func _disegna_pianeta(pid: int, pos: Vector2, r: float) -> void:
 	var ctrl := m.controllo(pid)
 	if ctrl >= 0:
 		draw_arc(pos, r + 5, 0, TAU, 64, UI.colore_fazione(ctrl), 3.0, true)
+	var disco := UI.reborn_tex("pianeti/%d_disco" % pid)
+	if disco != null:
+		draw_texture_rect(disco, Rect2(pos - Vector2(r, r) * 1.08, Vector2(r, r) * 2.16), false)
+		if m.pianeti[pid]["stato"] in ["ribellione", "ribelle"]:
+			draw_arc(pos, r + 12, _tempo * 2.0, _tempo * 2.0 + PI * 1.3, 32, Color(1, 0.3, 0.2, 0.8), 2.5, true)
+		return
 	draw_circle(pos, r, base.darkened(0.55))
 	draw_circle(pos + Vector2(-r * 0.12, -r * 0.12), r * 0.9, base.darkened(0.3))
 	draw_circle(pos + Vector2(-r * 0.25, -r * 0.25), r * 0.68, base)

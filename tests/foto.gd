@@ -15,6 +15,8 @@ func _init() -> void:
 	var main = load("res://scenes/Main.tscn").instantiate()
 	root.add_child(main)
 	await _attendi(1.5)
+	if OS.get_environment("FOTO_REBORN") != "":
+		UI.reborn = true
 	_scatta("1_menu")
 	var cfg := {"scenario": sc, "giocatori": [{"nome": "Ribelli", "ia": false}, {"nome": "Impero", "ia": true}], "seme": 77}
 	main.start_game(cfg)
@@ -30,6 +32,12 @@ func _init() -> void:
 		if k == 60:
 			_scatta("3_avanti")
 	_scatta("4_avanti")
+	var carte_pg: Array = p.carte_box.get_children()
+	if not carte_pg.is_empty():
+		carte_pg[0].mouse_entered.emit()
+		await _attendi(0.6)
+		_scatta("4a_carta")
+		carte_pg[0].mouse_exited.emit()
 	if p.galassia_v != null:
 		p._mostra_galassia(true)
 		await _attendi(1.0)
@@ -37,6 +45,10 @@ func _init() -> void:
 		p._mostra_galassia(false)
 	p._imposta_3d(true)
 	await _attendi(2.5)
+	if p.motore.livello != "sistema":
+		p.tavolo3d._dist = 32.0
+		p.tavolo3d._aggiorna_camera()
+		await _attendi(0.5)
 	_scatta("5_3d")
 	p._imposta_3d(false)
 	p._mostra_missioni()

@@ -23,6 +23,33 @@ static var font_titolo2: Font
 static var font_testo: Font
 static var font_grassetto: Font
 static var _tex := {}
+## Grafica Reborn (impostazione del menu): pedine, carte personaggio e pianeti ridisegnati.
+static var reborn := false
+
+
+static func carica_impostazioni() -> void:
+	var cf := ConfigFile.new()
+	if cf.load("user://impostazioni.cfg") == OK:
+		reborn = bool(cf.get_value("vista", "reborn", false))
+
+
+static func salva_reborn(on: bool) -> void:
+	reborn = on
+	var cf := ConfigFile.new()
+	cf.load("user://impostazioni.cfg")
+	cf.set_value("vista", "reborn", on)
+	cf.save("user://impostazioni.cfg")
+
+
+## Immagine Reborn (o null se non esiste o se la grafica Reborn è spenta).
+static func reborn_tex(percorso: String) -> Texture2D:
+	if not reborn:
+		return null
+	return tex("res://assets/reborn/%s.webp" % percorso)
+
+
+static func carta_reborn(nome: String) -> Texture2D:
+	return reborn_tex("carte/" + nome.to_lower().replace(" ", "-"))
 
 
 static func carica_font() -> void:
@@ -148,6 +175,9 @@ static func colore_fazione(f: int) -> Color:
 
 
 static func pedina_tex(chiave: String, retro := false) -> Texture2D:
+	var r := reborn_tex("pedine/%s%s" % [chiave, "_r" if retro else ""])
+	if r != null:
+		return r
 	return tex("res://assets/pedine/%s%s.jpg" % [chiave, "_r" if retro else ""])
 
 
