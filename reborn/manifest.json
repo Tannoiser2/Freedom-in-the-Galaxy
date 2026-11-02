@@ -1,58 +1,4574 @@
 [
   {
-    "file": "assets_reborn/ritratti/pg_zina_adora.png",
-    "originale": "assets/carte/scansioni/ribelli_19_fronte.webp",
-    "scheda": "reborn/schede/pg_zina_adora.md",
-    "confronto": "reborn/confronti/pg_zina_adora.png",
-    "stato": "da_approvare"
+    "file": "assets_reborn/astronavi/nave_33.png",
+    "categoria": "astronavi",
+    "dimensioni": "1536x1024",
+    "stato": "generato"
   },
   {
-    "file": "assets_reborn/ritratti/pg_redjac.png",
-    "originale": "assets/carte/scansioni/imperiali_04_fronte.webp",
-    "scheda": "reborn/schede/pg_redjac.md",
-    "confronto": "reborn/confronti/pg_redjac.png",
-    "stato": "da_approvare"
+    "file": "assets_reborn/astronavi/nave_33_r.png",
+    "categoria": "astronavi",
+    "dimensioni": "1536x1024",
+    "stato": "generato"
   },
   {
-    "file": "assets_reborn/ritratti/pg_kogus.png",
-    "originale": "assets/carte/scansioni/ribelli_09_fronte.webp",
-    "scheda": "reborn/schede/pg_kogus.md",
-    "confronto": "reborn/confronti/pg_kogus.png",
-    "stato": "da_approvare"
+    "file": "assets_reborn/astronavi/nave_34.png",
+    "categoria": "astronavi",
+    "dimensioni": "1374x1145",
+    "stato": "generato"
   },
   {
-    "file": "assets_reborn/figure_intere/pg_zina_adora.png",
-    "originale": "assets/carte/scansioni/ribelli_19_fronte.webp",
-    "scheda": "reborn/schede/pg_zina_adora.md",
-    "confronto": "reborn/confronti/pg_zina_adora.png",
-    "stato": "da_approvare"
+    "file": "assets_reborn/astronavi/nave_34_r.png",
+    "categoria": "astronavi",
+    "dimensioni": "1374x1145",
+    "stato": "generato"
   },
   {
-    "file": "assets_reborn/figure_intere/pg_redjac.png",
-    "originale": "assets/carte/scansioni/imperiali_04_fronte.webp",
-    "scheda": "reborn/schede/pg_redjac.md",
-    "confronto": "reborn/confronti/pg_redjac.png",
-    "stato": "da_approvare"
+    "file": "assets_reborn/astronavi/nave_35.png",
+    "categoria": "astronavi",
+    "dimensioni": "1330x1182",
+    "stato": "generato"
   },
   {
-    "file": "assets_reborn/figure_intere/pg_kogus.png",
-    "originale": "assets/carte/scansioni/ribelli_09_fronte.webp",
-    "scheda": "reborn/schede/pg_kogus.md",
-    "confronto": "reborn/confronti/pg_kogus.png",
-    "stato": "da_approvare"
+    "file": "assets_reborn/astronavi/nave_35_r.png",
+    "categoria": "astronavi",
+    "dimensioni": "1330x1182",
+    "stato": "generato"
   },
   {
-    "file": "assets_reborn/carte/cornice_ribelli.png",
-    "originale": "assets/carte/scansioni/ribelli_19_fronte.webp",
-    "scheda": null,
-    "confronto": "reborn/anteprime/carta_pg_zina_adora.png",
-    "stato": "da_approvare"
+    "file": "assets_reborn/astronavi/nave_36.png",
+    "categoria": "astronavi",
+    "dimensioni": "1536x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/astronavi/nave_36_r.png",
+    "categoria": "astronavi",
+    "dimensioni": "1536x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/astronavi/nave_37.png",
+    "categoria": "astronavi",
+    "dimensioni": "1002x1569",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/astronavi/nave_37_r.png",
+    "categoria": "astronavi",
+    "dimensioni": "1002x1569",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/astronavi/nave_38.png",
+    "categoria": "astronavi",
+    "dimensioni": "1374x1145",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/astronavi/nave_38_r.png",
+    "categoria": "astronavi",
+    "dimensioni": "1374x1145",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/astronavi/nave_39.png",
+    "categoria": "astronavi",
+    "dimensioni": "1536x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/astronavi/nave_39_r.png",
+    "categoria": "astronavi",
+    "dimensioni": "1536x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/astronavi/nave_40.png",
+    "categoria": "astronavi",
+    "dimensioni": "1402x1122",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/astronavi/nave_40_r.png",
+    "categoria": "astronavi",
+    "dimensioni": "1402x1122",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/astronavi/nave_imperiale.png",
+    "categoria": "astronavi",
+    "dimensioni": "1536x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/astronavi/nave_imperiale_r.png",
+    "categoria": "astronavi",
+    "dimensioni": "1536x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/astronavi/nave_redjac.png",
+    "categoria": "astronavi",
+    "dimensioni": "1536x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/astronavi/nave_redjac_r.png",
+    "categoria": "astronavi",
+    "dimensioni": "1536x1024",
+    "stato": "generato"
   },
   {
     "file": "assets_reborn/carte/cornice_imperiali.png",
-    "originale": "assets/carte/scansioni/imperiali_04_fronte.webp",
-    "scheda": null,
-    "confronto": "reborn/anteprime/carta_pg_redjac.png",
-    "stato": "da_approvare"
+    "categoria": "carte",
+    "dimensioni": "764x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte/cornice_ribelli.png",
+    "categoria": "carte",
+    "dimensioni": "764x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte/retro_imperiali.png",
+    "categoria": "carte",
+    "dimensioni": "764x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte/retro_ribelli.png",
+    "categoria": "carte",
+    "dimensioni": "764x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_00_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "764x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_00_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_01_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "764x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_01_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_02_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "764x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_02_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_03_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "764x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_03_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_04_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "764x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_04_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_05_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "764x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_05_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_06_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "764x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_06_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_07_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "764x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_07_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_08_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "764x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_08_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_09_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "764x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_09_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_10_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "764x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_10_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_11_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "764x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_11_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_12_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "764x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_12_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_13_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "764x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_13_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_14_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "764x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_14_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_15_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "764x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_15_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_16_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "764x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_16_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_17_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "764x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_17_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_18_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "764x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_18_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_19_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "764x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_19_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_20_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "764x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_20_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_21_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "764x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_21_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_22_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "764x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_22_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_23_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "764x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_23_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_24_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "764x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_24_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_25_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "764x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_25_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_26_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "764x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_26_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_27_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "764x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_27_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_28_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "764x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_28_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_29_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "764x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/azione_29_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_00_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "744x1150",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_00_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_01_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "744x1150",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_01_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_02_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "744x1150",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_02_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_03_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "744x1150",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_03_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_04_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "744x1150",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_04_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_05_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "744x1150",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_05_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_06_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "744x1150",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_06_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_07_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "744x1150",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_07_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_08_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "744x1150",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_08_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_09_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "744x1150",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_09_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_10_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "744x1150",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_10_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_11_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "744x1150",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_11_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_12_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "744x1150",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_12_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_13_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "744x1150",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_13_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_14_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "744x1150",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_14_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_15_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "744x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_15_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_16_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "744x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_16_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_17_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "744x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_17_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_18_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "744x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_18_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_19_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "744x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_19_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_20_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "744x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_20_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_21_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "744x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_21_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_22_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "744x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_22_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_23_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "744x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_23_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_24_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "744x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_24_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_25_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "744x1150",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_25_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_26_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "744x1150",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_26_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_27_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "744x1150",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_27_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_28_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "744x1150",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/evento_28_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/imperiali_00_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1158",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/imperiali_00_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/imperiali_01_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1158",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/imperiali_01_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/imperiali_02_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1160",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/imperiali_02_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/imperiali_03_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1158",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/imperiali_03_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/imperiali_04_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1158",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/imperiali_04_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/imperiali_05_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1158",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/imperiali_05_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/imperiali_06_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1158",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/imperiali_06_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/imperiali_07_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1158",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/imperiali_07_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/imperiali_08_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1158",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/imperiali_08_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/imperiali_09_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1158",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/imperiali_09_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/imperiali_10_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1158",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/imperiali_10_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/imperiali_11_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1158",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/imperiali_11_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/missione_00_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "744x1150",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/missione_00_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/missione_01_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "744x1150",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/missione_01_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/missione_02_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "744x1150",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/missione_02_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/missione_03_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "744x1150",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/missione_03_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/missione_04_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "744x1150",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/missione_04_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/missione_05_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "744x1150",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/missione_05_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/missione_06_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "744x1150",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/missione_06_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/missione_07_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "744x1150",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/missione_07_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/missione_08_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "744x1150",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/missione_08_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/missione_09_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "744x1150",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/missione_09_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/missione_10_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "744x1150",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/missione_10_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/missione_11_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "744x1150",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/missione_11_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/missione_12_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "744x1150",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/missione_12_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/missione_13_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "744x1150",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/missione_13_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/missione_14_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "744x1150",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/missione_14_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1152",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/possessi_00_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1160",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/possessi_00_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/possessi_01_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1158",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/possessi_01_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/possessi_02_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1158",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/possessi_02_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/possessi_03_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1158",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/possessi_03_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/possessi_04_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1158",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/possessi_04_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/possessi_05_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1158",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/possessi_05_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/possessi_06_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1158",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/possessi_06_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/possessi_07_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1158",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/possessi_07_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/possessi_08_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1158",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/possessi_08_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/possessi_09_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1160",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/possessi_09_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/possessi_10_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1158",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/possessi_10_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/possessi_11_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1158",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/possessi_11_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/possessi_12_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1158",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/possessi_12_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/possessi_13_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1158",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/possessi_13_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/possessi_14_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1158",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/possessi_14_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/possessi_15_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1160",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/possessi_15_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/possessi_16_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1160",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/possessi_16_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/possessi_17_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1158",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/possessi_17_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/possessi_18_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1160",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/possessi_18_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/possessi_19_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1160",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/possessi_19_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/ribelli_00_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1158",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/ribelli_00_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/ribelli_01_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1158",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/ribelli_01_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/ribelli_02_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1158",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/ribelli_02_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/ribelli_03_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1158",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/ribelli_03_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/ribelli_04_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1160",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/ribelli_04_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/ribelli_05_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1158",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/ribelli_05_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/ribelli_06_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1158",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/ribelli_06_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/ribelli_07_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1158",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/ribelli_07_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/ribelli_08_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1158",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/ribelli_08_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/ribelli_09_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1158",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/ribelli_09_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/ribelli_10_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1158",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/ribelli_10_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/ribelli_11_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1158",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/ribelli_11_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/ribelli_12_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1158",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/ribelli_12_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/ribelli_13_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1160",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/ribelli_13_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/ribelli_14_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1158",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/ribelli_14_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/ribelli_15_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1158",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/ribelli_15_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/ribelli_16_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1158",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/ribelli_16_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/ribelli_17_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1158",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/ribelli_17_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/ribelli_18_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1158",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/ribelli_18_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/ribelli_19_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "726x1160",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/ribelli_19_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "738x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/strategico_00_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "764x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/strategico_00_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/strategico_01_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "764x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/strategico_01_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/strategico_02_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "764x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/strategico_02_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/strategico_03_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "764x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/strategico_03_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/strategico_04_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "764x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/strategico_04_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/strategico_05_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "764x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/strategico_05_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/strategico_06_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "764x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/strategico_06_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/strategico_07_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "764x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/strategico_07_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/strategico_08_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "764x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/strategico_08_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/strategico_09_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "764x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/strategico_09_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/strategico_10_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "764x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/strategico_10_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/strategico_11_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "764x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/strategico_11_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/strategico_12_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "764x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/strategico_12_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/strategico_13_fronte.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "764x1154",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/carte_sorgenti/strategico_13_retro.jpg",
+    "categoria": "carte_sorgenti",
+    "dimensioni": "736x1156",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/figure_intere/pg_adam_starlight.png",
+    "categoria": "figure_intere",
+    "dimensioni": "992x1585",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/figure_intere/pg_agan_rafa.png",
+    "categoria": "figure_intere",
+    "dimensioni": "992x1585",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/figure_intere/pg_barca.png",
+    "categoria": "figure_intere",
+    "dimensioni": "992x1585",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/figure_intere/pg_boccanegra.png",
+    "categoria": "figure_intere",
+    "dimensioni": "992x1585",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/figure_intere/pg_bridne_murcada.png",
+    "categoria": "figure_intere",
+    "dimensioni": "1214x1295",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/figure_intere/pg_coreguya.png",
+    "categoria": "figure_intere",
+    "dimensioni": "992x1585",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/figure_intere/pg_dermond.png",
+    "categoria": "figure_intere",
+    "dimensioni": "992x1585",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/figure_intere/pg_doctor_sontag.png",
+    "categoria": "figure_intere",
+    "dimensioni": "993x1584",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/figure_intere/pg_drakir_grebb.png",
+    "categoria": "figure_intere",
+    "dimensioni": "992x1585",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/figure_intere/pg_els_taroff.png",
+    "categoria": "figure_intere",
+    "dimensioni": "992x1585",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/figure_intere/pg_frun_sentel.png",
+    "categoria": "figure_intere",
+    "dimensioni": "992x1585",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/figure_intere/pg_gelba.png",
+    "categoria": "figure_intere",
+    "dimensioni": "992x1585",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/figure_intere/pg_jin_voles.png",
+    "categoria": "figure_intere",
+    "dimensioni": "992x1586",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/figure_intere/pg_jon_kidu.png",
+    "categoria": "figure_intere",
+    "dimensioni": "992x1585",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/figure_intere/pg_kogus.png",
+    "categoria": "figure_intere",
+    "dimensioni": "1021x1541",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/figure_intere/pg_ly_mantok.png",
+    "categoria": "figure_intere",
+    "dimensioni": "992x1585",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/figure_intere/pg_odene_hobar.png",
+    "categoria": "figure_intere",
+    "dimensioni": "993x1584",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/figure_intere/pg_oneste_woada.png",
+    "categoria": "figure_intere",
+    "dimensioni": "992x1585",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/figure_intere/pg_prof_mareg.png",
+    "categoria": "figure_intere",
+    "dimensioni": "992x1585",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/figure_intere/pg_ran_jayma.png",
+    "categoria": "figure_intere",
+    "dimensioni": "992x1585",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/figure_intere/pg_rayner_derban.png",
+    "categoria": "figure_intere",
+    "dimensioni": "992x1585",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/figure_intere/pg_redjac.png",
+    "categoria": "figure_intere",
+    "dimensioni": "1019x1543",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/figure_intere/pg_saytar.png",
+    "categoria": "figure_intere",
+    "dimensioni": "992x1585",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/figure_intere/pg_scott_rubel.png",
+    "categoria": "figure_intere",
+    "dimensioni": "992x1585",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/figure_intere/pg_sidir_ganang.png",
+    "categoria": "figure_intere",
+    "dimensioni": "992x1585",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/figure_intere/pg_telmen.png",
+    "categoria": "figure_intere",
+    "dimensioni": "992x1585",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/figure_intere/pg_thysa_kymbo.png",
+    "categoria": "figure_intere",
+    "dimensioni": "992x1585",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/figure_intere/pg_tourag.png",
+    "categoria": "figure_intere",
+    "dimensioni": "992x1585",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/figure_intere/pg_vans_ka_tie_a.png",
+    "categoria": "figure_intere",
+    "dimensioni": "992x1585",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/figure_intere/pg_vudot_vodot.png",
+    "categoria": "figure_intere",
+    "dimensioni": "1024x1536",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/figure_intere/pg_yarro_latac.png",
+    "categoria": "figure_intere",
+    "dimensioni": "992x1586",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/figure_intere/pg_zina_adora.png",
+    "categoria": "figure_intere",
+    "dimensioni": "1024x1536",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/interfaccia/icona.png",
+    "categoria": "interfaccia",
+    "dimensioni": "1024x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/interfaccia/sfondo_menu.png",
+    "categoria": "interfaccia",
+    "dimensioni": "1920x1080",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/mappa/galassia.png",
+    "categoria": "mappa",
+    "dimensioni": "3874x2844",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/meshy/pg_adam_starlight.png",
+    "categoria": "meshy",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/meshy/pg_agan_rafa.png",
+    "categoria": "meshy",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/meshy/pg_barca.png",
+    "categoria": "meshy",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/meshy/pg_boccanegra.png",
+    "categoria": "meshy",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/meshy/pg_bridne_murcada.png",
+    "categoria": "meshy",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/meshy/pg_coreguya.png",
+    "categoria": "meshy",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/meshy/pg_dermond.png",
+    "categoria": "meshy",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/meshy/pg_doctor_sontag.png",
+    "categoria": "meshy",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/meshy/pg_drakir_grebb.png",
+    "categoria": "meshy",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/meshy/pg_els_taroff.png",
+    "categoria": "meshy",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/meshy/pg_frun_sentel.png",
+    "categoria": "meshy",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/meshy/pg_gelba.png",
+    "categoria": "meshy",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/meshy/pg_jin_voles.png",
+    "categoria": "meshy",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/meshy/pg_jon_kidu.png",
+    "categoria": "meshy",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/meshy/pg_kogus.png",
+    "categoria": "meshy",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/meshy/pg_ly_mantok.png",
+    "categoria": "meshy",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/meshy/pg_odene_hobar.png",
+    "categoria": "meshy",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/meshy/pg_oneste_woada.png",
+    "categoria": "meshy",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/meshy/pg_prof_mareg.png",
+    "categoria": "meshy",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/meshy/pg_ran_jayma.png",
+    "categoria": "meshy",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/meshy/pg_rayner_derban.png",
+    "categoria": "meshy",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/meshy/pg_redjac.png",
+    "categoria": "meshy",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/meshy/pg_saytar.png",
+    "categoria": "meshy",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/meshy/pg_scott_rubel.png",
+    "categoria": "meshy",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/meshy/pg_sidir_ganang.png",
+    "categoria": "meshy",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/meshy/pg_telmen.png",
+    "categoria": "meshy",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/meshy/pg_thysa_kymbo.png",
+    "categoria": "meshy",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/meshy/pg_tourag.png",
+    "categoria": "meshy",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/meshy/pg_vans_ka_tie_a.png",
+    "categoria": "meshy",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/meshy/pg_vudot_vodot.png",
+    "categoria": "meshy",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/meshy/pg_yarro_latac.png",
+    "categoria": "meshy",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/meshy/pg_zina_adora.png",
+    "categoria": "meshy",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/bdp.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/bdp_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/campo_ribelle.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/campo_ribelle_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/cr_imp1.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/cr_imp10.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/cr_imp10_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/cr_imp1_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/cr_ribelle10.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/cr_ribelle10_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/fase.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/fase_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/imp_elite_esercito.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/imp_elite_esercito_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/imp_elite_flotta.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/imp_elite_flotta_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/imp_linea.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/imp_linea_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/imp_milizia.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/imp_milizia_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/imp_pattuglia.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/imp_pattuglia_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/imp_peacemaker.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/imp_peacemaker_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/imp_resolution.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/imp_resolution_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/imp_squadra_suicida.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/imp_squadra_suicida_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/imp_stabilizzatore.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/imp_stabilizzatore_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/imp_veterano.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/imp_veterano_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/lealta.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/lealta_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/nave_33.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/nave_33_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/nave_34.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/nave_34_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/nave_35.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/nave_35_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/nave_36.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/nave_36_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/nave_37.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/nave_37_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/nave_38.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/nave_38_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/nave_39.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/nave_39_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/nave_40.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/nave_40_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/nave_imperiale.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/nave_imperiale_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/nave_redjac.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/nave_redjac_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_adam_starlight.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_adam_starlight_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_agan_rafa.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_agan_rafa_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_barca.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_barca_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_boccanegra.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_boccanegra_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_bridne_murcada.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_bridne_murcada_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_coreguya.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_coreguya_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_dermond.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_dermond_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_doctor_sontag.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_doctor_sontag_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_drakir_grebb.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_drakir_grebb_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_els_taroff.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_els_taroff_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_frun_sentel.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_frun_sentel_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_gelba.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_gelba_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_jin_voles.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_jin_voles_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_jon_kidu.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_jon_kidu_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_kogus.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_kogus_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_ly_mantok.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_ly_mantok_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_odene_hobar.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_odene_hobar_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_oneste_woada.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_oneste_woada_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_prof_mareg.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_prof_mareg_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_ran_jayma.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_ran_jayma_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_rayner_derban.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_rayner_derban_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_redjac.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_redjac_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_saytar.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_saytar_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_scott_rubel.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_scott_rubel_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_sidir_ganang.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_sidir_ganang_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_telmen.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_telmen_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_thysa_kymbo.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_thysa_kymbo_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_tourag.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_tourag_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_vans_ka_tie_a.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_vans_ka_tie_a_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_vudot_vodot.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_vudot_vodot_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_yarro_latac.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_yarro_latac_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_zina_adora.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/pg_zina_adora_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_aereo_10.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_aereo_10_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_aereo_21.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_aereo_21_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_aereo_23.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_aereo_23_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_aereo_43.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_aereo_43_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_fuoco_10.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_fuoco_10_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_fuoco_21.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_fuoco_21_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_fuoco_23.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_fuoco_23_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_liquido_10.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_liquido_10_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_liquido_21.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_liquido_21_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_liquido_23.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_liquido_23_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_liquido_43.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_liquido_43_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_selvaggio_10.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_selvaggio_10_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_selvaggio_21.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_selvaggio_21_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_selvaggio_23.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_selvaggio_23_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_selvaggio_43.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_selvaggio_43_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_selvaggio_elite.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_selvaggio_elite_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_sotterraneo_10.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_sotterraneo_10_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_sotterraneo_21.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_sotterraneo_21_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_sotterraneo_23.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_sotterraneo_23_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_sotterraneo_43.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_sotterraneo_43_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_urbano_10.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_urbano_10_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_urbano_21.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_urbano_21_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_urbano_23.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_urbano_23_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_urbano_43.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_urbano_43_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_urbano_elite.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/rib_urbano_elite_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/segreto.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/segreto_archivi.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/segreto_benvenuti.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/segreto_casino.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/segreto_clonazione.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/segreto_deltronics.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/segreto_droga.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/segreto_gemme.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/segreto_impero.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/segreto_industria.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/segreto_iper.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/segreto_ipoc.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/segreto_morto.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/segreto_mutanti.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/segreto_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/segreto_schiavi.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/segreto_trappola.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/segreto_vivo.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/sovrano_ascaill.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/sovrano_ascaill_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/sovrano_balgar.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/sovrano_balgar_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/sovrano_darb_selesh.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/sovrano_darb_selesh_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/sovrano_inzenzia_iii.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/sovrano_inzenzia_iii_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/sovrano_megda_sheels.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/sovrano_megda_sheels_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/sovrano_nan_nhuk.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/sovrano_nan_nhuk_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/sovrano_odel_hobar.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/sovrano_odel_hobar_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/sovrano_shirofune.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/sovrano_shirofune_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/sovrano_tensok_phi.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/sovrano_tensok_phi_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/sovrano_treb_eyro.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/sovrano_treb_eyro_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/sovrano_xela_grebb.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/sovrano_xela_grebb_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/sovrano_yaldor.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/sovrano_yaldor_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/turno.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pedine/turno_r.png",
+    "categoria": "pedine",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/111.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/111_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/112.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/112_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/113.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/113_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/121.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/121_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/122.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/122_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/131.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/131_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/141.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/141_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/142.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/142_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/143.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/143_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/151.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/151_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/152.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/152_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/161.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/161_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/162.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/162_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/163.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/163_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/211.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/211_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/212.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/212_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/221.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/221_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/222.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/222_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/223.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/223_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/231.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/231_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/232.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/232_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/241.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/241_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/311.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/311_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/312.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/312_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/321.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/321_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/322.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/322_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/323.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/323_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/331.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/331_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/341.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/341_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/342.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/342_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/351.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/351_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/352.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/352_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/411.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/411_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/412.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/412_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/421.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/421_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/431.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/431_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/432.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/432_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/433.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/433_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/441.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/441_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/442.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/442_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/451.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/451_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/511.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/511_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/512.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/512_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/513.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/513_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/521.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/521_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/522.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/522_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/523.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/523_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/531.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/531_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/541.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/541_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/542.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/542_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/551.png",
+    "categoria": "pianeti",
+    "dimensioni": "2048x1024",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/pianeti/551_disco.png",
+    "categoria": "pianeti",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/ritratti/pg_adam_starlight.png",
+    "categoria": "ritratti",
+    "dimensioni": "768x768",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/ritratti/pg_agan_rafa.png",
+    "categoria": "ritratti",
+    "dimensioni": "768x768",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/ritratti/pg_barca.png",
+    "categoria": "ritratti",
+    "dimensioni": "768x768",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/ritratti/pg_boccanegra.png",
+    "categoria": "ritratti",
+    "dimensioni": "768x768",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/ritratti/pg_bridne_murcada.png",
+    "categoria": "ritratti",
+    "dimensioni": "768x768",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/ritratti/pg_coreguya.png",
+    "categoria": "ritratti",
+    "dimensioni": "768x768",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/ritratti/pg_dermond.png",
+    "categoria": "ritratti",
+    "dimensioni": "768x768",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/ritratti/pg_doctor_sontag.png",
+    "categoria": "ritratti",
+    "dimensioni": "768x768",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/ritratti/pg_drakir_grebb.png",
+    "categoria": "ritratti",
+    "dimensioni": "768x768",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/ritratti/pg_els_taroff.png",
+    "categoria": "ritratti",
+    "dimensioni": "768x768",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/ritratti/pg_frun_sentel.png",
+    "categoria": "ritratti",
+    "dimensioni": "768x768",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/ritratti/pg_gelba.png",
+    "categoria": "ritratti",
+    "dimensioni": "768x768",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/ritratti/pg_jin_voles.png",
+    "categoria": "ritratti",
+    "dimensioni": "768x768",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/ritratti/pg_jon_kidu.png",
+    "categoria": "ritratti",
+    "dimensioni": "768x768",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/ritratti/pg_kogus.png",
+    "categoria": "ritratti",
+    "dimensioni": "768x768",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/ritratti/pg_ly_mantok.png",
+    "categoria": "ritratti",
+    "dimensioni": "768x768",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/ritratti/pg_odene_hobar.png",
+    "categoria": "ritratti",
+    "dimensioni": "768x768",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/ritratti/pg_oneste_woada.png",
+    "categoria": "ritratti",
+    "dimensioni": "768x768",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/ritratti/pg_prof_mareg.png",
+    "categoria": "ritratti",
+    "dimensioni": "768x768",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/ritratti/pg_ran_jayma.png",
+    "categoria": "ritratti",
+    "dimensioni": "768x768",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/ritratti/pg_rayner_derban.png",
+    "categoria": "ritratti",
+    "dimensioni": "768x768",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/ritratti/pg_redjac.png",
+    "categoria": "ritratti",
+    "dimensioni": "768x768",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/ritratti/pg_saytar.png",
+    "categoria": "ritratti",
+    "dimensioni": "768x768",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/ritratti/pg_scott_rubel.png",
+    "categoria": "ritratti",
+    "dimensioni": "768x768",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/ritratti/pg_sidir_ganang.png",
+    "categoria": "ritratti",
+    "dimensioni": "768x768",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/ritratti/pg_telmen.png",
+    "categoria": "ritratti",
+    "dimensioni": "768x768",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/ritratti/pg_thysa_kymbo.png",
+    "categoria": "ritratti",
+    "dimensioni": "768x768",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/ritratti/pg_tourag.png",
+    "categoria": "ritratti",
+    "dimensioni": "768x768",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/ritratti/pg_vans_ka_tie_a.png",
+    "categoria": "ritratti",
+    "dimensioni": "768x768",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/ritratti/pg_vudot_vodot.png",
+    "categoria": "ritratti",
+    "dimensioni": "768x768",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/ritratti/pg_yarro_latac.png",
+    "categoria": "ritratti",
+    "dimensioni": "768x768",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/ritratti/pg_zina_adora.png",
+    "categoria": "ritratti",
+    "dimensioni": "768x768",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/stelle/11.png",
+    "categoria": "stelle",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/stelle/12.png",
+    "categoria": "stelle",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/stelle/13.png",
+    "categoria": "stelle",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/stelle/14.png",
+    "categoria": "stelle",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/stelle/15.png",
+    "categoria": "stelle",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/stelle/16.png",
+    "categoria": "stelle",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/stelle/21.png",
+    "categoria": "stelle",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/stelle/22.png",
+    "categoria": "stelle",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/stelle/23.png",
+    "categoria": "stelle",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/stelle/24.png",
+    "categoria": "stelle",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/stelle/31.png",
+    "categoria": "stelle",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/stelle/32.png",
+    "categoria": "stelle",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/stelle/33.png",
+    "categoria": "stelle",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/stelle/34.png",
+    "categoria": "stelle",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/stelle/35.png",
+    "categoria": "stelle",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/stelle/41.png",
+    "categoria": "stelle",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/stelle/42.png",
+    "categoria": "stelle",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/stelle/43.png",
+    "categoria": "stelle",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/stelle/44.png",
+    "categoria": "stelle",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/stelle/45.png",
+    "categoria": "stelle",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/stelle/51.png",
+    "categoria": "stelle",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/stelle/52.png",
+    "categoria": "stelle",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/stelle/53.png",
+    "categoria": "stelle",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/stelle/54.png",
+    "categoria": "stelle",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/stelle/55.png",
+    "categoria": "stelle",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/stelle/N1.png",
+    "categoria": "stelle",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/stelle/N10.png",
+    "categoria": "stelle",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/stelle/N11.png",
+    "categoria": "stelle",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/stelle/N12.png",
+    "categoria": "stelle",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/stelle/N13.png",
+    "categoria": "stelle",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/stelle/N14.png",
+    "categoria": "stelle",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/stelle/N15.png",
+    "categoria": "stelle",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/stelle/N16.png",
+    "categoria": "stelle",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/stelle/N17.png",
+    "categoria": "stelle",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/stelle/N18.png",
+    "categoria": "stelle",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/stelle/N19.png",
+    "categoria": "stelle",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/stelle/N2.png",
+    "categoria": "stelle",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/stelle/N20.png",
+    "categoria": "stelle",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/stelle/N3.png",
+    "categoria": "stelle",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/stelle/N4.png",
+    "categoria": "stelle",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/stelle/N5.png",
+    "categoria": "stelle",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/stelle/N6.png",
+    "categoria": "stelle",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/stelle/N7.png",
+    "categoria": "stelle",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/stelle/N8.png",
+    "categoria": "stelle",
+    "dimensioni": "512x512",
+    "stato": "generato"
+  },
+  {
+    "file": "assets_reborn/stelle/N9.png",
+    "categoria": "stelle",
+    "dimensioni": "512x512",
+    "stato": "generato"
   }
 ]
