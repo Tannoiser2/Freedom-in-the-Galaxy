@@ -79,7 +79,7 @@ Quattro pianeti permettono il confronto tra skin attuale e pittorica; le altre 4
 - [Magro](https://tannoiser2.github.io/Freedom-in-the-Galaxy/reborn/atlante/?planet=112&skin=painterly): Urbano 3/8, Aereo 5/8.
 - [Cieson](https://tannoiser2.github.io/Freedom-in-the-Galaxy/reborn/atlante/?planet=211&skin=painterly): solo Aereo.
 
-Materiali in `atlante/painterly/v3/`: grigi urbani con strade emissive tra conglomerati; crepacci scuri, rosso cupo e ocra per Sotterraneo; montagne e diversi verdi per Selvaggio; oceani blu con isolotti decorativi radi per Liquido; bande acide e grandi tempeste rosse per Aereo. Maschere originali a 2048×1024, senza modifiche ai dati di gioco. Gli isolotti illustrativi restano classificati Liquido.
+Materiali in `atlante/painterly/v3/`, con Urbano aggiornato in `atlante/painterly/v4/`: grigi urbani con strade emissive tra conglomerati; crepacci scuri, rosso cupo e ocra per Sotterraneo; montagne e diversi verdi per Selvaggio; oceani blu con isolotti decorativi radi per Liquido; bande acide e grandi tempeste rosse per Aereo. Maschere originali a 2048×1024, senza modifiche ai dati di gioco. Gli isolotti illustrativi restano classificati Liquido.
 
 ## Scala planetaria e basi degli ambienti
 
@@ -88,3 +88,7 @@ Edifici e alberi restano dettagli minuti. Montagne e crepacci hanno una scala re
 Su tutti i 51 pianeti, l’immagine dell’ambiente compare **solo sulla base rotonda**. Nessun pannello verticale dietro le unità. Nome, bordo colorato e collegamento al bioma identificano la collocazione di truppe e personaggi. Immagini di tutti e sei gli ambienti in `atlante/environs/v3/`.
 
 Il test `python tests/atlas_browser.py` verifica per tutti i pianeti la presenza del terreno, l’assenza di fondali e la collocazione delle unità. `python tests/materials_v3_browser.py` verifica i quattro globi pittorici, le basi e la rete urbana sul lato notturno. Le prove precedenti di Solvia e Midest restano verificabili con i relativi test dedicati. Aggiungere `&isolated=1` al link nasconde inizialmente unità, PDB e nomi.
+
+### Urbano: luci nella texture
+
+La revisione urbana 4 elimina la rete geometrica di linee e anelli sovrapposta allo shader. Le città e le strade già disegnate nel materiale sono più gialle e luminose; l’emissione notturna viene ricavata esclusivamente dai loro dettagli gialli, con fondo grigio conservato. La trama regionale conserva i collegamenti dipinti tra conglomerati e il dettaglio minuto resta a scala planetaria. Stesso materiale sulla base rotonda urbana, senza fondali verticali.

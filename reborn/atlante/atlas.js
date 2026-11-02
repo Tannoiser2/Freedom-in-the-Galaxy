@@ -44,7 +44,7 @@ void main(){
    vec3 delta=vec3(73.,86.,-5.)/255.;
    float airWeight=clamp(dot(mask-vec3(64.,122.,235.)/255.,delta)/dot(delta,delta),0.,1.);
    cityWeight=1.-airWeight;
-   city=mix(artSample(urbanArt,micro),artSample(urbanArt,regional*2.),.25);
+   city=mix(artSample(urbanArt,micro),texture2D(urbanArt,regional*2.).rgb,.80);
    // Storms are planetary structures: sample the complete atmosphere once.
    art=mix(city,texture2D(airArt,t).rgb,airWeight);
   }else if(painted>1.5){
@@ -62,19 +62,15 @@ void main(){
    float wr=clamp((u.x*q.y-u.y*q.x)/det,0.,1.);
    float ww=max(0.,1.-wu-wr);
    cityWeight=wu;
-   city=mix(artSample(urbanArt,micro),artSample(urbanArt,regional*2.),.25);
+   city=mix(artSample(urbanArt,micro),texture2D(urbanArt,regional*2.).rgb,.80);
    vec3 rock=mix(artSample(rockArt,micro),texture2D(rockArt,regional).rgb,.84);
    vec3 forest=mix(artSample(wildArt,micro),texture2D(wildArt,regional).rgb,.84);
    art=(city*wu+rock*wr+forest*ww)/(wu+wr+ww);
   }
-  // Preserve an emissive network between the small grey urban conglomerates.
-  float bright=clamp((dot(city,vec3(.2126,.7152,.0722))-.44)*3.,0.,1.);
-  vec2 roadUV=t*vec2(24.,12.)*detailScale;roadUV+=.13*sin(roadUV.yx*1.7);
-  float roadDist=min(abs(sin(roadUV.x*3.14159265)),abs(sin(roadUV.y*3.14159265)));
-  float roads=1.-smoothstep(.012,.045,roadDist);
-  vec2 localHub=fract(roadUV+.5)-.5;
-  float rings=1.-smoothstep(.008,.028,abs(length(localHub)-.18));
-  e=vec3(1.,.64,.23)*(pow(bright,3.)+.55*roads+.3*rings)*cityWeight;
+  // Emission comes only from yellow city and street details painted in the material.
+  // No separate geometric grid or repeated ring network is drawn over the surface.
+  float cityLight=clamp((min(city.r,city.g)-city.b-.015)*4.,0.,1.);
+  e=vec3(1.,.78,.22)*pow(cityLight,1.4)*1.2*cityWeight;
   a=pow(art,vec3(2.2));
  }
  vec3 l=normalize(sun-vWorld);float raw=dot(n,l);if(mode>1.5)raw=-.8;
@@ -105,7 +101,7 @@ function refreshDefense(model){const status=motions.get(model.p.id);const color=
 function updatePlanetLabel(m){const d=motions.get(m.p.id);m.label.replaceChildren();const name=document.createElement('span');name.textContent=m.p.nome;const detail=document.createElement('small');detail.textContent=`PDB ${d.level} · ${d.up?'UP':'DOWN'} · ${m.p.units.length} personaggi`;detail.style.color=d.up?'#9bd5ad':'#ff9480';m.label.append(name,detail);m.label.classList.toggle('selected',m.p.id===state.planet);}
 function findAnchor(map,kind,preferred,radius){const image=map.image,c=document.createElement('canvas');c.width=image.width;c.height=image.height;const ctx=c.getContext('2d',{willReadFrequently:true});ctx.drawImage(image,0,0);const rgba=ctx.getImageData(0,0,c.width,c.height).data;const target={urbano:[64,122,235],selvaggio:[77,168,77],sotterraneo:[163,73,62],liquido:[37,160,195],aereo:[137,208,230],fuoco:[241,111,32]}[kind];let best=-Infinity,found=null;for(let row=2;row<c.height-2;row+=4){for(let col=0;col<c.width;col+=4){const i=(row*c.width+col)*4;if(Math.abs(rgba[i]-target[0])+Math.abs(rgba[i+1]-target[1])+Math.abs(rgba[i+2]-target[2])>12)continue;const theta=row/(c.height-1)*Math.PI,phi=col/(c.width-1)*Math.PI*2;const n=new THREE.Vector3(-Math.cos(phi)*Math.sin(theta),Math.cos(theta),Math.sin(phi)*Math.sin(theta));const score=n.dot(preferred);if(score>best){best=score;found=n;}}}if(!found)throw Error(`Maschera ${kind} assente per il pianeta`);return found.multiplyScalar(radius*1.006);}
 async function environmentScenery(group,kind){
- const map=await spriteMap('environs/v3/'+kind+'.jpg');group.userData.environ=kind;
+ const map=await spriteMap('environs/'+(kind==='urbano'?'v4/':'v3/')+kind+'.jpg');group.userData.environ=kind;
  const floor=new THREE.Mesh(new THREE.CircleGeometry(1.29,64),new THREE.MeshBasicMaterial({map,color:0xc0c0c0}));floor.rotation.x=-Math.PI/2;floor.position.y=.087;floor.userData.environFloor=kind;group.add(floor);
 }
 // Keep units arranged toward the observer while the round terrain stage follows its anchor.
@@ -117,7 +113,7 @@ async function platforms(p,maps,radius){const root=new THREE.Group();const envCo
  }return root;}
 
 const painterlyPlanets=new Map([[432,'solvia'],[341,'midest'],[112,'magro'],[211,'cieson']]);
-let artPromise;const artMasks=new Map();async function painterlyMaps(id){artPromise??=Promise.all(['urbano','sotterraneo','selvaggio','liquido','aereo'].map(k=>globeArtTexture('painterly/v3/'+k+'.jpg')));if(!artMasks.has(id))artMasks.set(id,texture('painterly/'+painterlyPlanets.get(id)+'-mask.png'));const [art,mask]=await Promise.all([artPromise,artMasks.get(id)]);return [...art,mask];}
+let artPromise;const artMasks=new Map();async function painterlyMaps(id){artPromise??=Promise.all(['urbano','sotterraneo','selvaggio','liquido','aereo'].map(k=>globeArtTexture('painterly/'+(k==='urbano'?'v4/':'v3/')+k+'.jpg')));if(!artMasks.has(id))artMasks.set(id,texture('painterly/'+painterlyPlanets.get(id)+'-mask.png'));const [art,mask]=await Promise.all([artPromise,artMasks.get(id)]);return [...art,mask];}
 async function makePlanet(p){const maps=await planetMaps(p);const painted=painterlyPlanets.has(p.id)&&state.skin==='painterly';const art=painted?await painterlyMaps(p.id):[maps[0],maps[0],maps[0],maps[0],maps[0]];const radius=p.radius;const root=new THREE.Group(),body=new THREE.Group();root.add(body);const material=new THREE.ShaderMaterial({vertexShader:sphereVertex,fragmentShader:surfaceFragment,uniforms:{detailScale:{value:p.radius/2.3},painted:{value:painted?(p.id===341?2:(p.id===112||p.id===211?3:1)):0},urbanArt:{value:art[0]},rockArt:{value:art[1]},wildArt:{value:art[2]},waterArt:{value:art[3]},airArt:{value:art[4]},colorMap:{value:maps[0]},emissionMap:{value:maps[1]},terrainMap:{value:painted?art[5]:maps[2]},heightMap:{value:maps[3]},sun:{value:sunWorld},mode:{value:state.material}}});const sphere=new THREE.Mesh(new THREE.SphereGeometry(radius,64,40),material);sphere.userData.pid=p.id;body.add(sphere);
  const water=p.ambienti.some(e=>e.tipo==='liquido'),fire=p.ambienti.some(e=>e.tipo==='fuoco');const atmosphere=new THREE.Mesh(new THREE.SphereGeometry(radius*1.019,48,32),new THREE.ShaderMaterial({vertexShader:sphereVertex,fragmentShader:atmosphereFragment,uniforms:{tint:{value:new THREE.Color(painted&&p.ambienti.some(e=>e.tipo==='aereo')?0xb9bf6a:water?0x5488c2:fire?0xb76f32:0x718a69)}},transparent:true,side:THREE.BackSide,depthWrite:false}));body.add(atmosphere);
  const buildings=painted?null:cityBuildings(p,maps[2]);if(buildings)body.add(buildings);const units=await platforms(p,maps,radius);units.visible=state.units;body.add(units);const defense=new THREE.Group();defense.rotation.z=.17;defense.rotation.x=.13;root.add(defense);const defenseMaterial=new THREE.MeshBasicMaterial({color:0x55e887});const defenseRadius=radius+.8;defense.add(circle(defenseRadius,0x55e887,.9));const orbit=defense.children[0];const bases=new THREE.Group();defense.add(bases);
