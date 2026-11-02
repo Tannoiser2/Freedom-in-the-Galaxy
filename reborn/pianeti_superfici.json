@@ -1,0 +1,1219 @@
+{
+  "regola_dimensione": "surface_area_proportional_to_sum_environ",
+  "raggio": "sqrt(sum(taglia) / 9), relative to Adare",
+  "metodo": "spherical noise; area-weighted quantiles; cos(latitude) band integration",
+  "pianeti": [
+    {
+      "id": 111,
+      "nome": "Mimulus",
+      "somma_environ": 4.0,
+      "raggio_relativo_adare": 0.6666666666666666,
+      "ambienti": [
+        {
+          "tipo": "selvaggio",
+          "taglia": 4.0,
+          "frazione_richiesta": 1.0,
+          "frazione_superficie": 1.0
+        }
+      ],
+      "texture": "assets_reborn/pianeti/111.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 111
+    },
+    {
+      "id": 112,
+      "nome": "Magro",
+      "somma_environ": 8.0,
+      "raggio_relativo_adare": 0.9428090415820634,
+      "ambienti": [
+        {
+          "tipo": "urbano",
+          "taglia": 3.0,
+          "frazione_richiesta": 0.375,
+          "frazione_superficie": 0.3749988079071045
+        },
+        {
+          "tipo": "aereo",
+          "taglia": 5.0,
+          "frazione_richiesta": 0.625,
+          "frazione_superficie": 0.625001072883606
+        }
+      ],
+      "texture": "assets_reborn/pianeti/112.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 112
+    },
+    {
+      "id": 113,
+      "nome": "Fliad",
+      "somma_environ": 8.0,
+      "raggio_relativo_adare": 0.9428090415820634,
+      "ambienti": [
+        {
+          "tipo": "liquido",
+          "taglia": 4.0,
+          "frazione_richiesta": 0.5,
+          "frazione_superficie": 0.49999985098838806
+        },
+        {
+          "tipo": "selvaggio",
+          "taglia": 4.0,
+          "frazione_richiesta": 0.5,
+          "frazione_superficie": 0.5000000596046448
+        }
+      ],
+      "texture": "assets_reborn/pianeti/113.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 113
+    },
+    {
+      "id": 121,
+      "nome": "Kalgar",
+      "somma_environ": 6.0,
+      "raggio_relativo_adare": 0.816496580927726,
+      "ambienti": [
+        {
+          "tipo": "sotterraneo",
+          "taglia": 6.0,
+          "frazione_richiesta": 1.0,
+          "frazione_superficie": 1.0
+        }
+      ],
+      "texture": "assets_reborn/pianeti/121.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 121
+    },
+    {
+      "id": 122,
+      "nome": "Bajukai",
+      "somma_environ": 10.0,
+      "raggio_relativo_adare": 1.0540925533894598,
+      "ambienti": [
+        {
+          "tipo": "urbano",
+          "taglia": 3.0,
+          "frazione_richiesta": 0.3,
+          "frazione_superficie": 0.29999980330467224
+        },
+        {
+          "tipo": "liquido",
+          "taglia": 3.0,
+          "frazione_richiesta": 0.3,
+          "frazione_superficie": 0.29999980330467224
+        },
+        {
+          "tipo": "selvaggio",
+          "taglia": 4.0,
+          "frazione_richiesta": 0.4,
+          "frazione_superficie": 0.40000036358833313
+        }
+      ],
+      "texture": "assets_reborn/pianeti/122.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 122
+    },
+    {
+      "id": 131,
+      "nome": "Tiglyf",
+      "somma_environ": 5.0,
+      "raggio_relativo_adare": 0.7453559924999299,
+      "ambienti": [
+        {
+          "tipo": "urbano",
+          "taglia": 5.0,
+          "frazione_richiesta": 1.0,
+          "frazione_superficie": 1.0
+        }
+      ],
+      "texture": "assets_reborn/pianeti/131.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 131
+    },
+    {
+      "id": 141,
+      "nome": "Ownex",
+      "somma_environ": 5.0,
+      "raggio_relativo_adare": 0.7453559924999299,
+      "ambienti": [
+        {
+          "tipo": "sotterraneo",
+          "taglia": 5.0,
+          "frazione_richiesta": 1.0,
+          "frazione_superficie": 1.0
+        }
+      ],
+      "texture": "assets_reborn/pianeti/141.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 141
+    },
+    {
+      "id": 142,
+      "nome": "Adare",
+      "somma_environ": 9.0,
+      "raggio_relativo_adare": 1.0,
+      "ambienti": [
+        {
+          "tipo": "urbano",
+          "taglia": 4.0,
+          "frazione_richiesta": 0.4444444444444444,
+          "frazione_superficie": 0.4444437325000763
+        },
+        {
+          "tipo": "selvaggio",
+          "taglia": 5.0,
+          "frazione_richiesta": 0.5555555555555556,
+          "frazione_superficie": 0.5555562376976013
+        }
+      ],
+      "texture": "assets_reborn/pianeti/142.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 142
+    },
+    {
+      "id": 143,
+      "nome": "Mitrith",
+      "somma_environ": 6.0,
+      "raggio_relativo_adare": 0.816496580927726,
+      "ambienti": [
+        {
+          "tipo": "fuoco",
+          "taglia": 2.0,
+          "frazione_richiesta": 0.3333333333333333,
+          "frazione_superficie": 0.3333333432674408
+        },
+        {
+          "tipo": "selvaggio",
+          "taglia": 4.0,
+          "frazione_richiesta": 0.6666666666666666,
+          "frazione_superficie": 0.6666666865348816
+        }
+      ],
+      "texture": "assets_reborn/pianeti/143.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 143
+    },
+    {
+      "id": 151,
+      "nome": "Jura",
+      "somma_environ": 7.0,
+      "raggio_relativo_adare": 0.8819171036881969,
+      "ambienti": [
+        {
+          "tipo": "urbano",
+          "taglia": 4.0,
+          "frazione_richiesta": 0.5714285714285714,
+          "frazione_superficie": 0.5714280009269714
+        },
+        {
+          "tipo": "aereo",
+          "taglia": 3.0,
+          "frazione_richiesta": 0.42857142857142855,
+          "frazione_superficie": 0.4285719394683838
+        }
+      ],
+      "texture": "assets_reborn/pianeti/151.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 151
+    },
+    {
+      "id": 152,
+      "nome": "Diomas",
+      "somma_environ": 8.0,
+      "raggio_relativo_adare": 0.9428090415820634,
+      "ambienti": [
+        {
+          "tipo": "urbano",
+          "taglia": 5.0,
+          "frazione_richiesta": 0.625,
+          "frazione_superficie": 0.6249999403953552
+        },
+        {
+          "tipo": "selvaggio",
+          "taglia": 3.0,
+          "frazione_richiesta": 0.375,
+          "frazione_superficie": 0.3749999701976776
+        }
+      ],
+      "texture": "assets_reborn/pianeti/152.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 152
+    },
+    {
+      "id": 161,
+      "nome": "Liomax",
+      "somma_environ": 6.0,
+      "raggio_relativo_adare": 0.816496580927726,
+      "ambienti": [
+        {
+          "tipo": "selvaggio",
+          "taglia": 6.0,
+          "frazione_richiesta": 1.0,
+          "frazione_superficie": 1.0
+        }
+      ],
+      "texture": "assets_reborn/pianeti/161.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 161
+    },
+    {
+      "id": 162,
+      "nome": "Orlog",
+      "somma_environ": 11.0,
+      "raggio_relativo_adare": 1.1055415967851334,
+      "ambienti": [
+        {
+          "tipo": "urbano",
+          "taglia": 6.0,
+          "frazione_richiesta": 0.5454545454545454,
+          "frazione_superficie": 0.5454539060592651
+        },
+        {
+          "tipo": "sotterraneo",
+          "taglia": 2.0,
+          "frazione_richiesta": 0.18181818181818182,
+          "frazione_superficie": 0.1818183809518814
+        },
+        {
+          "tipo": "selvaggio",
+          "taglia": 3.0,
+          "frazione_richiesta": 0.2727272727272727,
+          "frazione_superficie": 0.2727276682853699
+        }
+      ],
+      "texture": "assets_reborn/pianeti/162.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 162
+    },
+    {
+      "id": 163,
+      "nome": "Icid",
+      "somma_environ": 5.0,
+      "raggio_relativo_adare": 0.7453559924999299,
+      "ambienti": [
+        {
+          "tipo": "selvaggio",
+          "taglia": 5.0,
+          "frazione_richiesta": 1.0,
+          "frazione_superficie": 1.0
+        }
+      ],
+      "texture": "assets_reborn/pianeti/163.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 163
+    },
+    {
+      "id": 211,
+      "nome": "Cieson",
+      "somma_environ": 3.0,
+      "raggio_relativo_adare": 0.5773502691896257,
+      "ambienti": [
+        {
+          "tipo": "aereo",
+          "taglia": 3.0,
+          "frazione_richiesta": 1.0,
+          "frazione_superficie": 1.0
+        }
+      ],
+      "texture": "assets_reborn/pianeti/211.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 211
+    },
+    {
+      "id": 212,
+      "nome": "Etreg",
+      "somma_environ": 7.0,
+      "raggio_relativo_adare": 0.8819171036881969,
+      "ambienti": [
+        {
+          "tipo": "urbano",
+          "taglia": 3.0,
+          "frazione_richiesta": 0.42857142857142855,
+          "frazione_superficie": 0.4285709857940674
+        },
+        {
+          "tipo": "selvaggio",
+          "taglia": 4.0,
+          "frazione_richiesta": 0.5714285714285714,
+          "frazione_superficie": 0.5714289546012878
+        }
+      ],
+      "texture": "assets_reborn/pianeti/212.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 212
+    },
+    {
+      "id": 221,
+      "nome": "Quibron",
+      "somma_environ": 4.0,
+      "raggio_relativo_adare": 0.6666666666666666,
+      "ambienti": [
+        {
+          "tipo": "selvaggio",
+          "taglia": 4.0,
+          "frazione_richiesta": 1.0,
+          "frazione_superficie": 1.0
+        }
+      ],
+      "texture": "assets_reborn/pianeti/221.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 221
+    },
+    {
+      "id": 222,
+      "nome": "Angoff",
+      "somma_environ": 6.0,
+      "raggio_relativo_adare": 0.816496580927726,
+      "ambienti": [
+        {
+          "tipo": "urbano",
+          "taglia": 6.0,
+          "frazione_richiesta": 1.0,
+          "frazione_superficie": 1.0
+        }
+      ],
+      "texture": "assets_reborn/pianeti/222.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 222
+    },
+    {
+      "id": 223,
+      "nome": "Charkhan",
+      "somma_environ": 8.0,
+      "raggio_relativo_adare": 0.9428090415820634,
+      "ambienti": [
+        {
+          "tipo": "aereo",
+          "taglia": 5.0,
+          "frazione_richiesta": 0.625,
+          "frazione_superficie": 0.6249998211860657
+        },
+        {
+          "tipo": "selvaggio",
+          "taglia": 3.0,
+          "frazione_richiesta": 0.375,
+          "frazione_superficie": 0.37500008940696716
+        }
+      ],
+      "texture": "assets_reborn/pianeti/223.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 223
+    },
+    {
+      "id": 231,
+      "nome": "Pronox",
+      "somma_environ": 6.0,
+      "raggio_relativo_adare": 0.816496580927726,
+      "ambienti": [
+        {
+          "tipo": "urbano",
+          "taglia": 3.0,
+          "frazione_richiesta": 0.5,
+          "frazione_superficie": 0.4999999403953552
+        },
+        {
+          "tipo": "aereo",
+          "taglia": 3.0,
+          "frazione_richiesta": 0.5,
+          "frazione_superficie": 0.5
+        }
+      ],
+      "texture": "assets_reborn/pianeti/231.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 231
+    },
+    {
+      "id": 232,
+      "nome": "Lysenda",
+      "somma_environ": 9.0,
+      "raggio_relativo_adare": 1.0,
+      "ambienti": [
+        {
+          "tipo": "urbano",
+          "taglia": 4.0,
+          "frazione_richiesta": 0.4444444444444444,
+          "frazione_superficie": 0.4444442689418793
+        },
+        {
+          "tipo": "sotterraneo",
+          "taglia": 2.0,
+          "frazione_richiesta": 0.2222222222222222,
+          "frazione_superficie": 0.22222237288951874
+        },
+        {
+          "tipo": "selvaggio",
+          "taglia": 3.0,
+          "frazione_richiesta": 0.3333333333333333,
+          "frazione_superficie": 0.3333333432674408
+        }
+      ],
+      "texture": "assets_reborn/pianeti/232.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 232
+    },
+    {
+      "id": 241,
+      "nome": "Orning",
+      "somma_environ": 8.0,
+      "raggio_relativo_adare": 0.9428090415820634,
+      "ambienti": [
+        {
+          "tipo": "liquido",
+          "taglia": 3.0,
+          "frazione_richiesta": 0.375,
+          "frazione_superficie": 0.3749999701976776
+        },
+        {
+          "tipo": "selvaggio",
+          "taglia": 5.0,
+          "frazione_richiesta": 0.625,
+          "frazione_superficie": 0.6249999403953552
+        }
+      ],
+      "texture": "assets_reborn/pianeti/241.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 241
+    },
+    {
+      "id": 311,
+      "nome": "Chim",
+      "somma_environ": 7.0,
+      "raggio_relativo_adare": 0.8819171036881969,
+      "ambienti": [
+        {
+          "tipo": "urbano",
+          "taglia": 3.0,
+          "frazione_richiesta": 0.42857142857142855,
+          "frazione_superficie": 0.42857083678245544
+        },
+        {
+          "tipo": "selvaggio",
+          "taglia": 4.0,
+          "frazione_richiesta": 0.5714285714285714,
+          "frazione_superficie": 0.5714291334152222
+        }
+      ],
+      "texture": "assets_reborn/pianeti/311.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 311
+    },
+    {
+      "id": 312,
+      "nome": "Tamset",
+      "somma_environ": 9.0,
+      "raggio_relativo_adare": 1.0,
+      "ambienti": [
+        {
+          "tipo": "aereo",
+          "taglia": 4.0,
+          "frazione_richiesta": 0.4444444444444444,
+          "frazione_superficie": 0.4444437623023987
+        },
+        {
+          "tipo": "selvaggio",
+          "taglia": 5.0,
+          "frazione_richiesta": 0.5555555555555556,
+          "frazione_superficie": 0.5555562376976013
+        }
+      ],
+      "texture": "assets_reborn/pianeti/312.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 312
+    },
+    {
+      "id": 321,
+      "nome": "Unarpha",
+      "somma_environ": 3.0,
+      "raggio_relativo_adare": 0.5773502691896257,
+      "ambienti": [
+        {
+          "tipo": "urbano",
+          "taglia": 3.0,
+          "frazione_richiesta": 1.0,
+          "frazione_superficie": 1.0
+        }
+      ],
+      "texture": "assets_reborn/pianeti/321.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 321
+    },
+    {
+      "id": 322,
+      "nome": "Suti",
+      "somma_environ": 7.0,
+      "raggio_relativo_adare": 0.8819171036881969,
+      "ambienti": [
+        {
+          "tipo": "sotterraneo",
+          "taglia": 3.0,
+          "frazione_richiesta": 0.42857142857142855,
+          "frazione_superficie": 0.4285711348056793
+        },
+        {
+          "tipo": "selvaggio",
+          "taglia": 4.0,
+          "frazione_richiesta": 0.5714285714285714,
+          "frazione_superficie": 0.5714288353919983
+        }
+      ],
+      "texture": "assets_reborn/pianeti/322.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 322
+    },
+    {
+      "id": 323,
+      "nome": "Tsipa",
+      "somma_environ": 9.0,
+      "raggio_relativo_adare": 1.0,
+      "ambienti": [
+        {
+          "tipo": "urbano",
+          "taglia": 5.0,
+          "frazione_richiesta": 0.5555555555555556,
+          "frazione_superficie": 0.5555552840232849
+        },
+        {
+          "tipo": "selvaggio",
+          "taglia": 4.0,
+          "frazione_richiesta": 0.4444444444444444,
+          "frazione_superficie": 0.4444446563720703
+        }
+      ],
+      "texture": "assets_reborn/pianeti/323.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 323
+    },
+    {
+      "id": 331,
+      "nome": "Squamot",
+      "somma_environ": 4.0,
+      "raggio_relativo_adare": 0.6666666666666666,
+      "ambienti": [
+        {
+          "tipo": "urbano",
+          "taglia": 4.0,
+          "frazione_richiesta": 1.0,
+          "frazione_superficie": 1.0
+        }
+      ],
+      "texture": "assets_reborn/pianeti/331.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 331
+    },
+    {
+      "id": 341,
+      "nome": "Midest",
+      "somma_environ": 7.0,
+      "raggio_relativo_adare": 0.8819171036881969,
+      "ambienti": [
+        {
+          "tipo": "liquido",
+          "taglia": 3.0,
+          "frazione_richiesta": 0.42857142857142855,
+          "frazione_superficie": 0.42857083678245544
+        },
+        {
+          "tipo": "selvaggio",
+          "taglia": 4.0,
+          "frazione_richiesta": 0.5714285714285714,
+          "frazione_superficie": 0.5714291930198669
+        }
+      ],
+      "texture": "assets_reborn/pianeti/341.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 341
+    },
+    {
+      "id": 342,
+      "nome": "Akubera",
+      "somma_environ": 9.0,
+      "raggio_relativo_adare": 1.0,
+      "ambienti": [
+        {
+          "tipo": "urbano",
+          "taglia": 2.0,
+          "frazione_richiesta": 0.2222222222222222,
+          "frazione_superficie": 0.2222215235233307
+        },
+        {
+          "tipo": "liquido",
+          "taglia": 3.0,
+          "frazione_richiesta": 0.3333333333333333,
+          "frazione_superficie": 0.33333393931388855
+        },
+        {
+          "tipo": "sotterraneo",
+          "taglia": 4.0,
+          "frazione_richiesta": 0.4444444444444444,
+          "frazione_superficie": 0.4444445073604584
+        }
+      ],
+      "texture": "assets_reborn/pianeti/342.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 342
+    },
+    {
+      "id": 351,
+      "nome": "Mrane",
+      "somma_environ": 3.0,
+      "raggio_relativo_adare": 0.5773502691896257,
+      "ambienti": [
+        {
+          "tipo": "liquido",
+          "taglia": 3.0,
+          "frazione_richiesta": 1.0,
+          "frazione_superficie": 1.0
+        }
+      ],
+      "texture": "assets_reborn/pianeti/351.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 351
+    },
+    {
+      "id": 352,
+      "nome": "Kelta",
+      "somma_environ": 2.0,
+      "raggio_relativo_adare": 0.4714045207910317,
+      "ambienti": [
+        {
+          "tipo": "selvaggio",
+          "taglia": 2.0,
+          "frazione_richiesta": 1.0,
+          "frazione_superficie": 1.0
+        }
+      ],
+      "texture": "assets_reborn/pianeti/352.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 352
+    },
+    {
+      "id": 411,
+      "nome": "Troliso",
+      "somma_environ": 6.0,
+      "raggio_relativo_adare": 0.816496580927726,
+      "ambienti": [
+        {
+          "tipo": "urbano",
+          "taglia": 6.0,
+          "frazione_richiesta": 1.0,
+          "frazione_superficie": 1.0
+        }
+      ],
+      "texture": "assets_reborn/pianeti/411.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 411
+    },
+    {
+      "id": 412,
+      "nome": "Heliax",
+      "somma_environ": 10.0,
+      "raggio_relativo_adare": 1.0540925533894598,
+      "ambienti": [
+        {
+          "tipo": "liquido",
+          "taglia": 5.0,
+          "frazione_richiesta": 0.5,
+          "frazione_superficie": 0.4999999701976776
+        },
+        {
+          "tipo": "selvaggio",
+          "taglia": 5.0,
+          "frazione_richiesta": 0.5,
+          "frazione_superficie": 0.5000000596046448
+        }
+      ],
+      "texture": "assets_reborn/pianeti/412.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 412
+    },
+    {
+      "id": 421,
+      "nome": "Lonica",
+      "somma_environ": 7.0,
+      "raggio_relativo_adare": 0.8819171036881969,
+      "ambienti": [
+        {
+          "tipo": "urbano",
+          "taglia": 3.0,
+          "frazione_richiesta": 0.42857142857142855,
+          "frazione_superficie": 0.4285711348056793
+        },
+        {
+          "tipo": "selvaggio",
+          "taglia": 4.0,
+          "frazione_richiesta": 0.5714285714285714,
+          "frazione_superficie": 0.5714288353919983
+        }
+      ],
+      "texture": "assets_reborn/pianeti/421.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 421
+    },
+    {
+      "id": 431,
+      "nome": "Horon",
+      "somma_environ": 6.0,
+      "raggio_relativo_adare": 0.816496580927726,
+      "ambienti": [
+        {
+          "tipo": "liquido",
+          "taglia": 6.0,
+          "frazione_richiesta": 1.0,
+          "frazione_superficie": 1.0
+        }
+      ],
+      "texture": "assets_reborn/pianeti/431.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 431
+    },
+    {
+      "id": 432,
+      "nome": "Solvia",
+      "somma_environ": 12.0,
+      "raggio_relativo_adare": 1.1547005383792515,
+      "ambienti": [
+        {
+          "tipo": "urbano",
+          "taglia": 4.0,
+          "frazione_richiesta": 0.3333333333333333,
+          "frazione_superficie": 0.33333292603492737
+        },
+        {
+          "tipo": "sotterraneo",
+          "taglia": 3.0,
+          "frazione_richiesta": 0.25,
+          "frazione_superficie": 0.24999918043613434
+        },
+        {
+          "tipo": "selvaggio",
+          "taglia": 5.0,
+          "frazione_richiesta": 0.4166666666666667,
+          "frazione_superficie": 0.4166678190231323
+        }
+      ],
+      "texture": "assets_reborn/pianeti/432.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 432
+    },
+    {
+      "id": 433,
+      "nome": "Cercis",
+      "somma_environ": 7.0,
+      "raggio_relativo_adare": 0.8819171036881969,
+      "ambienti": [
+        {
+          "tipo": "sotterraneo",
+          "taglia": 4.0,
+          "frazione_richiesta": 0.5714285714285714,
+          "frazione_superficie": 0.5714282989501953
+        },
+        {
+          "tipo": "selvaggio",
+          "taglia": 3.0,
+          "frazione_richiesta": 0.42857142857142855,
+          "frazione_superficie": 0.4285716712474823
+        }
+      ],
+      "texture": "assets_reborn/pianeti/433.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 433
+    },
+    {
+      "id": 441,
+      "nome": "Rhexia",
+      "somma_environ": 3.0,
+      "raggio_relativo_adare": 0.5773502691896257,
+      "ambienti": [
+        {
+          "tipo": "selvaggio",
+          "taglia": 3.0,
+          "frazione_richiesta": 1.0,
+          "frazione_superficie": 1.0
+        }
+      ],
+      "texture": "assets_reborn/pianeti/441.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 441
+    },
+    {
+      "id": 442,
+      "nome": "Tartio",
+      "somma_environ": 7.0,
+      "raggio_relativo_adare": 0.8819171036881969,
+      "ambienti": [
+        {
+          "tipo": "urbano",
+          "taglia": 3.0,
+          "frazione_richiesta": 0.42857142857142855,
+          "frazione_superficie": 0.42857080698013306
+        },
+        {
+          "tipo": "sotterraneo",
+          "taglia": 4.0,
+          "frazione_richiesta": 0.5714285714285714,
+          "frazione_superficie": 0.5714291930198669
+        }
+      ],
+      "texture": "assets_reborn/pianeti/442.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 442
+    },
+    {
+      "id": 451,
+      "nome": "Ayod",
+      "somma_environ": 4.0,
+      "raggio_relativo_adare": 0.6666666666666666,
+      "ambienti": [
+        {
+          "tipo": "sotterraneo",
+          "taglia": 4.0,
+          "frazione_richiesta": 1.0,
+          "frazione_superficie": 1.0
+        }
+      ],
+      "texture": "assets_reborn/pianeti/451.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 451
+    },
+    {
+      "id": 511,
+      "nome": "Barak",
+      "somma_environ": 5.0,
+      "raggio_relativo_adare": 0.7453559924999299,
+      "ambienti": [
+        {
+          "tipo": "urbano",
+          "taglia": 5.0,
+          "frazione_richiesta": 1.0,
+          "frazione_superficie": 1.0
+        }
+      ],
+      "texture": "assets_reborn/pianeti/511.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 511
+    },
+    {
+      "id": 512,
+      "nome": "Liatris",
+      "somma_environ": 5.0,
+      "raggio_relativo_adare": 0.7453559924999299,
+      "ambienti": [
+        {
+          "tipo": "selvaggio",
+          "taglia": 5.0,
+          "frazione_richiesta": 1.0,
+          "frazione_superficie": 1.0
+        }
+      ],
+      "texture": "assets_reborn/pianeti/512.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 512
+    },
+    {
+      "id": 513,
+      "nome": "Xan",
+      "somma_environ": 8.0,
+      "raggio_relativo_adare": 0.9428090415820634,
+      "ambienti": [
+        {
+          "tipo": "urbano",
+          "taglia": 3.0,
+          "frazione_richiesta": 0.375,
+          "frazione_superficie": 0.37499964237213135
+        },
+        {
+          "tipo": "fuoco",
+          "taglia": 5.0,
+          "frazione_richiesta": 0.625,
+          "frazione_superficie": 0.6250002980232239
+        }
+      ],
+      "texture": "assets_reborn/pianeti/513.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 513
+    },
+    {
+      "id": 521,
+      "nome": "Aras",
+      "somma_environ": 4.0,
+      "raggio_relativo_adare": 0.6666666666666666,
+      "ambienti": [
+        {
+          "tipo": "urbano",
+          "taglia": 4.0,
+          "frazione_richiesta": 1.0,
+          "frazione_superficie": 1.0
+        }
+      ],
+      "texture": "assets_reborn/pianeti/521.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 521
+    },
+    {
+      "id": 522,
+      "nome": "Capilax",
+      "somma_environ": 4.0,
+      "raggio_relativo_adare": 0.6666666666666666,
+      "ambienti": [
+        {
+          "tipo": "fuoco",
+          "taglia": 4.0,
+          "frazione_richiesta": 1.0,
+          "frazione_superficie": 1.0
+        }
+      ],
+      "texture": "assets_reborn/pianeti/522.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 522
+    },
+    {
+      "id": 523,
+      "nome": "Adrax",
+      "somma_environ": 5.0,
+      "raggio_relativo_adare": 0.7453559924999299,
+      "ambienti": [
+        {
+          "tipo": "sotterraneo",
+          "taglia": 2.0,
+          "frazione_richiesta": 0.4,
+          "frazione_superficie": 0.3999998867511749
+        },
+        {
+          "tipo": "selvaggio",
+          "taglia": 3.0,
+          "frazione_richiesta": 0.6,
+          "frazione_superficie": 0.6000000834465027
+        }
+      ],
+      "texture": "assets_reborn/pianeti/523.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 523
+    },
+    {
+      "id": 531,
+      "nome": "Scythia",
+      "somma_environ": 4.0,
+      "raggio_relativo_adare": 0.6666666666666666,
+      "ambienti": [
+        {
+          "tipo": "fuoco",
+          "taglia": 4.0,
+          "frazione_richiesta": 1.0,
+          "frazione_superficie": 1.0
+        }
+      ],
+      "texture": "assets_reborn/pianeti/531.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 531
+    },
+    {
+      "id": 541,
+      "nome": "Anell",
+      "somma_environ": 4.0,
+      "raggio_relativo_adare": 0.6666666666666666,
+      "ambienti": [
+        {
+          "tipo": "aereo",
+          "taglia": 4.0,
+          "frazione_richiesta": 1.0,
+          "frazione_superficie": 1.0
+        }
+      ],
+      "texture": "assets_reborn/pianeti/541.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 541
+    },
+    {
+      "id": 542,
+      "nome": "Trov",
+      "somma_environ": 7.0,
+      "raggio_relativo_adare": 0.8819171036881969,
+      "ambienti": [
+        {
+          "tipo": "urbano",
+          "taglia": 4.0,
+          "frazione_richiesta": 0.5714285714285714,
+          "frazione_superficie": 0.5714281797409058
+        },
+        {
+          "tipo": "selvaggio",
+          "taglia": 3.0,
+          "frazione_richiesta": 0.42857142857142855,
+          "frazione_superficie": 0.42857179045677185
+        }
+      ],
+      "texture": "assets_reborn/pianeti/542.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 542
+    },
+    {
+      "id": 551,
+      "nome": "Niconi",
+      "somma_environ": 4.0,
+      "raggio_relativo_adare": 0.6666666666666666,
+      "ambienti": [
+        {
+          "tipo": "selvaggio",
+          "taglia": 4.0,
+          "frazione_richiesta": 1.0,
+          "frazione_superficie": 1.0
+        }
+      ],
+      "texture": "assets_reborn/pianeti/551.png",
+      "dimensioni": [
+        2048,
+        1024
+      ],
+      "seed": 551
+    }
+  ]
+}
