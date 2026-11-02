@@ -78,3 +78,13 @@ Il selettore “Skin di Solvia” confronta la prova con la superficie attuale. 
 ### Midest con acqua
 
 [Apri Midest pittorico](https://tannoiser2.github.io/Freedom-in-the-Galaxy/reborn/atlante/?planet=341&skin=painterly&isolated=1): Liquido 3/7 e Selvaggio 4/7, maschera originale a 2048×1024. Il materiale verde è condiviso con Solvia; il nuovo materiale blu petrolio definisce la palette di Liquido. Controllo dedicato: `python tests/midest_painterly_browser.py`.
+
+## Scala planetaria e piattaforme con fondale
+
+Le skin pittoriche di Solvia e Midest usano dettagli circa 24 volte più piccoli rispetto alla prima prova, con densità corretta in base al raggio. Il campionamento varia la trama per evitare una griglia di ripetizioni; mipmap e filtro anisotropico limitano lo sfarfallio. I blocchi urbani della vista attuale sono ridotti anch'essi alla scala del globo.
+
+Su tutti i pianeti, ciascuna piattaforma ha terreno e fondale del proprio ambiente, condivisi per mantenere la palette. Fondali per tutti e sei gli ambienti in `atlante/environs/`; personaggi e truppe sono davanti al fondale. Le piattaforme si orientano verso la camera e conservano il collegamento al bioma corretto. Il test browser verifica per tutti i 51 pianeti la presenza di fondale e terreno e la collocazione delle unità su ciascun ambiente.
+
+Per vedere anche le piattaforme, aprire i link senza `isolated=1`:
+- [Solvia](https://tannoiser2.github.io/Freedom-in-the-Galaxy/reborn/atlante/?planet=432&skin=painterly)
+- [Midest](https://tannoiser2.github.io/Freedom-in-the-Galaxy/reborn/atlante/?planet=341&skin=painterly)

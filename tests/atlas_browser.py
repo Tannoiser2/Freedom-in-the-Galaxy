@@ -70,6 +70,12 @@ def main():
                 assert snap['selected']==p['id'] and snap['mode']=='planet'
                 assert len(snap['objects'])==1 and snap['objects'][0]['id']==p['id']
                 assert snap['objects'][0]['unitCount']==len(p['ambienti'])+len(p['units'])
+                stages=snap['objects'][0]['platforms']
+                assert [stage['environ'] for stage in stages]==[e['tipo'] for e in p['ambienti']]
+                assert all(stage['backdrop'] and stage['floor'] for stage in stages)
+                assert sum(stage['units'] for stage in stages)==len(p['ambienti'])+len(p['units'])
+                character_env=next((e['tipo'] for e in p['ambienti'] if e['tipo']=='selvaggio'),p['ambienti'][0]['tipo'])
+                assert all(stage['units']==(1+len(p['units']) if stage['environ']==character_env else 1) for stage in stages)
                 assert snap['objects'][0]['buildings']>0 if any(e['tipo']=='urbano' for e in p['ambienti']) else snap['objects'][0]['buildings']==0
                 assert snap['cacheSize']<=8
             print('51/51 planet previews: loaded, rendered, units present, bounded texture cache',flush=True)
