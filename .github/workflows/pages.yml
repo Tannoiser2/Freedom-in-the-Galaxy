@@ -43,6 +43,11 @@ jobs:
           test -f build/web/index.pck
           touch build/web/.nojekyll
 
+      - name: Aggiungi l'anteprima Reborn al sito
+        run: |
+          python3 tools/prepare_reborn_preview.py
+          cp -R build/reborn-preview build/web/reborn
+
       # Ludoteca privata: con i segreti CLOUDFLARE_API_TOKEN e CLOUDFLARE_ACCOUNT_ID pubblica il gioco su
       # https://freedom-in-the-galaxy.<dominio>/ protetto da email e codice. Senza segreti non fa nulla.
       - name: Pubblica su Cloudflare (ludoteca privata)
@@ -68,3 +73,29 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+      - name: Verifica l'anteprima pubblicata
+        env:
+          PAGE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          python3 - <<'PY'
+          import json, os, time, urllib.request
+          base = os.environ['PAGE_URL'].rstrip('/') + '/reborn/'
+          expected = json.load(open('build/reborn-preview/version.json')) if os.path.exists('build/reborn-preview/version.json') else None
+          for attempt in range(12):
+              try:
+                  with urllib.request.urlopen(base + 'version.json', timeout=20) as response:
+                      version = json.load(response)
+                  assert version['standalone'] and version['render_count'] == 6
+                  if expected:
+                      assert version['viewer_sha256'] == expected['viewer_sha256']
+                  with urllib.request.urlopen(base, timeout=20) as response:
+                      assert 'Adare e il nuovo atlante planetario' in response.read().decode()
+                  print('Anteprima verificata su ' + base)
+                  with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as summary:
+                      summary.write('## Anteprima Reborn pubblicata\n\n' + base + '\n')
+                  break
+              except Exception:
+                  if attempt == 11:
+                      raise
+                  time.sleep(10)
+          PY
