@@ -38,8 +38,13 @@ I render usano le nuove texture; la sostituzione del materiale planetario della
 vista Godot rimane separata dalla scala e dal componente PDB già collegati.
 
 Corretto anche il caricamento dell'HTML autonomo: upload dei pixel direttamente
-in WebGL, verificato offline e con `img-src 'none'`. Il file sorgente HTML funziona
-dal checkout con percorsi relativi; il file `adare_3d.html` non richiede le PNG.
+in WebGL, verificato offline e con `img-src 'none'`. Entrambi gli HTML delle
+anteprime sono autonomi, senza percorsi relativi o PNG esterne. Il template di
+sviluppo è in `tools/templates/planet_viewer.html.template`, non nelle anteprime.
+Per distinguere questa consegna dai vecchi download c'è anche
+`anteprime/adare_3d_autonomo_v2.html`; i tre HTML sono identici.
+`python3 tests/check_standalone_viewer.py` prova ciascun file copiato da solo
+fuori dal repository, senza rete e con immagini esterne bloccate.
 `reborn/.gdignore` evita che Godot importi scene Blender, confronti e altri file
 di produzione come risorse del gioco.
 
