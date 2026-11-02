@@ -40,7 +40,7 @@ def main():
             snap=wait(page)
             assert page.locator('#planet-select option').count()==51
             assert page.locator('#system-select option').count()==25
-            assert snap['objects'][0]['buildings']>0
+            assert snap['skin']=='painterly' and snap['objects'][0]['buildings']==0
             assert 'Nessun environ Liquido' in page.locator('#terrain-note').inner_text()
             assert '44,44%' in page.locator('#environments').inner_text()
             for level in [0,1,2]:
@@ -76,16 +76,21 @@ def main():
                 assert sum(stage['units'] for stage in stages)==len(p['ambienti'])+len(p['units'])
                 character_env=next((e['tipo'] for e in p['ambienti'] if e['tipo']=='selvaggio'),p['ambienti'][0]['tipo'])
                 assert all(stage['units']==(1+len(p['units']) if stage['environ']==character_env else 1) for stage in stages)
-                assert snap['objects'][0]['buildings']>0 if any(e['tipo']=='urbano' for e in p['ambienti']) else snap['objects'][0]['buildings']==0
-                assert snap['cacheSize']<=8
+                assert snap['objects'][0]['buildings']==0
+                assert snap['skin']=='painterly'
+                assert [(s['environ'],s['variant']) for s in stages]==[(e['tipo'],e['material']['variant']) for e in p['ambienti']]
+                assert all(s['material']==e['material']['color'] and s['platformMap'].endswith(e['material']['platform']) for s,e in zip(stages,p['ambienti']))
+                assert snap['artCacheSize']<=max(8,snap['activeMaterials'])
+                assert snap['cacheSize']<=4
             print('51/51 planet previews: loaded, rendered, units present, bounded texture cache',flush=True)
             for s in catalog['systems']:
                 page.select_option('#system-select',str(s['id']))
                 snap=wait(page)
                 assert snap['system']==s['id'] and snap['mode']=='system'
                 assert {p['id'] for p in snap['objects']}==set(s['planets'])
-                assert all(p['unitCount']>=3 and p['bases']>=1 for p in snap['objects'])
-                assert snap['cacheSize']<=8
+                assert all(p['unitCount']>=3 and p['bases']>=1 and p['buildings']==0 for p in snap['objects'])
+                assert snap['artCacheSize']<=max(8,snap['activeMaterials'])
+                assert snap['cacheSize']<=4
             print('25/25 system previews: correct planets, PDB and unit platforms',flush=True)
             page.select_option('#system-select','14');wait(page)
             page.locator('#pause').click()

@@ -1,0 +1,67 @@
+[
+  {
+    "kind": "urbano",
+    "index": 2,
+    "prompt": "Create ONE flat equirectangular 2:1 planetary surface material map, intended 2048x1024. Rich hand-painted science fiction illustration seen straight down from orbit, full frame rectangle, evenly lit, seamless horizontal edges, no globe, horizon, perspective skyline, stars, text or labels. True planetary scale: individual buildings and trees microscopic, no giant single building. Varied coherent colors and legible large geological or atmospheric structures, NOT uniform noise. Dark slate GREY planet crust with irregular dense city conglomerates; warm golden YELLOW glowing windows, city cores, very thin bright interconnected street and highway filaments. VARIANT: organic branching asymmetric megacities around industrial basins and irregular polygonal districts, a few small radial centers, no regular global grid, no evenly spaced rings or thick overlay lines. Fine tiny grey roof detail, dark empty grey rocky industrial terrain between city clusters, yellow luminous networks embedded in the texture, not an overall bronze wash."
+  },
+  {
+    "kind": "urbano",
+    "index": 3,
+    "prompt": "Create ONE flat equirectangular 2:1 planetary surface material map, intended 2048x1024. Rich hand-painted science fiction illustration seen straight down from orbit, full frame rectangle, evenly lit, seamless horizontal edges, no globe, horizon, perspective skyline, stars, text or labels. True planetary scale: individual buildings and trees microscopic, no giant single building. Varied coherent colors and legible large geological or atmospheric structures, NOT uniform noise. Dark slate GREY urban planet crust, warm golden YELLOW luminous city cores and very thin glowing streets. VARIANT: elongated linear conurbations in sprawling valley corridors, terraced silver districts connected by irregular branching transport webs, small dense civic hubs, dark rocky grey gaps. Thousands of microscopic roofs and lit windows. No regular global grid, no evenly spaced circles, no giant structures or smooth thick lines. Grey base with brilliant delicate yellow city lights."
+  },
+  {
+    "kind": "sotterraneo",
+    "index": 2,
+    "prompt": "Create ONE flat equirectangular 2:1 planetary surface material map, intended 2048x1024. Rich hand-painted science fiction illustration seen straight down from orbit, full frame rectangle, evenly lit, seamless horizontal edges, no globe, horizon, perspective skyline, stars, text or labels. True planetary scale: individual buildings and trees microscopic, no giant single building. Varied coherent colors and legible large geological or atmospheric structures, NOT uniform noise. Subterranean continental terrain in deep red, ochre and near black, wide branching cave entrances and collapsed cavern basins, enormous dark sinkholes linked by narrow winding canyons, mineral strata and broken red sandstone plateaus. VARIANT: deep caves, charcoal abyss shadows and ochre rims, multiple red tones, clearly visible geology, no green forest, no cities, NO lava in this variant."
+  },
+  {
+    "kind": "sotterraneo",
+    "index": 3,
+    "prompt": "Create ONE flat equirectangular 2:1 planetary surface material map, intended 2048x1024. Rich hand-painted science fiction illustration seen straight down from orbit, full frame rectangle, evenly lit, seamless horizontal edges, no globe, horizon, perspective skyline, stars, text or labels. True planetary scale: individual buildings and trees microscopic, no giant single building. Varied coherent colors and legible large geological or atmospheric structures, NOT uniform noise. Subterranean continental crust of dark burgundy red rock, ochre mesas and deep near-black fissures. VARIANT: cave systems and fractured cavern roofs with occasional thin orange red molten lava rivers deep inside marked chasms, glowing fissure floors, dark red rock remains dominant, scattered ochre mineral outcrops. Lava is confined to some crevices, not a full ocean of lava. No vegetation or cities."
+  },
+  {
+    "kind": "selvaggio",
+    "index": 2,
+    "prompt": "Create ONE flat equirectangular 2:1 planetary surface material map, intended 2048x1024. Rich hand-painted science fiction illustration seen straight down from orbit, full frame rectangle, evenly lit, seamless horizontal edges, no globe, horizon, perspective skyline, stars, text or labels. True planetary scale: individual buildings and trees microscopic, no giant single building. Varied coherent colors and legible large geological or atmospheric structures, NOT uniform noise. Wild continental land in many greens, very dark evergreen forests, emerald broadleaf woods and olive mossy plains; long PALE GREY rocky alpine mountain chains, little snow on highest peaks, deep valleys. VARIANT: broad highland plateaus and isolated rugged massifs among dense dark pine belts and lighter open green plains, tiny orbital-scale forest texture. No cities or broad oceans."
+  },
+  {
+    "kind": "selvaggio",
+    "index": 3,
+    "prompt": "Create ONE flat equirectangular 2:1 planetary surface material map, intended 2048x1024. Rich hand-painted science fiction illustration seen straight down from orbit, full frame rectangle, evenly lit, seamless horizontal edges, no globe, horizon, perspective skyline, stars, text or labels. True planetary scale: individual buildings and trees microscopic, no giant single building. Varied coherent colors and legible large geological or atmospheric structures, NOT uniform noise. Wild planetary land in varied dark forest green, emerald, moss and pale green, prominent grey rocky mountain chains. VARIANT: folded parallel mountain ranges, winding forested valleys, broad subtropical emerald woodland, lighter grassy basins and a few exposed ochre ridges, only tiny snow patches on highest peaks. Microscopic canopy texture, legible long ranges, no giant individual trees, no buildings or seas."
+  },
+  {
+    "kind": "liquido",
+    "index": 2,
+    "prompt": "Create ONE flat equirectangular 2:1 planetary surface material map, intended 2048x1024. Rich hand-painted science fiction illustration seen straight down from orbit, full frame rectangle, evenly lit, seamless horizontal edges, no globe, horizon, perspective skyline, stars, text or labels. True planetary scale: individual buildings and trees microscopic, no giant single building. Varied coherent colors and legible large geological or atmospheric structures, NOT uniform noise. Ocean predominantly deep petrol BLUE, navy basins and azure turquoise currents. VARIANT: scattered small-to-medium GREEN rocky islands, irregular larger islands than tiny specks but no major continent, groups of modest volcanic islands and tiny sandy turquoise shallows; water covers at least 94 percent of the image. Wide open blue water, island sizes varied and naturally scattered, no cities or giant waves."
+  },
+  {
+    "kind": "liquido",
+    "index": 3,
+    "prompt": "Create ONE flat equirectangular 2:1 planetary surface material map, intended 2048x1024. Rich hand-painted science fiction illustration seen straight down from orbit, full frame rectangle, evenly lit, seamless horizontal edges, no globe, horizon, perspective skyline, stars, text or labels. True planetary scale: individual buildings and trees microscopic, no giant single building. Varied coherent colors and legible large geological or atmospheric structures, NOT uniform noise. Ocean predominantly deep petrol BLUE, navy basins, azure turquoise currents. VARIANT: rare strings of low tropical atolls and crescent coral islands, a few slightly larger rugged green islands, pale narrow turquoise shallow halos, a huge majority of open ocean covering over 95 percent of map, no large continent, no cities. Fine gentle ocean detail, not foam covering the water."
+  },
+  {
+    "kind": "aereo",
+    "index": 2,
+    "prompt": "Create ONE flat equirectangular 2:1 planetary surface material map, intended 2048x1024. Rich hand-painted science fiction illustration seen straight down from orbit, full frame rectangle, evenly lit, seamless horizontal edges, no globe, horizon, perspective skyline, stars, text or labels. True planetary scale: individual buildings and trees microscopic, no giant single building. Varied coherent colors and legible large geological or atmospheric structures, NOT uniform noise. Gas giant atmospheric surface seen from orbit, acidic sulphur yellow, olive grey green, smoky teal and creamy pale gas. VARIANT: broad undulating gas bands and dense turbulent wispy filaments, several dark teal blue-green cyclonic ovals with amber rusty rims and one small rust-orange cyclone, complex atmospheric fronts. Same acidic yellow green gas family, no ground, blue clear sky, horizon or cities."
+  },
+  {
+    "kind": "aereo",
+    "index": 3,
+    "prompt": "Create ONE flat equirectangular 2:1 planetary surface material map, intended 2048x1024. Rich hand-painted science fiction illustration seen straight down from orbit, full frame rectangle, evenly lit, seamless horizontal edges, no globe, horizon, perspective skyline, stars, text or labels. True planetary scale: individual buildings and trees microscopic, no giant single building. Varied coherent colors and legible large geological or atmospheric structures, NOT uniform noise. Gas giant atmospheric surface seen from orbit, acidic pale sulphur yellow, grey olive, cream and smoky teal with rust-red storm accents. VARIANT: violent chaotic folded cloud fronts and spiral cyclonic storm systems, one large asymmetric elongated rust red storm surrounded by pale yellow turbulent eddies, other smaller cream and olive vortices, less regular horizontal bands than Jupiter. Entire map gas, no land, no cities."
+  },
+  {
+    "kind": "fuoco",
+    "index": 1,
+    "prompt": "Create ONE flat equirectangular 2:1 planetary surface material map, intended 2048x1024. Rich hand-painted science fiction illustration seen straight down from orbit, full frame rectangle, evenly lit, seamless horizontal edges, no globe, horizon, perspective skyline, stars, text or labels. True planetary scale: individual buildings and trees microscopic, no giant single building. Varied coherent colors and legible large geological or atmospheric structures, NOT uniform noise. Volcanic planetary surface seen from orbit. Charcoal black basalt, dark crimson crust and bright ORANGE molten lava. VARIANT: branching thin orange lava rivers through black fractured plates, wide cooled basalt plains, scattered small volcanic calderas, strong dark versus orange contrast. No green plants, cities or water. Large geological systems with very fine detail."
+  },
+  {
+    "kind": "fuoco",
+    "index": 2,
+    "prompt": "Create ONE flat equirectangular 2:1 planetary surface material map, intended 2048x1024. Rich hand-painted science fiction illustration seen straight down from orbit, full frame rectangle, evenly lit, seamless horizontal edges, no globe, horizon, perspective skyline, stars, text or labels. True planetary scale: individual buildings and trees microscopic, no giant single building. Varied coherent colors and legible large geological or atmospheric structures, NOT uniform noise. Volcanic planetary surface, charcoal black basalt, dark red crust and bright ORANGE lava. VARIANT: numerous small shield-volcano calderas and a few vast cracked molten basins, radial thin orange lava channels and rough cooled lava fields. Basalt remains dark and dominant, orange glow concentrated in vents and basins, no buildings, water or forest."
+  },
+  {
+    "kind": "fuoco",
+    "index": 3,
+    "prompt": "Create ONE flat equirectangular 2:1 planetary surface material map, intended 2048x1024. Rich hand-painted science fiction illustration seen straight down from orbit, full frame rectangle, evenly lit, seamless horizontal edges, no globe, horizon, perspective skyline, stars, text or labels. True planetary scale: individual buildings and trees microscopic, no giant single building. Varied coherent colors and legible large geological or atmospheric structures, NOT uniform noise. Volcanic planetary surface, charcoal black and deep crimson rock with vivid ORANGE lava. VARIANT: continental tectonic rift belts with parallel broken black plates, long bright orange molten chasms, scattered ash grey cooled islands of basalt, winding fiery fractures, rugged detailed crust. No ocean of water, no vegetation or cities, no horizon."
+  }
+]

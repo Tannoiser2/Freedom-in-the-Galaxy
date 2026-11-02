@@ -94,11 +94,14 @@ jobs:
                   assert version['standalone'] and version['render_count'] == 6
                   assert version['viewer_sha256'] == expected
                   assert version['atlas_planets'] == 51 and version['atlas_systems'] == 25
+                  assert version['atlas_material_variants'] == 18
                   with urllib.request.urlopen(base, timeout=20) as response:
                       assert 'Atlante interattivo della galassia' in response.read().decode()
                   with urllib.request.urlopen(base + 'atlante/' + version['atlas_data'], timeout=20) as response:
                       atlas = json.load(response)
                   assert len(atlas['planets']) == 51 and len(atlas['systems']) == 25
+                  assert len(atlas['materials']) == 6 and all(len(v) == 3 for v in atlas['materials'].values())
+                  assert all('material' in e for p in atlas['planets'] for e in p['ambienti'])
                   print('Anteprima verificata su ' + base)
                   with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as summary:
                       summary.write('## Anteprima Reborn pubblicata\n\n' + base + '\n')

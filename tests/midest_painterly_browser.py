@@ -32,9 +32,11 @@ try:
         snap = page.evaluate('window.__atlas.snapshot()')
         assert snap['selected'] == 341 and snap['skin'] == 'painterly'
         assert snap['objects'][0]['buildings'] == 0 and not snap['objects'][0]['units']
-        assert any(u.endswith('/liquido.jpg') for u in resources)
-        assert any(u.endswith('/selvaggio.jpg') for u in resources)
-        assert any(u.endswith('/midest-mask.png') for u in resources)
+        out=ROOT/'reborn/atlante'
+        catalog=json.loads((out/json.loads((out/'build.json').read_text())['data']).read_text())
+        midest=next(p for p in catalog['planets'] if p['id']==341)
+        assert all(any(u.endswith(env['material']['color']) for u in resources) for env in midest['ambienti'])
+        assert all(any(u.endswith(midest['maps'][key]) for u in resources) for key in ['weights0','weights1'])
         assert page.locator('#skin-select').is_enabled()
         assert '42,86%' in page.locator('#environments').inner_text()
         assert '57,14%' in page.locator('#environments').inner_text()

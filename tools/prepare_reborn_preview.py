@@ -60,7 +60,7 @@ def main():
     revision = hashlib.sha256(viewer.encode()).hexdigest()
     (OUT/'version.json').write_text(json.dumps({'viewer_sha256':revision,'standalone':True,'render_count':len(IMAGES),
         'atlas_planets':atlas['planets'],'atlas_systems':atlas['systems'],'atlas_data':atlas['data'],
-        'atlas_sha256':atlas['script_sha256']})+'\n')
+        'atlas_sha256':atlas['script_sha256'],'atlas_material_variants':atlas.get('material_variants',0)})+'\n')
     print(f'Prepared {OUT}: standalone viewer, {len(IMAGES)} renders, ZIP; SHA256 {revision}')
 
 

@@ -24,18 +24,24 @@ agli estremi già verificati. Stelle, distanze e periodi orbitali sono schematic
 Nella vista di sistema le unità diventano piccole: le etichette e il pulsante
 di avvicinamento consentono di leggere il singolo pianeta.
 
-## Adare e l'aspetto dell'Urbano
+## Materiali di tutti i pianeti
 
-Adare contiene solo Urbano 4 e Selvaggio 5. Non ha territorio Liquido. La precedente
-resa grigio-azzurra delle città era ambigua: la texture urbana ora contiene strade
-e isolati ocra/bronzo, e l'atlante aggiunge volumi edificati sulla maschera urbana.
-Il riflesso speculare da acqua è limitato ai territori Liquido. Anche la mappa
-diagnostica mostra l'Urbano in ocra per non confonderlo con gli oceani. Le maschere
-di produzione conservano i codici RGB originali: non sono cambiate le regole.
+Lo stile pittorico è quello predefinito per tutti i 51 pianeti. La libreria comprende 18 texture: tre varianti per ognuno dei sei ambienti. La [pagina di confronto](https://tannoiser2.github.io/Freedom-in-the-Galaxy/reborn/atlante/materiali.html) mostra tutte le varianti e collega un pianeta che usa ciascuna di esse.
 
-Le proporzioni continuano a essere misurate sulla sfera, non sui pixel UV.
-Sui due mondi solo Liquido le isole scenografiche sono state richieste dall'utente
-e non creano nuovi environ. Nei mondi misti gli oceani separano i continenti.
+Ogni ambiente riceve una variante stabile, conservata nel catalogo e condivisa dal globo e dalla sua base rotonda. Le tre varianti di ogni famiglia sono tutte usate. Le quattro prime prove (Solvia, Midest, Magro, Cieson) conservano i materiali approvati come variante 1. Il selettore “Precedente” permette il confronto con le vecchie superfici.
+
+| Ambiente | Variante 1 | Variante 2 | Variante 3 |
+|---|---|---|---|
+| Urbano | Nuclei radiali | Conglomerati ramificati | Città a corridoio |
+| Sotterraneo | Crepacci e altopiani | Caverne e doline | Faglie con lava |
+| Selvaggio | Catene e foreste | Massicci e altopiani | Valli e dorsali |
+| Liquido | Isolotti radi | Isole maggiori | Atolli e arcipelaghi |
+| Aereo | Tempeste rosse | Vortici scuri | Fronti turbolenti |
+| Fuoco | Fiumi di lava | Caldere vulcaniche | Rift incandescenti |
+
+I dettagli urbani restano minuti, su fondo grigio con città e strade gialle luminose. Nessuna griglia geometrica è sovrapposta. Montagne, crepacci, nubi e isole hanno strutture leggibili dall’orbita. Le famiglie cromatiche sono condivise tra pianeti. La lava nei sotterranei è una variante artistica, non aggiunge un ambiente Fuoco; gli isolotti decorativi restano Liquido.
+
+Le sei categorie vengono codificate senza perdita in due mappe RGB a 2048×1024. Conservano pixel per pixel le maschere originali, comprese quote e geografia; nessun dato in `data/` cambia. Sulle piattaforme l’immagine dell’ambiente compare solo sulla base rotonda, senza pannelli dietro le unità.
 
 ## Build e pubblicazione
 
@@ -70,25 +76,8 @@ e gli errori WebGL vengono trattati come fallimenti.
 cuciture, poli e limiti delle emissioni per i 51 set di produzione. Non sono
 stati modificati i dati di gioco in `data/`.
 
-## Prove pittoriche correnti
+## Verifica della libreria
 
-Quattro pianeti permettono il confronto tra skin attuale e pittorica; le altre 47 superfici non cambiano:
+`python tests/planet_materials.py` controlla i 18 materiali, l’uso delle tre varianti in ciascuna famiglia e l’identità delle maschere su tutti i 51 pianeti. `python tests/atlas_browser.py` percorre i 51 pianeti e 25 sistemi, verifica le varianti sulle basi, le unità, i PDB e i limiti delle cache (4 pianeti e 8 materiali, oltre gli eventuali materiali ancora attivi). `python tests/materials_v3_browser.py` conserva il nome storico ma verifica anche le nuove varianti di lava, caverne, gas e isole, le luci notturne e la galleria su desktop e mobile.
 
-- [Solvia](https://tannoiser2.github.io/Freedom-in-the-Galaxy/reborn/atlante/?planet=432&skin=painterly): Urbano 4/12, Sotterraneo 3/12, Selvaggio 5/12.
-- [Midest](https://tannoiser2.github.io/Freedom-in-the-Galaxy/reborn/atlante/?planet=341&skin=painterly): Liquido 3/7, Selvaggio 4/7.
-- [Magro](https://tannoiser2.github.io/Freedom-in-the-Galaxy/reborn/atlante/?planet=112&skin=painterly): Urbano 3/8, Aereo 5/8.
-- [Cieson](https://tannoiser2.github.io/Freedom-in-the-Galaxy/reborn/atlante/?planet=211&skin=painterly): solo Aereo.
-
-Materiali in `atlante/painterly/v3/`, con Urbano aggiornato in `atlante/painterly/v4/`: grigi urbani con strade emissive tra conglomerati; crepacci scuri, rosso cupo e ocra per Sotterraneo; montagne e diversi verdi per Selvaggio; oceani blu con isolotti decorativi radi per Liquido; bande acide e grandi tempeste rosse per Aereo. Maschere originali a 2048×1024, senza modifiche ai dati di gioco. Gli isolotti illustrativi restano classificati Liquido.
-
-## Scala planetaria e basi degli ambienti
-
-Edifici e alberi restano dettagli minuti. Montagne e crepacci hanno una scala regionale distinta, per evitare un risultato monocolore; isole e tempeste conservano le loro forme sulla mappa completa. Mipmap e filtro anisotropico limitano lo sfarfallio. I piccoli blocchi urbani della skin attuale conservano la riduzione di scala precedente.
-
-Su tutti i 51 pianeti, l’immagine dell’ambiente compare **solo sulla base rotonda**. Nessun pannello verticale dietro le unità. Nome, bordo colorato e collegamento al bioma identificano la collocazione di truppe e personaggi. Immagini di tutti e sei gli ambienti in `atlante/environs/v3/`.
-
-Il test `python tests/atlas_browser.py` verifica per tutti i pianeti la presenza del terreno, l’assenza di fondali e la collocazione delle unità. `python tests/materials_v3_browser.py` verifica i quattro globi pittorici, le basi e la rete urbana sul lato notturno. Le prove precedenti di Solvia e Midest restano verificabili con i relativi test dedicati. Aggiungere `&isolated=1` al link nasconde inizialmente unità, PDB e nomi.
-
-### Urbano: luci nella texture
-
-La revisione urbana 4 elimina la rete geometrica di linee e anelli sovrapposta allo shader. Le città e le strade già disegnate nel materiale sono più gialle e luminose; l’emissione notturna viene ricavata esclusivamente dai loro dettagli gialli, con fondo grigio conservato. La trama regionale conserva i collegamenti dipinti tra conglomerati e il dettaglio minuto resta a scala planetaria. Stesso materiale sulla base rotonda urbana, senza fondali verticali.
+Le sorgenti artistiche correnti e i prompt sono in `reborn/materiali_pittorici/`. Il builder genera copie con hash del contenuto per il sito e versioni più piccole per le basi. Le cartelle `painterly/v3`, `painterly/v4` ed `environs/` dell’atlante documentano le prove precedenti; il sito corrente usa la libreria indicata dal catalogo.

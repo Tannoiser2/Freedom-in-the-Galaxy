@@ -1,4 +1,4 @@
-"""Inspect all four material trials and the round, unbacked environment stages."""
+"""Inspect reference planets and representative material variants and the round, unbacked environment stages."""
 from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -20,7 +20,13 @@ try:
         errors=[]
         page.on('pageerror',lambda e:errors.append(str(e)))
         page.on('console',lambda m:errors.append(m.text) if m.type=='error' else None)
-        for pid,name in [(432,'solvia'),(341,'midest'),(211,'cieson'),(112,'magro')]:
+        out=ROOT/'reborn/atlante'
+        catalog=json.loads((out/json.loads((out/'build.json').read_text())['data']).read_text())
+        examples=[(432,'solvia'),(341,'midest'),(211,'cieson'),(112,'magro')]
+        for kind,index in [('fuoco',1),('fuoco',3),('sotterraneo',3),('aereo',2),('liquido',2)]:
+            planet=next(p for p in catalog['planets'] if any(e['tipo']==kind and e['material']['variant']==index for e in p['ambienti']))
+            if not any(pid==planet['id'] for pid,_ in examples):examples.append((planet['id'],planet['nome'].lower()))
+        for pid,name in examples:
             page.goto(f'http://127.0.0.1:{server.server_port}/reborn/atlante/?planet={pid}&skin=painterly')
             page.wait_for_selector('body[data-ready="true"]',timeout=60000)
             page.click('#pause');page.wait_for_timeout(300)
@@ -40,6 +46,11 @@ try:
                 assert lights>50,('Urban network invisible on night side',lights)
                 page.screenshot(path=str(ROOT/'reborn/anteprime/solvia_notturna.png'))
             print(f'{pid} {name}: globo, basi senza fondale e materiali OK',flush=True)
+        page.goto(f'http://127.0.0.1:{server.server_port}/reborn/atlante/materiali.html')
+        assert page.locator('.card').count()==18
+        for width,height in [(1500,1000),(390,844)]:
+            page.set_viewport_size({'width':width,'height':height})
+            assert page.evaluate('document.documentElement.scrollWidth<=window.innerWidth')
         assert not errors,errors
         browser.close()
 finally:server.shutdown()
