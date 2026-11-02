@@ -2,6 +2,20 @@
 
 Pacchetto autonomo di produzione grafica. Le carte definitive restano volutamente fuori da questa fase.
 
+## Atlante dei pianeti e dei sistemi
+
+Disponibile un atlante WebGL completo in `atlante/`: elenco di 51 pianeti e
+25 sistemi, stella, rivoluzione e rotazione dei globi, PDB animato UP/DOWN e
+piattaforme con unità dimostrative. Dettagli e comandi: `ATLANTE.md`.
+
+Corretto l'aspetto ambiguo dell'Urbano: Adare non contiene acqua. Le sue città
+sono ora quartieri ocra/bronzo, con volumi edificati nell'atlante, e rimangono
+il 44,44% della superficie; il Selvaggio resta al 55,56%. L'acqua e i suoi riflessi
+sono riservati ai pianeti che possiedono environ Liquido.
+
+Il test del browser percorre tutte le 76 selezioni. I render statici delle
+iterazioni precedenti restano come archivio, non come riferimento dei nuovi colori.
+
 ## Pianeti e unità: seconda iterazione
 
 Aggiornati tutti i 51 set planetari con profili artistici distinti: sei famiglie

@@ -34,6 +34,10 @@ def main():
     (OUT / 'adare').mkdir(exist_ok=True)
     (OUT / 'render').mkdir(exist_ok=True)
     (OUT / 'adare/index.html').write_text(viewer)
+    atlas_source = ROOT / 'reborn/atlante'
+    atlas = json.loads((atlas_source/'build.json').read_text())
+    assert atlas['planets'] == 51 and atlas['systems'] == 25
+    shutil.copytree(atlas_source, OUT/'atlante', dirs_exist_ok=True)
     cards = []
     for filename,title,description in IMAGES:
         assert (SOURCE / filename).is_file(), filename
@@ -43,17 +47,20 @@ def main():
     landing = '''<!doctype html><html lang="it"><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><title>Freedom in the Galaxy · Reborn</title>
 <style>*{box-sizing:border-box}body{margin:0;background:#080e16;color:#e9ece6;font:16px system-ui,sans-serif}main{max-width:1180px;margin:auto;padding:40px 24px}h1{font-size:clamp(30px,5vw,60px);font-weight:500;margin:18px 0}h2{font-size:25px;font-weight:500}p{color:#acbdb2;line-height:1.7}a{color:#80d3ac}nav{display:flex;gap:15px;flex-wrap:wrap;margin:30px 0}nav a{padding:14px 20px;border:1px solid #4b7962;border-radius:7px;text-decoration:none}nav a:first-child{background:#224c39;color:white}img{display:block;width:100%;height:auto;border-radius:10px;border:1px solid #263a32}section{margin:55px 0}.eyebrow{font-size:12px;letter-spacing:3px;color:#7acaaa}footer{padding:30px 0;color:#728c7c;font-size:13px}</style>
-<main><div class="eyebrow">FREEDOM IN THE GALAXY / REBORN</div><h1>Adare e il nuovo atlante planetario</h1>
-<p>Anteprima grafica: 51 pianeti con territori proporzionali agli environ, piattaforme per le unità e difesa planetaria. Il gioco completo resta separato.</p>
-<nav><a href="adare/">Apri il pianeta 3D</a><a href="adare_3d.zip">Scarica la versione offline ZIP</a></nav>
-<p>Nel pianeta interattivo puoi ruotare, ingrandire e passare tra superficie, ambienti e notte. I render qui sotto mostrano le piattaforme e il PDB; non sono una partita in corso.</p>
+<main><div class="eyebrow">FREEDOM IN THE GALAXY / REBORN</div><h1>Atlante interattivo della galassia</h1>
+<p>51 pianeti e 25 sistemi selezionabili, con stelle, orbite animate, rotazione dei globi, basi PDB e unità dimostrative sulle piattaforme. Il gioco completo resta separato.</p>
+<nav><a href="atlante/">Apri l’atlante 3D completo</a><a href="adare/">Adare: esempio autonomo</a><a href="adare_3d.zip">Versione offline di Adare</a></nav>
+<p>Le zone urbane sono ora ocra e bronzo, con quartieri e strade: Adare non ha acqua. Nell’atlante puoi selezionare ogni mondo o sistema, configurare forza e stato del PDB, mettere in pausa e avvicinarti ai pianeti.</p>
+<h2>Archivio dei render della prima iterazione</h2><p>I render sotto documentano la prima prova delle piattaforme. Per materiali e colori aggiornati usa l’atlante interattivo.</p>
 ''' + '\n'.join(cards) + '<footer>Prototipi grafici da valutare · Texture di produzione 2048×1024 · Nessuna modifica alle regole di gioco</footer></main></html>'
     (OUT / 'index.html').write_text(landing)
     with zipfile.ZipFile(OUT/'adare_3d.zip','w',zipfile.ZIP_DEFLATED,compresslevel=9) as archive:
         archive.writestr('Adare_3D.html',viewer)
     (OUT / '_headers').write_text('/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: same-origin\n  Cache-Control: no-cache\n')
     revision = hashlib.sha256(viewer.encode()).hexdigest()
-    (OUT/'version.json').write_text(json.dumps({'viewer_sha256':revision,'standalone':True,'render_count':len(IMAGES)})+'\n')
+    (OUT/'version.json').write_text(json.dumps({'viewer_sha256':revision,'standalone':True,'render_count':len(IMAGES),
+        'atlas_planets':atlas['planets'],'atlas_systems':atlas['systems'],'atlas_data':atlas['data'],
+        'atlas_sha256':atlas['script_sha256']})+'\n')
     print(f'Prepared {OUT}: standalone viewer, {len(IMAGES)} renders, ZIP; SHA256 {revision}')
 
 

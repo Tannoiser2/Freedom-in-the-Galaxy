@@ -93,8 +93,12 @@ jobs:
                       version = json.load(response)
                   assert version['standalone'] and version['render_count'] == 6
                   assert version['viewer_sha256'] == expected
+                  assert version['atlas_planets'] == 51 and version['atlas_systems'] == 25
                   with urllib.request.urlopen(base, timeout=20) as response:
-                      assert 'Adare e il nuovo atlante planetario' in response.read().decode()
+                      assert 'Atlante interattivo della galassia' in response.read().decode()
+                  with urllib.request.urlopen(base + 'atlante/' + version['atlas_data'], timeout=20) as response:
+                      atlas = json.load(response)
+                  assert len(atlas['planets']) == 51 and len(atlas['systems']) == 25
                   print('Anteprima verificata su ' + base)
                   with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as summary:
                       summary.write('## Anteprima Reborn pubblicata\n\n' + base + '\n')

@@ -17,7 +17,8 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'assets_reborn/pianeti'
 W, H = 2048, 1024
 COLORS = {
-    'urbano': ((58, 70, 76), (155, 163, 158)),
+    # Warm stone/bronze roofs, distinct from blue water even in daylight.
+    'urbano': ((67, 44, 27), (192, 154, 105)),
     'selvaggio': ((12, 37, 26), (83, 112, 58)),
     'sotterraneo': ((42, 31, 31), (163, 125, 105)),
     'liquido': ((5, 22, 58), (24, 125, 148)),
@@ -44,7 +45,7 @@ def planet_profile(pid):
     return {'bioma_selvaggio': biome[0], 'palette_selvaggio': biome[1:3],
             'roccia': biome[3], 'frequenza_continenti': float(rng.uniform(1.6, 2.9)),
             'densita_montagne': float(rng.uniform(.4, .85)),
-            'frequenza_citta': float(rng.uniform(700, 1250)),
+            'frequenza_citta': float(rng.uniform(90, 160)),
             'tinta_citta': rng.uniform(.8, 1.18, 3).tolist(),
             'tinta_acqua': rng.uniform(.72, 1.25, 3).tolist(),
             'colore_luci': [255, int(rng.integers(145, 205)), int(rng.integers(55, 125))]}
@@ -151,11 +152,12 @@ def build(planet, xyz, weights):
     rugged = np.clip(1 - np.abs(mid - .5) * 2, 0, 1) ** 5
     rock = np.clip((broad - .48) * 7, 0, 1) * rugged
     frequency = profile['frequenza_citta']
-    grid_x = np.abs(np.sin(xyz[0] * frequency + fine * 7))
-    grid_z = np.abs(np.sin(xyz[2] * frequency * .93 + fine * 5))
-    streets = np.maximum(np.clip((grid_x - .966) * 29, 0, 1),
-                         np.clip((grid_z - .966) * 29, 0, 1))
-    blocks = .35 * mid + .35 * fine + .30 * micro
+    city_x = xyz[0] * frequency + mid * 2.5
+    city_z = xyz[2] * frequency * .93 + fine * 2.5
+    street_distance = np.minimum(np.minimum(np.mod(city_x,1),1-np.mod(city_x,1)),
+                                 np.minimum(np.mod(city_z,1),1-np.mod(city_z,1)))
+    streets = np.clip((.095-street_distance)*12,0,1)
+    blocks = np.mod(np.sin(np.floor(city_x)*12.9898+np.floor(city_z)*78.233+pid)*43758.5453,1)
     water = np.isin(labels, water_indices)
     pure_water = bool(water_indices) and len(water_indices) == len(envs)
     islands = np.zeros((H,W), dtype=bool)
@@ -183,8 +185,8 @@ def build(planet, xyz, weights):
             c *= (.78 + .40 * micro)[..., None]
             h = .35 * broad + .65 * rugged
         elif kind == 'urbano':
-            c *= (.65 + .55 * blocks)[..., None] * np.array(profile['tinta_citta'])
-            c += streets[..., None] * np.array([22, 20, 16])
+            c *= (.65 + .70 * blocks)[..., None] * np.array(profile['tinta_citta'])
+            c *= (1-.65*streets)[...,None]
             active = streets * np.clip((fine - .27) * 2.6, 0, 1)
             emission[mask] = (active[..., None] * np.array(profile['colore_luci']))[mask]
             h = .30 + .05 * blocks + .025 * micro

@@ -16,6 +16,12 @@ Versione digitale in Godot 4.7 di **Freedom in the Galaxy: The Star Rebellions, 
 
 Prossima fase: la versione **Reborn** con grafica nuova.
 
+L'[atlante Reborn interattivo](https://tannoiser2.github.io/Freedom-in-the-Galaxy/reborn/atlante/)
+mostra tutti i 51 pianeti e i 25 sistemi, selezionabili da un elenco: orbite e
+rotazioni animate, PDB operativo/down e unità dimostrative sulle piattaforme.
+Adare conserva Urbano 4 e Selvaggio 5, senza acqua; le città sono rese in ocra e
+bronzo. È un'anteprima grafica separata dalla partita. Dettagli in `reborn/ATLANTE.md`.
+
 ## Struttura
 
 - `data/` — dati estratti dal modulo Tabletop Simulator e dalle regole:
