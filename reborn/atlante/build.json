@@ -1,8 +1,8 @@
 {
   "planets": 51,
   "systems": 25,
-  "data": "data-1b53244fb7cf.json",
-  "script_sha256": "1cd002a6ff10a0574c4c1a9aca5f91f47271cd17f122a0c39229a0205f840bb5",
+  "data": "data-2104695b15ee.json",
+  "script_sha256": "a90eaf625df0f87a604feb0febd0f0f8de320541fe2b7d0e22792be252180150",
   "material_variants": 18,
   "default_skin": "painterly"
 }
