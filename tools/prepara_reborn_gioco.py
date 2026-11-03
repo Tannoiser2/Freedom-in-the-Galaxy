@@ -44,15 +44,26 @@ def main():
             salva(f, os.path.join(DEST, "pianeti", b + ".webp"), dimensioni=(1024, 512), qualita=84)
         elif b.endswith("_disco"):
             salva(f, os.path.join(DEST, "pianeti", b + ".webp"), lato_max=224)
+        elif b.endswith("_normal"):
+            salva(f, os.path.join(DEST, "pianeti", b + ".webp"), dimensioni=(1024, 512), qualita=88)
         elif b.endswith("_emission"):
             salva(f, os.path.join(DEST, "pianeti", b + ".webp"), dimensioni=(512, 256), qualita=80)
         else:
             continue
         n += 1
+    for f in glob.glob(os.path.join(RADICE, "assets_reborn/figure_intere/*.png")):
+        salva(f, os.path.join(DEST, "figure", os.path.basename(f)[:-4] + ".webp"), lato_max=420)
+        n += 1
+    for f in glob.glob(os.path.join(RADICE, "assets_reborn/astronavi/*.png")):
+        salva(f, os.path.join(DEST, "astronavi", os.path.basename(f)[:-4] + ".webp"), lato_max=320)
+        n += 1
     for f in glob.glob(os.path.join(RADICE, "reborn/atlante/environs/*.jpg")):
         salva(f, os.path.join(DEST, "ambienti", os.path.basename(f)[:-4] + ".webp"), lato_max=512, qualita=82)
         n += 1
     print("immagini preparate:", n)
+    # le unità militari si disegnano a vettori (sostituiscono le copie delle pedine originali)
+    import subprocess, sys
+    subprocess.run([sys.executable, os.path.join(RADICE, "tools", "genera_unita_reborn.py")], check=True)
 
 
 if __name__ == "__main__":

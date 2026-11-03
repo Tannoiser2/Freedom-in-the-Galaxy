@@ -40,6 +40,7 @@ var galassia_v
 var b_galassia: Button
 var lbl_risorse: Label
 var _galassia_aperta := false
+var _anteprima_aperta := false
 
 
 func _ready() -> void:
@@ -632,6 +633,7 @@ func _anteprima_carta(t: Texture2D) -> void:
 	tr.size = Vector2(h * t.get_width() / t.get_height(), h)
 	tr.position = Vector2(area_mappa.size.x - tr.size.x - 12, area_mappa.size.y - h - 10)
 	popup_carta.add_child(tr)
+	_anteprima_aperta = true
 
 
 func _mostra_popup_carta(tipo: String, dati: Dictionary, sezione := "") -> void:
@@ -814,4 +816,9 @@ func _unhandled_key_input(ev: InputEvent) -> void:
 
 
 func _process(_d: float) -> void:
-	pass
+	# l'anteprima Reborn sparisce appena il mouse non è più su una carta (anche se la striscia è stata rifatta)
+	if _anteprima_aperta:
+		var h := get_viewport().gui_get_hovered_control()
+		if h == null or not (h.get_script() == preload("res://scripts/ui/carta.gd")):
+			_anteprima_aperta = false
+			_svuota(popup_carta)

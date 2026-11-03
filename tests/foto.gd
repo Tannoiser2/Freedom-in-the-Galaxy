@@ -50,6 +50,10 @@ func _init() -> void:
 		p.tavolo3d._dist = 32.0
 		p.tavolo3d._aggiorna_camera()
 		await _attendi(0.5)
+		_scatta("5a_3d_sistema")
+		var pid_v: int = p.tavolo3d._pianeti.keys()[-1]
+		p.tavolo3d._avvicina(p.tavolo3d._pianeti[pid_v])
+		await _attendi(2.0)
 	_scatta("5_3d")
 	p._imposta_3d(false)
 	p._mostra_missioni()

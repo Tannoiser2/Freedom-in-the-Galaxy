@@ -40,6 +40,8 @@ func imposta_stella(s: int) -> void:
 	if s == stella_vista:
 		return
 	stella_vista = s
+	_vicino = null
+	_target = Vector3.ZERO
 	if _root != null:
 		_costruisci_sistema()
 		aggiorna()
@@ -167,6 +169,18 @@ func _costruisci_sistema() -> void:
 		pm.material_override = _materiale_pianeta(dp)
 		pm.name = "Globo"
 		nodo.add_child(pm)
+		# doppio clic sul globo: la camera si avvicina al pianeta (di nuovo: torna al sistema)
+		var ag := Area3D.new()
+		var cg := CollisionShape3D.new()
+		var sg := SphereShape3D.new()
+		sg.radius = ps.radius
+		cg.shape = sg
+		ag.add_child(cg)
+		var nodo_p := nodo
+		ag.input_event.connect(func(_c, ev, _p, _n, _i):
+			if ev is InputEventMouseButton and ev.pressed and ev.double_click and ev.button_index == MOUSE_BUTTON_LEFT:
+				_avvicina(nodo_p))
+		nodo.add_child(ag)
 		var difesa := DifesaPlanetaria3D.new()
 		difesa.rotation_degrees = Vector3(12, 0, 6)
 		nodo.add_child(difesa)
@@ -201,7 +215,7 @@ func _costruisci_sistema() -> void:
 				if ev is InputEventMouseButton and ev.pressed and ev.button_index == MOUSE_BUTTON_LEFT:
 					luogo_cliccato.emit(lo))
 			orb.add_child(ao)
-			_piattaforme[lo] = {"nodo": orb, "mat": mo, "col": Color(0.55, 0.65, 1.0)}
+			_piattaforme[lo] = {"nodo": orb, "mat": mo, "col": Color(0.55, 0.65, 1.0), "base": 0.8}
 		nodo.add_child(lp)
 		var st := _etichetta("", 60, Color(0.8, 0.8, 0.9))
 		st.name = "Stato"
@@ -234,7 +248,7 @@ func _costruisci_sistema() -> void:
 			if ta != null:
 				mt.albedo_texture = ta
 				mt.albedo_color = Color(1, 1, 1)
-				mt.emission_energy_multiplier = 0.12
+				mt.emission_energy_multiplier = 0.06
 				mt.metallic = 0.0
 				mt.roughness = 0.8
 			disco.material_override = mt
@@ -255,7 +269,7 @@ func _costruisci_sistema() -> void:
 				if ev is InputEventMouseButton and ev.pressed and ev.button_index == MOUSE_BUTTON_LEFT:
 					luogo_cliccato.emit(l))
 			piat.add_child(area)
-			_piattaforme[l] = {"nodo": piat, "mat": mt, "col": col}
+			_piattaforme[l] = {"nodo": piat, "mat": mt, "col": col, "base": mt.emission_energy_multiplier}
 			# collegamento al pianeta
 			var trave := MeshInstance3D.new()
 			var bm := CylinderMesh.new()
@@ -278,21 +292,64 @@ static func raggio_pianeta(dp: Dictionary) -> float:
 	return 2.3 * sqrt(maxf(superficie, 1.0) / 9.0)
 
 
-func _materiale_pianeta(dp: Dictionary) -> StandardMaterial3D:
-	var mt := StandardMaterial3D.new()
+const SHADER_PIANETA := """shader_type spatial;
+render_mode diffuse_lambert, specular_disabled, ambient_light_disabled;
+uniform sampler2D albedo_tex : source_color, filter_linear_mipmap, repeat_enable;
+uniform sampler2D normal_tex : hint_normal, filter_linear_mipmap, repeat_enable;
+uniform sampler2D luci_tex : source_color, filter_linear_mipmap, repeat_enable;
+uniform float rilievo = 3.0;
+uniform float luci = 2.2;
+uniform vec3 stella = vec3(0.0);
+uniform vec3 atmosfera : source_color = vec3(0.45, 0.62, 1.0);
+varying vec3 wpos;
+varying vec3 wnorm;
+void vertex() {
+	wpos = (MODEL_MATRIX * vec4(VERTEX, 1.0)).xyz;
+	wnorm = normalize((MODEL_MATRIX * vec4(NORMAL, 0.0)).xyz);
+}
+void fragment() {
+	vec3 c = texture(albedo_tex, UV).rgb;
+	ALBEDO = c;
+	NORMAL_MAP = texture(normal_tex, UV).rgb;
+	NORMAL_MAP_DEPTH = rilievo;
+	ROUGHNESS = 1.0;
+	float d = dot(wnorm, normalize(stella - wpos));
+	float notte = smoothstep(0.1, -0.3, d);
+	vec3 e = texture(luci_tex, UV).rgb * luci * notte;
+	e += c * 0.06;
+	float bordo = pow(1.0 - clamp(dot(NORMAL, VIEW), 0.0, 1.0), 3.0);
+	e += atmosfera * bordo * (0.15 + 0.55 * smoothstep(-0.4, 0.6, d));
+	EMISSION = e;
+}"""
+
+
+func _materiale_pianeta(dp: Dictionary) -> Material:
 	var tr := UI.reborn_tex("pianeti/%d" % int(dp["id"]))
 	if tr != null:
-		mt.albedo_texture = tr
-		mt.albedo_color = Color(0.82, 0.82, 0.82)
-		mt.roughness = 1.0
-		mt.specular_mode = BaseMaterial3D.SPECULAR_DISABLED
+		var sm := ShaderMaterial.new()
+		var sh := Shader.new()
+		sh.code = SHADER_PIANETA
+		sm.shader = sh
+		sm.set_shader_parameter("albedo_tex", tr)
+		var tn := UI.reborn_tex("pianeti/%d_normal" % int(dp["id"]))
+		if tn != null:
+			sm.set_shader_parameter("normal_tex", tn)
+		else:
+			sm.set_shader_parameter("rilievo", 0.0)
 		var te := UI.reborn_tex("pianeti/%d_emission" % int(dp["id"]))
 		if te != null:
-			mt.emission_enabled = true
-			mt.emission_texture = te
-			mt.emission = Color(1.0, 0.85, 0.6)
-			mt.emission_energy_multiplier = 0.25
-		return mt
+			sm.set_shader_parameter("luci_tex", te)
+		else:
+			sm.set_shader_parameter("luci", 0.0)
+		var tipi := []
+		for a in dp["ambienti"]:
+			tipi.append(a["tipo"])
+		if "fuoco" in tipi:
+			sm.set_shader_parameter("atmosfera", Color(1.0, 0.5, 0.25))
+		elif "aereo" in tipi:
+			sm.set_shader_parameter("atmosfera", Color(0.7, 0.85, 1.0))
+		return sm
+	var mt := StandardMaterial3D.new()
 	var nt := NoiseTexture2D.new()
 	nt.width = 256
 	nt.height = 128
@@ -379,6 +436,11 @@ func aggiorna() -> void:
 				var u: Dictionary = m.unita[id]
 				if u["luogo"] == l and u["fz"] == f:
 					lista.append(id)
+			# Reborn: i personaggi diventano figure intere in piedi dietro le pedine
+			var figure := lista.filter(func(x): return m.unita[x]["k"] == "pg" and _figura(x) != null)
+			lista = lista.filter(func(x): return not figure.has(x))
+			for j in figure.size():
+				_metti_figura(figure[j], j, figure.size(), base, 1.0 if f == Motore.R else -1.0)
 			var n := lista.size()
 			for i in n:
 				var id2: int = lista[i]
@@ -414,6 +476,61 @@ func aggiorna() -> void:
 					_pedine_root.add_child(sn)
 
 
+func _figura(id: int) -> Texture2D:
+	var u: Dictionary = m.unita[id]
+	if u.has("ped"):
+		return null
+	return UI.reborn_tex("figure/" + UI.chiave_pg(u["nome"]))
+
+
+func _metti_figura(id: int, j: int, n: int, base: Vector3, lato: float) -> void:
+	var u: Dictionary = m.unita[id]
+	var tx := _figura(id)
+	var alto := 3.0
+	var sp := Sprite3D.new()
+	sp.texture = tx
+	sp.pixel_size = alto / float(tx.get_height())
+	sp.billboard = BaseMaterial3D.BILLBOARD_FIXED_Y
+	sp.shaded = false
+	sp.alpha_cut = SpriteBase3D.ALPHA_CUT_DISCARD
+	var x := (float(j) - (n - 1) * 0.5) * minf(1.05, 3.4 / maxf(1, n))
+	sp.position = base + Vector3(x, 0.12 + alto * 0.5, lato * 1.45)
+	if u["prig"] >= 0:
+		sp.modulate = Color(0.55, 0.55, 0.6)
+	elif u["ind"]:
+		sp.modulate = Color(1.0, 0.78, 0.72)
+	_pedine_root.add_child(sp)
+	# ombra a terra
+	var om := MeshInstance3D.new()
+	var cm := CylinderMesh.new()
+	cm.top_radius = 0.3
+	cm.bottom_radius = 0.3
+	cm.height = 0.01
+	om.mesh = cm
+	var mo := StandardMaterial3D.new()
+	mo.albedo_color = Color(0, 0, 0, 0.45)
+	mo.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+	mo.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+	om.material_override = mo
+	om.position = Vector3(sp.position.x, base.y + 0.11, sp.position.z)
+	_pedine_root.add_child(om)
+	var nome := _etichetta(u["nome"], 36, UI.colore_fazione(u["fz"]).lightened(0.3))
+	nome.position = Vector3(sp.position.x, base.y + 0.18, sp.position.z + lato * 0.45)
+	_pedine_root.add_child(nome)
+	if not u["nave"].is_empty():
+		var chiave := UI.chiave_nave(u["nave"])
+		var tn := UI.reborn_tex("astronavi/" + chiave + ("_r" if u["nave"].get("dmg", false) else ""))
+		if tn != null:
+			var sn := Sprite3D.new()
+			sn.texture = tn
+			sn.pixel_size = 1.5 / float(tn.get_width())
+			sn.billboard = BaseMaterial3D.BILLBOARD_ENABLED
+			sn.shaded = false
+			sn.alpha_cut = SpriteBase3D.ALPHA_CUT_DISCARD
+			sn.position = sp.position + Vector3(0.35, alto * 0.5 + 0.55, 0)
+			_pedine_root.add_child(sn)
+
+
 func anima_volo(da: String, a: String, f: int) -> void:
 	if not _piattaforme.has(a):
 		return
@@ -434,6 +551,13 @@ func anima_volo(da: String, a: String, f: int) -> void:
 
 func _process(delta: float) -> void:
 	_tempo += delta
+	if _dist_meta > 0.0:
+		var k := minf(1.0, delta * 4.0)
+		_target = _target.lerp(_meta, k)
+		_dist = lerpf(_dist, _dist_meta, k)
+		_aggiorna_camera()
+		if _target.distance_to(_meta) < 0.02 and absf(_dist - _dist_meta) < 0.05:
+			_dist_meta = -1.0
 	for pid in _pianeti:
 		var g: Node3D = _pianeti[pid].get_node("Globo")
 		g.rotate_y(delta * 0.15)
@@ -445,7 +569,7 @@ func _process(delta: float) -> void:
 			mt.emission_energy_multiplier = 1.4 + 0.8 * sin(_tempo * 5.0)
 		else:
 			mt.emission = d["col"]
-			mt.emission_energy_multiplier = 0.35
+			mt.emission_energy_multiplier = float(d.get("base", 0.35))
 	for v in _voli:
 		v["t"] += delta / 1.4
 		var t: float = minf(1.0, v["t"])
@@ -460,6 +584,22 @@ func _process(delta: float) -> void:
 		if v["t"] >= 1.0:
 			n.queue_free()
 	_voli = _voli.filter(func(v): return v["t"] < 1.0)
+
+
+var _meta := Vector3.ZERO
+var _dist_meta := -1.0
+var _vicino: Node3D = null
+
+
+func _avvicina(nodo: Node3D) -> void:
+	if _vicino == nodo:
+		_vicino = null
+		_meta = Vector3.ZERO
+		_dist_meta = 66.0
+	else:
+		_vicino = nodo
+		_meta = nodo.position
+		_dist_meta = 14.0
 
 
 func _aggiorna_camera() -> void:

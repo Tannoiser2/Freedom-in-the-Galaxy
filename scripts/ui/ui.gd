@@ -203,6 +203,8 @@ static func chiave_mil(u: Dictionary) -> String:
 		if int(u["fz"]) == Motore.I:
 			return str(d["ped"])
 		var c := str(d["ped"])
+		if reborn:
+			return "rib_%s_%s" % [u["amb"], c]
 		if c == "elite" and not u["amb"] in ["urbano", "selvaggio"]:
 			c = "43"
 		if c == "43" and u["amb"] == "fuoco":
