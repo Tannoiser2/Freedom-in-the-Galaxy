@@ -454,8 +454,10 @@ func aggiorna() -> void:
 				var sp := Sprite3D.new()
 				sp.texture = tx
 				sp.pixel_size = 0.9 / maxf(1.0, float(tx.get_width()) if tx != null else 64.0)
-				if u2["k"] == "mil" and tx != null:
-					sp.pixel_size = 1.15 / float(tx.get_height())
+				var altezza_truppa := 0.0
+				if UI.reborn and u2["k"] == "mil" and tx != null and not (u2["fz"] == Motore.I and u2["mobile"] and not u2["scoperta"] and vista == Motore.R):
+					altezza_truppa = 1.25 if UI.truppa_in_spazio(u2) or int(u2["forza"]) == 0 else 2.8
+					sp.pixel_size = altezza_truppa / float(tx.get_height())
 				sp.billboard = BaseMaterial3D.BILLBOARD_FIXED_Y
 				sp.shaded = false
 				sp.alpha_cut = SpriteBase3D.ALPHA_CUT_DISABLED
@@ -464,18 +466,21 @@ func aggiorna() -> void:
 				var x := (float(i % 4) - (cols - 1) * 0.5) * 0.98
 				var riga := int(i / 4)
 				sp.position = base + Vector3(x, 0.6 + riga * 0.98, fila - riga * 0.05)
+				if altezza_truppa > 0:
+					sp.position = base + Vector3(x * 1.35, 0.12 + altezza_truppa * 0.5 + riga * (altezza_truppa + 0.1), fila - riga * 0.05)
+				sp.set_meta("unit_id", id2)
 				if u2["k"] == "pg" and u2["prig"] >= 0:
 					sp.modulate = Color(0.6, 0.6, 0.6)
 				_pedine_root.add_child(sp)
-				if u2["k"] == "mil":
+				if UI.reborn and u2["k"] == "mil":
 					var nascosta: bool = u2["fz"] == Motore.I and u2["mobile"] and not u2["scoperta"] and vista == Motore.R
 					var testo_unita := "Unità imperiale" if nascosta else m.descr_mil(id2)
 					if not nascosta:
 						var forza_spazio := int(u2.get("spazio", 0 if not u2["mobile"] else (2 if u2["fz"] == Motore.I else 1)))
 						testo_unita += "\nTerra %d · Spazio %d" % [int(u2["forza"]), forza_spazio]
 					var et := _etichetta(testo_unita, 28, UI.colore_fazione(f))
-					et.position = sp.position + Vector3(0, -0.55, 0.12)
-					et.pixel_size = 0.0025
+					et.position = Vector3(sp.position.x, base.y + 0.12, sp.position.z + 0.25)
+					et.pixel_size = 0.008
 					_pedine_root.add_child(et)
 				if u2["k"] == "pg" and not u2["nave"].is_empty():
 					var sn := Sprite3D.new()

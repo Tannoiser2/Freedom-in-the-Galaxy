@@ -6,6 +6,7 @@ extends Control
 signal luogo_cliccato(luogo: String)
 signal pedina_cliccata(id: int)
 signal sopra(info: String)
+signal pedina_sorvolata(id: int)
 
 var m: Motore
 var vista := -1          # fazione di chi guarda (-1 = tutto visibile)
@@ -20,6 +21,7 @@ var _tempo := 0.0
 var _voli: Array = []    # animazioni {da: Vector2, a: Vector2, t: float, col}
 var _pos_pianeti := {}
 var _hover := ""
+var _hover_unita := -1
 var stella_vista := -1
 const PED := 50.0
 
@@ -519,9 +521,14 @@ func _gui_input(ev: InputEvent) -> void:
 			_hover = nuovo
 			queue_redraw()
 		var info := ""
+		var hover_id := -1
 		for rp in _rect_pedine:
 			if rp[0].has_point(ev.position):
 				info = descrivi(rp[1])
+				hover_id = int(rp[1])
+		if hover_id != _hover_unita:
+			_hover_unita = hover_id
+			pedina_sorvolata.emit(hover_id)
 		for sr in _rect_segreti:
 			if sr.has_point(ev.position):
 				var k: String = m.galattico.segreti[_rect_segreti[sr]]

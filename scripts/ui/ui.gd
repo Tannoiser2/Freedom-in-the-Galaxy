@@ -249,19 +249,27 @@ static func truppa_path(u: Dictionary, nascosta := false, figura := false) -> St
 	var chiave := chiave_truppa(u)
 	var spazio := truppa_in_spazio(u)
 	if not figura:
-		return "res://assets_reborn/truppe/pedine/%s-%s.png" % [chiave, "orbita" if spazio else "terra"]
+		return "res://assets/reborn/truppe/pedine/%s-%s.webp" % [chiave, "orbita" if spazio else "terra"]
 	var cat: String = str(u.get("cat", u["tipo"]))
 	if int(u["fz"]) == Motore.R:
 		cat = str(u.get("cat", "r21" if int(u["forza"]) == 2 else "r10"))
 		if spazio:
-			return "res://assets_reborn/truppe/rib_orbita_%s.webp" % cat
+			return "res://assets/reborn/truppe/figure/rib_orbita_%s.webp" % cat
 		var classe := "milizia" if cat == "r10" else ("elite" if cat == "r44" else "linea")
-		return "res://assets_reborn/truppe/rib_%s_%s.webp" % [u["amb"], classe]
+		return "res://assets/reborn/truppe/figure/rib_%s_%s.webp" % [u["amb"], classe]
 	var arte := {"suicida": "pattuglia", "resolution": "elite_flotta", "peacemaker": "elite_flotta", "stabilizzatore": "elite_flotta"}
 	var solo_nave: bool = cat in ["resolution", "peacemaker", "stabilizzatore"]
-	return "res://assets_reborn/truppe/imp_%s%s.webp" % [arte.get(cat, cat), "_orbita" if spazio or solo_nave else ""]
+	return "res://assets/reborn/truppe/figure/imp_%s%s.webp" % [arte.get(cat, cat), "_orbita" if spazio or solo_nave else ""]
 
 
 static func truppa_tex(u: Dictionary, nascosta := false, figura := false) -> Texture2D:
+	if not reborn:
+		return pedina_tex(chiave_mil(u), nascosta)
 	var t := tex(truppa_path(u, nascosta, figura))
 	return t if t != null else pedina_tex(chiave_mil(u), nascosta)
+
+
+static func truppa_carta(u: Dictionary, nascosta := false) -> Texture2D:
+	if not reborn or nascosta:
+		return null
+	return reborn_tex("truppe/carte/%s-%s" % [chiave_truppa(u), "orbita" if truppa_in_spazio(u) else "terra"])

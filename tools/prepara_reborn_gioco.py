@@ -64,6 +64,7 @@ def main():
     # le unità militari si disegnano a vettori (sostituiscono le copie delle pedine originali)
     import subprocess, sys
     subprocess.run([sys.executable, os.path.join(RADICE, "tools", "genera_unita_reborn.py")], check=True)
+    subprocess.run([sys.executable, os.path.join(RADICE, "tools", "package_troop_game.py")], check=True)
 
 
 if __name__ == "__main__":

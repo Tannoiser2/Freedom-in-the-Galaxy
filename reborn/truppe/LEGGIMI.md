@@ -6,7 +6,9 @@ La Milizia, la Linea e l’Élite hanno figure distinte; per i ribelli ciascuna 
 
 Le figure originali di produzione provengono da sei fogli generati, documentati con prompt in `../produzione/truppe-illustrazioni.json`. `tools/export_troop_art.py` estrae le celle con margine, senza ridipingere o ricolorare. Sono disponibili 36 illustrazioni (una nave speciale ribelle è riservata e non usata), 80 PNG di schede a 1200×2080 in `png/`, e 80 pedine quadrate in `assets_reborn/truppe/pedine/` per la mappa del gioco.
 
-In partita, `UI.truppa_tex` sceglie automaticamente la figura in base al luogo: superficie, orbita e deriva. Mappa e tavolo 3D usano lo stesso criterio. Le unità nemiche nascoste continuano a usare i retro originali; le nuove immagini e le etichette non ne rivelano la forza. Le regole di movimento e combattimento restano invariate.
+In partita, con Grafica Reborn attiva, `UI.truppa_tex` sceglie automaticamente la figura in base al luogo: superficie, orbita e deriva. Mappa, galassia e tavolo 3D usano lo stesso criterio; passando sulla pedina nella mappa si apre la scheda ingrandita. Le unità nemiche nascoste continuano a usare i retro originali; le nuove immagini e le etichette non ne rivelano la forza. Le regole di movimento e combattimento restano invariate. La modalità classica conserva le pedine originali.
+
+`tools/package_troop_game.py`, richiamato anche da `tools/prepara_reborn_gioco.py`, crea copie runtime compresse in `assets/reborn/truppe/`: 35 figure, 80 pedine WebP a 256×256 e 80 schede WebP con lato massimo 860. Le sorgenti restano in `assets_reborn/` e `reborn/`, escluse dall’importazione Godot. Il test della partita verifica le risorse runtime effettive e non soltanto il ripiego sulle pedine originali.
 
 L’atlante usa il nuovo selettore di posizione per la dimostrazione: sposta le sole truppe sulle piattaforme orbitali e lascia i personaggi sulle basi di superficie. Non è uno stato di partita.
 

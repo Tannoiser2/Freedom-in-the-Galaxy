@@ -41,6 +41,7 @@ var b_galassia: Button
 var lbl_risorse: Label
 var _galassia_aperta := false
 var _anteprima_aperta := false
+var _anteprima_truppa_id := -1
 
 
 func _ready() -> void:
@@ -169,6 +170,10 @@ func _costruisci() -> void:
 	mappa.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	mappa.luogo_cliccato.connect(_clic_luogo)
 	mappa.pedina_cliccata.connect(_clic_pedina)
+	mappa.pedina_sorvolata.connect(_anteprima_truppa)
+	mappa.mouse_exited.connect(func():
+		mappa._hover_unita = -1
+		_anteprima_truppa(-1))
 	area_mappa.add_child(mappa)
 	if motore.livello != "sistema":
 		mappa.stella_vista = _stella_iniziale()
@@ -617,6 +622,24 @@ func _carta_reborn(c: Control, tipo: String, dati: Dictionary) -> void:
 	c.tooltip_text = ""
 	c.mouse_entered.connect(func(): _anteprima_carta(t))
 	c.mouse_exited.connect(func(): _svuota(popup_carta))
+
+
+## Carta Reborn ingrandita mentre il mouse le passa sopra.
+func _anteprima_truppa(id: int) -> void:
+	if _anteprima_truppa_id >= 0:
+		_svuota(popup_carta)
+		_anteprima_truppa_id = -1
+	if not UI.reborn or not motore.unita.has(id):
+		return
+	var u: Dictionary = motore.unita[id]
+	if u["k"] != "mil":
+		return
+	var nascosta: bool = u["fz"] == Motore.I and u["mobile"] and not u["scoperta"] and vista == Motore.R
+	var texture := UI.truppa_carta(u, nascosta)
+	if texture != null:
+		_anteprima_carta(texture)
+		_anteprima_aperta = false
+		_anteprima_truppa_id = id
 
 
 ## Carta Reborn ingrandita mentre il mouse le passa sopra.
