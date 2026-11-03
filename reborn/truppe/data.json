@@ -150,8 +150,8 @@
     "elite": false,
     "mobile": true,
     "costo": 10,
-    "ground": "imp_pattuglia.webp",
-    "orbit": "imp_pattuglia_orbita.webp",
+    "ground": "imp_suicida.webp",
+    "orbit": "imp_suicida_orbita.webp",
     "rules": {
       "nome": "Squadra suicida",
       "f": 1,
@@ -175,8 +175,8 @@
     "elite": false,
     "mobile": true,
     "costo": 15,
-    "ground": "imp_elite_flotta_orbita.webp",
-    "orbit": "imp_elite_flotta_orbita.webp",
+    "ground": "imp_resolution_orbita.webp",
+    "orbit": "imp_resolution_orbita.webp",
     "rules": {
       "nome": "Resolution",
       "f": 0,
@@ -200,8 +200,8 @@
     "elite": false,
     "mobile": true,
     "costo": 15,
-    "ground": "imp_elite_flotta_orbita.webp",
-    "orbit": "imp_elite_flotta_orbita.webp",
+    "ground": "imp_peacemaker_orbita.webp",
+    "orbit": "imp_peacemaker_orbita.webp",
     "rules": {
       "nome": "Peacemaker",
       "f": 0,
@@ -225,8 +225,8 @@
     "elite": false,
     "mobile": true,
     "costo": 25,
-    "ground": "imp_elite_flotta_orbita.webp",
-    "orbit": "imp_elite_flotta_orbita.webp",
+    "ground": "imp_stabilizzatore_orbita.webp",
+    "orbit": "imp_stabilizzatore_orbita.webp",
     "rules": {
       "nome": "Planet Stabilizer",
       "f": 0,
@@ -665,7 +665,7 @@
     "elite": false,
     "mobile": true,
     "costo": 7,
-    "ground": "rib_urbano_linea.webp",
+    "ground": "rib_urbano_veterana.webp",
     "orbit": "rib_orbita_r43.webp",
     "rules": {
       "nome": "4-3",
@@ -688,7 +688,7 @@
     "elite": false,
     "mobile": true,
     "costo": 7,
-    "ground": "rib_sotterraneo_linea.webp",
+    "ground": "rib_sotterraneo_veterana.webp",
     "orbit": "rib_orbita_r43.webp",
     "rules": {
       "nome": "4-3",
@@ -711,7 +711,7 @@
     "elite": false,
     "mobile": true,
     "costo": 7,
-    "ground": "rib_selvaggio_linea.webp",
+    "ground": "rib_selvaggio_veterana.webp",
     "orbit": "rib_orbita_r43.webp",
     "rules": {
       "nome": "4-3",
@@ -734,7 +734,7 @@
     "elite": false,
     "mobile": true,
     "costo": 7,
-    "ground": "rib_liquido_linea.webp",
+    "ground": "rib_liquido_veterana.webp",
     "orbit": "rib_orbita_r43.webp",
     "rules": {
       "nome": "4-3",
@@ -757,7 +757,7 @@
     "elite": false,
     "mobile": true,
     "costo": 7,
-    "ground": "rib_aereo_linea.webp",
+    "ground": "rib_aereo_veterana.webp",
     "orbit": "rib_orbita_r43.webp",
     "rules": {
       "nome": "4-3",
@@ -780,7 +780,7 @@
     "elite": false,
     "mobile": true,
     "costo": 7,
-    "ground": "rib_fuoco_linea.webp",
+    "ground": "rib_fuoco_veterana.webp",
     "orbit": "rib_orbita_r43.webp",
     "rules": {
       "nome": "4-3",

@@ -255,11 +255,10 @@ static func truppa_path(u: Dictionary, nascosta := false, figura := false) -> St
 		cat = str(u.get("cat", "r21" if int(u["forza"]) == 2 else "r10"))
 		if spazio:
 			return "res://assets/reborn/truppe/figure/rib_orbita_%s.webp" % cat
-		var classe := "milizia" if cat == "r10" else ("elite" if cat == "r44" else "linea")
+		var classe: String = {"r10": "milizia", "r21": "linea", "r23": "linea", "r43": "veterana", "r44": "elite"}[cat]
 		return "res://assets/reborn/truppe/figure/rib_%s_%s.webp" % [u["amb"], classe]
-	var arte := {"suicida": "pattuglia", "resolution": "elite_flotta", "peacemaker": "elite_flotta", "stabilizzatore": "elite_flotta"}
 	var solo_nave: bool = cat in ["resolution", "peacemaker", "stabilizzatore"]
-	return "res://assets/reborn/truppe/figure/imp_%s%s.webp" % [arte.get(cat, cat), "_orbita" if spazio or solo_nave else ""]
+	return "res://assets/reborn/truppe/figure/imp_%s%s.webp" % [cat, "_orbita" if spazio or solo_nave else ""]
 
 
 static func truppa_tex(u: Dictionary, nascosta := false, figura := false) -> Texture2D:

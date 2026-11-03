@@ -114,6 +114,10 @@ jobs:
                   with urllib.request.urlopen(base + 'truppe/data.json', timeout=20) as response:
                       troops = json.load(response)
                   assert len(troops) == version['troop_types'] == 40 and version['troop_presentations'] == 80
+                  with urllib.request.urlopen(base + 'truppe/', timeout=20) as response:
+                      assert 'pawn-gallery' in response.read().decode()
+                  with urllib.request.urlopen(base + 'truppe/pedine/imp_milizia-terra.png', timeout=20) as response:
+                      assert response.read(8) == b'\x89PNG\r\n\x1a\n'
                   print('Anteprima verificata su ' + base)
                   with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as summary:
                       summary.write('## Anteprima Reborn pubblicata\n\n' + base + '\n')

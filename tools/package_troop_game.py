@@ -12,5 +12,5 @@ def main():
             name=f'{c["key"]}-{position}'
             for source,folder,size in [(ROOT/'assets_reborn/truppe/pedine'/(name+'.png'),'pedine','256x256'),(ROOT/'reborn/truppe/png'/(name+'.png'),'carte','860x860')]:
                 subprocess.run(['convert',str(source),'-resize',size,'-quality','89',str(target/folder/(name+'.webp'))],check=True)
-    print('Runtime: 35 figure, 80 pedine e 80 schede truppa compresse')
+    print('Runtime: reparti e flotte, 80 pedine e 80 schede truppa compresse')
 if __name__=='__main__':main()

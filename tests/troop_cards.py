@@ -2,7 +2,7 @@
 from functools import partial
 from http.server import SimpleHTTPRequestHandler,ThreadingHTTPServer
 from pathlib import Path
-import json,threading,sys
+import json,threading,sys,shutil
 from playwright.sync_api import sync_playwright
 ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'reborn/truppe'
 class Quiet(SimpleHTTPRequestHandler):
@@ -24,7 +24,7 @@ def main():
             page=browser.new_page(viewport={'width':1360,'height':1260},device_scale_factor=2)
             errors=[];page.on('pageerror',lambda e:errors.append(str(e)))
             url=f'http://127.0.0.1:{server.server_port}/reborn/truppe/'
-            def load(suffix=''):
+            def load(suffix='schede.html'):
                 page.goto(url+suffix);page.wait_for_function('window.__troopsReady===true')
             load()
             for i,c in enumerate(records):
@@ -36,13 +36,14 @@ def main():
                     page.evaluate('([key,pos])=>window.__troops.setPosition(document.querySelector(`[data-key="${key}"]`),pos)',[c['key'],position])
                     card.scroll_into_view_if_needed();card.locator('img').evaluate('im=>im.decode()')
                     assert card.get_attribute('data-position')==position
-                    assert card.locator('img').get_attribute('src')=='assets/'+c['ground' if position=='terra' else 'orbit']
+                    assert card.locator('img').get_attribute('src').split('?')[0]=='assets/'+c['ground' if position=='terra' else 'orbit']
                     assert card.evaluate('el=>{const t=el.querySelector(".ability-text"),m=el.querySelector(".card-meta");return t.offsetTop+t.offsetHeight<m.offsetTop-8}') ,c['key']
                     if '--orbit-only' not in sys.argv or position=='orbita':
                         card.screenshot(path=str(OUT/'png'/f'{c["key"]}-{position}.png'))
                     if '--orbit-only' not in sys.argv:
                         card.evaluate('el=>el.classList.add("token")')
                         card.screenshot(path=str(tokens/f'{c["key"]}-{position}.png'))
+                        shutil.copyfile(tokens/f'{c["key"]}-{position}.png',OUT/'pedine'/f'{c["key"]}-{position}.png')
                         card.evaluate('el=>el.classList.remove("token")')
                 if (i+1)%10==0:print(f'{i+1}/40 unità: entrambe le posizioni e i valori verificati',flush=True)
             page.select_option('#faction-filter','ribelli');assert page.locator('.card-item:visible').count()==30
@@ -60,6 +61,11 @@ def main():
             page.evaluate('''()=>{const item=document.querySelector('[data-key="imp_linea"]');const clone=item.cloneNode(true);clone.dataset.key='comparison';item.after(clone);window.__troops.setPosition(clone,'orbita');}''')
             for img in page.locator('.card-item:visible img').all():img.evaluate('im=>im.decode()')
             page.locator('.pair').screenshot(path=str(OUT/'confronto-terra-orbita.png'))
+            load('prova-reparti.html')
+            assert page.locator('.card-item:visible').count()==4
+            assert set(page.locator('.card-item').evaluate_all('els=>els.map(el=>el.dataset.key)'))=={'imp_milizia','imp_elite_esercito','rib_selvaggio_10','rib_selvaggio_elite'}
+            for img in page.locator('img').all():img.evaluate('im=>im.decode()')
+            page.locator('.pair').screenshot(path=str(OUT/'confronto-reparti.png'),scale='css')
             assert not errors,errors
             browser.close()
     finally:server.shutdown()
