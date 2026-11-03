@@ -346,20 +346,19 @@ func _aggiorna_carte() -> void:
 			var c = preload("res://scripts/ui/carta.gd").new("personaggio", u2["c"])
 			c.m = motore
 			c.id_unita = id
-			c.custom_minimum_size = Vector2(130, 224) if UI.carta_reborn(u2["nome"]) != null else Vector2(158, 224)
-			if UI.carta_reborn(u2["nome"]) != null:
-				var nome_c: String = u2["nome"]
-				c.mouse_entered.connect(func(): _anteprima_carta(nome_c))
-				c.mouse_exited.connect(func(): _svuota(popup_carta))
+			c.custom_minimum_size = Vector2(158, 224)
+			_carta_reborn(c, "personaggio", u2["c"])
 			c.modulate = Color(1, 1, 1, 0.45) if u2["luogo"] == "morto" else Color.WHITE
 			carte_box.add_child(c)
 			for nr in u2["poss"]:
 				var cp = preload("res://scripts/ui/carta.gd").new("possesso", Dati.d()["poss"][int(nr)])
 				cp.custom_minimum_size = Vector2(150, 224)
+				_carta_reborn(cp, "possesso", Dati.d()["poss"][int(nr)])
 				carte_box.add_child(cp)
 			if not u2["nave"].is_empty() and int(u2["nave"].get("nr", 0)) > 0:
 				var cn = preload("res://scripts/ui/carta.gd").new("possesso", Dati.d()["poss"][int(u2["nave"]["nr"])])
 				cn.custom_minimum_size = Vector2(150, 224)
+				_carta_reborn(cn, "possesso", Dati.d()["poss"][int(u2["nave"]["nr"])])
 				carte_box.add_child(cn)
 
 
@@ -608,10 +607,20 @@ func _al_evento(tipo: String, dati: Dictionary) -> void:
 	_aggiorna()
 
 
-## Carta personaggio Reborn ingrandita mentre il mouse le passa sopra.
-func _anteprima_carta(nome: String) -> void:
+## Con la grafica Reborn la carta prende le proporzioni nuove e si ingrandisce al passaggio del mouse.
+func _carta_reborn(c: Control, tipo: String, dati: Dictionary) -> void:
+	var t := UI.carta_reborn_di(tipo, dati)
+	if t == null:
+		return
+	c.custom_minimum_size = Vector2(round(c.custom_minimum_size.y * t.get_width() / t.get_height()), c.custom_minimum_size.y)
+	c.tooltip_text = ""
+	c.mouse_entered.connect(func(): _anteprima_carta(t))
+	c.mouse_exited.connect(func(): _svuota(popup_carta))
+
+
+## Carta Reborn ingrandita mentre il mouse le passa sopra.
+func _anteprima_carta(t: Texture2D) -> void:
 	_svuota(popup_carta)
-	var t := UI.carta_reborn(nome)
 	if t == null:
 		return
 	var tr := TextureRect.new()
@@ -631,7 +640,11 @@ func _mostra_popup_carta(tipo: String, dati: Dictionary, sezione := "") -> void:
 	c.sezione = sezione
 	c.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	c.size = Vector2(250, 360)
-	c.position = Vector2(area_mappa.size.x - 262, area_mappa.size.y - 372)
+	var tr := UI.carta_reborn_di(tipo, dati)
+	if tr != null:
+		var h := minf(600.0, area_mappa.size.y - 24)
+		c.size = Vector2(h * tr.get_width() / tr.get_height(), h)
+	c.position = Vector2(area_mappa.size.x - c.size.x - 12, area_mappa.size.y - c.size.y - 12)
 	popup_carta.add_child(c)
 	var tw := create_tween()
 	c.modulate.a = 0.0
@@ -763,6 +776,9 @@ func _mostra_missioni() -> void:
 			continue
 		var cm = preload("res://scripts/ui/carta.gd").new("missione", c)
 		cm.custom_minimum_size = Vector2(270, 390)
+		var tm := UI.carta_reborn_di("missione", c)
+		if tm != null:
+			cm.custom_minimum_size = Vector2(270, round(270.0 * tm.get_height() / tm.get_width()))
 		g.add_child(cm)
 	var t := UI.titolo("Le missioni dello Star System Game (clic per chiudere, clic destro su una carta per l'originale)", 22)
 	t.position = Vector2(40, 24)

@@ -52,6 +52,13 @@ static func carta_reborn(nome: String) -> Texture2D:
 	return reborn_tex("carte/" + nome.to_lower().replace(" ", "-"))
 
 
+## Carta Reborn di qualsiasi mazzo: personaggi per nome, le altre per file della scansione.
+static func carta_reborn_di(tipo: String, dati: Dictionary) -> Texture2D:
+	if tipo == "personaggio":
+		return carta_reborn(str(dati.get("nome", "")))
+	return reborn_tex("carte/" + str(dati.get("file", "")))
+
+
 static func carica_font() -> void:
 	if font_testo != null:
 		return

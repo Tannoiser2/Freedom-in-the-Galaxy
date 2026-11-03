@@ -35,6 +35,9 @@ def main():
             continue
         salva(f, os.path.join(DEST, "carte", nome + ".webp"), lato_max=860, qualita=88)
         n += 1
+    for f in glob.glob(os.path.join(RADICE, "reborn/carte/mazzi/*.png")):
+        salva(f, os.path.join(DEST, "carte", os.path.basename(f)[:-4] + ".webp"), lato_max=860, qualita=88)
+        n += 1
     for f in glob.glob(os.path.join(RADICE, "assets_reborn/pianeti/*.png")):
         b = os.path.basename(f)[:-4]
         if b.isdigit():

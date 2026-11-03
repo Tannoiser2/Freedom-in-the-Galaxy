@@ -44,7 +44,7 @@ func _draw() -> void:
 			else:
 				draw_texture_rect(t, r, false)
 			return
-	if tipo == "personaggio" and _reborn():
+	if _reborn():
 		return
 	match tipo:
 		"personaggio":
@@ -59,7 +59,7 @@ func _draw() -> void:
 
 ## Carta personaggio Reborn: l'immagine intera, con lo stato del personaggio sovrapposto.
 func _reborn() -> bool:
-	var t := UI.carta_reborn(str(dati.get("nome", "")))
+	var t := UI.carta_reborn_di(tipo, dati)
 	if t == null:
 		return false
 	draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)

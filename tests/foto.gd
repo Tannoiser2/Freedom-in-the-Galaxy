@@ -37,7 +37,8 @@ func _init() -> void:
 		carte_pg[0].mouse_entered.emit()
 		await _attendi(0.6)
 		_scatta("4a_carta")
-		carte_pg[0].mouse_exited.emit()
+		if is_instance_valid(carte_pg[0]):
+			carte_pg[0].mouse_exited.emit()
 	if p.galassia_v != null:
 		p._mostra_galassia(true)
 		await _attendi(1.0)
