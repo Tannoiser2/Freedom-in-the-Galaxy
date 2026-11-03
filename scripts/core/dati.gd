@@ -19,7 +19,7 @@ static var _d := {}
 
 static func d() -> Dictionary:
 	if _d.is_empty():
-		for nome in ["galassia", "carte", "tabelle", "creature", "scenari", "possessi_effetti", "regole_avanzate"]:
+		for nome in ["galassia", "carte", "tabelle", "creature", "scenari", "possessi_effetti", "regole_avanzate", "mappa_caselle"]:
 			var f := FileAccess.open("res://data/%s.json" % nome, FileAccess.READ)
 			if f == null:
 				push_error("Dati: manca data/%s.json" % nome)

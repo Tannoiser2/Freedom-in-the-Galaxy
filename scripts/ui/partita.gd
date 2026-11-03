@@ -37,6 +37,7 @@ var b_ritmo: Button
 var b_firebase: Button
 var _popup_timer := 0.0
 var galassia_v
+var galassia3d
 var b_galassia: Button
 var lbl_risorse: Label
 var _galassia_aperta := false
@@ -183,6 +184,7 @@ func _costruisci() -> void:
 		galassia_v.stella_corrente = mappa.stella_vista
 		galassia_v.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 		galassia_v.stella_scelta.connect(_apri_stella)
+		galassia_v.luogo_cliccato.connect(_clic_luogo_galassia)
 		galassia_v.visible = false
 		area_mappa.add_child(galassia_v)
 	popup_carta = Control.new()
@@ -248,15 +250,33 @@ func _applica_ritmo() -> void:
 
 
 func _stella_iniziale() -> int:
-	var cap := motore.galattico.capitale_di(motore.provincia) if motore.livello == "provincia" else 16
+	var cap := motore.galattico.capitale_di(motore.provincia) if motore.livello == "provincia" else 162
 	return int(cap / 10) if cap > 0 else int(motore.scenario_pianeti()[0] / 10)
+
+
+func _tre_d() -> bool:
+	return b_3d.text == "Mappa 2D"
 
 
 func _mostra_galassia(on: bool) -> void:
 	if galassia_v == null:
 		return
 	_galassia_aperta = on
-	galassia_v.visible = on
+	var in3d := on and _tre_d()
+	if in3d and galassia3d == null:
+		galassia3d = preload("res://scripts/ui/galassia3d.gd").new()
+		galassia3d.m = motore
+		galassia3d.vista = vista
+		galassia3d.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+		galassia3d.stella_scelta.connect(_apri_stella)
+		galassia3d.luogo_cliccato.connect(_clic_luogo_galassia)
+		area_mappa.add_child(galassia3d)
+		galassia3d.evidenzia(galassia_v.evidenziati)
+	galassia_v.visible = on and not in3d
+	if galassia3d != null:
+		galassia3d.visible = in3d
+		if in3d:
+			galassia3d.aggiorna()
 	if on:
 		galassia_v.stella_corrente = mappa.stella_vista
 		mappa.visible = false
@@ -271,6 +291,18 @@ func _mostra_galassia(on: bool) -> void:
 				tavolo3d.aggiorna()
 	b_galassia.text = "Sistema" if on else "Galassia"
 	area_mappa.move_child(popup_carta, -1)
+
+
+## Clic su una casella della galassia: la sceglie se la decisione in corso la prevede, altrimenti apre il sistema.
+func _clic_luogo_galassia(l: String) -> void:
+	if _in_attesa and _richiesta.get("tipo", "") != "multi":
+		for o in _richiesta.get("opzioni", []):
+			if o.get("luogo", "") == l:
+				_clic_luogo(l)
+				return
+	var st := motore.av.stella_di(l)
+	if st > 0:
+		_apri_stella(st)
 
 
 func _apri_stella(st: int) -> void:
@@ -300,7 +332,7 @@ func _imposta_3d(on: bool) -> void:
 	mappa.visible = not on
 	b_3d.text = "Mappa 2D" if on else "Vista 3D"
 	if _galassia_aperta:
-		_mostra_galassia(false)
+		_mostra_galassia(true)
 
 
 # =====================================================================================
@@ -319,6 +351,8 @@ func _aggiorna() -> void:
 	mappa.queue_redraw()
 	if tavolo3d != null and tavolo3d.visible:
 		tavolo3d.aggiorna()
+	if galassia3d != null and galassia3d.visible:
+		galassia3d.aggiorna()
 	if lbl_risorse != null:
 		if motore.livello == "galassia":
 			lbl_risorse.text = "Risorse R %d · I %d" % [int(motore.pf[Motore.R]), int(motore.pf[Motore.I])]
@@ -495,6 +529,8 @@ func _evidenzia_richiesta() -> void:
 	mappa.evidenzia(ev)
 	if tavolo3d != null:
 		tavolo3d.evidenzia(ev)
+	if galassia3d != null:
+		galassia3d.evidenzia(ev)
 	if galassia_v != null:
 		galassia_v.evidenzia(ev)
 		if not ev.is_empty() and _in_attesa:
@@ -503,7 +539,7 @@ func _evidenzia_richiesta() -> void:
 				var st := motore.av.stella_di(str(l))
 				if st > 0 and galassia_v._stelle_scenario().has(st):
 					stelle[st] = true
-			if not stelle.is_empty() and not stelle.has(mappa.stella_vista):
+			if not stelle.is_empty() and not stelle.has(mappa.stella_vista) and not _galassia_aperta:
 				if stelle.size() == 1:
 					_apri_stella(stelle.keys()[0])
 				elif not _galassia_aperta:
