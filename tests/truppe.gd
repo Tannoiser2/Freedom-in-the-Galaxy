@@ -19,8 +19,9 @@ func _init() -> void:
 			assert(UI.truppa_tex(u).resource_path == UI.truppa_path(u))
 			assert(UI.truppa_tex(u, false, true).resource_path == UI.truppa_path(u, false, true))
 			assert(UI.truppa_carta(u) != null and UI.truppa_carta(u, true) == null)
-			assert(UI.truppa_path(u, true).begins_with("res://assets/pedine/"))
-			assert(UI.truppa_path(u, true).ends_with("_r.jpg"))
+			# unità nascosta: solo il retro con lo stemma, uguale per tutte (Reborn) o il retro originale
+			assert(UI.truppa_path(u, true).ends_with("_r.webp") or UI.truppa_path(u, true).ends_with("_r.jpg"))
+			assert(not UI.truppa_path(u, true).contains("truppe"))
 			assert(u["forza"] == before["forza"] and u["spazio"] == before["spazio"])
 		for luogo in ["D:14", "D2:14", "S:14"]:
 			u["luogo"] = luogo

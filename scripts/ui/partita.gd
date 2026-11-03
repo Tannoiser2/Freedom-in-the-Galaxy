@@ -185,6 +185,10 @@ func _costruisci() -> void:
 		galassia_v.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 		galassia_v.stella_scelta.connect(_apri_stella)
 		galassia_v.luogo_cliccato.connect(_clic_luogo_galassia)
+		galassia_v.pedina_sorvolata.connect(_anteprima_truppa)
+		galassia_v.mouse_exited.connect(func():
+			galassia_v._sopra = -1
+			_anteprima_truppa(-1))
 		galassia_v.visible = false
 		area_mappa.add_child(galassia_v)
 	popup_carta = Control.new()

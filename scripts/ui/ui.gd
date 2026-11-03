@@ -245,6 +245,10 @@ static func truppa_in_spazio(u: Dictionary) -> bool:
 static func truppa_path(u: Dictionary, nascosta := false, figura := false) -> String:
 	# Never reveal class, environment or strength through art of a hidden enemy unit.
 	if nascosta:
+		# retro Reborn: solo lo stemma imperiale, uguale per tutte le unità
+		var retro := "res://assets/reborn/pedine/%s_r.webp" % chiave_mil(u)
+		if reborn and ResourceLoader.exists(retro):
+			return retro
 		return "res://assets/pedine/%s_r.jpg" % chiave_mil(u)
 	var chiave := chiave_truppa(u)
 	var spazio := truppa_in_spazio(u)

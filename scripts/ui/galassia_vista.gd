@@ -7,6 +7,7 @@ extends Control
 
 signal stella_scelta(stella: int)
 signal luogo_cliccato(luogo: String)
+signal pedina_sorvolata(id: int)
 
 var m: Motore
 var vista := -1
@@ -23,6 +24,7 @@ var _pronta := false
 var _rect_pedine := []     # [Rect2, segnalino]
 var _caselle: Array = []
 var _hover_luogo := ""
+var _sopra := -1
 
 
 func _ready() -> void:
@@ -221,10 +223,15 @@ func _gui_input(ev: InputEvent) -> void:
 		var h := _stella_a(ev.position)
 		_hover = h
 		var info := ""
+		var sopra := -1
 		for rp in _rect_pedine:
 			if rp[0].has_point(ev.position):
 				var e: Dictionary = rp[1]
 				info = _descrivi_pedina(e["id"]) if e["tipo"] == "pedina" else _descrivi_pianeta(e["id"])
+				sopra = int(e["id"]) if e["tipo"] == "pedina" else -1
+		if sopra != _sopra:
+			_sopra = sopra
+			pedina_sorvolata.emit(sopra)
 		_hover_luogo = _luogo_a(ev.position)
 		if info == "" and _hover_luogo != "":
 			info = m.nome_luogo(_hover_luogo)

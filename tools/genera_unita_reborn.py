@@ -194,7 +194,38 @@ def main():
                     im = ribelle(tipo, cat, int(u["f"]), int(u["s"]), cat == "r44", retro)
                     salva(im, "rib_%s_%s%s" % (tipo, ped, "_r" if retro else ""))
                     n += 1
+    n += navi()
     print("pedine delle unità:", n)
+
+
+def navi():
+    """Pedine delle astronavi dei personaggi con le illustrazioni Reborn (retro = danneggiata)."""
+    import glob
+    poss = {int(c["nr"]): c for c in json.load(open(os.path.join(RADICE, "data/carte.json")))["possessi"]}
+    n = 0
+    for f in sorted(glob.glob(os.path.join(RADICE, "assets_reborn/astronavi/nave_*.png"))):
+        nome_file = os.path.basename(f)[:-4]
+        retro = nome_file.endswith("_r")
+        chiave = nome_file[:-2] if retro else nome_file
+        imperiale = chiave in ("nave_imperiale", "nave_redjac")
+        if chiave == "nave_imperiale":
+            nome = "Imperiale"
+        elif chiave == "nave_redjac":
+            nome = "Redjac"
+        else:
+            nome = str(poss.get(int(chiave.split("_")[1]), {}).get("nome_it", ""))
+        im = sfondo((44, 58, 96), (12, 16, 32), ORO) if imperiale else sfondo((40, 70, 110), (10, 20, 40), (92, 200, 245))
+        arte = Image.open(f).convert("RGBA")
+        k = min(440 / arte.width, 300 / arte.height)
+        arte = arte.resize((int(arte.width * k), int(arte.height * k)), Image.LANCZOS)
+        im.alpha_composite(arte, (int((LATO - arte.width) / 2), int(250 - arte.height / 2)))
+        d = ImageDraw.Draw(im)
+        testo_centro(d, 400, nome.upper(), font(TITOLO, 56 if len(nome) < 14 else 44), (255, 240, 210, 255))
+        if retro:
+            testo_centro(d, 40, "DANNEGGIATA", font(TITOLO, 50), (255, 110, 80, 255))
+        salva(im, chiave + ("_r" if retro else ""))
+        n += 1
+    return n
 
 
 def salva(im, nome):
