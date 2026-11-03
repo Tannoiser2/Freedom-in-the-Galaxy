@@ -111,6 +111,9 @@ jobs:
                       decks = json.load(response)
                   assert decks['counts'] == {'azione':30,'missione':15,'evento':29,'strategico':14,'possessi':20}
                   assert decks['total'] == version['other_cards'] == 108 and version['total_cards'] == 140
+                  with urllib.request.urlopen(base + 'truppe/data.json', timeout=20) as response:
+                      troops = json.load(response)
+                  assert len(troops) == version['troop_types'] == 40 and version['troop_presentations'] == 80
                   print('Anteprima verificata su ' + base)
                   with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as summary:
                       summary.write('## Anteprima Reborn pubblicata\n\n' + base + '\n')

@@ -454,7 +454,7 @@ func _disegna_pedina(id: int, pr: Rect2) -> void:
 		t = UI.pedina_tex(str(u["ped"]) if u.has("ped") else UI.chiave_pg(u["nome"]), u["ind"])
 	else:
 		var nascosta: bool = u["fz"] == Motore.I and u["mobile"] and not u["scoperta"] and vista == Motore.R
-		t = UI.pedina_tex(UI.chiave_mil(u), nascosta)
+		t = UI.truppa_tex(u, nascosta)
 	draw_rect(Rect2(pr.position + Vector2(3, 3), pr.size), Color(0, 0, 0, 0.5))
 	if t != null:
 		draw_texture_rect(t, pr, false)

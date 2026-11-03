@@ -450,10 +450,12 @@ func aggiorna() -> void:
 					tx = UI.pedina_tex(str(u2["ped"]) if u2.has("ped") else UI.chiave_pg(u2["nome"]), u2["ind"])
 				else:
 					var nascosta: bool = u2["fz"] == Motore.I and u2["mobile"] and not u2["scoperta"] and vista == Motore.R
-					tx = UI.pedina_tex(UI.chiave_mil(u2), nascosta)
+					tx = UI.truppa_tex(u2, nascosta, true)
 				var sp := Sprite3D.new()
 				sp.texture = tx
 				sp.pixel_size = 0.9 / maxf(1.0, float(tx.get_width()) if tx != null else 64.0)
+				if u2["k"] == "mil" and tx != null:
+					sp.pixel_size = 1.15 / float(tx.get_height())
 				sp.billboard = BaseMaterial3D.BILLBOARD_FIXED_Y
 				sp.shaded = false
 				sp.alpha_cut = SpriteBase3D.ALPHA_CUT_DISABLED
@@ -465,6 +467,16 @@ func aggiorna() -> void:
 				if u2["k"] == "pg" and u2["prig"] >= 0:
 					sp.modulate = Color(0.6, 0.6, 0.6)
 				_pedine_root.add_child(sp)
+				if u2["k"] == "mil":
+					var nascosta: bool = u2["fz"] == Motore.I and u2["mobile"] and not u2["scoperta"] and vista == Motore.R
+					var testo_unita := "Unità imperiale" if nascosta else m.descr_mil(id2)
+					if not nascosta:
+						var forza_spazio := int(u2.get("spazio", 0 if not u2["mobile"] else (2 if u2["fz"] == Motore.I else 1)))
+						testo_unita += "\nTerra %d · Spazio %d" % [int(u2["forza"]), forza_spazio]
+					var et := _etichetta(testo_unita, 28, UI.colore_fazione(f))
+					et.position = sp.position + Vector3(0, -0.55, 0.12)
+					et.pixel_size = 0.0025
+					_pedine_root.add_child(et)
 				if u2["k"] == "pg" and not u2["nave"].is_empty():
 					var sn := Sprite3D.new()
 					var tn := UI.pedina_tex(UI.chiave_nave(u2["nave"]), u2["nave"].get("dmg", false))

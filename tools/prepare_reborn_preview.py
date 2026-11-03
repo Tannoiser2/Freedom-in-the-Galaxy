@@ -47,6 +47,12 @@ def main():
     assert other_cards['decks'] == {k:original_cards[k] for k in ['azione','missione','evento','strategico','possessi']}
     assert other_cards['total'] == 108
     shutil.copytree(card_source, OUT/'carte', dirs_exist_ok=True)
+    troop_source = ROOT/'reborn/truppe'
+    troops = json.loads((troop_source/'data.json').read_text())
+    troop_rules = json.loads((ROOT/'data/regole_avanzate.json').read_text())['unita']
+    assert len(troops) == 40
+    assert all(c['rules'] == troop_rules[c['cat']] for c in troops)
+    shutil.copytree(troop_source, OUT/'truppe', dirs_exist_ok=True)
     cards = []
     for filename,title,description in IMAGES:
         assert (SOURCE / filename).is_file(), filename
@@ -58,7 +64,7 @@ def main():
 <style>*{box-sizing:border-box}body{margin:0;background:#080e16;color:#e9ece6;font:16px system-ui,sans-serif}main{max-width:1180px;margin:auto;padding:40px 24px}h1{font-size:clamp(30px,5vw,60px);font-weight:500;margin:18px 0}h2{font-size:25px;font-weight:500}p{color:#acbdb2;line-height:1.7}a{color:#80d3ac}nav{display:flex;gap:15px;flex-wrap:wrap;margin:30px 0}nav a{padding:14px 20px;border:1px solid #4b7962;border-radius:7px;text-decoration:none}nav a:first-child{background:#224c39;color:white}img{display:block;width:100%;height:auto;border-radius:10px;border:1px solid #263a32}section{margin:55px 0}.eyebrow{font-size:12px;letter-spacing:3px;color:#7acaaa}footer{padding:30px 0;color:#728c7c;font-size:13px}</style>
 <main><div class="eyebrow">FREEDOM IN THE GALAXY / REBORN</div><h1>Atlante interattivo della galassia</h1>
 <p>51 pianeti e 25 sistemi selezionabili, con stelle, orbite animate, rotazione dei globi, basi PDB e unità dimostrative sulle piattaforme. La raccolta comprende tutte le 140 carte: personaggi e altri cinque mazzi. Il gioco completo resta separato.</p>
-<nav><a href="atlante/">Apri l’atlante 3D completo</a><a href="carte/">Le 32 carte personaggio</a><a href="carte/mazzi.html">Gli altri mazzi · 108 carte</a><a href="adare/">Adare: esempio autonomo</a><a href="adare_3d.zip">Versione offline di Adare</a></nav>
+<nav><a href="atlante/">Apri l’atlante 3D completo</a><a href="carte/">Le 32 carte personaggio</a><a href="truppe/">Truppe e flotte · 40 tipi</a><a href="carte/mazzi.html">Gli altri mazzi · 108 carte</a><a href="adare/">Adare: esempio autonomo</a><a href="adare_3d.zip">Versione offline di Adare</a></nav>
 <p>Lo stile pittorico usa 18 texture per i sei ambienti. Le città hanno fondo grigio e strade gialle luminose; Adare non ha acqua. Nell’atlante puoi selezionare ogni mondo o sistema, configurare forza e stato del PDB, mettere in pausa e avvicinarti ai pianeti.</p>
 <h2>Archivio dei render della prima iterazione</h2><p>I render sotto documentano la prima prova delle piattaforme. Per materiali e colori aggiornati usa l’atlante interattivo.</p>
 ''' + '\n'.join(cards) + '<footer>Prototipi grafici da valutare · Texture di produzione 2048×1024 · Nessuna modifica alle regole di gioco</footer></main></html>'
@@ -69,7 +75,7 @@ def main():
     revision = hashlib.sha256(viewer.encode()).hexdigest()
     (OUT/'version.json').write_text(json.dumps({'viewer_sha256':revision,'standalone':True,'render_count':len(IMAGES),
         'atlas_planets':atlas['planets'],'atlas_systems':atlas['systems'],'atlas_data':atlas['data'],
-        'atlas_sha256':atlas['script_sha256'],'atlas_material_variants':atlas.get('material_variants',0),'card_examples':2,'character_cards':len(card_examples),'other_cards':other_cards['total'],'total_cards':len(card_examples)+other_cards['total']})+'\n')
+        'atlas_sha256':atlas['script_sha256'],'atlas_material_variants':atlas.get('material_variants',0),'card_examples':2,'character_cards':len(card_examples),'other_cards':other_cards['total'],'total_cards':len(card_examples)+other_cards['total'],'troop_types':len(troops),'troop_presentations':len(troops)*2})+'\n')
     print(f'Prepared {OUT}: standalone viewer, {len(IMAGES)} renders, ZIP; SHA256 {revision}')
 
 

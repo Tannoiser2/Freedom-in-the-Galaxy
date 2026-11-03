@@ -111,6 +111,8 @@ def material_gallery(materials, planets):
 
 
 def main():
+    from troop_catalog import catalog
+    troops={c['key']:c for c in catalog()}
     galaxy = json.loads((ROOT/'data/galassia.json').read_text())
     cards = json.loads((ROOT/'data/carte.json').read_text())['personaggi']
     profiles = {p['id']:p for p in json.loads((ROOT/'reborn/pianeti_superfici.json').read_text())['pianeti']}
@@ -157,8 +159,13 @@ def main():
         envs=[]
         for e in p['ambienti']:
             key='imp_linea' if e['tipo']=='urbano' else f'rib_{e["tipo"]}_23'
-            if not (ROOT/f'assets_reborn/pedine/{key}.png').is_file():key='imp_milizia'
-            envs.append({'tipo':e['tipo'],'taglia':e['taglia'],'token':unit_image(key,False),
+            troop=troops[key]
+            pictures={}
+            for position,field in [('ground','ground'),('orbit','orbit')]:
+                path=image(ROOT/'assets_reborn/truppe'/troop[field],OUT/'units',troop[field].replace('.webp',''),(400,560),mode='RGBA')
+                used.add(path);pictures[position]=path
+            envs.append({'tipo':e['tipo'],'taglia':e['taglia'],'token':pictures['ground'],
+                'troop':dict(key=key,nome=troop['nome'],fazione=troop['fazione'],terra=troop['terra'],spazio=troop['spazio'],**pictures),
                 'material':assignments[pid,e['tipo']]})
         dominant=max(p['ambienti'],key=lambda e:e['taglia'])['tipo']
         profile=profiles[pid]['profilo_artistico']['bioma_selvaggio'] if any(e['tipo']=='selvaggio' for e in p['ambienti']) else {

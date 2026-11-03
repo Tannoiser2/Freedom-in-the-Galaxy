@@ -1,0 +1,12 @@
+const items=[...document.querySelectorAll('.card-item')];
+const fit=()=>document.querySelectorAll('.card-shell').forEach(el=>{if(el.clientWidth)el.style.setProperty('--card-scale',Math.min(1,el.clientWidth/600));});
+new ResizeObserver(fit).observe(document.body);
+function setPosition(item,position){const card=item.querySelector('.card'),orbit=position==='orbita';card.dataset.position=position;const img=card.querySelector('.figure');img.src=orbit?card.dataset.orbit:card.dataset.ground;img.alt=card.querySelector('.card-name').textContent+(orbit?', in orbita':', sulla superficie');card.querySelector('.position-label').textContent=orbit?'IN ORBITA':'SUPERFICIE';const button=item.querySelector('.position-toggle');button.textContent=orbit?'Mostra sulla superficie':'Mostra in orbita';button.setAttribute('aria-pressed',String(orbit));}
+const position=document.getElementById('position-filter');position.onchange=()=>items.forEach(item=>setPosition(item,position.value));
+items.forEach(item=>item.querySelector('.position-toggle').onclick=()=>setPosition(item,item.querySelector('.card').dataset.position==='terra'?'orbita':'terra'));
+const params=new URLSearchParams(location.search),search=document.getElementById('troop-search'),faction=document.getElementById('faction-filter'),env=document.getElementById('environ-filter');
+search.value=params.get('nome')||'';faction.value=params.get('fazione')||'';env.value=params.get('environ')||'';
+function filter(){let count=0;for(const item of items){const visible=(!search.value||item.dataset.name.includes(search.value.toLocaleLowerCase('it').trim()))&&(!faction.value||item.dataset.faction===faction.value)&&(!env.value||item.dataset.environ===env.value)&&(!params.get('unita')||params.get('unita')===item.dataset.key);item.hidden=!visible;if(visible)count++;}document.getElementById('visible-count').textContent=count+' unità';fit();}
+for(const control of [search,faction,env])control.addEventListener('input',filter);
+document.fonts.ready.then(()=>{for(const item of items){const card=item.querySelector('.card');if(card.querySelector('.card-name').offsetHeight>65)card.classList.add('long-name');}if(params.get('posizione')==='orbita'){position.value='orbita';items.forEach(item=>setPosition(item,'orbita'));}filter();window.__troopsReady=true;});fit();
+window.__troops={setPosition};
